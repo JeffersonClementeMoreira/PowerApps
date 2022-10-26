@@ -1,0 +1,323 @@
+Tela_Inicial_app As screen:
+    BackgroundImage: =Transmissões_foto_bw
+    ImagePosition: =ImagePosition.Fill
+
+    Titulo_ini As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(50, 86, 160, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =111
+        Size: =23
+        Text: ="LEVANTAMENTO DE PERDAS - TRANSMISSÕES"
+        Width: =640
+        ZIndex: =3
+
+    ComboBoxute_ini As combobox:
+        DisplayFields: =["Result"]
+        Height: =68
+        InputTextPlaceholder: ="UTE"
+        Items: =Sort(Distinct( CreateMaquina , UTE ).Result,Result)
+        NoSelectionText: ="UTE"
+        SearchFields: =["Result"]
+        SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result,Result),ComboBoxute_ini.SearchText,"Result")
+        SelectMultiple: =false
+        Size: =21
+        Width: =160
+        Y: =Titulo_ini.Y + Titulo_ini.Height + 15
+        ZIndex: =4
+
+    ComboBoxmaquina_ini As combobox:
+        DisplayFields: =["Result"]
+        Height: =ComboBoxute_ini.Height
+        InputTextPlaceholder: ="MÁQUINA"
+        IsSearchable: =false
+        Items: =Sort(Distinct( Filter(CreateMaquina, Text(ComboBoxute_ini.Selected.Result) in UTE) , CAF ).Result , Result)
+        NoSelectionText: ="MÁQUINA"
+        SearchFields: =["Result"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Size: =21
+        Width: =250
+        X: =ComboBoxute_ini.X+ComboBoxute_ini.Width+1
+        Y: =ComboBoxute_ini.Y 
+        ZIndex: =5
+
+    ComboBoxdata_ini As combobox:
+        DisplayFields: =["Result"]
+        Height: =ComboBoxute_ini.Height
+        InputTextPlaceholder: ="DATA"
+        Items: =Distinct( DatasPowerapps , Datas ).Result
+        NoSelectionText: ="DATA"
+        SearchFields: =["Result"]
+        SearchItems: =Search(Distinct( DatasPowerapps , Datas ).Result,ComboBoxdata_ini.SearchText,"Result")
+        SelectMultiple: =false
+        Size: =21
+        Width: =225
+        X: |
+            =ComboBoxmaquina_ini.X+ComboBoxmaquina_ini.Width+1
+        Y: =ComboBoxute_ini.Y
+        ZIndex: =6
+
+    Prod_Real_ini As text:
+        Align: =Align.Center
+        Default: |-
+            =Sum(Filter(LancamentoProducao,
+             (IsBlank(Text(ComboBoxmaquina_ini.Selected.Result)) || ComboBoxmaquina_ini.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute_ini.Selected.Result)) || ComboBoxute_ini.Selected.Result = UTE
+            ) && (IsBlank(Text(ComboBoxdata_ini.Selected.Result)) || ComboBoxdata_ini.Selected.Result = DATA
+            )),QUANTIDADE)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =Label_prod_real_ini.Height
+        Size: =21
+        Width: =200
+        X: =Label_prod_real_ini.X + Label_prod_real_ini.Width + 30
+        Y: =Label_resumo_ini.Y+ Label_resumo_ini.Height + 15
+        ZIndex: =10
+
+    Label_prod_real_ini As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Size: =21
+        Text: ="Produção Realizada"
+        Width: =320
+        Y: =Label_resumo_ini.Y+ Label_resumo_ini.Height + 15
+        ZIndex: =11
+
+    Label_resumo_ini As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderStyle: =BorderStyle.Dashed
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =70
+        Size: =21
+        Text: ="RESUMO LANÇAMENTOS"
+        Width: =560
+        X: =40
+        Y: =ComboBoxdata_ini.Y+ ComboBoxdata_ini.Height + 20
+        ZIndex: =12
+
+    Label_perda_real_ini As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =Label_prod_real_ini.Height
+        Size: =21
+        Text: ="Perdas Totais"
+        Width: =Label_prod_real_ini.Width
+        X: =Label_prod_real_ini.X
+        Y: =Label_prod_real_ini.Y + Label_prod_real_ini.Height + 15
+        ZIndex: =13
+
+    Perda_Real_ini As text:
+        Align: =Align.Center
+        Default: |-
+            =Sum(Filter(LancamentoPerdas,
+             (IsBlank(Text(ComboBoxmaquina_ini.Selected.Result)) || ComboBoxmaquina_ini.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute_ini.Selected.Result)) || ComboBoxute_ini.Selected.Result = UTE
+            ) && (IsBlank(Text(ComboBoxdata_ini.Selected.Result)) || ComboBoxdata_ini.Selected.Result = DATA
+            )),QUANTIDADE)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =Prod_Real_ini.Height
+        Size: =21
+        Width: =Prod_Real_ini.Width
+        X: =Prod_Real_ini.X
+        Y: =Prod_Real_ini.Y + Prod_Real_ini.Height + 15
+        ZIndex: =14
+
+    Label_perda_real_ini_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =Label_perda_real_ini.Height
+        Size: =21
+        Text: ="Total Lançado"
+        Width: =Label_perda_real_ini.Width
+        X: =Label_perda_real_ini.X
+        Y: =Label_perda_real_ini.Y + Label_perda_real_ini.Height + 15
+        ZIndex: =15
+
+    Total As text:
+        Align: =Align.Center
+        Default: =Perda_Real_ini+Prod_Real_ini
+        DisplayMode: =DisplayMode.Disabled
+        Height: =Perda_Real_ini.Height
+        Size: =21
+        Width: =Perda_Real_ini.Width
+        X: =Perda_Real_ini.X
+        Y: =Perda_Real_ini.Y + Perda_Real_ini.Height + 15
+        ZIndex: =16
+
+    Btn_lancar_prod As button:
+        Height: =70
+        OnSelect: =Navigate(Tela_Inicial_Producao)
+        Size: =24
+        Text: ="Lançar Produção"
+        Width: =280
+        X: =26
+        Y: =1015
+        ZIndex: =17
+
+    Btn_lancar_perda As button:
+        Height: =Btn_lancar_prod.Height
+        OnSelect: =Navigate(Tela_Inicial_Perdas)
+        Size: =24
+        Text: ="Lançar Perda"
+        Width: =280
+        X: =Btn_lancar_prod.X+ Btn_lancar_prod.Width + 27
+        Y: =1015
+        ZIndex: =18
+
+    Label_perdanaoimpact_ini As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =Label_perda_real_ini.Height
+        Size: =21
+        Text: ="Perdas não Impactam OEE"
+        Width: =Label_perda_real_ini.Width
+        X: =11
+        Y: =Label_resumo_ini_1.Y + Label_resumo_ini_1.Height +30
+        ZIndex: =19
+
+    Perdanaoimpact_ini As text:
+        Align: =Align.Center
+        Default: |-
+            =Sum(
+                Filter(
+                    LancamentoPerdas,
+                    (IsBlank(Text(ComboBoxmaquina_ini.Selected.Result)) || ComboBoxmaquina_ini.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute_ini.Selected.Result)) || ComboBoxute_ini.Selected.Result = UTE) && (IsBlank(Text(ComboBoxdata_ini.Selected.Result)) || ComboBoxdata_ini.Selected.Result = DATA) && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
+                ),
+                QUANTIDADE
+            )
+        DisplayMode: =DisplayMode.Disabled
+        Height: =Perda_Real_ini.Height
+        Size: =21
+        Width: =Perda_Real_ini.Width
+        X: =361
+        Y: =Label_perdanaoimpact_ini.Y
+        ZIndex: =20
+
+    Label_resumo_ini_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderStyle: =BorderStyle.Dashed
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =70
+        Size: =21
+        Text: ="RESUMO OEE"
+        Width: =560
+        X: =40
+        Y: =580
+        ZIndex: =21
+
+    Label_perdaimpact_ini As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =Label_perda_real_ini.Height
+        Size: =21
+        Text: ="Perdas Impactam OEE"
+        Width: =Label_perda_real_ini.Width
+        X: =11
+        Y: =Label_perdanaoimpact_ini.Y + Label_perdanaoimpact_ini.Height + 25
+        ZIndex: =22
+
+    Perdaimpact_ini As text:
+        Align: =Align.Center
+        Default: =Perda_Real_ini - Perdanaoimpact_ini
+        DisplayMode: =DisplayMode.Disabled
+        Height: =Perda_Real_ini.Height
+        Size: =21
+        Width: =Perda_Real_ini.Width
+        X: =361
+        Y: =Label_perdanaoimpact_ini.Y + Label_perdanaoimpact_ini.Height + 25
+        ZIndex: =23
+
+    Label_oee_ini As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =Label_perda_real_ini.Height
+        Size: =21
+        Text: ="OEE"
+        Width: =Label_perda_real_ini.Width
+        X: =11
+        Y: =Label_perdaimpact_ini.Y + Label_perdaimpact_ini.Height + 25
+        ZIndex: =24
+
+    OEE_ini As text:
+        Align: =Align.Center
+        Default: =Round(Prod_Real_ini / If(Perdaimpact_ini.Text = "0", Prod_Real_ini.Text , Perdaimpact_ini+Prod_Real_ini.Text) , 4) * 100 &"%"
+        DisplayMode: =DisplayMode.Disabled
+        Height: =Perda_Real_ini.Height
+        Size: =21
+        Width: =Perda_Real_ini.Width
+        X: =361
+        Y: =Label_perdaimpact_ini.Y + Label_perdaimpact_ini.Height + 25
+        ZIndex: =25
+
+    Filtro_naoprevistoprod As text:
+        Default: ="NÃO PREVISTO PRODUÇÃO"
+        Height: =20
+        Size: =21
+        Visible: =false
+        Width: =182
+        Y: =887
+        ZIndex: =26
+
+    Filtro_refeicao_intervalo As text:
+        Default: ="REFEIÇÃO / INTERVALO"
+        Height: =20
+        Size: =21
+        Visible: =false
+        Width: =150
+        X: =261
+        Y: =887
+        ZIndex: =27
+
+    Filtro_desbalanceamento As text:
+        Default: ="NÃO PREVISTO PRODUÇÃO"
+        Height: =30
+        Size: =21
+        Visible: =false
+        Width: =140
+        X: =477
+        Y: =868
+        ZIndex: =28
+
+    Label10 As label:
+        Height: =62
+        Size: =21
+        Text: ="Texto"
+        Width: =640
+        Y: =921
+        ZIndex: =29
+
+    Icon2_1 As icon.Erase:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Icon: =Icon.Erase
+        OnSelect: =Reset(ComboBoxdata_ini) ; Reset(ComboBoxmaquina_ini) ; Reset(ComboBoxute_ini)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        Tooltip: ="Limpar Filtros"
+        Width: =69
+        X: =571
+        Y: =45
+        ZIndex: =30
+
+    IconRefresh1_2 As icon.Reload:
+        AccessibleLabel: =Self.Tooltip
+        Height: =70
+        Icon: =Icon.Reload
+        OnSelect: =Refresh([@LancamentoProducao]) ; Refresh([@LancamentoPerdas])
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Atualizar informações"
+        Width: =69
+        X: =571
+        ZIndex: =31
+

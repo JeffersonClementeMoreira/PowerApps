@@ -1,0 +1,805 @@
+"Tel_Edit_Producao As screen.'phoneDetailEditLayout_ver3.0'":
+    BackgroundImage: =Transmissões_foto_bw
+    ImagePosition: =ImagePosition.Fill
+
+    RectQuickActionBar3 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    IconCancel1 As icon.Cancel:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Cancel
+        OnSelect: =ResetForm('Form Produção');Back()
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Cancelar item"
+        Width: =88
+        ZIndex: =2
+
+    IconAccept1 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        DisplayMode: =If(varDelta < 0 , DisplayMode.Disabled  ,DisplayMode.Edit)
+        Height: =88
+        Icon: =Icon.Check
+        OnSelect: =SubmitForm('Form Produção')
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Enviar item"
+        Width: =88
+        X: =Parent.Width - Self.Width
+        ZIndex: =3
+
+    LblAppName3 As label:
+        Fill: =RGBA(58, 58, 58, 0)
+        Height: =88
+        Size: =27
+        Text: ="Lançamento Produção"
+        Width: =Parent.Width - IconCancel1.Width - IconAccept1.Width
+        Wrap: =false
+        X: =80
+        ZIndex: =4
+
+    "'Form Produção' As form":
+        DataSource: =[@LancamentoProducao]
+        Height: =831
+        Item: =BrowseGallery1.Selected
+        OnSuccess: =Back()
+        Width: =Parent.Width
+        Y: =103
+        ZIndex: =5
+
+        IDPAI_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =varIDpai
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardidpai.Text
+            Visible: =false
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey9 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardidpai As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =varIDpai
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardidpai.Y + DataCardidpai.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey9.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey9.Y
+                ZIndex: =4
+
+        UTE_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="UTE"
+            Default: =ThisItem.UTE
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"UTE")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "UTE")
+            Required: =true
+            Update: =DataCardute.Selected.Result
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardute.Y + DataCardute.Height
+                ZIndex: =3
+
+            StarVisible2 As label:
+                Align: =Align.Center
+                Height: =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =
+                ZIndex: =4
+
+            DataCardute As combobox:
+                DefaultSelectedItems: |
+                    =LookUp(Distinct(LancamentoProducao,UTE).Result, Result = ThisItem.UTE)
+                DisplayFields: =["Result"]
+                Height: =70
+                InputTextPlaceholder: ="Selecione a UTE"
+                IsSearchable: =false
+                Items: |
+                    =Sort(Distinct(CreateMaquina,UTE),Result)
+                NoSelectionText: ="Selecione a UTE"
+                OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Reset(DataCardsetor) ; Reset(DataCardtipo_de_peca) ; Reset(DataCardmaquina) ; Reset(DataCardoperacao) ; Reset(DataCardquantidade)
+                OnSelect: |
+                    =
+                SearchFields: =["Result"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =30
+                Y: |
+                    =
+                ZIndex: =5
+
+        SETOR_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="SETOR"
+            Default: =ThisItem.SETOR
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"SETOR")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "SETOR")
+            Required: =true
+            Update: =DataCardsetor.Selected.Result
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            ErrorMessage10 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardsetor.Y + DataCardsetor.Height
+                ZIndex: =3
+
+            StarVisible10 As label:
+                Align: =Align.Center
+                Height: =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =
+                ZIndex: =4
+
+            DataCardsetor As combobox:
+                DefaultSelectedItems: |
+                    = LookUp(Distinct(LancamentoProducao,SETOR).Result, Result = ThisItem.SETOR) // Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
+                DisplayFields: =["Result"]
+                Height: =70
+                InputTextPlaceholder: ="Insira o Setor"
+                IsSearchable: =false
+                Items: =Sort(Distinct( Filter(CreateMaquina, Text(DataCardute.Selected.Result) in UTE) , SETOR ).Result , Result) // Distinct(CreateMaquina;SETOR)
+                NoSelectionText: ="Insira o Setor"
+                OnChange: =Reset(DataCardtipo_de_peca) ; Reset(DataCardmaquina) ; Reset(DataCardoperacao) 
+                SearchFields: =["Result"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =30
+                Y: |
+                    =
+                ZIndex: =5
+
+        OPERACAO_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OPERA_x00c7__x00c3_O"
+            Default: =ThisItem.OPERACAO
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"OPERA_x00c7__x00c3_O")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "OPERA_x00c7__x00c3_O")
+            Required: =true
+            Update: =DataCardoperacao.Selected.Result
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardoperacao.Y + DataCardoperacao.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Height: =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =
+                ZIndex: =4
+
+            DataCardoperacao As combobox:
+                DefaultSelectedItems: |
+                    =LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = ThisItem.OPERACAO)
+                DisplayFields: =["Result"]
+                Height: =70
+                InputTextPlaceholder: ="Insira a Operação"
+                IsSearchable: =false
+                Items: |
+                    =Sort( Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , OPERACAO ).Result , Result) //Distinct(CreateMaquina;OPERACAO).Result
+                NoSelectionText: ="Insira a Operação"
+                OnChange: =Reset(DataCardtipo_de_peca) ; Reset(DataCardmaquina)
+                SearchFields: =["Result"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =30
+                Y: |
+                    =
+                ZIndex: =5
+
+        MAQUINA_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="MAQUINA"
+            Default: =ThisItem.MAQUINA
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"MAQUINA")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "MAQUINA")
+            Required: =true
+            Update: =DataCardmaquina.Selected.Result
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            ErrorMessage6 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardmaquina.Y + DataCardmaquina.Height
+                ZIndex: =3
+
+            StarVisible6 As label:
+                Align: =Align.Center
+                Height: =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =
+                ZIndex: =4
+
+            DataCardmaquina As combobox:
+                DefaultSelectedItems: =LookUp(Distinct(LancamentoProducao,MAQUINA).Result, Result = ThisItem.MAQUINA)
+                DisplayFields: =["Result"]
+                Height: =70
+                InputTextPlaceholder: ="CAF Máquina - Somente Números"
+                IsSearchable: =false
+                Items: =Sort(Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE, Text(DataCardoperacao.Selected.Result) in OPERACAO) , CAF).Result , Result) //Distinct(CreateMaquina;CAF)
+                NoSelectionText: ="CAF Máquina - Somente Números"
+                OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , Cap_Produtiva - DataCardquantidade) ; Reset(DataCardquantidade) ; Set(varDelay,true) ; Reset(DataCardtipo_de_peca)
+                SearchFields: =["Result"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =30
+                Y: |
+                    =
+                ZIndex: =5
+
+        DATA_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            ContentLanguage: =""
+            DataField: ="DATA"
+            Default: =ThisItem.DATA
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"DATA")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "DATA")
+            Required: =true
+            Update: =DataCarddata.SelectedDate
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            ErrorMessage9 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: |
+                    =DataCarddata.Y + DataCarddata.Height
+                ZIndex: =3
+
+            StarVisible9 As label:
+                Align: =Align.Center
+                Height: =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =
+                ZIndex: =4
+
+            DataCarddata As datepicker:
+                DefaultDate: =If('Form Produção'.Mode <> FormMode.New ,DATA_Card.Default, Today())
+                Height: =73
+                OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result)
+                Size: =24
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =5
+
+        HORA_INICIO_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="HORA_INICIO"
+            Default: =
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"HORA_INICIO")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =75
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "HORA_INICIO")
+            Required: =true
+            Update: =DataCardhora_inicio.Selected.Result
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardhora_inicio.Y + DataCardhora_inicio.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: |
+                    =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =
+                ZIndex: =4
+
+            DataCardhora_inicio As combobox:
+                DefaultSelectedItems: |
+                    =LookUp(Distinct(CreateHora,Hora).Result, Result = ThisItem.HORA_INICIO)
+                    
+                     // Distinct(CreateHora;Hora).Result           LookUp(Distinct(LancamentoProducao;TIPO_DE_PECA).Result; Result = ThisItem.TIPO_DE_PECA)          If('Form Produção'.Mode <> FormMode.New ;{Value:HORA_INICIO_Card.Default})   LookUp(Distinct(LancamentoProducao;HORA_INICIO).Result; Result = ThisItem.HORA_INICIO)
+                DisplayFields: =["Result"]
+                Height: =70
+                InputTextPlaceholder: ="Hora"
+                IsSearchable: =false
+                Items: =Distinct(CreateHora,Hora)
+                NoSelectionText: ="Hora"
+                OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result)
+                SearchFields: =["Result"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =5
+
+        COLABORADOR_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="COLABORADOR"
+            Default: =ThisItem.COLABORADOR
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"COLABORADOR")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "COLABORADOR")
+            Required: =true
+            Update: =DataCardcolaborador.Text
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardcolaborador As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Clear: =true
+                Default: =If('Form Produção'.Mode <> FormMode.New ,COLABORADOR_Card.Default)
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                HintText: ="Registro Colaborador"
+                MaxLength: =Parent.MaxLength
+                OnChange: |-
+                    =If(DataCardcolaborador.Text <> "" And
+                          Value(DataCardcolaborador.Text) <> RoundDown(Value(DataCardcolaborador.Text),0),
+                              Notify("Favor digitar apenas o número do Registro");
+                              Reset(DataCardcolaborador)
+                    )
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                VirtualKeyboardMode: =VirtualKeyboardMode.Numeric
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =
+                ZIndex: =2
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardcolaborador.Y + DataCardcolaborador.Height
+                ZIndex: =3
+
+            StarVisible5 As label:
+                Align: =Align.Center
+                Height: |
+                    =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: |
+                    =
+                ZIndex: =4
+
+        TIPO_DE_PECA_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TIPO_DE_PECA"
+            Default: =ThisItem.TIPO_DE_PECA
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"TIPO_DE_PECA")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "TIPO_DE_PECA")
+            Required: =true
+            Update: =DataCardtipo_de_peca.Selected.Result
+            Width: =640
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardtipo_de_peca.Y + DataCardtipo_de_peca.Height
+                ZIndex: =3
+
+            StarVisible7 As label:
+                Align: =Align.Center
+                Height: =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: |
+                    =
+                ZIndex: =4
+
+            DataCardtipo_de_peca As combobox:
+                DefaultSelectedItems: =LookUp(Distinct(LancamentoProducao,TIPO_DE_PECA).Result, Result = ThisItem.TIPO_DE_PECA)
+                DisplayFields: =["Result"]
+                Height: =70
+                InputTextPlaceholder: ="Selecione o tipo de peças"
+                IsSearchable: =false
+                Items: =Sort( Distinct( Filter(CreatePeca, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , PECA).Result , Result)
+                NoSelectionText: ="Selecione o tipo de peças"
+                SearchFields: =["Result"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Width: =Parent.Width - 60
+                X: =30
+                Y: |
+                    =
+                ZIndex: =5
+
+        QUANTIDADE_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            ContentLanguage: =""
+            DataField: ="QUANTIDADE"
+            Default: =ThisItem.QUANTIDADE
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"QUANTIDADE")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =178
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "QUANTIDADE")
+            Required: =true
+            Update: =DataCardquantidade.Text
+            Width: =640
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardquantidade As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =If('Form Produção'.Mode=FormMode.New , 0 , Parent.Default)
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                HintText: ="Insira a quantidade produzida"
+                MaxLength: =Parent.MaxLength
+                OnChange: |-
+                    =If(DataCardquantidade.Text <> "" And
+                          Value(DataCardquantidade.Text) <> RoundDown(Value(DataCardquantidade.Text),0),
+                              Notify("Favor digitar apenas o número do Registro");
+                              Reset(DataCardquantidade)
+                    ); Set(varDelta , Cap_Produtiva - DataCardquantidade)
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                VirtualKeyboardMode: =VirtualKeyboardMode.Numeric
+                Width: =150
+                X: =45
+                Y: =86
+                ZIndex: =2
+
+            ErrorMessage8 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardquantidade.Y + DataCardquantidade.Height
+                ZIndex: =3
+
+            StarVisible8 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 0, 0, 1)
+                Height: |
+                    =
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: |
+                    =
+                ZIndex: =4
+
+            Label_Prod_Realizada As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =86
+                Size: =21
+                Text: ="Prod. Realizada"
+                X: =45
+                ZIndex: =5
+
+            Label_Prod_Prevista As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =86
+                Size: =21
+                Text: ="Prod. Prevista"
+                X: =258
+                ZIndex: =7
+
+            CardProd_Delta As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: |-
+                    =varDelta
+                              
+                DelayOutput: =true
+                DisplayMode: =DisplayMode.Disabled
+                Format: =TextFormat.Number
+                Height: =70
+                HintText: ="Insira a quantidade produzida"
+                MaxLength: =Parent.MaxLength
+                OnChange: =
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                TabIndex: =-1
+                Tooltip: =Parent.DisplayName
+                Width: =150
+                X: =466
+                Y: =86
+                ZIndex: =8
+
+            Label_Delta As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =86
+                Size: =21
+                Text: ="Delta"
+                X: =466
+                ZIndex: =9
+
+    Gal_Producao_Maxima As gallery.galleryVertical:
+        Height: =108
+        Items: |
+            =If('Form Produção'.Mode <> FormMode.New , Filter(CreateMaquina , DataCardmaquina.Selected.Result = CAF).CAPACIDADE , Filter( CreateMaquina , DataCardmaquina.Selected.Result = CAF).CAPACIDADE)
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplateSize: =103
+        Width: =187
+        X: =223
+        Y: =826
+        ZIndex: =6
+
+        Cap_Produtiva As text:
+            Align: =Align.Center
+            Default: =ThisItem.CAPACIDADE
+            DisplayMode: =DisplayMode.View
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Width: =144
+            X: =33
+            ZIndex: =1
+
+    Timer1 As timer:
+        Duration: =2500
+        Height: =70
+        OnTimerEnd: =Set(varDelta , Cap_Produtiva - DataCardquantidade) ; Set(varDelay,false)
+        Reset: =true
+        Start: =varDelay
+        Visible: =false
+        Width: =280
+        X: =360
+        Y: =1060
+        ZIndex: =7
+
