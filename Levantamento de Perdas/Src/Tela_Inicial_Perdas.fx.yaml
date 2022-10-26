@@ -1,0 +1,327 @@
+"Tela_Inicial_Perdas As screen.'phoneBrowseLayout_ver3.0'":
+    BackgroundImage: =Transmissões_foto_bw
+    ImagePosition: =ImagePosition.Fill
+
+    RectQuickActionBar1_1 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1_1 As label:
+        Fill: =RGBA(58, 58, 58, 0)
+        Height: =88
+        Size: =27
+        Text: ="Perdas"
+        Width: =278
+        Wrap: =false
+        X: =20
+        ZIndex: =2
+
+    IconRefresh1_1 As icon.Reload:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Reload
+        OnSelect: =Refresh([@LancamentoProducao])
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Atualizar lista"
+        Width: =80
+        X: =Parent.Width - IconNewItem1_1.Width - IconSortUpDown1_1.Width - Self.Width
+        ZIndex: =3
+
+    IconSortUpDown1_1 As icon.ArrowsUpDown:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Sort
+        OnSelect: |-
+            =UpdateContext({SortDescending1: !SortDescending1})
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: =If(SortDescending1, "Classificar lista em ordem alfabética inversa", "Classificar lista em ordem alfabética")
+        Width: =80
+        X: =Parent.Width - IconNewItem1_1.Width - Self.Width
+        ZIndex: =4
+
+    IconNewItem1_1 As icon.Add:
+        AccessibleLabel: =Self.Tooltip
+        DisplayMode: =If(DataSourceInfo([@LancamentoProducao], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =88
+        Icon: =Icon.Add
+        OnSelect: |
+            =NewForm(Formperdas);Navigate(Tel_Edit_Perdas, ScreenTransition.None); Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Criar novo item"
+        Width: =80
+        X: =Parent.Width - Self.Width
+        ZIndex: =5
+
+    SearchIcon1_1 As icon.Search:
+        Color: =RGBA(191, 190, 190, 1)
+        Height: =Self.Width
+        Icon: =Icon.Search
+        PaddingBottom: =14
+        PaddingLeft: =14
+        PaddingRight: =14
+        PaddingTop: =14
+        Tooltip: ="Pesquisar"
+        Width: =ComboBoxuteperdas.Height
+        X: =ComboBoxuteperdas.X
+        Y: =ComboBoxuteperdas.Y
+        ZIndex: =7
+
+    Rectangle11_1 As rectangle:
+        Height: =2
+        Width: =Parent.Width
+        Y: =ComboBoxuteperdas.Y + ComboBoxuteperdas.Height
+        ZIndex: =8
+
+    "BrowseGallery1perdas As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        FocusedBorderColor: =
+        Height: =856
+        Items: |
+            =SortByColumns(
+            Filter(LancamentoPerdas,
+             (IsBlank(Text(ComboBoxmaquinaperdas.Selected.Result)) || ComboBoxmaquinaperdas.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxuteperdas.Selected.Result)) || ComboBoxuteperdas.Selected.Result = UTE
+            ) && (IsBlank(Text(ComboBoxdataperdas.Selected.Result)) || ComboBoxdataperdas.Selected.Result = DATA
+            )),"HORA_INICIO", If(SortDescending1, Descending, Ascending))
+        Layout: =Layout.Vertical
+        NavigationStep: =2
+        OnSelect: =Navigate(Tela_Detail_Perdas, ScreenTransition.None)
+        ShowScrollbar: =false
+        TemplatePadding: =1
+        TemplateSize: =Min(168, Self.Height - 60)
+        Transition: =Transition.Pop
+        Width: =Parent.Width
+        Y: =263
+        ZIndex: =9
+
+        Label1_1 As label:
+            Fill: =If(ThisItem.IsSelected,RGBA(6,72,34,1))
+            Height: =168
+            OnSelect: =Select(Parent);Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & Value(DataCardhora_inicio.Selected.Result)) ; Set(varDelta , Cap_Produtiva - DataCardquantidade)
+            Size: =21
+            Text: =
+            Width: =638
+            ZIndex: =1
+
+        Title1_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="CAF " & ThisItem.MAQUINA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =2
+
+        Subtitle1_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="UTE: " & ThisItem.UTE
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title1_1.Y + Title1_1.Height + 2
+            ZIndex: =3
+
+        Body1_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Data: " & ThisItem.DATA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =216
+            X: =32
+            Y: =Subtitle1_1.Y + Subtitle1_1.Height + 4
+            ZIndex: =4
+
+        NextArrow1_1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent);Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & Value(DataCardhora_inicio.Selected.Result)) ; Set(varDelta , Cap_Produtiva - DataCardquantidade)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="Exibir detalhes do item"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =5
+
+        Separator1_1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
+
+        Body1_3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =37
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Hora Início: " & ThisItem.HORA_INICIO
+            VerticalAlign: =VerticalAlign.Top
+            Width: =261
+            X: =32
+            Y: =Body1_2.Y + Body1_2.Height + 4
+            ZIndex: =7
+
+        Body1_4 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =37
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Quantidade: " & ThisItem.QUANTIDADE
+            VerticalAlign: =VerticalAlign.Top
+            Width: =326
+            X: =312
+            Y: =130
+            ZIndex: =8
+
+        Body1_5 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =60
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Tipo de Perda: " & ThisItem.TIPO_DE_PERDA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =308
+            X: =325
+            Y: =54
+            ZIndex: =9
+
+    ComboBoxuteperdas As combobox:
+        DisplayFields: =["Result"]
+        Height: =71
+        InputTextPlaceholder: ="UTE"
+        Items: =Sort(Distinct( CreateMaquina , UTE ).Result , Result)
+        NoSelectionText: ="UTE"
+        SearchFields: =["Result"]
+        SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result , Result),ComboBoxuteperdas.SearchText,"Result")
+        SelectMultiple: =false
+        Size: =21
+        Width: =160
+        X: =1
+        Y: =101
+        ZIndex: =10
+
+    ComboBoxmaquinaperdas As combobox:
+        DisplayFields: =["Result"]
+        Height: =70
+        InputTextPlaceholder: ="MÁQUINA"
+        IsSearchable: =false
+        Items: |
+            =Sort(Distinct( Filter(CreateMaquina, Text(ComboBoxuteperdas.Selected.Result) in UTE) , CAF ).Result , Result)
+        NoSelectionText: ="MÁQUINA"
+        SearchFields: =["Result"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Size: =21
+        Width: =250
+        X: =ComboBoxuteperdas.X + ComboBoxuteperdas.Width + 1
+        Y: =ComboBoxuteperdas.Y
+        ZIndex: =11
+
+    ComboBoxdataperdas As combobox:
+        DisplayFields: =["Result"]
+        Height: =70
+        InputTextPlaceholder: ="DATA"
+        Items: =Distinct( DatasPowerapps , Datas ).Result 
+        NoSelectionText: ="DATA"
+        SearchFields: =["Result"]
+        SearchItems: =Search(Distinct( DatasPowerapps , Datas ).Result ,ComboBoxdataperdas.SearchText,"Result")
+        SelectMultiple: =false
+        Size: =21
+        Width: =225
+        X: |
+            =ComboBoxmaquinaperdas.X + ComboBoxmaquinaperdas.Width + 1
+        Y: =ComboBoxmaquinaperdas.Y
+        ZIndex: =12
+
+    Icon1_1 As icon.Home:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =1
+        Height: =88
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Tela_Inicial_app,ScreenTransition.None)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        Width: =80
+        X: =333
+        ZIndex: =13
+
+    LabelLancamentos_iniperdas As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderStyle: =BorderStyle.Dotted
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =64
+        Size: =21
+        Text: ="Filtro lançamentos perdas"
+        Width: =560
+        X: =40
+        Y: |
+            =185
+        ZIndex: =14
+
+    Icon2_2 As icon.Erase:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =88
+        Icon: =Icon.Erase
+        OnSelect: =Reset(ComboBoxdataperdas) ; Reset(ComboBoxmaquinaperdas) ; Reset(ComboBoxuteperdas)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        Tooltip: ="Limpar Filtros"
+        Width: =80
+        X: =253
+        ZIndex: =15
+
