@@ -63,7 +63,7 @@ Tela_Inicial_app As screen:
     Prod_Real_ini As text:
         Align: =Align.Center
         Default: |-
-            =Sum(Filter(LancamentoProducao,
+            =Sum(Filter(Listaproducao,
              (IsBlank(Text(ComboBoxmaquina_ini.Selected.Result)) || ComboBoxmaquina_ini.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute_ini.Selected.Result)) || ComboBoxute_ini.Selected.Result = UTE
             ) && (IsBlank(Text(ComboBoxdata_ini.Selected.Result)) || ComboBoxdata_ini.Selected.Result = DATA
             )),QUANTIDADE)
@@ -310,13 +310,14 @@ Tela_Inicial_app As screen:
         AccessibleLabel: =Self.Tooltip
         Height: =70
         Icon: =Icon.Reload
-        OnSelect: |
+        OnSelect: |-
             =Refresh([@LancamentoProducao]) ; Refresh([@LancamentoPerdas]);
             
             
-            ClearCollect(ListaProducao,Filter(LancamentoProducao,IDEspelho >= 1));
-            UpdateContext({maiorIdEspelho: Max(ListaProducao,IDEspelho)});
-            Collect(ListaProducao,Filter(LancamentoProducao,IDEspelho >= maiorIdEspelho));
+            ClearCollect(Listaproducao,Filter(LancamentoProducao,IDEspelho >= 1));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            UpdateContext({IdEspelhoatual: 0});
+            Select(btn_collprod)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -326,4 +327,41 @@ Tela_Inicial_app As screen:
         Width: =69
         X: =571
         ZIndex: =31
+
+    btn_collprod As button:
+        Height: =70
+        OnSelect: |
+            =UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho >= maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+        Size: =24
+        Text: ="Botão"
+        Width: =280
+        ZIndex: =32
+
+    Button2 As button:
+        Height: =70
+        Size: =24
+        Text: ="Botão"
+        Width: =280
+        X: =11
+        Y: =926
+        ZIndex: =33
+
+    TextInput1 As text:
+        Default: =IdEspelhoatual
+        Height: =72
+        Size: =21
+        Width: =306
+        Y: =70
+        ZIndex: =34
+
+    TextInput1_1 As text:
+        Default: =maiorIdEspelho
+        Height: =72
+        Size: =21
+        Width: =306
+        X: =334
+        Y: =70
+        ZIndex: =35
 

@@ -89,21 +89,11 @@
         FocusedBorderColor: =
         Height: =856
         Items: |
-            =If(((IsBlank(Text(ComboBoxmaquina.Selected.Result))) && (IsBlank(Text(ComboBoxute.Selected.Result))) && (IsBlank(Text(ComboBoxdata.Selected.Result))
-            )) ,
-            
-            SortByColumns(
-            Filter(LancamentoProducao,
-             (IsBlank(Text(ComboBoxmaquina.Selected.Result)) || ComboBoxmaquina.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute.Selected.Result)) || ComboBoxute.Selected.Result = UTE
-            ) &&  DataHoje.Text
-            ),"HORA_INICIO", If(SortDescending1, Descending, Ascending))
-            
-            ,
-            SortByColumns(
-            Filter(LancamentoProducao,
+            =SortByColumns(
+            Filter(Listaproducao,
              (IsBlank(Text(ComboBoxmaquina.Selected.Result)) || ComboBoxmaquina.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute.Selected.Result)) || ComboBoxute.Selected.Result = UTE
             ) && (IsBlank(Text(ComboBoxdata.Selected.Result)) || ComboBoxdata.Selected.Result = DATA
-            )),"HORA_INICIO", If(SortDescending1, Descending, Ascending)))
+            )),"HORA_INICIO", If(SortDescending1, Descending, Ascending))
         Layout: =Layout.Vertical
         NavigationStep: =2
         OnSelect: =Navigate(Tela_Detail_Producao, ScreenTransition.None)
