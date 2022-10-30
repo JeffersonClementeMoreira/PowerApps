@@ -310,7 +310,13 @@ Tela_Inicial_app As screen:
         AccessibleLabel: =Self.Tooltip
         Height: =70
         Icon: =Icon.Reload
-        OnSelect: =Refresh([@LancamentoProducao]) ; Refresh([@LancamentoPerdas])
+        OnSelect: |
+            =Refresh([@LancamentoProducao]) ; Refresh([@LancamentoPerdas]);
+            
+            
+            ClearCollect(ListaProducao,Filter(LancamentoProducao,IDEspelho >= 1));
+            UpdateContext({maiorIdEspelho: Max(ListaProducao,IDEspelho)});
+            Collect(ListaProducao,Filter(LancamentoProducao,IDEspelho >= maiorIdEspelho));
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
