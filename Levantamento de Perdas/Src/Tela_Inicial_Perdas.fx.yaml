@@ -90,7 +90,7 @@
         Height: =856
         Items: |
             =SortByColumns(
-            Filter(LancamentoPerdas,
+            Filter(Listaperdas,
              (IsBlank(Text(ComboBoxmaquinaperdas.Selected.Result)) || ComboBoxmaquinaperdas.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxuteperdas.Selected.Result)) || ComboBoxuteperdas.Selected.Result = UTE
             ) && (IsBlank(Text(ComboBoxdataperdas.Selected.Result)) || ComboBoxdataperdas.Selected.Result = DATA
             )),"HORA_INICIO", If(SortDescending1, Descending, Ascending))
