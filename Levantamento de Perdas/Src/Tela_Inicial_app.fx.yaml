@@ -316,12 +316,13 @@ Tela_Inicial_app As screen:
             UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
             UpdateContext({IdEspelhoatual: 0});
             
+            Select(btn_collprod);
+            
             ClearCollect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas >= 1));
             UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
             UpdateContext({IdEspelhoatualPerdas: 0});
             
-            Select(btn_collprod);
-            //Select(btn_collperd)
+            Select(btn_collperd)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
