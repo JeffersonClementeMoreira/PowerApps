@@ -3363,6 +3363,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.IdEspelhoatualPerdas"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.IdEspelhoatualPerdas",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "IdEspelhoatualPerdas",
+                "module": "Tela_Inicial_Perdas",
+                "type": "Tela_Inicial_Perdas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.IdEspelhoatualPerdas"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.IdEspelhoatualPerdas",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "IdEspelhoatualPerdas",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.Item"
                 }
               ],

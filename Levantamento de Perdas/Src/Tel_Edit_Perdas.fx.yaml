@@ -26,7 +26,12 @@
         DisplayMode: =If(varDelta < 0 , DisplayMode.Disabled  ,DisplayMode.Edit)
         Height: =88
         Icon: =Icon.Check
-        OnSelect: =SubmitForm(Formperdas)
+        OnSelect: |-
+            =SubmitForm(Formperdas);
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            ClearCollect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
