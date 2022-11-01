@@ -26,7 +26,9 @@
         DisplayMode: =If(varDelta < 0 , DisplayMode.Disabled  ,DisplayMode.Edit)
         Height: =88
         Icon: =Icon.Check
-        OnSelect: =SubmitForm('Form Produção')
+        OnSelect: |+
+            =SubmitForm('Form Produção')
+            
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22

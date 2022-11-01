@@ -338,8 +338,7 @@ Tela_Inicial_app As screen:
     btn_collprod As button:
         Height: =70
         OnSelect: |
-            =
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            =UpdateContext({IdEspelhoatual: maiorIdEspelho});
             Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
             UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
             
