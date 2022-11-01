@@ -3093,6 +3093,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tel_Edit_Producao.IdEspelhoatual"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Producao.IdEspelhoatual",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "IdEspelhoatual",
+                "module": "Tel_Edit_Producao",
+                "type": "Tel_Edit_Producao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tel_Edit_Producao.'Form Produção'.Item"
                 }
               ],

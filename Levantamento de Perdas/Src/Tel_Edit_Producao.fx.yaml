@@ -27,7 +27,11 @@
         Height: =88
         Icon: =Icon.Check
         OnSelect: |+
-            =SubmitForm('Form Produção')
+            =SubmitForm('Form Produção') ;
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
             
         PaddingBottom: =22
         PaddingLeft: =22
