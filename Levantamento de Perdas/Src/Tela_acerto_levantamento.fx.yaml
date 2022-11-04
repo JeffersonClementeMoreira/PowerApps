@@ -1,0 +1,60 @@
+"Tela_acerto_levantamento As screen.'printableLayout_A4Landscape_ver1.0'":
+    Height: =794
+    Width: =1123
+
+    Image1 As image:
+        Height: =794
+        Image: ='Imagem Levantamento de perdas'
+        ImagePosition: =ImagePosition.Fill
+        Width: =1123
+        ZIndex: =1
+
+    Hora_00 As label:
+        Height: =24
+        Size: =12
+        Text: |-
+            ="00:00"
+        Width: =77
+        X: =21
+        Y: =111
+        ZIndex: =2
+
+    Prod_0 As label:
+        Height: =28
+        Size: =12
+        Text: =Sum(Filter(Listaproducao , HORA_INICIO = Hora_00.Text),QUANTIDADE)
+        Width: =85
+        X: =103
+        Y: =113
+        ZIndex: =3
+
+    Hora_01 As label:
+        Height: =24
+        Size: =12
+        Text: |-
+            ="01:00"
+        Width: =77
+        X: =25
+        Y: =139
+        ZIndex: =4
+
+    UTE As combobox:
+        DisplayFields: =["Result"]
+        Height: =20
+        InputTextPlaceholder: ="UTE"
+        Items: =Sort(Distinct( CreateMaquina , UTE ).Result,Result)
+        SearchFields: =["Result"]
+        SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result,Result),UTE.SearchText,"Result")
+        SelectMultiple: =false
+        Size: =12
+        Width: =90
+        X: =98
+        ZIndex: =5
+
+    DatePicker1 As datepicker:
+        Height: =20
+        Size: =12
+        Width: =244
+        X: =877
+        ZIndex: =6
+
