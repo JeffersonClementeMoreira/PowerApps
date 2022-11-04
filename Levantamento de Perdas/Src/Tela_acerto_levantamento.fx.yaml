@@ -22,19 +22,23 @@
     Prod_0 As label:
         Height: =28
         Size: =12
-        Text: =Sum(Filter(Listaproducao , HORA_INICIO = Hora_00.Text),QUANTIDADE)
+        Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
         Width: =85
         X: =103
         Y: =113
         ZIndex: =3
 
-    UTE As combobox:
+    Cbox_UTE As combobox:
         DisplayFields: =["Result"]
         Height: =20
         InputTextPlaceholder: ="UTE"
         Items: =Sort(Distinct( CreateMaquina , UTE ).Result,Result)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         SearchFields: =["Result"]
-        SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result,Result),UTE.SearchText,"Result")
+        SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result,Result),Cbox_UTE.SearchText,"Result")
         SelectMultiple: =false
         Size: =12
         Width: =90
@@ -44,8 +48,9 @@
     DatePicker1 As datepicker:
         Height: =20
         Size: =12
-        Width: =244
-        X: =877
+        Width: |
+            =248
+        X: =873
         ZIndex: =5
 
     Icon1_2 As icon.Home:
@@ -290,22 +295,50 @@
         ZIndex: =29
 
     Prod_Horária As label:
+        Align: =Align.Center
         Height: =23
         Size: =12
-        Text: |-
-            ="23:00"
+        Text: |
+            =If( IsBlank(Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)),0,Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE))
         Width: =77
         X: =103
         Y: =30
         ZIndex: =30
 
     Prod_Diária As label:
+        Align: =Align.Center
         Height: =23
         Size: =12
-        Text: |-
-            ="23:00"
+        Text: =24*Prod_Horária
         Width: =77
         X: =105
         Y: =62
         ZIndex: =31
+
+    Cbox_Maquina As combobox:
+        DisplayFields: =["Result"]
+        Height: =20
+        InputTextPlaceholder: ="CAF"
+        IsSearchable: =false
+        Items: =Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE)) , CAF ).Result , Result)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingTop: =0
+        SearchFields: =["Result"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Size: =12
+        Width: =173
+        X: =589
+        ZIndex: =32
+
+    LabelDate As label:
+        Height: =70
+        Size: =21
+        Text: |
+            =DatePicker1.SelectedDate
+        Width: =560
+        X: =353
+        Y: =243
+        ZIndex: =33
 
