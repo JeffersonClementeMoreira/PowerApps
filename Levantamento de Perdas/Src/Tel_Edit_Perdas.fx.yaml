@@ -1211,13 +1211,13 @@
         IdEspelhoPerdas_DataCard1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="IdEspelhoPerdas"
-            Default: =If(IsBlank(ThisItem.ID),Max(Listaperdas,IdEspelhoPerdas)+1,ThisItem.ID)
+            Default: =If(IsBlank(ThisItem.ID),Max(Listaperdas,IdEspelhoPerdas)+5000,ThisItem.ID)
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"IdEspelhoPerdas")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =If(IsBlank(ThisItem.ID),Max(Listaperdas,IdEspelhoPerdas)+1,ThisItem.ID)
+            Update: =If(IsBlank(ThisItem.ID),Max(Listaperdas,IdEspelhoPerdas)+5000,ThisItem.ID)
             Visible: =false
             Width: =640
             X: =0
