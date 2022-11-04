@@ -20,11 +20,12 @@
         ZIndex: =2
 
     Prod_0 As label:
+        Align: =Align.Center
         Height: =28
         Size: =12
         Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
         Width: =85
-        X: =103
+        X: =98
         Y: =113
         ZIndex: =3
 
@@ -320,7 +321,7 @@
         Height: =20
         InputTextPlaceholder: ="CAF"
         IsSearchable: =false
-        Items: =Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE)) , CAF ).Result , Result)
+        Items: =Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE) && (Text(Cbox_Setor.Selected.Result) in SETOR)) , CAF ).Result , Result)
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingTop: =0
@@ -333,12 +334,30 @@
         ZIndex: =32
 
     LabelDate As label:
-        Height: =70
+        Height: =44
         Size: =21
         Text: |
             =DatePicker1.SelectedDate
-        Width: =560
-        X: =353
-        Y: =243
+        Visible: =false
+        Width: =172
+        X: =873
+        Y: =23
         ZIndex: =33
+
+    Cbox_Setor As combobox:
+        DisplayFields: =["Result"]
+        Height: =20
+        InputTextPlaceholder: ="CAF"
+        IsSearchable: =false
+        Items: =Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE)) , SETOR ).Result , Result)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingTop: =0
+        SearchFields: =["Result"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Size: =12
+        Width: =195
+        X: =291
+        ZIndex: =34
 
