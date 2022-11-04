@@ -63,19 +63,249 @@
         Height: =23
         Size: =12
         Text: |-
-            ="00:00"
+            ="01:00"
         Width: =77
         X: =Hora_00.X
-        Y: =Hora_00.Y+Hora_1.Height + 2
+        Y: =Hora_00.Y+Hora_1.Height + 3
         ZIndex: =7
 
     Hora_2 As label:
         Height: =23
         Size: =12
         Text: |-
-            ="00:00"
+            ="02:00"
         Width: =77
         X: =Hora_00.X
-        Y: =Hora_1.Y+Hora_2.Height + 2
+        Y: =Hora_1.Y+Hora_2.Height + 3
         ZIndex: =8
+
+    Hora_3 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="03:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_2.Y+Hora_3.Height + 3
+        ZIndex: =9
+
+    Hora_4 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="04:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_3.Y+Hora_4.Height + 3
+        ZIndex: =10
+
+    Hora_5 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="05:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_4.Y+Hora_5.Height + 3
+        ZIndex: =11
+
+    Hora_6 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="06:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_5.Y+Hora_6.Height+Hora_6.Height + 3
+        ZIndex: =12
+
+    Hora_7 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="07:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_6.Y+Hora_7.Height + 3
+        ZIndex: =13
+
+    Hora_8 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="08:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_7.Y+Hora_8.Height + 3
+        ZIndex: =14
+
+    Hora_9 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="09:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_8.Y+Hora_9.Height + 3
+        ZIndex: =15
+
+    Hora_10 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="10:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_9.Y+Hora_10.Height + 3
+        ZIndex: =16
+
+    Hora_11 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="11:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_10.Y+Hora_11.Height + 3
+        ZIndex: =17
+
+    Hora_12 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="12:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_11.Y+Hora_12.Height + 3
+        ZIndex: =18
+
+    Hora_13 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="13:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_12.Y+Hora_13.Height + 3
+        ZIndex: =19
+
+    Hora_14 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="14:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_13.Y+Hora_14.Height + 3
+        ZIndex: =20
+
+    Hora_15 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="15:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_14.Y+Hora_15.Height+Hora_15.Height + 3
+        ZIndex: =21
+
+    Hora_16 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="16:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_15.Y+Hora_16.Height + 3
+        ZIndex: =22
+
+    Hora_17 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="17:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_16.Y+Hora_17.Height + 3
+        ZIndex: =23
+
+    Hora_18 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="18:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_17.Y+Hora_18.Height + 3
+        ZIndex: =24
+
+    Hora_19 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="19:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_18.Y+Hora_19.Height + 3
+        ZIndex: =25
+
+    Hora_20 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="20:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_19.Y+Hora_20.Height + 3
+        ZIndex: =26
+
+    Hora_21 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="21:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_20.Y+Hora_21.Height + 3
+        ZIndex: =27
+
+    Hora_22 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="22:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_21.Y+Hora_22.Height + 3
+        ZIndex: =28
+
+    Hora_23 As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="23:00"
+        Width: =77
+        X: =Hora_00.X
+        Y: =Hora_22.Y+Hora_23.Height + 3
+        ZIndex: =29
+
+    Prod_Horária As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="23:00"
+        Width: =77
+        X: =103
+        Y: =30
+        ZIndex: =30
+
+    Prod_Diária As label:
+        Height: =23
+        Size: =12
+        Text: |-
+            ="23:00"
+        Width: =77
+        X: =105
+        Y: =62
+        ZIndex: =31
 

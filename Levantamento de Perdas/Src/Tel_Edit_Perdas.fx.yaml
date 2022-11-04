@@ -1178,6 +1178,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
+            Visible: =false
             Width: =640
             X: =0
             Y: =16
@@ -1217,6 +1218,7 @@
             Height: =50
             Required: =false
             Update: =If(IsBlank(ThisItem.ID),Max(Listaperdas,IdEspelhoPerdas)+1,ThisItem.ID)
+            Visible: =false
             Width: =640
             X: =0
             Y: =17
