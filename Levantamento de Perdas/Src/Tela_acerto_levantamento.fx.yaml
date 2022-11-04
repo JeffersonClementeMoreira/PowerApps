@@ -21,12 +21,16 @@
 
     Prod_0 As label:
         Align: =Align.Center
-        Height: =28
+        Height: =23
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
         Size: =12
         Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
         Width: =85
         X: =98
-        Y: =113
+        Y: =Hora_00.Y
         ZIndex: =3
 
     Cbox_UTE As combobox:
@@ -360,4 +364,18 @@
         Width: =195
         X: =291
         ZIndex: =34
+
+    Prod_1 As label:
+        Align: =Align.Center
+        Height: =23
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
+        Width: =45
+        X: =188
+        Y: =Hora_00.Y
+        ZIndex: =35
 
