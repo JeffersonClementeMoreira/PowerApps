@@ -282,14 +282,6 @@ Tela_Inicial_app As screen:
         Y: =868
         ZIndex: =28
 
-    Label10 As label:
-        Height: =62
-        Size: =21
-        Text: ="Texto"
-        Width: =640
-        Y: =921
-        ZIndex: =29
-
     Icon2_1 As icon.Erase:
         Color: =RGBA(255, 255, 255, 1)
         Height: =80
@@ -618,4 +610,13 @@ Tela_Inicial_app As screen:
         Width: =280
         Y: =70
         ZIndex: =33
+
+    Btn_vis_lev_perdas As button:
+        OnSelect: =Navigate(Tela_acerto_levantamento)
+        Size: =16
+        Text: ="Visualização Levantamento de Perdas"
+        Width: =587
+        X: =26
+        Y: =956
+        ZIndex: =34
 
