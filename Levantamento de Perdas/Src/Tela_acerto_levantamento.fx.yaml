@@ -19,6 +19,7 @@
         Size: =12
         Text: |-
             ="00:00"
+        Visible: =false
         Width: =49
         X: =2
         Y: =140
@@ -82,6 +83,7 @@
         Size: =12
         Text: |-
             ="01:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_00.Y + Hora_00.Height
@@ -96,6 +98,7 @@
         Size: =12
         Text: |-
             ="02:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_1.Y + Hora_1.Height
@@ -110,6 +113,7 @@
         Size: =12
         Text: |-
             ="03:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_2.Y + Hora_2.Height
@@ -124,6 +128,7 @@
         Size: =12
         Text: |-
             ="04:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_3.Y + Hora_3.Height
@@ -138,6 +143,7 @@
         Size: =12
         Text: |-
             ="05:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_4.Y + Hora_4.Height
@@ -152,6 +158,7 @@
         Size: =12
         Text: |-
             ="06:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_5.Y + Hora_5.Height
@@ -166,6 +173,7 @@
         Size: =12
         Text: |-
             ="07:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_6.Y + Hora_6.Height
@@ -180,6 +188,7 @@
         Size: =12
         Text: |-
             ="08:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_7.Y + Hora_7.Height
@@ -194,6 +203,7 @@
         Size: =12
         Text: |-
             ="09:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_8.Y + Hora_8.Height
@@ -208,6 +218,7 @@
         Size: =12
         Text: |-
             ="10:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_9.Y + Hora_9.Height
@@ -222,6 +233,7 @@
         Size: =12
         Text: |-
             ="11:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_10.Y + Hora_10.Height
@@ -236,6 +248,7 @@
         Size: =12
         Text: |-
             ="12:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_11.Y + Hora_11.Height
@@ -250,6 +263,7 @@
         Size: =12
         Text: |-
             ="13:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_12.Y + Hora_12.Height
@@ -264,6 +278,7 @@
         Size: =12
         Text: |-
             ="14:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_13.Y + Hora_13.Height
@@ -278,6 +293,7 @@
         Size: =12
         Text: |-
             ="15:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_14.Y + Hora_14.Height
@@ -292,6 +308,7 @@
         Size: =12
         Text: |-
             ="16:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_15.Y + Hora_15.Height
@@ -306,6 +323,7 @@
         Size: =12
         Text: |-
             ="17:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_16.Y + Hora_16.Height
@@ -320,6 +338,7 @@
         Size: =12
         Text: |-
             ="18:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_17.Y + Hora_17.Height
@@ -334,6 +353,7 @@
         Size: =12
         Text: |-
             ="19:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_18.Y + Hora_18.Height
@@ -348,6 +368,7 @@
         Size: =12
         Text: |-
             ="20:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_19.Y + Hora_19.Height
@@ -362,6 +383,7 @@
         Size: =12
         Text: |-
             ="21:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_20.Y + Hora_20.Height
@@ -376,6 +398,7 @@
         Size: =12
         Text: |-
             ="22:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_21.Y + Hora_21.Height
@@ -390,6 +413,7 @@
         Size: =12
         Text: |-
             ="23:00"
+        Visible: =false
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_22.Y + Hora_22.Height
@@ -690,7 +714,7 @@
         PaddingTop: =2
         Size: =12
         Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AJUSTE DE INÍCIO E FINAL DE TURNO") )),QUANTIDADE)
-        Width: =47
+        Width: =46
         X: =Limpeza_tecnica_00.X + Limpeza_tecnica_00.Width 
         Y: =Hora_00.Y
         ZIndex: =54
@@ -705,7 +729,91 @@
         Size: =12
         Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "MICRO PARADA") )),QUANTIDADE)
         Width: =47
-        X: =Limpeza_tecnica_00.X + Limpeza_tecnica_00.Width 
+        X: =Ajuste_inicio_turno_00.X + Ajuste_inicio_turno_00.Width 
         Y: =Hora_00.Y
         ZIndex: =55
+
+    FaltaMaterial_00 As label:
+        Align: =Align.Center
+        Height: =Hora_00.Height
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "FALTA DE MATERIAL DIRETO") )),QUANTIDADE)
+        Width: =46
+        X: =MicroParada_00.X + MicroParada_00.Width 
+        Y: =Hora_00.Y
+        ZIndex: =56
+
+    Velocidade_producao_00 As label:
+        Align: =Align.Center
+        Height: =Hora_00.Height
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "VELOCIDADE DE PRODUÇÃO") )),QUANTIDADE)
+        Width: =47
+        X: =FaltaMaterial_00.X + FaltaMaterial_00.Width 
+        Y: =Hora_00.Y
+        ZIndex: =57
+
+    Carga_Descarga_00 As label:
+        Align: =Align.Center
+        Height: =Hora_00.Height
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AUSÊNCIA / CARGA IMPOSSÍVEL") || (TIPO_DE_PERDA = "BLOQUEIO / DESCARGA IMPOSSÍVEL") )),QUANTIDADE)
+        Width: =47
+        X: =Velocidade_producao_00.X + Velocidade_producao_00.Width 
+        Y: =Hora_00.Y
+        ZIndex: =58
+
+    OPI_foraPDT_00 As label:
+        Align: =Align.Center
+        Height: =Hora_00.Height
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AUSÊNCIA / CARGA IMPOSSÍVEL") || (TIPO_DE_PERDA = "BLOQUEIO / DESCARGA IMPOSSÍVEL") )),QUANTIDADE)
+        Width: =46
+        X: =Carga_Descarga_00.X + Carga_Descarga_00.Width 
+        Y: =Hora_00.Y
+        ZIndex: =59
+
+    Refugo_00 As label:
+        Align: =Align.Center
+        Height: =Hora_00.Height
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "REFUGO") )),QUANTIDADE)
+        Width: =46
+        X: =OPI_foraPDT_00.X + OPI_foraPDT_00.Width 
+        Y: =Hora_00.Y
+        ZIndex: =60
+
+    Retrabalho_00 As label:
+        Align: =Align.Center
+        Height: =Hora_00.Height
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "REFUGO") )),QUANTIDADE)
+        Width: =46
+        X: =Refugo_00.X + Refugo_00.Width 
+        Y: =Hora_00.Y
+        ZIndex: =61
 
