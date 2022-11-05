@@ -429,7 +429,7 @@
         Text: |
             =If( IsBlank(Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)),0,Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE))
         Width: =54
-        X: =213
+        X: =657
         ZIndex: =30
 
     Prod_Diária As label:
@@ -438,7 +438,7 @@
         Size: =12
         Text: =24*Prod_Horária
         Width: =54
-        X: =213
+        X: =657
         Y: =26
         ZIndex: =31
 
@@ -569,7 +569,7 @@
         Size: =12
         Text: ="Capacidade Hora"
         Width: =142
-        X: =71
+        X: =515
         ZIndex: =43
 
     Label_Capacidade_Dia As label:
@@ -581,7 +581,7 @@
         Size: =12
         Text: ="Capacidade Dia"
         Width: =142
-        X: =71
+        X: =515
         Y: =26
         ZIndex: =44
 
@@ -8577,7 +8577,7 @@
         Fill: =RGBA(9, 33, 98, 1)
         Height: =23
         Icon: =Icon.Erase
-        OnSelect: =Reset(DatePicker1) ; Reset(Cbox_Maquina) ; Reset(Cbox_UTE)
+        OnSelect: =Reset(DatePicker1) ; Reset(Cbox_Maquina) ; Reset(Cbox_UTE) ; Reset(Cbox_Setor)
         PaddingBottom: =2
         PaddingLeft: =2
         PaddingRight: =2
@@ -8587,4 +8587,13 @@
         X: =730
         Y: =1
         ZIndex: =594
+
+    Label2 As label:
+        Height: =46
+        Size: =16
+        Text: ="Levantamento de Perdas - " & Cbox_Maquina.Selected.Result
+        Width: =466
+        X: =37
+        Y: =3
+        ZIndex: =595
 
