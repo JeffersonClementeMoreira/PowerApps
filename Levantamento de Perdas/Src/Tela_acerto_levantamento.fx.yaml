@@ -581,7 +581,7 @@
 
     Delta_prod_00 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_00.Text <> 0 , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_00.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -826,7 +826,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
+        Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_1.Y
@@ -840,7 +840,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "QUEBRAS")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "QUEBRAS")),QUANTIDADE)
         Width: =47
         X: =Refeicao_1.X + Refeicao_1.Width
         Y: =Hora_1.Y
@@ -854,7 +854,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "TROCA DE FERRAMENTA")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "TROCA DE FERRAMENTA")),QUANTIDADE)
         Width: =46
         X: =Quebras_1.X + Quebras_1.Width
         Y: =Hora_1.Y
@@ -868,7 +868,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AJUSTES / REGULAGENS") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AJUSTES / REGULAGENS") )),QUANTIDADE)
         Width: =47
         X: =Troca_Ferramentas_1.X + Troca_Ferramentas_1.Width
         Y: =Hora_1.Y
@@ -882,7 +882,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "TROCA DE TIPO / SETUP") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "TROCA DE TIPO / SETUP") )),QUANTIDADE)
         Width: =46
         X: =Ajustes_Regulagens_1.X + Ajustes_Regulagens_1.Width
         Y: =Hora_1.Y
@@ -896,7 +896,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "SIST. DE MEDIÇÃO PERIFÉRICOS") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "SIST. DE MEDIÇÃO PERIFÉRICOS") )),QUANTIDADE)
         Width: =47
         X: =Troca_tipo_1.X + Troca_tipo_1.Width 
         Y: =Hora_1.Y
@@ -904,7 +904,7 @@
 
     Delta_prod_1 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_1.Text <> 0 , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_1.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -925,7 +925,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_1.X + Delta_prod_1.Width
         Y: =Hora_1.Y
@@ -939,7 +939,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "REUNIÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "REUNIÃO")),QUANTIDADE)
         Width: =46
         X: =Nao_Prev_Prod_1.X + Nao_Prev_Prod_1.Width
         Y: =Hora_1.Y
@@ -953,7 +953,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "REFEIÇÃO / INTERVALO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "REFEIÇÃO / INTERVALO")),QUANTIDADE)
         Width: =46
         X: =Reuniao_1.X + Reuniao_1.Width
         Y: =Hora_1.Y
@@ -967,7 +967,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "SISTEMA DE TRANSPORTE") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "SISTEMA DE TRANSPORTE") )),QUANTIDADE)
         Width: =47
         X: =Sist_Medicao_1.X + Sist_Medicao_1.Width 
         Y: =Hora_1.Y
@@ -981,7 +981,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "ATIVIDADE DE AM") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "ATIVIDADE DE AM") )),QUANTIDADE)
         Width: =46
         X: =Sist_Transporte_1.X + Sist_Transporte_1.Width 
         Y: =Hora_1.Y
@@ -995,7 +995,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "ATIVIDADE DE WO e 5S") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "ATIVIDADE DE WO e 5S") )),QUANTIDADE)
         Width: =46
         X: =AM_1.X + AM_1.Width 
         Y: =Hora_1.Y
@@ -1009,7 +1009,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "MANUTENÇÃO  PLANEJADA") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "MANUTENÇÃO  PLANEJADA") )),QUANTIDADE)
         Width: =47
         X: =WO_5S_1.X + WO_5S_1.Width 
         Y: =Hora_1.Y
@@ -1023,7 +1023,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "LIMPEZA TÉCNICA / 5S") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "LIMPEZA TÉCNICA / 5S") )),QUANTIDADE)
         Width: =47
         X: =Manutencao_planejada_1.X + Manutencao_planejada_1.Width 
         Y: =Hora_1.Y
@@ -1037,7 +1037,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AJUSTE DE INÍCIO E FINAL DE TURNO") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AJUSTE DE INÍCIO E FINAL DE TURNO") )),QUANTIDADE)
         Width: =46
         X: =Limpeza_tecnica_1.X + Limpeza_tecnica_1.Width 
         Y: =Hora_1.Y
@@ -1051,7 +1051,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "MICRO PARADA") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "MICRO PARADA") )),QUANTIDADE)
         Width: =47
         X: =Ajuste_inicio_turno_1.X + Ajuste_inicio_turno_1.Width 
         Y: =Hora_1.Y
@@ -1065,7 +1065,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "FALTA DE MATERIAL DIRETO") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "FALTA DE MATERIAL DIRETO") )),QUANTIDADE)
         Width: =46
         X: =MicroParada_1.X + MicroParada_1.Width 
         Y: =Hora_1.Y
@@ -1079,7 +1079,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "VELOCIDADE DE PRODUÇÃO") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "VELOCIDADE DE PRODUÇÃO") )),QUANTIDADE)
         Width: =47
         X: =FaltaMaterial_1.X + FaltaMaterial_1.Width 
         Y: =Hora_1.Y
@@ -1093,7 +1093,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AUSÊNCIA / CARGA IMPOSSÍVEL") || (TIPO_DE_PERDA = "BLOQUEIO / DESCARGA IMPOSSÍVEL") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AUSÊNCIA / CARGA IMPOSSÍVEL") || (TIPO_DE_PERDA = "BLOQUEIO / DESCARGA IMPOSSÍVEL") )),QUANTIDADE)
         Width: =47
         X: =Velocidade_producao_1.X + Velocidade_producao_1.Width 
         Y: =Hora_1.Y
@@ -1107,7 +1107,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AUSÊNCIA / CARGA IMPOSSÍVEL") || (TIPO_DE_PERDA = "BLOQUEIO / DESCARGA IMPOSSÍVEL") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "AUSÊNCIA / CARGA IMPOSSÍVEL") || (TIPO_DE_PERDA = "BLOQUEIO / DESCARGA IMPOSSÍVEL") )),QUANTIDADE)
         Width: =46
         X: =Carga_Descarga_1.X + Carga_Descarga_1.Width 
         Y: =Hora_1.Y
@@ -1121,7 +1121,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "REFUGO") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "REFUGO") )),QUANTIDADE)
         Width: =46
         X: =OPI_foraPDT_1.X + OPI_foraPDT_1.Width 
         Y: =Hora_1.Y
@@ -1135,7 +1135,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "REFUGO") )),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = "REFUGO") )),QUANTIDADE)
         Width: =46
         X: =Refugo_1.X + Refugo_1.Width 
         Y: =Hora_1.Y
