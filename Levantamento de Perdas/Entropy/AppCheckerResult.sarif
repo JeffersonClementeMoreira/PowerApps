@@ -3543,6 +3543,35 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tela_acerto_levantamento"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tela_Detail_Perdas.IconDelete1_1.DisplayMode"
                 }
               ],
@@ -4059,6 +4088,27 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Os controles que referenciam controles em outras telas podem deixar o carregamento do aplicativo e a navegação mais lentos. Isso força o aplicativo a carregar as outras telas imediatamente, em vez de aguardar até que o usuário navegue para elas."
+              }
+            },
+            {
+              "id": "app-ScreenHasManyControls",
+              "messageStrings": {
+                "issue": {
+                  "text": "Muitos controles em uma tela"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Reduza o número de controles na tela.",
+                  "Divida o aplicativo em mais telas para reduzir a complexidade por tela.",
+                  "Use componentes para unificar os controles agrupados que são idênticos entre telas, reduzindo a duplicação.",
+                  "Use galerias para representar uma série de controles semelhantes repetidos.",
+                  "Divida o aplicativo em vários aplicativos para que cada aplicativo seja pequeno e tenha maior desempenho."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Cada controle consome recursos e, quando uma tela tem muitos controles, o aplicativo pode ficar lento ou parar de responder. A complexidade estimada de \"Tela_acerto_levantamento\" é 334, o que excede o limite máximo recomendado (300)."
               }
             }
           ],
