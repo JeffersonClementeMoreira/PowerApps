@@ -476,15 +476,15 @@
 
     Troca_Ferramentas_00 As label:
         Align: =Align.Center
-        Height: =23
+        Height: =Hora_00.Height
         PaddingBottom: =2
         PaddingLeft: =2
         PaddingRight: =2
         PaddingTop: =2
         Size: =12
         Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "TROCA DE FERRAMENTA")),QUANTIDADE)
-        Width: =54
-        X: =Quebras_00.X + Quebras_00.Width + 2
+        Width: =47
+        X: =Quebras_00.X + Quebras_00.Width
         Y: =Hora_00.Y
         ZIndex: =36
 
@@ -572,7 +572,7 @@
         Y: =Hora_00.Y
         ZIndex: =42
 
-    Label_Capacidade As label:
+    Label_Capacidade_Hora As label:
         Height: =20
         PaddingBottom: =2
         PaddingLeft: =2
@@ -584,7 +584,7 @@
         X: =59
         ZIndex: =43
 
-    Label_Capacidade_1 As label:
+    Label_Capacidade_Dia As label:
         Height: =20
         PaddingBottom: =2
         PaddingLeft: =2
