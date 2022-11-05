@@ -583,7 +583,7 @@
 
     Delta_prod_00 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_00.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_00.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_00.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -906,7 +906,7 @@
 
     Delta_prod_1 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_1.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_1.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_1.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -1229,7 +1229,7 @@
 
     Delta_prod_2 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_2.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_2.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_2.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -1552,7 +1552,7 @@
 
     Delta_prod_3 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_3.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_3.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_3.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -1875,7 +1875,7 @@
 
     Delta_prod_4 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_4.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_4.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_4.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -2198,7 +2198,7 @@
 
     Delta_prod_5 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_5.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_5.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_5.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -2521,7 +2521,7 @@
 
     Delta_prod_6 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_6.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_6.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_6.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -2844,7 +2844,7 @@
 
     Delta_prod_7 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_7.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_7.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_7.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -3167,7 +3167,7 @@
 
     Delta_prod_8 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_8.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_8.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_8.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -3490,7 +3490,7 @@
 
     Delta_prod_9 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_9.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_9.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_9.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -3813,7 +3813,7 @@
 
     Delta_prod_10 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_10.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_10.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_10.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -4136,7 +4136,7 @@
 
     Delta_prod_11 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_11.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_11.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_11.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -4459,7 +4459,7 @@
 
     Delta_prod_12 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_12.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_12.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_12.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -4782,7 +4782,7 @@
 
     Delta_prod_13 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_13.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_13.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_13.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -5105,7 +5105,7 @@
 
     Delta_prod_14 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_14.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_14.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_14.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -5428,7 +5428,7 @@
 
     Delta_prod_15 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_15.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_15.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_15.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -5751,7 +5751,7 @@
 
     Delta_prod_16 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_16.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_16.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_16.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -6074,7 +6074,7 @@
 
     Delta_prod_17 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_17.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_17.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_17.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -6397,7 +6397,7 @@
 
     Delta_prod_18 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_18.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_18.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_18.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -6720,7 +6720,7 @@
 
     Delta_prod_19 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_19.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_19.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_19.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -7043,7 +7043,7 @@
 
     Delta_prod_20 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_20.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_20.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_20.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -7366,7 +7366,7 @@
 
     Delta_prod_21 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_21.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_21.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_21.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -7689,7 +7689,7 @@
 
     Delta_prod_22 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_22.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_22.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_22.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
@@ -8012,7 +8012,7 @@
 
     Delta_prod_23 As label:
         Align: =Align.Center
-        Fill: =If(Delta_prod_23.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) )
+        Fill: =If(Delta_prod_23.Text = Prod_Horária.Text, RGBA(215, 200, 27, 0.7) , If(Delta_prod_23.Text <> Text(0) , RGBA(225, 48, 25, 0.7) , RGBA(0, 0, 0, 0) ))
         Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
