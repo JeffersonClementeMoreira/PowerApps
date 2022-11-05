@@ -68,10 +68,12 @@
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(9, 33, 98, 1)
         FocusedBorderThickness: =1
-        Height: =49
+        Height: =23
         Icon: =Icon.Home
         OnSelect: =Navigate(Tela_Inicial_app,ScreenTransition.None)
-        Width: =48
+        Width: =23
+        X: =1
+        Y: =1
         ZIndex: =6
 
     Hora_1 As label:
@@ -426,7 +428,7 @@
         Text: |
             =If( IsBlank(Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)),0,Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE))
         Width: =54
-        X: =201
+        X: =213
         ZIndex: =30
 
     Prod_Diária As label:
@@ -435,7 +437,7 @@
         Size: =12
         Text: =24*Prod_Horária
         Width: =54
-        X: =201
+        X: =213
         Y: =26
         ZIndex: =31
 
@@ -563,7 +565,7 @@
         Size: =12
         Text: ="Capacidade Hora"
         Width: =142
-        X: =59
+        X: =71
         ZIndex: =43
 
     Label_Capacidade_Dia As label:
@@ -575,7 +577,7 @@
         Size: =12
         Text: ="Capacidade Dia"
         Width: =142
-        X: =59
+        X: =71
         Y: =26
         ZIndex: =44
 
@@ -8246,4 +8248,323 @@
         X: =Refugo_23.X + Refugo_23.Width 
         Y: =Hora_23.Y
         ZIndex: =590
+
+    IconRefresh1_3 As icon.Reload:
+        AccessibleLabel: =Self.Tooltip
+        Fill: =RGBA(0, 16, 96, 1)
+        Height: =23
+        Icon: =Icon.Reload
+        OnSelect: |-
+            =Refresh([@LancamentoProducao]) ; Refresh([@LancamentoPerdas]);
+            
+            ClearCollect(Listaproducao,Filter(LancamentoProducao,IDEspelho >= 1));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            UpdateContext({IdEspelhoatual: 0});
+            
+            Select(btn_collprod_1);
+            
+            ClearCollect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas >= 1));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            UpdateContext({IdEspelhoatualPerdas: 0});
+            
+            Select(btn_collperd_1)
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        TabIndex: =0
+        Tooltip: ="Atualizar informações"
+        Width: =23
+        X: =1
+        Y: =26
+        ZIndex: =591
+
+    btn_collprod_1 As button:
+        Height: =70
+        OnSelect: |
+            =UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+            
+            UpdateContext({IdEspelhoatual: maiorIdEspelho});
+            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
+            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
+        Size: =24
+        Text: ="Botão"
+        Visible: =false
+        Width: =280
+        X: =20
+        Y: =20
+        ZIndex: =592
+
+    btn_collperd_1 As button:
+        Height: =66
+        OnSelect: |+
+            =UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
+            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
+            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
+            
+        Size: =24
+        Text: ="Botão"
+        Visible: =false
+        Width: =280
+        X: =20
+        Y: =90
+        ZIndex: =593
 
