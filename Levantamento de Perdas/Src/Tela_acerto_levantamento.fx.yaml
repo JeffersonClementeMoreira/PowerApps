@@ -3,33 +3,38 @@
     Width: =1123
 
     Image1 As image:
-        Height: =794
-        Image: ='Imagem Levantamento de perdas'
-        ImagePosition: =ImagePosition.Fill
+        Height: =741
+        Image: ='Imagem Levantamento de perdas_v2'
+        ImagePosition: =ImagePosition.Stretch
         Width: =1123
+        Y: =53
         ZIndex: =1
 
     Hora_00 As label:
-        Height: =23
+        Height: =27.1
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="00:00"
-        Width: =77
-        X: =21
-        Y: =116
+        Width: =49
+        X: =2
+        Y: =140
         ZIndex: =2
 
     Prod_0 As label:
         Align: =Align.Center
-        Height: =23
+        Height: =27
         PaddingBottom: =2
         PaddingLeft: =2
         PaddingRight: =2
         PaddingTop: =2
         Size: =12
         Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
-        Width: =85
-        X: =98
+        Width: =47
+        X: =Hora_00.X + Hora_00.Width
         Y: =Hora_00.Y
         ZIndex: =3
 
@@ -47,15 +52,14 @@
         SelectMultiple: =false
         Size: =12
         Width: =90
-        X: =98
+        X: =474
         ZIndex: =4
 
     DatePicker1 As datepicker:
         Height: =20
         Size: =12
-        Width: |
-            =248
-        X: =873
+        Width: =154
+        X: =969
         ZIndex: =5
 
     Icon1_2 As icon.Home:
@@ -63,261 +67,352 @@
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(9, 33, 98, 1)
         FocusedBorderThickness: =1
-        Height: =23
+        Height: =49
         Icon: =Icon.Home
         OnSelect: =Navigate(Tela_Inicial_app,ScreenTransition.None)
-        Width: =27
+        Width: =48
         ZIndex: =6
 
     Hora_1 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="01:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_00.Y+Hora_1.Height + 3
+        Y: =Hora_00.Y + Hora_00.Height
         ZIndex: =7
 
     Hora_2 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="02:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_1.Y+Hora_2.Height + 3
+        Y: =Hora_1.Y + Hora_1.Height
         ZIndex: =8
 
     Hora_3 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="03:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_2.Y+Hora_3.Height + 3
+        Y: =Hora_2.Y + Hora_2.Height
         ZIndex: =9
 
     Hora_4 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="04:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_3.Y+Hora_4.Height + 3
+        Y: =Hora_3.Y + Hora_3.Height
         ZIndex: =10
 
     Hora_5 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="05:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_4.Y+Hora_5.Height + 3
+        Y: =Hora_4.Y + Hora_4.Height
         ZIndex: =11
 
     Hora_6 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="06:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_5.Y+Hora_6.Height+Hora_6.Height + 3
+        Y: =Hora_5.Y + Hora_5.Height
         ZIndex: =12
 
     Hora_7 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="07:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_6.Y+Hora_7.Height + 3
+        Y: =Hora_6.Y + Hora_6.Height
         ZIndex: =13
 
     Hora_8 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="08:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_7.Y+Hora_8.Height + 3
+        Y: =Hora_7.Y + Hora_7.Height
         ZIndex: =14
 
     Hora_9 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="09:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_8.Y+Hora_9.Height + 3
+        Y: =Hora_8.Y + Hora_8.Height
         ZIndex: =15
 
     Hora_10 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="10:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_9.Y+Hora_10.Height + 3
+        Y: =Hora_9.Y + Hora_9.Height
         ZIndex: =16
 
     Hora_11 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="11:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_10.Y+Hora_11.Height + 3
+        Y: =Hora_10.Y + Hora_10.Height
         ZIndex: =17
 
     Hora_12 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="12:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_11.Y+Hora_12.Height + 3
+        Y: =Hora_11.Y + Hora_11.Height
         ZIndex: =18
 
     Hora_13 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="13:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_12.Y+Hora_13.Height + 3
+        Y: =Hora_12.Y + Hora_12.Height
         ZIndex: =19
 
     Hora_14 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="14:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_13.Y+Hora_14.Height + 3
+        Y: =Hora_13.Y + Hora_13.Height
         ZIndex: =20
 
     Hora_15 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="15:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_14.Y+Hora_15.Height+Hora_15.Height + 3
+        Y: =Hora_14.Y + Hora_14.Height
         ZIndex: =21
 
     Hora_16 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="16:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_15.Y+Hora_16.Height + 3
+        Y: =Hora_15.Y + Hora_15.Height
         ZIndex: =22
 
     Hora_17 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="17:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_16.Y+Hora_17.Height + 3
+        Y: =Hora_16.Y + Hora_16.Height
         ZIndex: =23
 
     Hora_18 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="18:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_17.Y+Hora_18.Height + 3
+        Y: =Hora_17.Y + Hora_17.Height
         ZIndex: =24
 
     Hora_19 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="19:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_18.Y+Hora_19.Height + 3
+        Y: =Hora_18.Y + Hora_18.Height
         ZIndex: =25
 
     Hora_20 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="20:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_19.Y+Hora_20.Height + 3
+        Y: =Hora_19.Y + Hora_19.Height
         ZIndex: =26
 
     Hora_21 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="21:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_20.Y+Hora_21.Height + 3
+        Y: =Hora_20.Y + Hora_20.Height
         ZIndex: =27
 
     Hora_22 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="22:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_21.Y+Hora_22.Height + 3
+        Y: =Hora_21.Y + Hora_21.Height
         ZIndex: =28
 
     Hora_23 As label:
-        Height: =23
+        Height: =Hora_00.Height
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
         Size: =12
         Text: |-
             ="23:00"
-        Width: =77
+        Width: =Hora_00.Width
         X: =Hora_00.X
-        Y: =Hora_22.Y+Hora_23.Height + 3
+        Y: =Hora_22.Y + Hora_22.Height
         ZIndex: =29
 
     Prod_Horária As label:
         Align: =Align.Center
-        Height: =23
+        Height: =20
         Size: =12
         Text: |
             =If( IsBlank(Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)),0,Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE))
-        Width: =77
-        X: =103
-        Y: =30
+        Width: =54
+        X: =201
         ZIndex: =30
 
     Prod_Diária As label:
         Align: =Align.Center
-        Height: =23
+        Height: =20
         Size: =12
         Text: =24*Prod_Horária
-        Width: =77
-        X: =105
-        Y: =62
+        Width: =54
+        X: =201
+        Y: =26
         ZIndex: =31
 
     Cbox_Maquina As combobox:
@@ -334,7 +429,7 @@
         SelectMultiple: =false
         Size: =12
         Width: =173
-        X: =589
+        X: =784
         ZIndex: =32
 
     LabelDate As label:
@@ -362,20 +457,20 @@
         SelectMultiple: =false
         Size: =12
         Width: =195
-        X: =291
+        X: =575
         ZIndex: =34
 
     Quebras_00 As label:
         Align: =Align.Center
-        Height: =23
+        Height: =Hora_00.Height
         PaddingBottom: =2
         PaddingLeft: =2
         PaddingRight: =2
         PaddingTop: =2
         Size: =12
         Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "QUEBRAS")),QUANTIDADE)
-        Width: =48
-        X: =Prod_0.X + Prod_0.Width + 2
+        Width: =47
+        X: =Refeicao_00.X + Refeicao_00.Width
         Y: =Hora_00.Y
         ZIndex: =35
 
@@ -476,4 +571,85 @@
         X: =Troca_tipo_00.X + Troca_tipo_00.Width + 2
         Y: =Hora_00.Y
         ZIndex: =42
+
+    Label_Capacidade As label:
+        Height: =20
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: ="Capacidade Hora"
+        Width: =142
+        X: =59
+        ZIndex: =43
+
+    Label_Capacidade_1 As label:
+        Height: =20
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: ="Capacidade Dia"
+        Width: =142
+        X: =59
+        Y: =26
+        ZIndex: =44
+
+    Delta_prod_00 As label:
+        Align: =Align.Center
+        Height: =27
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
+        Width: =47
+        X: =Prod_0.X + Prod_0.Width
+        Y: =Hora_00.Y
+        ZIndex: =45
+
+    Nao_Prev_Prod_00 As label:
+        Align: =Align.Center
+        Height: =27
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
+        Width: =47
+        X: =Delta_prod_00.X + Delta_prod_00.Width
+        Y: =Hora_00.Y
+        ZIndex: =46
+
+    Reuniao_00 As label:
+        Align: =Align.Center
+        Height: =27
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
+        Width: =46
+        X: =Nao_Prev_Prod_00.X + Nao_Prev_Prod_00.Width
+        Y: =Hora_00.Y
+        ZIndex: =47
+
+    Refeicao_00 As label:
+        Align: =Align.Center
+        Height: =27
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: =Sum(Filter(Listaproducao , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text)),QUANTIDADE)
+        Width: =46
+        X: =Reuniao_00.X + Reuniao_00.Width
+        Y: =Hora_00.Y
+        ZIndex: =48
 

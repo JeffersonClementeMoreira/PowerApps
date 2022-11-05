@@ -3334,6 +3334,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.Imagem Levantamento de perdas"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.Imagem Levantamento de perdas",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Imagem Levantamento de perdas",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App"
                 }
               ],
