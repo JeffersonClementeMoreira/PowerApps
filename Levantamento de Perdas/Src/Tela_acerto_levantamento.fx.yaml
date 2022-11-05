@@ -41,7 +41,7 @@
 
     Cbox_UTE As combobox:
         DisplayFields: =["Result"]
-        Height: =20
+        Height: =23
         InputTextPlaceholder: ="UTE"
         Items: =Sort(Distinct( CreateMaquina , UTE ).Result,Result)
         PaddingBottom: =0
@@ -57,7 +57,7 @@
         ZIndex: =4
 
     DatePicker1 As datepicker:
-        Height: =20
+        Height: =23
         Size: =12
         Width: =154
         X: =969
@@ -443,10 +443,11 @@
 
     Cbox_Maquina As combobox:
         DisplayFields: =["Result"]
-        Height: =20
+        Height: =23
         InputTextPlaceholder: ="CAF"
         IsSearchable: =false
         Items: =Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE) && (Text(Cbox_Setor.Selected.Result) in SETOR)) , CAF ).Result , Result)
+        NoSelectionText: ="CAF"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingTop: =0
@@ -471,10 +472,11 @@
 
     Cbox_Setor As combobox:
         DisplayFields: =["Result"]
-        Height: =20
-        InputTextPlaceholder: ="CAF"
+        Height: =23
+        InputTextPlaceholder: ="SETOR"
         IsSearchable: =false
         Items: =Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE)) , SETOR ).Result , Result)
+        NoSelectionText: ="SETOR"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingTop: =0
@@ -8567,4 +8569,19 @@
         X: =20
         Y: =90
         ZIndex: =593
+
+    Icon2_3 As icon.Erase:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =23
+        Icon: =Icon.Erase
+        OnSelect: =Reset(DatePicker1) ; Reset(Cbox_Maquina) ; Reset(Cbox_UTE)
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Tooltip: ="Limpar Filtros"
+        Width: =23
+        X: =441
+        ZIndex: =594
 
