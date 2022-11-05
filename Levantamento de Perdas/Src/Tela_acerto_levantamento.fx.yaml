@@ -8591,7 +8591,7 @@
     Label2 As label:
         Height: =46
         Size: =16
-        Text: ="Levantamento de Perdas - " & Cbox_Maquina.Selected.Result
+        Text: ="Levantamento de Perdas - CAF " & Cbox_Maquina.Selected.Result
         Width: =466
         X: =37
         Y: =3
