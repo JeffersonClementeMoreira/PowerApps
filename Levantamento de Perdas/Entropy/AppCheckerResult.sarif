@@ -174,6 +174,2646 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_0.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_0.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_0"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Nao_Prev_Prod_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Nao_Prev_Prod_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 187,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"NÃO PREVISTO PRODUÇÃO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Nao_Prev_Prod_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Reuniao_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Reuniao_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 173,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"REUNIÃO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Reuniao_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refeicao_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refeicao_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 186,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"REFEIÇÃO / INTERVALO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Refeicao_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Quebras_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Quebras_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 173,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"QUEBRAS\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Quebras_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_Ferramentas_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_Ferramentas_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 185,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"TROCA DE FERRAMENTA\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Troca_Ferramentas_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajustes_Regulagens_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajustes_Regulagens_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AJUSTES / REGULAGENS\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Ajustes_Regulagens_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_tipo_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_tipo_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 190,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"TROCA DE TIPO / SETUP\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Troca_tipo_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Medicao_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Medicao_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 197,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"SIST. DE MEDIÇÃO PERIFÉRICOS\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Sist_Medicao_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Transporte_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Transporte_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 190,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"SISTEMA DE TRANSPORTE\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Sist_Transporte_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.AM_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.AM_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 184,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"ATIVIDADE DE AM\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.AM_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.WO_5S_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.WO_5S_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"ATIVIDADE DE WO e 5S\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.WO_5S_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Manutencao_planejada_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Manutencao_planejada_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 190,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"MANUTENÇÃO  PLANEJADA\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Manutencao_planejada_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Limpeza_tecnica_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Limpeza_tecnica_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"LIMPEZA TÉCNICA / 5S\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Limpeza_tecnica_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajuste_inicio_turno_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajuste_inicio_turno_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 202,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AJUSTE DE INÍCIO E FINAL DE TURNO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Ajuste_inicio_turno_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.MicroParada_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.MicroParada_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 181,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"MICRO PARADA\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.MicroParada_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.FaltaMaterial_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.FaltaMaterial_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 193,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"FALTA DE MATERIAL DIRETO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.FaltaMaterial_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Velocidade_producao_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Velocidade_producao_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 191,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"VELOCIDADE DE PRODUÇÃO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Velocidade_producao_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 250,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AUSÊNCIA / CARGA IMPOSSÍVEL\") || (TIPO_DE_PERDA = \"BLOQUEIO / DESCARGA IMPOSSÍVEL\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Carga_Descarga_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.OPI_foraPDT_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.OPI_foraPDT_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"OPERADOR FORA DO PDT\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.OPI_foraPDT_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refugo_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refugo_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 175,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"REFUGO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Refugo_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Retrabalho_00.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Retrabalho_00.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 179,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"RETRABALHO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Retrabalho_00"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Nao_Prev_Prod_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Nao_Prev_Prod_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 186,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"NÃO PREVISTO PRODUÇÃO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Nao_Prev_Prod_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Reuniao_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Reuniao_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 172,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"REUNIÃO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Reuniao_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refeicao_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refeicao_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 185,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"REFEIÇÃO / INTERVALO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Refeicao_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Quebras_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Quebras_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 172,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"QUEBRAS\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Quebras_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_Ferramentas_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_Ferramentas_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 184,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"TROCA DE FERRAMENTA\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Troca_Ferramentas_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajustes_Regulagens_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajustes_Regulagens_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AJUSTES / REGULAGENS\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Ajustes_Regulagens_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_tipo_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_tipo_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"TROCA DE TIPO / SETUP\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Troca_tipo_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Medicao_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Medicao_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 196,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"SIST. DE MEDIÇÃO PERIFÉRICOS\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Sist_Medicao_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Transporte_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Transporte_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"SISTEMA DE TRANSPORTE\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Sist_Transporte_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.AM_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.AM_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 183,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"ATIVIDADE DE AM\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.AM_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.WO_5S_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.WO_5S_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"ATIVIDADE DE WO e 5S\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.WO_5S_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Manutencao_planejada_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Manutencao_planejada_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"MANUTENÇÃO  PLANEJADA\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Manutencao_planejada_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Limpeza_tecnica_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Limpeza_tecnica_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"LIMPEZA TÉCNICA / 5S\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Limpeza_tecnica_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajuste_inicio_turno_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajuste_inicio_turno_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 201,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AJUSTE DE INÍCIO E FINAL DE TURNO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Ajuste_inicio_turno_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.MicroParada_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.MicroParada_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 180,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"MICRO PARADA\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.MicroParada_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.FaltaMaterial_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.FaltaMaterial_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 192,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"FALTA DE MATERIAL DIRETO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.FaltaMaterial_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Velocidade_producao_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Velocidade_producao_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 190,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"VELOCIDADE DE PRODUÇÃO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Velocidade_producao_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 249,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AUSÊNCIA / CARGA IMPOSSÍVEL\") || (TIPO_DE_PERDA = \"BLOQUEIO / DESCARGA IMPOSSÍVEL\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Carga_Descarga_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.OPI_foraPDT_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.OPI_foraPDT_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"OPERADOR FORA DO PDT\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.OPI_foraPDT_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refugo_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refugo_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 174,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"REFUGO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Refugo_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Retrabalho_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Retrabalho_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 178,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"RETRABALHO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Retrabalho_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_2.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_2.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_2.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_3.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_6.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_6.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_6.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_7.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_8.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_8.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_8.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_9.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_9.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 143,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_9.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_10.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_10.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_10.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_10"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_11.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_11.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_11.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_12.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_12.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_12.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_12"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_13.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_13.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_13.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_13"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_14.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_14.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_14.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_14"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_15.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_15.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_15.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_15"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_16.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_16.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_16.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_16"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_17.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_17.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_17.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_17"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_18.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_18.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_18.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_18"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_19.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_19.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_19.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_19"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_20.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_20.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_20.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_20"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_21.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_21.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_21.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_21"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_22.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_22.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_22.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_22"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_23.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Prod_23.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 144,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoProducao ; (HORA_INICIO = Hora_23.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Prod_23"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tel_Edit_Producao.'Form Produção'.SETOR_DataCard1.DataCardsetor.Items"
                 }
               ],
@@ -677,7 +3317,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -707,7 +3347,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -737,7 +3377,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -767,7 +3407,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -797,7 +3437,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -827,7 +3467,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -857,7 +3497,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -887,7 +3527,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -917,7 +3557,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -947,7 +3587,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -977,7 +3617,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1007,7 +3647,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1037,7 +3677,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1067,7 +3707,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1097,7 +3737,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1127,7 +3767,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1157,7 +3797,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1187,7 +3827,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1217,7 +3857,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1247,7 +3887,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1277,7 +3917,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1307,7 +3947,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1337,7 +3977,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1367,7 +4007,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1397,7 +4037,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1427,7 +4067,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1457,7 +4097,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1487,7 +4127,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1517,7 +4157,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1547,7 +4187,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1577,7 +4217,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1607,7 +4247,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1637,7 +4277,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1667,7 +4307,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1697,7 +4337,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1727,7 +4367,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1757,7 +4397,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1787,7 +4427,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1817,7 +4457,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1847,7 +4487,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1877,7 +4517,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1907,7 +4547,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1937,7 +4577,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1967,7 +4607,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1997,7 +4637,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2027,7 +4667,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2057,7 +4697,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2087,7 +4727,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2117,7 +4757,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2147,7 +4787,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2177,7 +4817,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2207,7 +4847,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2237,7 +4877,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2267,7 +4907,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2297,7 +4937,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2327,7 +4967,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2357,7 +4997,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2387,7 +5027,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2417,7 +5057,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2447,7 +5087,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2477,7 +5117,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2507,7 +5147,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2537,7 +5177,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2567,7 +5207,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2597,7 +5237,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2627,7 +5267,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2657,7 +5297,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2687,7 +5327,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2717,7 +5357,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2747,7 +5387,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2777,7 +5417,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2807,7 +5447,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2837,7 +5477,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2867,7 +5507,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2897,7 +5537,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2927,7 +5567,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2957,7 +5597,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2987,7 +5627,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3017,7 +5657,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3047,7 +5687,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3077,7 +5717,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3107,7 +5747,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3137,7 +5777,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3167,7 +5807,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3197,7 +5837,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3227,7 +5867,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3257,7 +5897,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3287,7 +5927,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3317,7 +5957,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3347,7 +5987,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3377,7 +6017,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3407,7 +6047,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3437,7 +6077,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3467,7 +6107,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3497,7 +6137,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3527,7 +6167,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3557,7 +6197,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3586,7 +6226,7 @@
             "level": "Medium"
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3616,7 +6256,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3646,7 +6286,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3675,7 +6315,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -3705,7 +6345,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -3735,7 +6375,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -3765,7 +6405,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -3795,7 +6435,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3825,7 +6465,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3855,7 +6495,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3885,7 +6525,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3915,7 +6555,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3945,7 +6585,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3975,7 +6615,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -4005,7 +6645,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4035,7 +6675,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4065,7 +6705,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4095,7 +6735,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 8
         }
       ],
       "tool": {
@@ -4127,6 +6767,25 @@
               "messageStrings": {
                 "issue": {
                   "text": "Delegation warning. The \"{0}\" part of this formula might not work correctly on large data sets."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
+                  "Try simplifying the formula.",
+                  "Try moving your data to a different data source."
+                ],
+                "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+              "messageStrings": {
+                "issue": {
+                  "text": "Delegation warning. The highlighted part of this formula might not work correctly on large data sets. The \"{0}\" operation is not supported by this connector."
                 }
               },
               "properties": {
