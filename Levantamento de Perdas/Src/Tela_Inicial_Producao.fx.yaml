@@ -96,11 +96,19 @@
         FocusedBorderColor: =
         Height: =856
         Items: |
-            =SortByColumns(
-            Filter(Listaproducao,
-             (IsBlank(Text(ComboBoxmaquina.Selected.Result)) || ComboBoxmaquina.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute.Selected.Result)) || ComboBoxute.Selected.Result = UTE
-            ) && (IsBlank(Text(ComboBoxdata.Selected.Result)) || ComboBoxdata.Selected.Result = DATA
-            )),"HORA_INICIO", If(SortDescending1, Descending, Ascending))
+            =
+                SortByColumns(
+                    Filter(
+                        LancamentoProducao,
+                        (IsBlank(Text(ComboBoxmaquina.Selected.Result))) || (ComboBoxmaquina.Selected.Result = MAQUINA ) && (IsBlank(Text(ComboBoxute.Selected.Result)) || ComboBoxute.Selected.Result = UTE) && (IsBlank(Text(ComboBoxdata.Selected.Result)) || ComboBoxdata.Selected.Result = DATA)
+                    ),
+                    "HORA_INICIO",
+                    If(
+                        SortDescending1,
+                        Descending,
+                        Ascending
+                    )
+                )
         Layout: =Layout.Vertical
         NavigationStep: =2
         OnSelect: =Navigate(Tela_Detail_Producao, ScreenTransition.None)
@@ -475,4 +483,15 @@
         Visible: =false
         Width: =280
         ZIndex: =16
+
+    Slider1 As slider:
+        Default: =CountRows(BrowseGallery1.AllItems)
+        Height: =45
+        Max: =varDelegationLimit
+        OnChange: =Set(varDataCount , Self.Value)
+        Visible: =false
+        Width: =265
+        X: =375
+        Y: =1091
+        ZIndex: =17
 
