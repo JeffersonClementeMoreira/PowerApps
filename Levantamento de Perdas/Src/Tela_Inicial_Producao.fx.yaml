@@ -96,28 +96,9 @@
         FocusedBorderColor: =
         Height: =856
         Items: |-
-            =If(
-                varDataCount < varDelegationLimit,
-                SortByColumns(
-                    Filter(
-                        LancamentoProducao,
-                        (ComboBoxmaquina.Selected.Result = Blank()) || (MAQUINA = ComboBoxmaquina.Selected.Result)),
-                    "HORA_INICIO",
-                    If(
-                        SortDescending1,
-                        Descending,
-                        Ascending
-                    )
-                )
-            ,
-            Filter(
-                        LancamentoProducao,
-                        (StartsWith(MAQUINA , Text(ComboBoxmaquina.Selected.Result)))
-            )
-            )
+            =LancamentoProducao
             
-            
-            
+            // If(varDataCount<varDelegationLimit;SortByColumns(Filter(LancamentoProducao;(ComboBoxmaquina.Selected.Result=Blank())||(MAQUINA=ComboBoxmaquina.Selected.Result));"HORA_INICIO";If(SortDescending1;Descending;Ascending));Filter(LancamentoProducao;(StartsWith(MAQUINA;Text(ComboBoxmaquina.Selected.Result)))))
             
             
             // SortByColumns(Filter(LancamentoProducao;(IsBlank(Text(ComboBoxmaquina.Selected.Result)))||(ComboBoxmaquina.Selected.Result=MAQUINA)&&(IsBlank(Text(ComboBoxute.Selected.Result))||ComboBoxute.Selected.Result=UTE)&&(IsBlank(Text(ComboBoxdata.Selected.Result))||ComboBoxdata.Selected.Result=DATA));"HORA_INICIO";If(SortDescending1;Descending;Ascending))
