@@ -109,6 +109,10 @@
                         Ascending
                     )
                 )
+            ,
+            Filter(
+                        LancamentoProducao,
+                        (ComboBoxmaquina.Selected.Result = Blank()) || (MAQUINA = ComboBoxmaquina.Selected.Result))
             )
             
             
