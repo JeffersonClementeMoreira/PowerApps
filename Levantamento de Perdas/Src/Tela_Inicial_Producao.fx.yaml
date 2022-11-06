@@ -112,9 +112,9 @@
             ,
             Filter(
                         LancamentoProducao,
-                        (ComboBoxmaquina.Selected.Result = Blank()) || (MAQUINA = ComboBoxmaquina.Selected.Result))
+                        (StartsWith(MAQUINA , Text(ComboBoxmaquina.Selected.Result)))
             )
-            
+            )
             
             
             
