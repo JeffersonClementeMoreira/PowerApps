@@ -95,13 +95,13 @@
     "BrowseGallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         FocusedBorderColor: =
         Height: =856
-        Items: |
-            =
+        Items: |-
+            =If(
+                varDataCount < varDelegationLimit,
                 SortByColumns(
                     Filter(
                         LancamentoProducao,
-                        (IsBlank(Text(ComboBoxmaquina.Selected.Result))) || (ComboBoxmaquina.Selected.Result = MAQUINA ) && (IsBlank(Text(ComboBoxute.Selected.Result)) || ComboBoxute.Selected.Result = UTE) && (IsBlank(Text(ComboBoxdata.Selected.Result)) || ComboBoxdata.Selected.Result = DATA)
-                    ),
+                        (ComboBoxmaquina.Selected.Result = Blank()) || (MAQUINA = ComboBoxmaquina.Selected.Result)),
                     "HORA_INICIO",
                     If(
                         SortDescending1,
@@ -109,6 +109,14 @@
                         Ascending
                     )
                 )
+            )
+            
+            
+            
+            
+            
+            
+            // SortByColumns(Filter(LancamentoProducao;(IsBlank(Text(ComboBoxmaquina.Selected.Result)))||(ComboBoxmaquina.Selected.Result=MAQUINA)&&(IsBlank(Text(ComboBoxute.Selected.Result))||ComboBoxute.Selected.Result=UTE)&&(IsBlank(Text(ComboBoxdata.Selected.Result))||ComboBoxdata.Selected.Result=DATA));"HORA_INICIO";If(SortDescending1;Descending;Ascending))
         Layout: =Layout.Vertical
         NavigationStep: =2
         OnSelect: =Navigate(Tela_Detail_Producao, ScreenTransition.None)
