@@ -94,8 +94,8 @@
                 SortByColumns(
                 Filter(Filter(
                         LancamentoPerdas,
-                        ((UTE = ComboBoxute.Selected.Result) || ComboBoxute.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina.Selected.Result) || ComboBoxmaquina.Selected.Result = Blank()) && ((DATA = txt_date_prod.Text) || txt_date_prod.Text = Blank())
-                    ) , txt_date_prod.Text in DATA),
+                        ((UTE = ComboBoxuteperdas.Selected.Result) || ComboBoxuteperdas.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquinaperdas.Selected.Result) || ComboBoxmaquinaperdas.Selected.Result = Blank()) && ((DATA = txt_date_perdas.Text) || txt_date_perdas.Text = Blank())
+                    ) , txt_date_perdas.Text in DATA),
                     "HORA_INICIO",
                     If(
                         SortDescending1,
@@ -106,7 +106,7 @@
                 ),
                 Filter(
                     LancamentoPerdas,
-                    ((UTE = ComboBoxute.Selected.Result) || ComboBoxute.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina.Selected.Result) || ComboBoxmaquina.Selected.Result = Blank()) && ((DATA = txt_date_prod.Text) || txt_date_prod.Text = Blank())
+                    ((UTE = ComboBoxuteperdas.Selected.Result) || ComboBoxuteperdas.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquinaperdas.Selected.Result) || ComboBoxmaquinaperdas.Selected.Result = Blank()) && ((DATA = txt_date_perdas.Text) || txt_date_perdas.Text = Blank())
                 )
             )
         Layout: =Layout.Vertical
@@ -286,7 +286,9 @@
         FocusedBorderThickness: =1
         Height: =88
         Icon: =Icon.Home
-        OnSelect: =Navigate(Tela_Inicial_app,ScreenTransition.None)
+        OnSelect: |-
+            =Select(Icon2_2);
+            Navigate(Tela_Inicial_app,ScreenTransition.None)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -342,4 +344,14 @@
         X: =480
         Y: =1086
         ZIndex: =18
+
+    txt_date_perdas As label:
+        Height: =57
+        Size: =21
+        Text: =Text(DatePickerPerdas.SelectedDate)
+        Visible: =false
+        Width: =160
+        X: =480
+        Y: =185
+        ZIndex: =19
 

@@ -71,7 +71,9 @@
         FocusedBorderThickness: =1
         Height: =23
         Icon: =Icon.Home
-        OnSelect: =Navigate(Tela_Inicial_app,ScreenTransition.None)
+        OnSelect: |-
+            =Select(Icon2_3);
+            Navigate(Tela_Inicial_app,ScreenTransition.None)
         Width: =23
         X: =1
         Y: =1
