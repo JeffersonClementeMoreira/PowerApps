@@ -2,5 +2,6 @@ App As appinfo:
     BackEnabled: =false
     OnStart: |-
         =Set(varDelegationLimit , 1000) ;
-        Set(varDataCount , 3000)
+        Set(varDataCount , 3000) ;
+        Set(varDataCountperdas , 3000)
 

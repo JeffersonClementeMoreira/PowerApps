@@ -324,7 +324,7 @@
         X: =253
         ZIndex: =15
 
-    Slider1 As slider:
+    SliderProd As slider:
         Default: =CountRows(BrowseGallery1.AllItems)
         Height: =45
         Max: =varDelegationLimit

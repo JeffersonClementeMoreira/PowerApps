@@ -21,14 +21,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =88
         Icon: =Icon.Reload
-        OnSelect: |-
-            =Refresh([@LancamentoPerdas]);
-            
-            ClearCollect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas >= 1));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            UpdateContext({IdEspelhoatualPerdas: 0});
-            
-            Select(btn_collperd_perd)
+        OnSelect: =Refresh([@LancamentoPerdas]);
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -95,12 +88,27 @@
     "BrowseGallery1perdas As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         FocusedBorderColor: =
         Height: =856
-        Items: |
-            =SortByColumns(
-            Filter(Listaperdas,
-             (IsBlank(Text(ComboBoxmaquinaperdas.Selected.Result)) || ComboBoxmaquinaperdas.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxuteperdas.Selected.Result)) || ComboBoxuteperdas.Selected.Result = UTE
-            ) && (IsBlank(Text(ComboBoxdataperdas.Selected.Result)) || ComboBoxdataperdas.Selected.Result = DATA
-            )),"HORA_INICIO", If(SortDescending1, Descending, Ascending))
+        Items: |-
+            =If(
+                varDataCountperdas < varDelegationLimit,
+                SortByColumns(
+                Filter(Filter(
+                        LancamentoPerdas,
+                        ((UTE = ComboBoxute.Selected.Result) || ComboBoxute.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina.Selected.Result) || ComboBoxmaquina.Selected.Result = Blank()) && ((DATA = txt_date_prod.Text) || txt_date_prod.Text = Blank())
+                    ) , txt_date_prod.Text in DATA),
+                    "HORA_INICIO",
+                    If(
+                        SortDescending1,
+                        Descending,
+                        Ascending
+                        
+                    )
+                ),
+                Filter(
+                    LancamentoPerdas,
+                    ((UTE = ComboBoxute.Selected.Result) || ComboBoxute.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina.Selected.Result) || ComboBoxmaquina.Selected.Result = Blank()) && ((DATA = txt_date_prod.Text) || txt_date_prod.Text = Blank())
+                )
+            )
         Layout: =Layout.Vertical
         NavigationStep: =2
         OnSelect: =Navigate(Tela_Detail_Perdas, ScreenTransition.None)
@@ -268,25 +276,9 @@
         SelectMultiple: =false
         Size: =21
         Width: =250
-        X: =ComboBoxuteperdas.X + ComboBoxuteperdas.Width + 1
+        X: =ComboBoxuteperdas.X + ComboBoxuteperdas.Width + 2
         Y: =ComboBoxuteperdas.Y
         ZIndex: =11
-
-    ComboBoxdataperdas As combobox:
-        DisplayFields: =["Result"]
-        Height: =70
-        InputTextPlaceholder: ="DATA"
-        Items: =Distinct( DatasPowerapps , Datas ).Result 
-        NoSelectionText: ="DATA"
-        SearchFields: =["Result"]
-        SearchItems: =Search(Distinct( DatasPowerapps , Datas ).Result ,ComboBoxdataperdas.SearchText,"Result")
-        SelectMultiple: =false
-        Size: =21
-        Width: =225
-        X: |
-            =ComboBoxmaquinaperdas.X + ComboBoxmaquinaperdas.Width + 1
-        Y: =ComboBoxmaquinaperdas.Y
-        ZIndex: =12
 
     Icon1_1 As icon.Home:
         BorderColor: =RGBA(255, 255, 255, 1)
@@ -322,7 +314,7 @@
         Color: =RGBA(255, 255, 255, 1)
         Height: =88
         Icon: =Icon.Erase
-        OnSelect: =Reset(ComboBoxdataperdas) ; Reset(ComboBoxmaquinaperdas) ; Reset(ComboBoxuteperdas)
+        OnSelect: =Reset(DatePickerPerdas) ; Reset(ComboBoxmaquinaperdas) ; Reset(ComboBoxuteperdas)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -332,144 +324,22 @@
         X: =253
         ZIndex: =15
 
-    btn_collperd_perd As button:
-        Height: =70
-        OnSelect: |+
-            =UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
-            UpdateContext({IdEspelhoatualPerdas: maiorIdEspelhoPerdas});
-            Collect(Listaperdas,Filter(LancamentoPerdas,IdEspelhoPerdas > maiorIdEspelhoPerdas));
-            UpdateContext({maiorIdEspelhoPerdas: Max(Listaperdas,IdEspelhoPerdas)});
-            
+    DatePickerPerdas As datepicker:
+        Height: =ComboBoxmaquina.Height
         Size: =24
-        Text: ="Botão"
+        Width: =220
+        X: =ComboBoxmaquinaperdas.X + ComboBoxmaquinaperdas.Width + 4
+        Y: =ComboBoxmaquinaperdas.Y
+        ZIndex: =17
+
+    SliderPerdas As slider:
+        Default: =CountRows(BrowseGallery1perdas.AllItems)
+        Height: =50
+        Max: =varDelegationLimit
+        OnChange: =Set(varDataCountperdas , Self.Value)
         Visible: =false
-        Width: =280
-        ZIndex: =16
+        Width: =160
+        X: =480
+        Y: =1086
+        ZIndex: =18
 

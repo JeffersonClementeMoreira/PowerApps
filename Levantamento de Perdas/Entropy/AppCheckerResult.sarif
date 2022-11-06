@@ -454,6 +454,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.BrowseGallery1perdas.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.BrowseGallery1perdas.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 404,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Tela_Inicial_Perdas",
+                "type": "Tela_Inicial_Perdas.BrowseGallery1perdas"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DATA"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items"
                 }
               ],
@@ -2054,6 +2094,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.SliderPerdas.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.SliderPerdas.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tela_Inicial_Perdas",
+                "type": "Tela_Inicial_Perdas.SliderPerdas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tela_Inicial_Producao.BrowseGallery1.AccessibleLabel"
                 }
               ],
@@ -2174,19 +2244,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tela_Inicial_Producao.Slider1.AccessibleLabel"
+                  "fullyQualifiedName": "Tela_Inicial_Producao.SliderProd.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tela_Inicial_Producao.Slider1.AccessibleLabel",
+                  "fullyQualifiedName": "Tela_Inicial_Producao.SliderProd.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Tela_Inicial_Producao",
-                "type": "Tela_Inicial_Producao.Slider1"
+                "type": "Tela_Inicial_Producao.SliderProd"
               }
             }
           ],
@@ -2474,19 +2544,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tela_Inicial_Perdas.ComboBoxdataperdas.AccessibleLabel"
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tela_Inicial_Perdas.ComboBoxdataperdas.AccessibleLabel",
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Tela_Inicial_Perdas",
-                "type": "Tela_Inicial_Perdas.ComboBoxdataperdas"
+                "type": "Tela_Inicial_Perdas.DatePickerPerdas"
               }
             }
           ],
@@ -3912,19 +3982,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tela_Inicial_Perdas.IdEspelhoatualPerdas"
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tela_Inicial_Perdas.IdEspelhoatualPerdas",
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.Height",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "IdEspelhoatualPerdas",
+                "member": "Height",
                 "module": "Tela_Inicial_Perdas",
-                "type": "Tela_Inicial_Perdas"
+                "type": "Tela_Inicial_Perdas.DatePickerPerdas"
               }
             }
           ],
@@ -3934,8 +4004,38 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 8
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.BrowseGallery1perdas.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.BrowseGallery1perdas.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Tela_Inicial_Perdas",
+                "type": "Tela_Inicial_Perdas.BrowseGallery1perdas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 7
         },
         {
           "locations": [
