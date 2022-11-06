@@ -21,14 +21,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =88
         Icon: =Icon.Reload
-        OnSelect: |
-            =Refresh([@LancamentoProducao]) ;
-            
-            ClearCollect(Listaproducao,Filter(LancamentoProducao,IDEspelho >= 1));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            UpdateContext({IdEspelhoatual: 0});
-            
-            Select(btn_collprod_prod);
+        OnSelect: =Refresh([@LancamentoProducao])
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -51,7 +44,6 @@
         PaddingTop: =22
         TabIndex: =0
         Tooltip: =If(SortDescending1, "Classificar lista em ordem alfabética inversa", "Classificar lista em ordem alfabética")
-        Visible: =If(varDataCount < varDelegationLimit , false , true)
         Width: =80
         X: =Parent.Width - IconNewItem1.Width - Self.Width
         ZIndex: =4
@@ -100,15 +92,16 @@
             =If(
                 varDataCount < varDelegationLimit,
                 SortByColumns(
-                    Filter(
+                Filter(Filter(
                         LancamentoProducao,
                         ((UTE = ComboBoxute.Selected.Result) || ComboBoxute.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina.Selected.Result) || ComboBoxmaquina.Selected.Result = Blank()) && ((DATA = txt_date_prod.Text) || txt_date_prod.Text = Blank())
-                    ),
+                    ) , txt_date_prod.Text in DATA),
                     "HORA_INICIO",
                     If(
                         SortDescending1,
                         Descending,
                         Ascending
+                        
                     )
                 ),
                 Filter(
@@ -116,7 +109,6 @@
                     ((UTE = ComboBoxute.Selected.Result) || ComboBoxute.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina.Selected.Result) || ComboBoxmaquina.Selected.Result = Blank()) && ((DATA = txt_date_prod.Text) || txt_date_prod.Text = Blank())
                 )
             )
-            // SortByColumns(Filter(LancamentoProducao;(IsBlank(Text(ComboBoxmaquina.Selected.Result)))||(ComboBoxmaquina.Selected.Result=MAQUINA)&&(IsBlank(Text(ComboBoxute.Selected.Result))||ComboBoxute.Selected.Result=UTE)&&(IsBlank(Text(ComboBoxdata.Selected.Result))||ComboBoxdata.Selected.Result=DATA));"HORA_INICIO";If(SortDescending1;Descending;Ascending))
         Layout: =Layout.Vertical
         NavigationStep: =2
         OnSelect: =Navigate(Tela_Detail_Producao, ScreenTransition.None)
@@ -331,150 +323,6 @@
         Width: =80
         X: =253
         ZIndex: =15
-
-    btn_collprod_prod As button:
-        Height: =70
-        OnSelect: |
-            =UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-            
-            UpdateContext({IdEspelhoatual: maiorIdEspelho});
-            Collect(Listaproducao,Filter(LancamentoProducao,IDEspelho > maiorIdEspelho));
-            UpdateContext({maiorIdEspelho: Max(Listaproducao,IDEspelho)});
-        Size: =24
-        Text: ="Botão"
-        Visible: =false
-        Width: =280
-        ZIndex: =16
 
     Slider1 As slider:
         Default: =CountRows(BrowseGallery1.AllItems)
