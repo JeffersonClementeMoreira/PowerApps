@@ -3734,6 +3734,846 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Nao_Prev_Prod_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Nao_Prev_Prod_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 186,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"NÃO PREVISTO PRODUÇÃO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Nao_Prev_Prod_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Reuniao_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Reuniao_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 172,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"REUNIÃO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Reuniao_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refeicao_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refeicao_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 185,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"REFEIÇÃO / INTERVALO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Refeicao_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Quebras_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Quebras_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 172,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"QUEBRAS\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Quebras_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_Ferramentas_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_Ferramentas_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 184,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"TROCA DE FERRAMENTA\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Troca_Ferramentas_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajustes_Regulagens_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajustes_Regulagens_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AJUSTES / REGULAGENS\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Ajustes_Regulagens_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_tipo_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_tipo_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"TROCA DE TIPO / SETUP\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Troca_tipo_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Medicao_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Medicao_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 196,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"SIST. DE MEDIÇÃO PERIFÉRICOS\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Sist_Medicao_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Transporte_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Transporte_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"SISTEMA DE TRANSPORTE\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Sist_Transporte_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.AM_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.AM_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 183,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"ATIVIDADE DE AM\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.AM_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.WO_5S_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.WO_5S_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"ATIVIDADE DE WO e 5S\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.WO_5S_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Manutencao_planejada_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Manutencao_planejada_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"MANUTENÇÃO  PLANEJADA\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Manutencao_planejada_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Limpeza_tecnica_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Limpeza_tecnica_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"LIMPEZA TÉCNICA / 5S\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Limpeza_tecnica_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajuste_inicio_turno_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajuste_inicio_turno_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 201,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AJUSTE DE INÍCIO E FINAL DE TURNO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Ajuste_inicio_turno_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.MicroParada_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.MicroParada_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 180,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"MICRO PARADA\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.MicroParada_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.FaltaMaterial_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.FaltaMaterial_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 192,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"FALTA DE MATERIAL DIRETO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.FaltaMaterial_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Velocidade_producao_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Velocidade_producao_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 190,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"VELOCIDADE DE PRODUÇÃO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Velocidade_producao_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 249,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AUSÊNCIA / CARGA IMPOSSÍVEL\") || (TIPO_DE_PERDA = \"BLOQUEIO / DESCARGA IMPOSSÍVEL\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Carga_Descarga_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.OPI_foraPDT_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.OPI_foraPDT_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 187,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text)&& (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"OPERADOR FORA DO PDT\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.OPI_foraPDT_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refugo_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refugo_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 174,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"REFUGO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Refugo_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Retrabalho_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Retrabalho_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 178,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"RETRABALHO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Retrabalho_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tela_acerto_levantamento.Prod_5.Text"
                 }
               ],
@@ -3754,6 +4594,846 @@
                 "member": "Text",
                 "module": "Tela_acerto_levantamento",
                 "type": "Tela_acerto_levantamento.Prod_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Nao_Prev_Prod_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Nao_Prev_Prod_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 186,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"NÃO PREVISTO PRODUÇÃO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Nao_Prev_Prod_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Reuniao_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Reuniao_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 172,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"REUNIÃO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Reuniao_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refeicao_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refeicao_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 185,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"REFEIÇÃO / INTERVALO\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Refeicao_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Quebras_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Quebras_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 172,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"QUEBRAS\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Quebras_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_Ferramentas_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_Ferramentas_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 184,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = \"TROCA DE FERRAMENTA\"));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Troca_Ferramentas_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajustes_Regulagens_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajustes_Regulagens_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AJUSTES / REGULAGENS\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Ajustes_Regulagens_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_tipo_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Troca_tipo_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"TROCA DE TIPO / SETUP\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Troca_tipo_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Medicao_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Medicao_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 196,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"SIST. DE MEDIÇÃO PERIFÉRICOS\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Sist_Medicao_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Transporte_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Sist_Transporte_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"SISTEMA DE TRANSPORTE\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Sist_Transporte_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.AM_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.AM_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 183,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"ATIVIDADE DE AM\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.AM_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.WO_5S_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.WO_5S_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"ATIVIDADE DE WO e 5S\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.WO_5S_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Manutencao_planejada_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Manutencao_planejada_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 189,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"MANUTENÇÃO  PLANEJADA\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Manutencao_planejada_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Limpeza_tecnica_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Limpeza_tecnica_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"LIMPEZA TÉCNICA / 5S\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Limpeza_tecnica_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajuste_inicio_turno_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Ajuste_inicio_turno_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 201,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AJUSTE DE INÍCIO E FINAL DE TURNO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Ajuste_inicio_turno_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.MicroParada_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.MicroParada_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 180,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"MICRO PARADA\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.MicroParada_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.FaltaMaterial_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.FaltaMaterial_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 192,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"FALTA DE MATERIAL DIRETO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.FaltaMaterial_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Velocidade_producao_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Velocidade_producao_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 190,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"VELOCIDADE DE PRODUÇÃO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Velocidade_producao_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 249,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AUSÊNCIA / CARGA IMPOSSÍVEL\") || (TIPO_DE_PERDA = \"BLOQUEIO / DESCARGA IMPOSSÍVEL\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Carga_Descarga_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.OPI_foraPDT_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.OPI_foraPDT_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 188,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"OPERADOR FORA DO PDT\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.OPI_foraPDT_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refugo_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Refugo_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 174,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"REFUGO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Refugo_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Retrabalho_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Retrabalho_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 178,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"RETRABALHO\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Retrabalho_5"
               }
             }
           ],
@@ -4234,6 +5914,46 @@
                 "member": "Text",
                 "module": "Tela_acerto_levantamento",
                 "type": "Tela_acerto_levantamento.Prod_16"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sum"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_16.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Carga_Descarga_16.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 250,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sum(Filter(LancamentoPerdas ; (HORA_INICIO = Hora_16.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && ((TIPO_DE_PERDA = \"AUSÊNCIA / CARGA IMPOSSÍVEL\") || (TIPO_DE_PERDA = \"BLOQUEIO / DESCARGA IMPOSSÍVEL\") ));QUANTIDADE)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Carga_Descarga_16"
               }
             }
           ],
