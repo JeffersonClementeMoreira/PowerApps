@@ -40,17 +40,17 @@ Tela_Inicial_app As screen:
         SelectMultiple: =false
         Size: =21
         Width: =250
-        X: =ComboBoxute_ini.X+ComboBoxute_ini.Width+1
+        X: =ComboBoxute_ini.X+ComboBoxute_ini.Width+2
         Y: =ComboBoxute_ini.Y 
         ZIndex: =5
 
     Prod_Real_ini As text:
         Align: =Align.Center
         Default: |-
-            =Sum(Filter(LancamentoProducao,
-             (IsBlank(Text(ComboBoxmaquina_ini.Selected.Result)) || ComboBoxmaquina_ini.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute_ini.Selected.Result)) || ComboBoxute_ini.Selected.Result = UTE
-            ) && (IsBlank(Text(ComboBoxdata_ini_2.Selected.Result)) || ComboBoxdata_ini_2.Selected.Result = DATA
-            )),QUANTIDADE)
+            =Sum(Filter(
+                    LancamentoProducao,
+                    ((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                ).QUANTIDADE , QUANTIDADE)
         DisplayMode: =DisplayMode.Disabled
         Height: =Label_prod_real_ini.Height
         Size: =21
@@ -97,10 +97,10 @@ Tela_Inicial_app As screen:
     Perda_Real_ini As text:
         Align: =Align.Center
         Default: |-
-            =Sum(Filter(Listaperdas,
-             (IsBlank(Text(ComboBoxmaquina_ini.Selected.Result)) || ComboBoxmaquina_ini.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute_ini.Selected.Result)) || ComboBoxute_ini.Selected.Result = UTE
-            ) && (IsBlank(Text(DatePicker_ini.Selected.Result)) || DatePicker_ini.Selected.Result = DATA
-            )),QUANTIDADE)
+            =Sum(Filter(
+                    LancamentoPerdas,
+                    ((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                ).QUANTIDADE , QUANTIDADE)
         DisplayMode: =DisplayMode.Disabled
         Height: =Prod_Real_ini.Height
         Size: =21
@@ -164,10 +164,11 @@ Tela_Inicial_app As screen:
     Perdanaoimpact_ini As text:
         Align: =Align.Center
         Default: |-
-            =Sum(
-                Filter(
-                    Listaperdas ,        (IsBlank(Text(ComboBoxmaquina_ini.Selected.Result)) || ComboBoxmaquina_ini.Selected.Result = MAQUINA) && (IsBlank(Text(ComboBoxute_ini.Selected.Result)) || ComboBoxute_ini.Selected.Result = UTE) && (IsBlank(Text(DatePicker_ini.Selected.Result)) || ComboBoxdata_ini_2.Selected.Result = DATA) && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
-                ),
+            =Sum(Filter(
+                    LancamentoPerdas,
+                    (((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                ) && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
+                ).QUANTIDADE,
                 QUANTIDADE
             )
         DisplayMode: =DisplayMode.Disabled
@@ -312,4 +313,14 @@ Tela_Inicial_app As screen:
         X: =ComboBoxmaquina_ini.X + ComboBoxmaquina_ini.Width + 4
         Y: =ComboBoxmaquina_ini.Y
         ZIndex: =35
+
+    txt_date_ini As label:
+        Height: =45
+        Size: =21
+        Text: =Text(DatePicker_ini.SelectedDate)
+        Visible: =false
+        Width: =165
+        X: =475
+        Y: =198
+        ZIndex: =36
 
