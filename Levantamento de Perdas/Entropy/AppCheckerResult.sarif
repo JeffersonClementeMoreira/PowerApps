@@ -3682,96 +3682,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tela_acerto_levantamento.IdEspelhoatual"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_acerto_levantamento.IdEspelhoatual",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "IdEspelhoatual",
-                "module": "Tela_acerto_levantamento",
-                "type": "Tela_acerto_levantamento"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_acerto_levantamento.IdEspelhoatualPerdas"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_acerto_levantamento.IdEspelhoatualPerdas",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "IdEspelhoatualPerdas",
-                "module": "Tela_acerto_levantamento",
-                "type": "Tela_acerto_levantamento"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Producao.IdEspelhoatual"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Producao.IdEspelhoatual",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "IdEspelhoatual",
-                "module": "Tel_Edit_Producao",
-                "type": "Tel_Edit_Producao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Tel_Edit_Producao.'Form Produção'.Item"
                 }
               ],
@@ -3946,36 +3856,6 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.IdEspelhoatualPerdas"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.IdEspelhoatualPerdas",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "IdEspelhoatualPerdas",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
         },
         {
           "locations": [
@@ -4261,24 +4141,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Cada controle consome recursos e, quando uma tela tem muitos controles, o aplicativo pode ficar lento ou parar de responder. A complexidade estimada de \"Tela_acerto_levantamento\" é 592, o que excede o limite máximo recomendado (300)."
-              }
-            },
-            {
-              "id": "app-UnusedVariables",
-              "messageStrings": {
-                "issue": {
-                  "text": "Variável não usada"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remover a variável não usada."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "Essa variável está declarada, mas não é referenciada por nenhum controle, portanto não é necessária."
+                "whyFix": "Cada controle consome recursos e, quando uma tela tem muitos controles, o aplicativo pode ficar lento ou parar de responder. A complexidade estimada de \"Tela_acerto_levantamento\" é 594, o que excede o limite máximo recomendado (300)."
               }
             }
           ],
