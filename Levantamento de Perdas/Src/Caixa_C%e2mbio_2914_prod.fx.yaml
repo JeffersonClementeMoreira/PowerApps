@@ -1,0 +1,29 @@
+Caixa_Câmbio_2914_prod As screen:
+    BackgroundImage: ='Linha Caixa 2914'
+
+    Btnmaq1 As button:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =73
+        OnSelect: |-
+            =Set( varmaquina , "81500001");
+            Set( varsetor , "Usinagem Caixa de cambio");
+            Set( varute , "2914") ;
+            Set( varoperacao , "10/20");
+            Navigate(Tel_Edit_Producao)
+        Size: =24
+        Text: =""
+        Width: =78
+        X: =18
+        Y: =261
+        ZIndex: =1
+
+    Label3 As label:
+        Align: =Align.Center
+        Height: =88
+        Size: =21
+        Text: ="Linha Caixa de Câmbio - UTE 2914"
+        Width: =600
+        X: =18
+        Y: =36
+        ZIndex: =2
+

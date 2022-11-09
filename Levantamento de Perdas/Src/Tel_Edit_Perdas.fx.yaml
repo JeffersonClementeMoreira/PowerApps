@@ -628,7 +628,6 @@
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione o tipo de perda"
-                IsSearchable: =false
                 Items: =Sort( Distinct(CreateTipodePerda, TIPO_DE_PERDA) , Result)
                 NoSelectionText: ="Tipo de perda"
                 OnChange: |-
@@ -638,7 +637,7 @@
                         false
                     )
                 SearchFields: =["Result"]
-                SearchItems: =[]
+                SearchItems: =Search(Sort( Distinct(CreateTipodePerda, TIPO_DE_PERDA) , Result),DataCardtipo_de_perda.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -696,11 +695,10 @@
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Descrição da Falha"
-                IsSearchable: =false
                 Items: =Sort( Distinct(CreateTipodePerda , LISTA_FALHAS) , Result)
                 NoSelectionText: ="Descrição da Falha"
                 SearchFields: =["Result"]
-                SearchItems: =[]
+                SearchItems: =Search(Sort( Distinct(CreateTipodePerda , LISTA_FALHAS) , Result),DataCardtipo_de_falha.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -756,11 +754,10 @@
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Grupo"
-                IsSearchable: =false
                 Items: =Sort( Distinct(CreateGrupo,GRUPO) , Result)
                 NoSelectionText: ="Grupo"
                 SearchFields: =["Result"]
-                SearchItems: =[]
+                SearchItems: =Search(Sort( Distinct(CreateGrupo,GRUPO) , Result),DataCardGrupo.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -816,11 +813,10 @@
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Sub Grupo"
-                IsSearchable: =false
                 Items: =Sort( Distinct(CreateSubGrupo, SUBGRUPO) , Result)
                 NoSelectionText: ="Sub Grupo"
                 SearchFields: =["Result"]
-                SearchItems: =[]
+                SearchItems: =Search(Sort( Distinct(CreateSubGrupo, SUBGRUPO) , Result),DataCardSubGrupo.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -876,11 +872,10 @@
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Componente"
-                IsSearchable: =false
                 Items: =Sort( Distinct(CreateComponentes,COMPONENTES) , Result)
                 NoSelectionText: ="Componente"
                 SearchFields: =["Result"]
-                SearchItems: =[]
+                SearchItems: =Search(Sort( Distinct(CreateComponentes,COMPONENTES) , Result),DataCardComponente.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
