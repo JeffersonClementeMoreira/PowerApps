@@ -175,8 +175,11 @@
                 ZIndex: =4
 
             DataCardute As combobox:
-                DefaultSelectedItems: |
-                    =LookUp(Distinct(LancamentoProducao,UTE).Result, Result = ThisItem.UTE)
+                DefaultSelectedItems: |-
+                    =If( IsEmpty(varselect) , LookUp(Distinct(LancamentoProducao,UTE).Result, Result = ThisItem.UTE) , LookUp(Distinct(LancamentoProducao,UTE).Result, Result = varute))
+                    
+                    
+                    //LookUp(Distinct(LancamentoProducao;UTE).Result; Result = ThisItem.UTE)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione a UTE"
@@ -242,7 +245,7 @@
 
             DataCardsetor As combobox:
                 DefaultSelectedItems: |
-                    = LookUp(Distinct(LancamentoProducao,SETOR).Result, Result = ThisItem.SETOR) // Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
+                    = If( IsEmpty(varselect) , LookUp(Distinct(LancamentoProducao,SETOR).Result, Result = ThisItem.SETOR) , LookUp(Distinct(LancamentoProducao,SETOR).Result, Result = varsetor))// Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Insira o Setor"
@@ -305,7 +308,7 @@
 
             DataCardoperacao As combobox:
                 DefaultSelectedItems: |
-                    =LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = ThisItem.OPERACAO)
+                    = If( IsEmpty(varselect) , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = ThisItem.OPERACAO) , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = varoperacao))
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Insira a Operação"
@@ -368,7 +371,7 @@
                 ZIndex: =4
 
             DataCardmaquina As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(LancamentoProducao,MAQUINA).Result, Result = ThisItem.MAQUINA)
+                DefaultSelectedItems: =If( IsEmpty(varselect) , LookUp(Distinct(LancamentoProducao,MAQUINA).Result, Result = ThisItem.MAQUINA) , LookUp(Distinct(LancamentoProducao,MAQUINA).Result, Result = varmaquina))
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="CAF Máquina - Somente Números"

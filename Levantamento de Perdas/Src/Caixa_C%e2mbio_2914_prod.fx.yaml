@@ -9,6 +9,7 @@ Caixa_Câmbio_2914_prod As screen:
             Set( varsetor , "Usinagem Caixa de cambio");
             Set( varute , "2914") ;
             Set( varoperacao , "10/20");
+            Set( varselect , 1) ;
             Navigate(Tel_Edit_Producao)
         Size: =24
         Text: =""
