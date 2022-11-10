@@ -13,13 +13,14 @@ Caixa_Câmbio_2914_prod As screen:
     Btnmaq1 As button:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =96
-        OnSelect: |-
+        OnSelect: |
             =Set( varmaquina , "81500001");
             Set( varsetor , "Usinagem Caixa de cambio");
             Set( varute , "2914") ;
             Set( varoperacao , "10/20");
             Set( varselect , 1) ;
-            Navigate(Tel_Edit_Producao)
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
         Width: =78
