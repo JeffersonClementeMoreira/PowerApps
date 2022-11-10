@@ -11,7 +11,10 @@
         AccessibleLabel: =Self.Tooltip
         Height: =88
         Icon: =Icon.Cancel
-        OnSelect: =ResetForm('Form Produção');Back()
+        OnSelect: |-
+            =ResetForm('Form Produção');
+            Set(varselect , 0) ;
+            Back()
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -176,7 +179,7 @@
 
             DataCardute As combobox:
                 DefaultSelectedItems: |-
-                    =If( IsEmpty(varselect) , LookUp(Distinct(LancamentoProducao,UTE).Result, Result = ThisItem.UTE) , LookUp(Distinct(LancamentoProducao,UTE).Result, Result = varute))
+                    =If( varselect = 0 , LookUp(Distinct(LancamentoProducao,UTE).Result, Result = ThisItem.UTE) , LookUp(Distinct(LancamentoProducao,UTE).Result, Result = varute))
                     
                     
                     //LookUp(Distinct(LancamentoProducao;UTE).Result; Result = ThisItem.UTE)
@@ -245,7 +248,7 @@
 
             DataCardsetor As combobox:
                 DefaultSelectedItems: |
-                    = If( IsEmpty(varselect) , LookUp(Distinct(LancamentoProducao,SETOR).Result, Result = ThisItem.SETOR) , LookUp(Distinct(LancamentoProducao,SETOR).Result, Result = varsetor))// Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
+                    = If( varselect = 0 , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = ThisItem.SETOR) , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = varsetor))// Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Insira o Setor"
@@ -308,7 +311,7 @@
 
             DataCardoperacao As combobox:
                 DefaultSelectedItems: |
-                    = If( IsEmpty(varselect) , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = ThisItem.OPERACAO) , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = varoperacao))
+                    = If( varselect = 0 , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = ThisItem.OPERACAO) , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = varoperacao))
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Insira a Operação"
@@ -371,7 +374,7 @@
                 ZIndex: =4
 
             DataCardmaquina As combobox:
-                DefaultSelectedItems: =If( IsEmpty(varselect) , LookUp(Distinct(LancamentoProducao,MAQUINA).Result, Result = ThisItem.MAQUINA) , LookUp(Distinct(LancamentoProducao,MAQUINA).Result, Result = varmaquina))
+                DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreateMaquina,CAF).Result, Result = ThisItem.MAQUINA) , LookUp(Distinct(CreateMaquina,CAF).Result, Result = varmaquina))
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="CAF Máquina - Somente Números"
