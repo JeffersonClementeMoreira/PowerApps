@@ -179,7 +179,7 @@
 
             DataCardute As combobox:
                 DefaultSelectedItems: |-
-                    =If( varselect = 0 , LookUp(Distinct(LancamentoProducao,UTE).Result, Result = ThisItem.UTE) , LookUp(Distinct(LancamentoProducao,UTE).Result, Result = varute))
+                    =If( varselect = 0 , LookUp(Distinct(CreateMaquina,UTE).Result, Result = ThisItem.UTE) , LookUp(Distinct(CreateMaquina,UTE).Result, Result = varute))
                     
                     
                     //LookUp(Distinct(LancamentoProducao;UTE).Result; Result = ThisItem.UTE)
@@ -531,7 +531,7 @@
             DataCardcolaborador As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Clear: =true
-                Default: =If( varselect = 0 , COLABORADOR_Card.Default , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).COLABORADOR) // If('Form Produção'.Mode <> FormMode.New ;COLABORADOR_Card.Default)
+                Default: =If('Form Produção'.Mode <> FormMode.New ,COLABORADOR_Card.Default) //If( varselect = 0 ; COLABORADOR_Card.Default ; Last(Filter(LancamentoProducao ; (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).COLABORADOR) // 
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
