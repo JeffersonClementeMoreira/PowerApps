@@ -630,7 +630,7 @@
                 ZIndex: =4
 
             DataCardtipo_de_peca As combobox:
-                DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreatePeca,PECA).Result, Result = ThisItem.TIPO_DE_PECA , LookUp(Distinct(CreatePeca,PECA).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).TIPO_DE_PECA)))
+                DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreatePeca,PECA).Result, Result = ThisItem.TIPO_DE_PECA) , LookUp(Distinct(CreatePeca,PECA).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).TIPO_DE_PECA))
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione o tipo de peças"
