@@ -248,7 +248,7 @@
 
             DataCardsetor As combobox:
                 DefaultSelectedItems: |
-                    = If( varselect = 0 , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = ThisItem.SETOR) , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = varsetor))// Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
+                    =If( varselect = 0 , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = ThisItem.SETOR) , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = varsetor))// Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Insira o Setor"
