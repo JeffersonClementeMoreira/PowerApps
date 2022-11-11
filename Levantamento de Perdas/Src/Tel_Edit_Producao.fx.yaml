@@ -493,7 +493,7 @@
 
             DataCardhora_inicio As combobox:
                 DefaultSelectedItems: |
-                    =LookUp(Distinct(CreateHora,Hora).Result, Result = ThisItem.HORA_INICIO)
+                    =If( varselect = 0, LookUp(Distinct(CreateHora,Hora).Result, Result = ThisItem.HORA_INICIO) ,  LookUp(Distinct(CreateHora,Hora).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).HORA_INICIO))
                     
                      // Distinct(CreateHora;Hora).Result           LookUp(Distinct(LancamentoProducao;TIPO_DE_PECA).Result; Result = ThisItem.TIPO_DE_PECA)          If('Form Produção'.Mode <> FormMode.New ;{Value:HORA_INICIO_Card.Default})   LookUp(Distinct(LancamentoProducao;HORA_INICIO).Result; Result = ThisItem.HORA_INICIO)
                 DisplayFields: =["Result"]
