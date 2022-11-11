@@ -175,7 +175,7 @@
 
             DataCardute_1 As combobox:
                 DefaultSelectedItems: |
-                    =LookUp(Distinct(LancamentoPerdas,UTE).Result, Result = ThisItem.UTE)
+                    =LookUp(Distinct(CreateMaquina,UTE).Result, Result = ThisItem.UTE)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione a UTE"
@@ -240,7 +240,7 @@
 
             DataCardsetor_1 As combobox:
                 DefaultSelectedItems: |
-                    = LookUp(Distinct(LancamentoPerdas,SETOR).Result, Result = ThisItem.SETOR) // Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
+                    = LookUp(Distinct(CreateMaquina,SETOR).Result, Result = ThisItem.SETOR) // Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Insira o Setor"
@@ -303,7 +303,7 @@
 
             DataCardoperacao_1 As combobox:
                 DefaultSelectedItems: |
-                    =LookUp(Distinct(LancamentoPerdas,OPERACAO).Result, Result = ThisItem.OPERACAO) //LookUp(Distinct(LancamentoPerdas;OPERACAO).Result; Result = ThisItem.OPERACAO)
+                    =LookUp(Distinct(CreateMaquina,OPERACAO).Result, Result = ThisItem.OPERACAO) //LookUp(Distinct(LancamentoPerdas;OPERACAO).Result; Result = ThisItem.OPERACAO)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Insira a Operação"
@@ -431,7 +431,7 @@
                 ZIndex: =4
 
             DataCarddata_1 As datepicker:
-                DefaultDate: =If(Formperdas.Mode <> FormMode.New ,DATA_Cardperdas.Default, Today())
+                DefaultDate: =If(Formperdas.Mode <> FormMode.New ,DATA_Cardperdas.Default, If(Hour(Now()) > 0 , Today() , Today()-1))
                 Height: =73
                 OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result)
                 Size: =24
@@ -624,7 +624,7 @@
                 ZIndex: =4
 
             DataCardtipo_de_perda As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(LancamentoPerdas,TIPO_DE_PERDA).Result, Result = ThisItem.TIPO_DE_PERDA)
+                DefaultSelectedItems: =LookUp(Distinct(CreateTipodePerda,TIPO_DE_PERDA).Result, Result = ThisItem.TIPO_DE_PERDA)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione o tipo de perda"
@@ -691,7 +691,7 @@
                 ZIndex: =4
 
             DataCardtipo_de_falha As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(LancamentoPerdas,FALHA).Result, Result = ThisItem.FALHA)
+                DefaultSelectedItems: =LookUp(Distinct(CreateTipodePerda , LISTA_FALHAS).Result, Result = ThisItem.FALHA)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Descrição da Falha"
@@ -750,7 +750,7 @@
                 ZIndex: =4
 
             DataCardGrupo As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(LancamentoPerdas,GRUPO).Result, Result = ThisItem.GRUPO)
+                DefaultSelectedItems: =LookUp(Distinct(CreateGrupo,GRUPO).Result, Result = ThisItem.GRUPO)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Grupo"
@@ -809,7 +809,7 @@
                 ZIndex: =4
 
             DataCardSubGrupo As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(LancamentoPerdas,SUB_GRUPO).Result, Result = ThisItem.SUB_GRUPO)
+                DefaultSelectedItems: =LookUp(Distinct(CreateSubGrupo, SUBGRUPO).Result, Result = ThisItem.SUB_GRUPO)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Sub Grupo"
@@ -868,7 +868,7 @@
                 ZIndex: =4
 
             DataCardComponente As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(LancamentoPerdas,COMPONENTE).Result, Result = ThisItem.COMPONENTE)
+                DefaultSelectedItems: =LookUp(Distinct(CreateComponentes,COMPONENTES).Result, Result = ThisItem.COMPONENTE)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Componente"
@@ -926,7 +926,7 @@
                 ZIndex: =4
 
             DataCard4ms As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(LancamentoPerdas,'4M''S').Result, Result = ThisItem.'4M''S')
+                DefaultSelectedItems: =LookUp(Distinct(CreateTipodePerda,'4M''S').Result, Result = ThisItem.'4M''S')
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="4M's + D"

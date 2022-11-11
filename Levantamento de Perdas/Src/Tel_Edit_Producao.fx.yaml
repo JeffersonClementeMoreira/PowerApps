@@ -438,7 +438,7 @@
                 ZIndex: =4
 
             DataCarddata As datepicker:
-                DefaultDate: =If('Form Produção'.Mode <> FormMode.New ,DATA_Card.Default, Today())
+                DefaultDate: =If('Form Produção'.Mode <> FormMode.New ,DATA_Card.Default, If(Hour(Now()) > 0 , Today() , Today()-1))
                 Height: =73
                 OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result)
                 Size: =24
