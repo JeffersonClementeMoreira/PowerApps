@@ -494,7 +494,7 @@
                 InputTextPlaceholder: ="Hora"
                 IsSearchable: =false
                 Items: =Distinct(CreateHora,Hora)
-                NoSelectionText: ="Hora"
+                NoSelectionText: ="Hora Inicial"
                 OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; Set(varCapacidade, Cap_Produtiva_1)
                 SearchFields: =["Result"]
                 SearchItems: =[]

@@ -501,7 +501,7 @@
                 InputTextPlaceholder: ="Hora"
                 IsSearchable: =false
                 Items: =Distinct(CreateHora,Hora)
-                NoSelectionText: ="Hora"
+                NoSelectionText: ="Hora Inicial"
                 OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result)
                 SearchFields: =["Result"]
                 SearchItems: =[]
@@ -916,7 +916,7 @@
 
             DataCardValue15 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Sum(Filter( CreateMaquina , DataCardmaquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)
+                Default: =Max(Filter( CreateMaquina , DataCardmaquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -928,6 +928,7 @@
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
+                Visible: =false
                 Width: =Parent.Width - 60
                 X: =30
                 Y: =DataCardKey16.Y + DataCardKey16.Height + 5
