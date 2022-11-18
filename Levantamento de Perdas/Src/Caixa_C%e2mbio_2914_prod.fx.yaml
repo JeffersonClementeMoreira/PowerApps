@@ -189,6 +189,9 @@ Caixa_Câmbio_2914_prod As screen:
             Set( varselect , 1) ;
             Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            
+            // Caso a máquina faça peças para outro tipo de setor, operação precisa ser escrita manualmente conforme modelo abaixo: 
+            // Set(varsetor; "Usinagem Caixa Diferencial Completa")
         Size: =24
         Text: =""
         Width: =Btnmaq.Width
