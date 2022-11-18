@@ -313,7 +313,7 @@
 
             DataCardoperacao As combobox:
                 DefaultSelectedItems: |
-                    = If( varselect = 0 , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = ThisItem.OPERACAO) , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = varoperacao))
+                    = If( varselect = 0 , LookUp(Distinct(CreateMaquina,OPERACAO).Result, Result = ThisItem.OPERACAO) , LookUp(Distinct(CreateMaquina,OPERACAO).Result, Result = varoperacao))
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
@@ -322,7 +322,7 @@
                 Items: |
                     =Sort( Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , OPERACAO ).Result , Result) //Distinct(CreateMaquina;OPERACAO).Result
                 NoSelectionText: ="Insira a Operação"
-                OnChange: =Reset(DataCardtipo_de_peca) ; Reset(DataCardmaquina)
+                OnChange: =Reset(DataCardtipo_de_peca) ; Reset(DataCardmaquina) ; 
                 SearchFields: =["Result"]
                 SearchItems: =[]
                 SelectMultiple: =false
