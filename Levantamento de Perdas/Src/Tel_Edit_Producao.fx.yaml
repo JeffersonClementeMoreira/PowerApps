@@ -184,6 +184,7 @@
                     
                     //LookUp(Distinct(LancamentoProducao;UTE).Result; Result = ThisItem.UTE)
                 DisplayFields: =["Result"]
+                DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="Selecione a UTE"
                 IsSearchable: =false
@@ -250,6 +251,7 @@
                 DefaultSelectedItems: |
                     =If( varselect = 0 , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = ThisItem.SETOR) , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = varsetor))// Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
                 DisplayFields: =["Result"]
+                DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="Insira o Setor"
                 IsSearchable: =false
@@ -313,6 +315,7 @@
                 DefaultSelectedItems: |
                     = If( varselect = 0 , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = ThisItem.OPERACAO) , LookUp(Distinct(LancamentoProducao,OPERACAO).Result, Result = varoperacao))
                 DisplayFields: =["Result"]
+                DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="Insira a Operação"
                 IsSearchable: =false
@@ -376,6 +379,7 @@
             DataCardmaquina As combobox:
                 DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreateMaquina,CAF).Result, Result = ThisItem.MAQUINA) , LookUp(Distinct(CreateMaquina,CAF).Result, Result = varmaquina))
                 DisplayFields: =["Result"]
+                DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="CAF Máquina - Somente Números"
                 IsSearchable: =false
@@ -531,7 +535,7 @@
             DataCardcolaborador As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Clear: =true
-                Default: =If('Form Produção'.Mode <> FormMode.New ,COLABORADOR_Card.Default) //If( varselect = 0 ; COLABORADOR_Card.Default ; Last(Filter(LancamentoProducao ; (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).COLABORADOR) // 
+                Default: =If( varselect = 0 , If('Form Produção'.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).COLABORADOR) // If('Form Produção'.Mode <> FormMode.New ;COLABORADOR_Card.Default)
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
