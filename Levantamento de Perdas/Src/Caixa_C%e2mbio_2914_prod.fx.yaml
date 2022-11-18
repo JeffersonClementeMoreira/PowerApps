@@ -107,7 +107,7 @@ Caixa_Câmbio_2914_prod As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "71500114");
+            =Set( varmaquina , "201405004489");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
