@@ -6,7 +6,7 @@ Tela_Ini_2913 As screen:
         DisplayMode: =DisplayMode.View
         Height: =70
         Size: =24
-        Text: ="UTE - 2912"
+        Text: ="UTE - 2913"
         Width: =550
         X: =45
         Y: =36
@@ -145,15 +145,6 @@ Tela_Ini_2913 As screen:
         Y: =Button2_34.Y + Button2_34.Height + 15
         ZIndex: =15
 
-    Button2_37 As button:
-        Height: =Button2_24.Height
-        Size: =24
-        Text: ="Retífica Tampa"
-        Width: =Button2_24.Width
-        X: =Button2_25.X
-        Y: =Button2_36.Y 
-        ZIndex: =16
-
     Button2_38 As button:
         Height: =Button2_24.Height
         Size: =24
@@ -163,21 +154,12 @@ Tela_Ini_2913 As screen:
         Y: =Button2_36.Y + Button2_36.Height + 15
         ZIndex: =17
 
-    Button2_39 As button:
-        Height: =Button2_24.Height
-        Size: =24
-        Text: ="Retífica Engr. CDZ 5ª"
-        Width: =Button2_24.Width
-        X: =Button2_25.X
-        Y: =Button2_38.Y 
-        ZIndex: =18
-
     Button2_40 As button:
-        Height: =Button2_24.Height
-        Size: =18
+        Height: =Button2_24.Height * 2 +15
+        Size: =24
         Text: ="Usinagem Caixa Diferencial Completa"
         Width: =Button2_24.Width
-        X: =Button2_24.X
-        Y: =Button2_38.Y + Button2_38.Height + 15
+        X: =Button2_25.X
+        Y: =Button2_36.Y
         ZIndex: =19
 
