@@ -37,17 +37,6 @@ Caixa_Câmbio_2914_prod As screen:
         Y: =175
         ZIndex: =2
 
-    Label3 As label:
-        Align: =Align.Center
-        Fill: =RGBA(230, 230, 230, 1)
-        Height: =88
-        Size: =21
-        Text: ="Linha Caixa de Câmbio - UTE 2914"
-        Width: =600
-        X: =18
-        Y: =36
-        ZIndex: =3
-
     Btnmaq_1 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -397,4 +386,14 @@ Caixa_Câmbio_2914_prod As screen:
         Width: =560
         X: =41
         ZIndex: =18
+
+    Label_Local As button:
+        DisplayMode: =DisplayMode.View
+        Height: =88
+        Size: =24
+        Text: ="Linha Caixa de Câmbio - UTE 2914"
+        Width: =600
+        X: =18
+        Y: =36
+        ZIndex: =19
 

@@ -671,7 +671,7 @@
             DataCardquantidade As text:
                 Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If('Form Produção'.Mode=FormMode.New , 0 , Parent.Default)
+                Default: =If( varselect = 0 , If('Form Produção'.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE) 
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -989,7 +989,7 @@
             ZIndex: =1
 
     Timer1 As timer:
-        Duration: =2500
+        Duration: =1500
         Height: =70
         OnTimerEnd: =Set(varDelta , Cap_Produtiva - DataCardquantidade) ; Set(varDelay,false)
         Reset: =true
