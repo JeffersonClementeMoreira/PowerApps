@@ -674,6 +674,7 @@
                 Default: =If( varselect = 0 , If('Form Produção'.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE) 
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
+                FontWeight: =FontWeight.Bold
                 Height: =70
                 HintText: ="Insira a quantidade produzida"
                 MaxLength: =Parent.MaxLength
@@ -728,7 +729,6 @@
 
             Label_Prod_Realizada As label:
                 Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(204, 204, 204, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =80
@@ -740,7 +740,6 @@
 
             Label_Prod_Prevista As label:
                 Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(204, 204, 204, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =80
@@ -758,6 +757,7 @@
                               
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.Disabled
+                FontWeight: =FontWeight.Bold
                 Format: =TextFormat.Number
                 Height: =DataCardquantidade.Height
                 HintText: ="Insira a quantidade produzida"
@@ -778,7 +778,6 @@
 
             Label_Delta As label:
                 Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(204, 204, 204, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =80
@@ -792,6 +791,7 @@
                 Align: =Align.Center
                 Default: =Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE
                 DisplayMode: =DisplayMode.Disabled
+                FontWeight: =FontWeight.Bold
                 Height: =DataCardquantidade.Height
                 Size: =21
                 Width: =DataCardquantidade.Width
