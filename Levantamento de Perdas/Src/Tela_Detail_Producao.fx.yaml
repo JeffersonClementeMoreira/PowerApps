@@ -27,7 +27,7 @@
         Height: =88
         Icon: =Icon.Edit
         OnSelect: |
-            =EditForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None) ; Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , Cap_Produtiva - DataCardquantidade);
+            =EditForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None) ; Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , CardProd_Prev - DataCardquantidade);
             Set(varselect , 0)
         PaddingBottom: =24
         PaddingLeft: =24

@@ -1,0 +1,183 @@
+Tela_Ini_2912 As screen:
+    BackgroundImage: =Transmissões_foto_bw
+    ImagePosition: =ImagePosition.Fill
+
+    Label_ute_1 As button:
+        DisplayMode: =DisplayMode.View
+        Height: =70
+        Size: =24
+        Text: ="UTE - 2912"
+        Width: =550
+        X: =45
+        Y: =36
+        ZIndex: =1
+
+    Button2_7 As button:
+        Height: =95
+        Size: =24
+        Text: ="Usinagem Engr. 1ª"
+        Width: =280
+        X: =24
+        Y: =150
+        ZIndex: =2
+
+    Button2_8 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Retífica Engr. 1ª"
+        Width: =Button2_7.Width
+        X: =Button2_7.X+ Button2_7.Width + 25
+        Y: =Button2_7.Y
+        ZIndex: =3
+
+    Button2_9 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Usinagem Engr. 2ª"
+        Width: =Button2_7.Width
+        X: =Button2_7.X
+        Y: =Button2_7.Y + Button2_7.Height + 15
+        ZIndex: =4
+
+    Button2_10 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Retífica Engr. 2ª"
+        Width: =Button2_7.Width
+        X: =Button2_8.X
+        Y: =Button2_9.Y
+        ZIndex: =5
+
+    Icon1_4 As icon.Home:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =1
+        Height: =88
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Tela_Inicial_app,ScreenTransition.None)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        Width: =80
+        X: =515
+        Y: =28
+        ZIndex: =6
+
+    Button2_11 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Usinagem Engr. CDT 3ª"
+        Width: =Button2_7.Width
+        X: =Button2_7.X
+        Y: =Button2_9.Y + Button2_9.Height + 15
+        ZIndex: =7
+
+    Button2_12 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Retífica Engr. CDT 3ª"
+        Width: =Button2_7.Width
+        X: =Button2_8.X
+        Y: =Button2_11.Y 
+        ZIndex: =8
+
+    Button2_13 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Usinagem Engr. CDZ 3ª"
+        Width: =Button2_7.Width
+        X: =Button2_7.X
+        Y: =Button2_11.Y + Button2_11.Height + 15
+        ZIndex: =9
+
+    Button2_14 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Retífica Engr. CDZ 3ª"
+        Width: =Button2_7.Width
+        X: =Button2_8.X
+        Y: =Button2_13.Y 
+        ZIndex: =10
+
+    Button2_15 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Usinagem Engr. CDT 4ª"
+        Width: =Button2_7.Width
+        X: =Button2_7.X
+        Y: =Button2_13.Y + Button2_13.Height + 15
+        ZIndex: =11
+
+    Button2_16 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Retífica Engr. CDT 4ª"
+        Width: =Button2_7.Width
+        X: =Button2_8.X
+        Y: =Button2_15.Y 
+        ZIndex: =12
+
+    Button2_17 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Usinagem Engr. CDZ 4ª"
+        Width: =Button2_7.Width
+        X: =Button2_7.X
+        Y: =Button2_15.Y + Button2_15.Height + 15
+        ZIndex: =13
+
+    Button2_18 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Retífica Engr. CDZ 4ª"
+        Width: =Button2_7.Width
+        X: =Button2_8.X
+        Y: =Button2_17.Y 
+        ZIndex: =14
+
+    Button2_19 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Usinagem Engr. CDT 5ª"
+        Width: =Button2_7.Width
+        X: =Button2_7.X
+        Y: =Button2_17.Y + Button2_17.Height + 15
+        ZIndex: =15
+
+    Button2_20 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Retífica Engr. CDT 5ª"
+        Width: =Button2_7.Width
+        X: =Button2_8.X
+        Y: =Button2_19.Y 
+        ZIndex: =16
+
+    Button2_21 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Usinagem Engr. CDZ 5ª"
+        Width: =Button2_7.Width
+        X: =Button2_7.X
+        Y: =Button2_19.Y + Button2_19.Height + 15
+        ZIndex: =17
+
+    Button2_22 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Retífica Engr. CDZ 5ª"
+        Width: =Button2_7.Width
+        X: =Button2_8.X
+        Y: =Button2_21.Y 
+        ZIndex: =18
+
+    Button2_23 As button:
+        Height: =Button2_7.Height
+        Size: =24
+        Text: ="Usinagem Coroinha"
+        Width: =Button2_7.Width
+        X: =Button2_7.X
+        Y: =Button2_21.Y + Button2_21.Height + 15
+        ZIndex: =19
+

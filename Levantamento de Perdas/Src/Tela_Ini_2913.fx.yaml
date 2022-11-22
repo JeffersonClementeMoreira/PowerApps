@@ -1,0 +1,183 @@
+Tela_Ini_2913 As screen:
+    BackgroundImage: =Transmissões_foto_bw
+    ImagePosition: =ImagePosition.Fill
+
+    Label_ute_2 As button:
+        DisplayMode: =DisplayMode.View
+        Height: =70
+        Size: =24
+        Text: ="UTE - 2912"
+        Width: =550
+        X: =45
+        Y: =36
+        ZIndex: =1
+
+    Button2_24 As button:
+        Height: =95
+        Size: =24
+        Text: ="Usinagem Luva 1ª2ª"
+        Width: =280
+        X: =24
+        Y: =150
+        ZIndex: =2
+
+    Button2_25 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Retífica Luva 1ª2ª"
+        Width: =Button2_24.Width
+        X: =Button2_24.X+ Button2_24.Width + 25
+        Y: =Button2_24.Y
+        ZIndex: =3
+
+    Button2_26 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Usinagem Luva 3ª4ª"
+        Width: =Button2_24.Width
+        X: =Button2_24.X
+        Y: =Button2_24.Y + Button2_24.Height + 15
+        ZIndex: =4
+
+    Button2_27 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Retifica Luva 3ª4ª"
+        Width: =Button2_24.Width
+        X: =Button2_25.X
+        Y: =Button2_26.Y
+        ZIndex: =5
+
+    Icon1_5 As icon.Home:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =1
+        Height: =88
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Tela_Inicial_app,ScreenTransition.None)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        Width: =80
+        X: =515
+        Y: =28
+        ZIndex: =6
+
+    Button2_28 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Usinagem Luva 5ª"
+        Width: =Button2_24.Width
+        X: =Button2_24.X
+        Y: =Button2_26.Y + Button2_26.Height + 15
+        ZIndex: =7
+
+    Button2_29 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Retífica Luva 5ª"
+        Width: =Button2_24.Width
+        X: =Button2_25.X
+        Y: =Button2_28.Y 
+        ZIndex: =8
+
+    Button2_30 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Usinagem Planetária"
+        Width: =Button2_24.Width
+        X: =Button2_24.X
+        Y: =Button2_28.Y + Button2_28.Height + 15
+        ZIndex: =9
+
+    Button2_31 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Retífica Planetária"
+        Width: =Button2_24.Width
+        X: =Button2_25.X
+        Y: =Button2_30.Y 
+        ZIndex: =10
+
+    Button2_32 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Usinagem Satélite"
+        Width: =Button2_24.Width
+        X: =Button2_24.X
+        Y: =Button2_30.Y + Button2_30.Height + 15
+        ZIndex: =11
+
+    Button2_33 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Retífica Satélite"
+        Width: =Button2_24.Width
+        X: =Button2_25.X
+        Y: =Button2_32.Y 
+        ZIndex: =12
+
+    Button2_34 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Usinagem Marcha Ré"
+        Width: =Button2_24.Width
+        X: =Button2_24.X
+        Y: =Button2_32.Y + Button2_32.Height + 15
+        ZIndex: =13
+
+    Button2_35 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Retífica Marcha Ré"
+        Width: =Button2_24.Width
+        X: =Button2_25.X
+        Y: =Button2_34.Y 
+        ZIndex: =14
+
+    Button2_36 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Usinagem Tampa"
+        Width: =Button2_24.Width
+        X: =Button2_24.X
+        Y: =Button2_34.Y + Button2_34.Height + 15
+        ZIndex: =15
+
+    Button2_37 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Retífica Tampa"
+        Width: =Button2_24.Width
+        X: =Button2_25.X
+        Y: =Button2_36.Y 
+        ZIndex: =16
+
+    Button2_38 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Usinagem Caixa Diferencial"
+        Width: =Button2_24.Width
+        X: =Button2_24.X
+        Y: =Button2_36.Y + Button2_36.Height + 15
+        ZIndex: =17
+
+    Button2_39 As button:
+        Height: =Button2_24.Height
+        Size: =24
+        Text: ="Retífica Engr. CDZ 5ª"
+        Width: =Button2_24.Width
+        X: =Button2_25.X
+        Y: =Button2_38.Y 
+        ZIndex: =18
+
+    Button2_40 As button:
+        Height: =Button2_24.Height
+        Size: =18
+        Text: ="Usinagem Caixa Diferencial Completa"
+        Width: =Button2_24.Width
+        X: =Button2_24.X
+        Y: =Button2_38.Y + Button2_38.Height + 15
+        ZIndex: =19
+

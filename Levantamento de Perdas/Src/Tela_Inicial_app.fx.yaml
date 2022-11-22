@@ -82,9 +82,9 @@ Tela_Inicial_app As screen:
         Height: =70
         Size: =21
         Text: ="RESUMO LANÇAMENTOS"
-        Width: =560
+        Width: =545
         X: =40
-        Y: =DatePicker_ini.Y+ DatePicker_ini.Height + 20
+        Y: =DatePicker_ini.Y+ DatePicker_ini.Height + 15
         ZIndex: =6
 
     Label_perda_real_ini As label:
@@ -140,9 +140,10 @@ Tela_Inicial_app As screen:
         OnSelect: =Navigate(Tela_Inicial_Producao)
         Size: =24
         Text: ="Lançar Produção"
+        Visible: =false
         Width: =280
-        X: =26
-        Y: =1015
+        X: =30
+        Y: =703
         ZIndex: =11
 
     Btn_lancar_perda As button:
@@ -150,9 +151,10 @@ Tela_Inicial_app As screen:
         OnSelect: =Navigate(Tela_Inicial_Perdas)
         Size: =24
         Text: ="Lançar Perda"
+        Visible: =false
         Width: =280
-        X: =Btn_lancar_prod.X+ Btn_lancar_prod.Width + 27
-        Y: =1015
+        X: =320
+        Y: =703
         ZIndex: =12
 
     Label_perdanaoimpact_ini As label:
@@ -163,7 +165,7 @@ Tela_Inicial_app As screen:
         Text: ="Perdas não Impactam OEE"
         Width: =Label_perda_real_ini.Width
         X: =Label_perda_real_ini.X
-        Y: =Label_resumo_ini_1.Y + Label_resumo_ini_1.Height +30
+        Y: =Label_resumo_ini_1.Y + Label_resumo_ini_1.Height +20
         ZIndex: =13
 
     Perdanaoimpact_ini As text:
@@ -194,9 +196,9 @@ Tela_Inicial_app As screen:
         Height: =70
         Size: =21
         Text: ="RESUMO OEE"
-        Width: =560
+        Width: =545
         X: =40
-        Y: =580
+        Y: =Label_perda_real_ini_1.Y + Label_perda_real_ini_1.Height +15
         ZIndex: =15
 
     Label_perdaimpact_ini As label:
@@ -303,12 +305,17 @@ Tela_Inicial_app As screen:
         ZIndex: =24
 
     Btn_vis_lev_perdas As button:
+        Height: =42
         OnSelect: =Navigate(Tela_acerto_levantamento)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
         Size: =16
         Text: ="Visualização Levantamento de Perdas"
-        Width: =587
+        Width: =574
         X: =26
-        Y: =956
+        Y: =Label_oee_ini.Y + Label_oee_ini.Height + 15
         ZIndex: =25
 
     DatePicker_ini As datepicker:
@@ -328,4 +335,74 @@ Tela_Inicial_app As screen:
         X: =475
         Y: =198
         ZIndex: =27
+
+    btn_2911 As button:
+        Height: =70
+        OnSelect: =Navigate(Tela_Ini_2911)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="UTE 2911"
+        Width: =280
+        X: =Btn_vis_lev_perdas.X
+        Y: =Btn_vis_lev_perdas.Y + Btn_vis_lev_perdas.Height+14
+        ZIndex: =28
+
+    btn_2912 As button:
+        Height: =70
+        OnSelect: =Navigate(Tela_Ini_2912)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="UTE 2912"
+        Width: =280
+        X: =Btn_vis_lev_perdas.X + 295
+        Y: =btn_2911.Y
+        ZIndex: =29
+
+    btn_2913 As button:
+        Height: =70
+        OnSelect: =Navigate(Tela_Ini_2913)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="UTE 2913"
+        Width: =280
+        X: =Btn_vis_lev_perdas.X
+        Y: =btn_2911.Y + btn_2911.Height + 8
+        ZIndex: =30
+
+    btn_2914 As button:
+        Height: =70
+        OnSelect: =Navigate(Tela_Ini_2914)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="UTE 2914"
+        Width: =280
+        X: =Btn_vis_lev_perdas.X + 295
+        Y: =btn_2913.Y
+        ZIndex: =31
+
+    btn_2915 As button:
+        Height: =70
+        OnSelect: =Navigate(Tela_Ini_2915)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="UTE 2915"
+        Width: =280
+        X: =Btn_vis_lev_perdas.X
+        Y: =btn_2913.Y + btn_2913.Height + 10
+        ZIndex: =32
 
