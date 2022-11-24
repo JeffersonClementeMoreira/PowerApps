@@ -30,7 +30,8 @@
         Height: =88
         Icon: =Icon.Check
         OnSelect: |
-            =SubmitForm('Form Produção') ;
+            =SubmitForm('Form Produção');
+            Set(varenviado ,1)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -55,7 +56,7 @@
         DataSource: =[@LancamentoProducao]
         Height: =831
         Item: =BrowseGallery1.Selected
-        OnSuccess: =Back()
+        OnSuccess: =If(varenviado = 1, Back() , Navigate(Tel_Edit_Producao));
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
@@ -1020,4 +1021,34 @@
         X: =360
         Y: =1060
         ZIndex: =7
+
+    IconNewItem1_2 As icon.Add:
+        AccessibleLabel: =Self.Tooltip
+        DisplayMode: =If(DataSourceInfo([@LancamentoProducao], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        Fill: =RGBA(56, 96, 178, 1)
+        Height: =70
+        Icon: =Icon.Add
+        OnSelect: |-
+            =SubmitForm('Form Produção') ;
+            Set(varenviado ,0)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Criar novo item"
+        Width: =270
+        X: =344
+        Y: =962
+        ZIndex: =8
+
+    Btn_lancar_perda_1 As button:
+        Height: =Btn_lancar_prod.Height
+        OnSelect: =Navigate(Tel_Edit_Perdas)
+        Size: =24
+        Text: ="Lançar Perda"
+        Width: =280
+        X: =35
+        Y: =962
+        ZIndex: =9
 
