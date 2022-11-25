@@ -1,7 +1,32 @@
 App As appinfo:
     BackEnabled: =false
     OnStart: |-
-        =Set(varDelegationLimit , 1000) ;
-        Set(varDataCount , 3000) ;
-        Set(varDataCountperdas , 3000)
+        =Set(
+            varDelegationLimit,
+            1000
+        );
+        Set(
+            varDataCount,
+            3000
+        );
+        Set(
+            varDataCountperdas,
+            3000
+        );
+        
+        ClearCollect(
+            colRoleKeys,
+            Table(
+                {
+                    Role: "Suporte_União_2914",
+                    Screen: Suporte_União_2914
+                },
+                {
+                    Role: "Caixa_Câmbio_2914",
+                    Screen: Caixa_Câmbio_2914
+                }
+            )
+        );
+        
+        ClearCollect( TelaAnterior , colRoleKeys)
 

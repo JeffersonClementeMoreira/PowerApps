@@ -14,7 +14,7 @@
         OnSelect: |-
             =ResetForm('Form Produção');
             Set(varselect , 0) ;
-            Back()
+            Navigate(
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -504,14 +504,13 @@
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Hora"
-                IsSearchable: =false
                 Items: =Distinct(CreateHora,Hora)
                 NoSelectionText: ="Hora Inicial"
                 OnChange: |-
                     =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ;
                     Set(varDelay , true)
                 SearchFields: =["Result"]
-                SearchItems: =[]
+                SearchItems: =Search(Distinct(CreateHora,Hora),DataCardhora_inicio.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -1050,12 +1049,13 @@
         ZIndex: =7
 
     Btn_lancar_perda_1 As button:
-        DisplayMode: =If((varDelta <= 0 || varprod_realizada <=0 ), DisplayMode.Disabled  ,DisplayMode.Edit)
+        DisplayMode: =If((varDelta <= 0 || varprod_realizada <0 ), DisplayMode.Disabled  ,DisplayMode.Edit)
         Height: =98
         OnSelect: |-
-            =SubmitForm('Form Produção') ;
+            =If( varprod_realizada = 0, Navigate(Tel_Edit_Perdas));
+            SubmitForm('Form Produção');
             Set(varenviado ,0);
-            Navigate(Tel_Edit_Perdas)
+            Navigate(Tel_Edit_Perdas);
         Size: =24
         Text: ="Salvar e Lançar Perda"
         Tooltip: ="Enviar item e ir para página de lançamento perdas"
