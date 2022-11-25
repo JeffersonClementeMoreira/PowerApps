@@ -26,7 +26,7 @@
 
     IconAccept1 As icon.Check:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(varDelta < 0 , DisplayMode.Disabled  ,DisplayMode.Edit)
+        DisplayMode: =If(varDelta < 0 || varprod_realizada <=0 , DisplayMode.Disabled  ,DisplayMode.Edit)
         Height: =88
         Icon: =Icon.Check
         OnSelect: |
@@ -37,7 +37,7 @@
         PaddingRight: =22
         PaddingTop: =22
         TabIndex: =0
-        Tooltip: ="Enviar item"
+        Tooltip: ="Enviar item e retornar a página inicial"
         Width: =88
         X: =Parent.Width - Self.Width
         ZIndex: =3
@@ -507,7 +507,9 @@
                 IsSearchable: =false
                 Items: =Distinct(CreateHora,Hora)
                 NoSelectionText: ="Hora Inicial"
-                OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result)
+                OnChange: |-
+                    =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ;
+                    Set(varDelay , true)
                 SearchFields: =["Result"]
                 SearchItems: =[]
                 SelectMultiple: =false
@@ -672,7 +674,14 @@
             DataCardquantidade As text:
                 Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If( varselect = 0 , If('Form Produção'.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE) 
+                Default: |-
+                    =If( varselect = 0 , If('Form Produção'.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE) - Sum(Filter(
+                            LancamentoProducao,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE) - Sum(Filter(
+                            LancamentoPerdas,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE)
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 FontWeight: =FontWeight.Bold
@@ -684,7 +693,15 @@
                           Value(DataCardquantidade.Text) <> RoundDown(Value(DataCardquantidade.Text),0),
                               Notify("Favor digitar apenas o número do Registro");
                               Reset(DataCardquantidade)
-                    ); Set(varDelta , CardProd_Prev - DataCardquantidade)
+                    ); Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
+                            LancamentoProducao,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                            LancamentoPerdas,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE)))) ;
+                    
+                    Set(varprod_realizada , Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))) ;
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -753,9 +770,7 @@
             CardProd_Delta As text:
                 Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: |-
-                    =varDelta
-                              
+                Default: =varDelta 
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.Disabled
                 FontWeight: =FontWeight.Bold
@@ -1013,7 +1028,19 @@
     Timer1 As timer:
         Duration: =1500
         Height: =70
-        OnTimerEnd: =Set(varDelta , Cap_Produtiva - DataCardquantidade) ; Set(varDelay,false)
+        OnTimerEnd: |-
+            =Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)))); 
+                
+                
+            Set(varDelay,false) ;
+            
+            Set(varprod_realizada , Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva)))
         Reset: =true
         Start: =varDelay
         Visible: =false
@@ -1022,33 +1049,85 @@
         Y: =1060
         ZIndex: =7
 
-    IconNewItem1_2 As icon.Add:
-        AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(DataSourceInfo([@LancamentoProducao], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
-        Fill: =RGBA(56, 96, 178, 1)
-        Height: =70
-        Icon: =Icon.Add
+    Btn_lancar_perda_1 As button:
+        DisplayMode: =If((varDelta <= 0 || varprod_realizada <=0 ), DisplayMode.Disabled  ,DisplayMode.Edit)
+        Height: =98
+        OnSelect: |-
+            =SubmitForm('Form Produção') ;
+            Set(varenviado ,0);
+            Navigate(Tel_Edit_Perdas)
+        Size: =24
+        Text: ="Salvar e Lançar Perda"
+        Tooltip: ="Enviar item e ir para página de lançamento perdas"
+        Width: =280
+        X: =35
+        Y: =934
+        ZIndex: =9
+
+    Total_hora_produção As text:
+        Default: |+
+            =Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)
+            
+        Height: =63
+        Size: =21
+        Width: =132
+        X: =35
+        Y: =1060
+        ZIndex: =10
+
+    Total_hora_perdas As text:
+        Default: |+
+            =Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)
+            
+        Height: =63
+        Size: =21
+        Width: =132
+        X: =183
+        Y: =1060
+        ZIndex: =11
+
+    Total_lancamento_hora As text:
+        Default: |
+            =Sum( Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE))
+        Height: =63
+        Size: =21
+        Width: =132
+        X: =333
+        Y: =1060
+        ZIndex: =12
+
+    Prod_realizada As text:
+        Default: =Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))
+        Height: =63
+        Size: =21
+        Width: =132
+        X: =482
+        Y: =1060
+        ZIndex: =13
+
+    Btn_lancar_perda_2 As button:
+        DisplayMode: =If((varDelta < 0 || varprod_realizada <=0 ), DisplayMode.Disabled  ,DisplayMode.Edit)
+        Height: =98
         OnSelect: |-
             =SubmitForm('Form Produção') ;
             Set(varenviado ,0)
-        PaddingBottom: =22
-        PaddingLeft: =22
-        PaddingRight: =22
-        PaddingTop: =22
-        TabIndex: =0
-        Tooltip: ="Criar novo item"
-        Width: =270
-        X: =344
-        Y: =962
-        ZIndex: =8
-
-    Btn_lancar_perda_1 As button:
-        Height: =Btn_lancar_prod.Height
-        OnSelect: =Navigate(Tel_Edit_Perdas)
         Size: =24
-        Text: ="Lançar Perda"
+        Text: ="Adicionar nova produção"
+        Tooltip: ="Enviar item e manter nesta página"
         Width: =280
-        X: =35
-        Y: =962
-        ZIndex: =9
+        X: =334
+        Y: =934
+        ZIndex: =14
 
