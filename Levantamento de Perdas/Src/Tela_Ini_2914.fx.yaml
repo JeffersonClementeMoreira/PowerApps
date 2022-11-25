@@ -24,6 +24,7 @@ Tela_Ini_2914 As screen:
 
     Button2_39 As button:
         Height: =Button2_37.Height
+        OnSelect: =Navigate(Suporte_União_2914)
         Size: =24
         Text: ="Linha Suporte União"
         Width: =Button2_37.Width
