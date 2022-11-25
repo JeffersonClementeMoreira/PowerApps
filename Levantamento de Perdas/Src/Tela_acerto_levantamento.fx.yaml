@@ -458,6 +458,7 @@
         OnChange: |-
             =ClearCollect(Listaperdas , Filter(LancamentoPerdas , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
             ClearCollect(Listaproducao , Filter(LancamentoProducao , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
+            Set( varmaquina , Cbox_Maquina.Selected.Result );
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingTop: =0

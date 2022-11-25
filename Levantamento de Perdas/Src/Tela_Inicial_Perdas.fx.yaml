@@ -264,6 +264,7 @@
         ZIndex: =10
 
     ComboBoxmaquinaperdas As combobox:
+        DefaultSelectedItems: =LookUp(Distinct(CreateMaquina,CAF).Result, Result = varmaquina)
         DisplayFields: =["Result"]
         Height: =70
         InputTextPlaceholder: ="MÁQUINA"
@@ -288,7 +289,8 @@
         Icon: =Icon.Home
         OnSelect: |-
             =Select(Icon2_2);
-            Navigate(Tela_Inicial_app,ScreenTransition.None)
+            Back();
+            //Navigate(Tela_Inicial_app;ScreenTransition.None)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
