@@ -14,11 +14,9 @@ Tela_Ini_2914 As screen:
 
     Button2_37 As button:
         Height: =122
-        OnSelect: |-
+        OnSelect: |
             =Navigate(Caixa_Câmbio_2914);
             Set(vartela , "Caixa_Câmbio_2914");
-            //UpdateContext({TelaAnterior : LookUp(colRoleKeys ; Screen = Text("Caixa_Câmbio_2914"))})
-            LookUp(Distinct(colRoleKeys,Screen).Result, Result = vartela)
         Size: =24
         Text: ="Linha Caixa de Câmbio"
         Width: =280
@@ -30,7 +28,7 @@ Tela_Ini_2914 As screen:
         Height: =Button2_37.Height
         OnSelect: |-
             =Navigate(Suporte_União_2914);
-            Set(vartelaanterior , "Suporte_União_2914")
+            Set(vartela , "Suporte_União_2914")
         Size: =24
         Text: ="Linha Suporte União"
         Width: =Button2_37.Width

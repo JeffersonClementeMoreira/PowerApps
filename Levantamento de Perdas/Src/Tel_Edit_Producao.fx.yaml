@@ -14,7 +14,9 @@
         OnSelect: |-
             =ResetForm('Form Produção');
             Set(varselect , 0) ;
-            Navigate(
+            UpdateContext({TelaAnterior : LookUp(colRoleKeys, Role = vartela)});
+            
+            Navigate(TelaAnterior.Screen)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -508,7 +510,8 @@
                 NoSelectionText: ="Hora Inicial"
                 OnChange: |-
                     =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ;
-                    Set(varDelay , true)
+                    Set(varDelay , true);
+                    Set(varhora , DataCardhora_inicio.Selected.Result)
                 SearchFields: =["Result"]
                 SearchItems: =Search(Distinct(CreateHora,Hora),DataCardhora_inicio.SearchText,"Result")
                 SelectMultiple: =false
