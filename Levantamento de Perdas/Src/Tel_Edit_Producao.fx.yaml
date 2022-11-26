@@ -58,7 +58,9 @@
         DataSource: =[@LancamentoProducao]
         Height: =831
         Item: =BrowseGallery1.Selected
-        OnSuccess: =If(varenviado = 1, Back() , Navigate(Tel_Edit_Producao));
+        OnSuccess: |-
+            =If(varenviado = 1, (UpdateContext({TelaAnterior : LookUp(colRoleKeys, Role = vartela)});
+            Navigate(TelaAnterior.Screen)) , Navigate(Tel_Edit_Producao));
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
