@@ -58,7 +58,7 @@
         DataSource: =[@LancamentoProducao]
         Height: =831
         Item: =BrowseGallery1.Selected
-        OnSuccess: =If(varenviado = 1, Navigate(TelaAnterior.Screen) , Navigate(Tel_Edit_Producao));
+        OnSuccess: =If(varenviado = 1, Navigate(TelaAnterior.Screen)) //; NewForm(Formperdas);;Navigate(Tel_Edit_Producao));;
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
@@ -1055,11 +1055,11 @@
         DisplayMode: =If((varDelta <= 0 || varprod_realizada <0 ), DisplayMode.Disabled  ,DisplayMode.Edit)
         Height: =98
         OnSelect: |-
-            =If( varprod_realizada = 0, Navigate(Tel_Edit_Perdas));
-            SubmitForm('Form Produção');
+            =If( varprod_realizada = 0, NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas),
             Set(varenviado ,0);
+            SubmitForm('Form Produção');
             NewForm(Formperdas);
-            //Navigate(Tel_Edit_Perdas);;
+            Navigate(Tel_Edit_Perdas));
         Size: =24
         Text: ="Salvar e Lançar Perda"
         Tooltip: ="Enviar item e ir para página de lançamento perdas"
@@ -1126,7 +1126,9 @@
         Height: =98
         OnSelect: |-
             =SubmitForm('Form Produção') ;
-            Set(varenviado ,0)
+            Set(varenviado ,0);
+            NewForm('Form Produção');
+            Navigate(Tel_Edit_Producao)
         Size: =24
         Text: ="Adicionar nova produção"
         Tooltip: ="Enviar item e manter nesta página"

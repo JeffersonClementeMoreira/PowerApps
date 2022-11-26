@@ -370,6 +370,7 @@
             DataCardmaquina_1 As combobox:
                 DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreateMaquina,CAF).Result, Result = ThisItem.MAQUINA) , LookUp(Distinct(CreateMaquina,CAF).Result, Result = varmaquina)) //LookUp(Distinct(LancamentoProducao;MAQUINA).Result; Result = ThisItem.MAQUINA)
                 DisplayFields: =["Result"]
+                DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="CAF Máquina - Somente Números"
                 IsSearchable: =false
@@ -1311,6 +1312,7 @@
         Reset: =true
         Start: =varDelay_2
         Tooltip: ="Selecione para atualizar os dados de produção prevista e delta se não tiver atualizado automaticamente"
+        Visible: =false
         Width: =92
         X: =472
         Y: =13
