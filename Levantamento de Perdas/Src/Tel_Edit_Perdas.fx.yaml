@@ -530,7 +530,10 @@
             DataCardcolaborador_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Clear: =true
-                Default: =If(Formperdas.Mode <> FormMode.New ,COLABORADOR_Card.Default)
+                Default: |-
+                    =If( varselect = 0 , If(Formperdas.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).COLABORADOR)
+                    
+                    //If(Formperdas.Mode <> FormMode.New ;COLABORADOR_Card.Default)
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
