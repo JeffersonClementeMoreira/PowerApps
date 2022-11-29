@@ -15,7 +15,6 @@
             =ResetForm('Form Produção');
             Set(varselect , 0) ;
             UpdateContext({TelaAnterior : LookUp(colRoleKeys, Role = vartela)});
-            
             Navigate(TelaAnterior.Screen)
         PaddingBottom: =22
         PaddingLeft: =22
