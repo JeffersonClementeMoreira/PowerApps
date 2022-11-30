@@ -10,360 +10,18 @@ Usinagem_Eixo_Secundário As screen:
         Y: =168
         ZIndex: =1
 
-    Btnmaq_42 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =106
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |+
-            =Set( varmaquina , "41500071");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-            
-        Size: =24
-        Text: =""
-        Width: =78
-        X: =18
-        Y: =175
-        ZIndex: =2
-
-    Btnmaq_43 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "81500070");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_42.X + Btnmaq_42.Width + 14
-        Y: =Btnmaq_42.Y
-        ZIndex: =3
-
-    Btnmaq_44 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "81500004");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_43.X + Btnmaq_43.Width + 10
-        Y: =Btnmaq_42.Y
-        ZIndex: =4
-
-    Btnmaq_45 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "101500024");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_44.X + Btnmaq_44.Width + 13
-        Y: =Btnmaq_42.Y
-        ZIndex: =5
-
-    Btnmaq_46 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "11501403");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_45.X + Btnmaq_45.Width + 12
-        Y: =Btnmaq_42.Y
-        ZIndex: =6
-
-    Btnmaq_47 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "11501404");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_46.X + Btnmaq_46.Width + 12
-        Y: =Btnmaq_42.Y
-        ZIndex: =7
-
-    Btnmaq_48 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "21500911");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-            
-            // Caso a máquina faça peças para outro tipo de setor, operação precisa ser escrita manualmente conforme modelo abaixo: 
-            // Set(varsetor; "Usinagem Caixa Diferencial Completa")
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_47.X + Btnmaq_47.Width + 12
-        Y: =Btnmaq_42.Y
-        ZIndex: =8
-
-    Btnmaq_49 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "51500031");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =110
-        Y: =430
-        ZIndex: =9
-
-    Btnmaq_50 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "51500032");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_49.X + Btnmaq_49.Width + 12
-        Y: =Btnmaq_49.Y
-        ZIndex: =10
-
-    Btnmaq_51 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "201405003556");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_50.X + Btnmaq_50.Width + 10 + Btnmaq_50.Width + 14
-        Y: =Btnmaq_49.Y
-        ZIndex: =11
-
-    Btnmaq_52 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "11501393");
-            Set( varsetor ,  Label_setor_3.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_49.X + Btnmaq_49.Width + 12
-        Y: =Btnmaq_49.Y + 197
-        ZIndex: =12
-
-    Btnmaq_53 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "91500122");
-            Set( varsetor ,  Label_setor_3.Text);
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_50.X + Btnmaq_50.Width + 10 + Btnmaq_50.Width + 13
-        Y: =Btnmaq_49.Y + 197
-        ZIndex: =13
-
-    Btnmaq_55 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "091500123 - 122");
-            Set( varsetor ,  Label_setor_3.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_50.X + Btnmaq_50.Width + 10 + Btnmaq_50.Width + 13
-        Y: =Btnmaq_49.Y + 200 + 200
-        ZIndex: =14
-
     Btnmaq_54 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_42.Height
+        Height: =121
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "091500123 - 393");
+            =Set( varmaquina , "3270017005");
             Set( varsetor ,  Label_setor_3.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -373,15 +31,15 @@ Usinagem_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =Btnmaq_42.Width
-        X: =Btnmaq_49.X + Btnmaq_49.Width + 13
-        Y: =Btnmaq_49.Y + 200 + 200
+        Width: =168
+        X: =310
+        Y: =260
         ZIndex: =15
 
     Label_setor_3 As label:
         Height: =70
         Size: =21
-        Text: ="Acabamento Suporte união"
+        Text: ="Usinagem Eixo Secundário"
         Visible: =false
         Width: =560
         X: =41
@@ -415,4 +73,186 @@ Usinagem_Eixo_Secundário As screen:
         X: =560
         Y: =36
         ZIndex: =18
+
+    Btnmaq_55 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =121
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "951500937");
+            Set( varsetor ,  Label_setor_3.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =168
+        X: =310
+        Y: =411
+        ZIndex: =19
+
+    Btnmaq_56 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =121
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "961502077");
+            Set( varsetor ,  Label_setor_3.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =168
+        X: =152
+        Y: =562
+        ZIndex: =20
+
+    Btnmaq_57 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =121
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "961502078");
+            Set( varsetor ,  Label_setor_3.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =168
+        X: =468
+        Y: =562
+        ZIndex: =21
+
+    Btnmaq_58 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =121
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "3326017021");
+            Set( varsetor ,  Label_setor_3.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =168
+        X: =468
+        Y: =714
+        ZIndex: =22
+
+    Btnmaq_59 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =121
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "961500906");
+            Set( varsetor ,  Label_setor_3.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =168
+        X: =468
+        Y: =864
+        ZIndex: =23
+
+    Btnmaq_60 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =121
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "3326017022");
+            Set( varsetor ,  Label_setor_3.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =168
+        X: =152
+        Y: =714
+        ZIndex: =24
+
+    Btnmaq_61 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =121
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "961502088");
+            Set( varsetor ,  Label_setor_3.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =168
+        X: =152
+        Y: =864
+        ZIndex: =25
 

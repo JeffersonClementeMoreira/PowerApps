@@ -703,7 +703,6 @@
                         ).QUANTIDADE , QUANTIDADE)))) ;
                     
                     Set(varprod_realizada , Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))) ;
-                    Set(varDelay,true) ;
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -1115,6 +1114,7 @@
     Prod_realizada As text:
         Default: =Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))
         Height: =63
+        OnChange: =Set(varDelay,true) ;
         Size: =21
         Width: =132
         X: =482
