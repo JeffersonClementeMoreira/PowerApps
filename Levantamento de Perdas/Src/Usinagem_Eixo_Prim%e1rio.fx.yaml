@@ -96,7 +96,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Dentadora Liebherr 572"
         Width: =168
         X: =175
         Y: =270
@@ -177,7 +177,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Dentadora Gleason 921"
         Width: =168
         X: =325
         Y: =357
@@ -204,7 +204,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Chanfradora Prawema 918"
         Width: =168
         X: =325
         Y: =441
@@ -213,6 +213,7 @@ Usinagem_Eixo_Primário As screen:
     Btnmaq_74 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Btnmaq_73.Height
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -231,7 +232,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Máquina sem CAF no acompanhamento"
         Width: =Btnmaq_73.Width
         X: =Btnmaq_73.X
         Y: =Btnmaq_73.Y + Btnmaq_73.Height + 8
@@ -258,7 +259,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Etxe-tar 138"
         Width: =Btnmaq_74.Width
         X: =Btnmaq_74.X
         Y: =Btnmaq_74.Y + Btnmaq_74.Height + 8
@@ -285,7 +286,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Roladora Max Novo 936"
         Width: =Btnmaq_75.Width
         X: =Btnmaq_75.X
         Y: =Btnmaq_75.Y + Btnmaq_75.Height + 8
@@ -312,7 +313,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Roladora Roto_Flo 328"
         Width: =Btnmaq_75.Width
         X: =Btnmaq_76.X
         Y: =Btnmaq_76.Y + Btnmaq_76.Height + 8
@@ -339,7 +340,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Raspadora Sicmat 667"
         Width: =Btnmaq_75.Width
         X: =Btnmaq_76.X
         Y: =Btnmaq_77.Y + Btnmaq_76.Height + 8
@@ -366,7 +367,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Raspadora Sicmat 666"
         Width: =Btnmaq_75.Width
         X: =Btnmaq_76.X
         Y: =Btnmaq_78.Y + Btnmaq_76.Height + 8
@@ -393,7 +394,7 @@ Usinagem_Eixo_Primário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
+        Tooltip: ="Rasparadora Sicmat 084"
         Width: =Btnmaq_75.Width
         X: =Btnmaq_76.X
         Y: =Btnmaq_79.Y + Btnmaq_76.Height + 8
