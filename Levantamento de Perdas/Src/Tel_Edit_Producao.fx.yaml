@@ -692,7 +692,7 @@
                 OnChange: |-
                     =If(DataCardquantidade.Text <> "" And
                           Value(DataCardquantidade.Text) <> RoundDown(Value(DataCardquantidade.Text),0),
-                              Notify("Favor digitar apenas o número do Registro");
+                              Notify("Favor digitar apenas números");
                               Reset(DataCardquantidade)
                     ); Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
                             LancamentoProducao,
@@ -703,6 +703,7 @@
                         ).QUANTIDADE , QUANTIDADE)))) ;
                     
                     Set(varprod_realizada , Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))) ;
+                    Set(varDelay,true) ;
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
