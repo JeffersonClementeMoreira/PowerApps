@@ -14,6 +14,7 @@
         OnSelect: |-
             =ResetForm('Form Produção');
             Set(varselect , 0) ;
+            Set(vartime , 0) ;
             UpdateContext({TelaAnterior : LookUp(colRoleKeys, Role = vartela)});
             Navigate(TelaAnterior.Screen)
         PaddingBottom: =22
@@ -1027,7 +1028,7 @@
             ZIndex: =1
 
     Timer1 As timer:
-        Duration: =1500
+        Duration: =2000
         Height: =70
         OnTimerEnd: |-
             =Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
@@ -1105,6 +1106,9 @@
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE))
         Height: =63
+        OnChange: |-
+            =Set(varDelta, -1);
+            Select(Button1);
         Size: =21
         Width: =132
         X: =333
@@ -1136,4 +1140,14 @@
         X: =334
         Y: =934
         ZIndex: =14
+
+    Button1 As button:
+        Height: =70
+        OnSelect: =Set(varDelay , true)
+        Size: =24
+        Text: ="Botão"
+        Width: =280
+        X: =334
+        Y: =103
+        ZIndex: =15
 

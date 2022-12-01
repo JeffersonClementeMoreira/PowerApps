@@ -14,6 +14,9 @@ Tela_Ini_2912 As screen:
 
     Button2_7 As button:
         Height: =95
+        OnSelect: |-
+            =Navigate(Usinagem_Engr_1ª);
+            Set(vartela , "Usinagem_Engr_1ª");
         Size: =24
         Text: ="Usinagem Engr. 1ª"
         Width: =280
@@ -32,6 +35,9 @@ Tela_Ini_2912 As screen:
 
     Button2_9 As button:
         Height: =Button2_7.Height
+        OnSelect: |-
+            =Navigate(Usinagem_Engr_2ª);
+            Set(vartela , "Usinagem_Engr_2ª");
         Size: =24
         Text: ="Usinagem Engr. 2ª"
         Width: =Button2_7.Width
