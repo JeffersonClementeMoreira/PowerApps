@@ -2913,7 +2913,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Usinagem_Engr_2ª": {
+    "Usinagem_Engr_1ª_2ª": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -2948,7 +2948,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Usinagem_Engr_2ª",
+      "Name": "Usinagem_Engr_1ª_2ª",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2959,12 +2959,7 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "LoadingSpinnerColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ImagePosition",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2974,12 +2969,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
+          "PropertyName": "ImagePosition",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "LoadingSpinner",
+          "PropertyName": "LoadingSpinnerColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2989,12 +2984,17 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Orientation",
+          "PropertyName": "LoadingSpinner",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Orientation",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -3002,5 +3002,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Usinagem_Engr_2ª"
+  "TopParentName": "Usinagem_Engr_1ª_2ª"
 }

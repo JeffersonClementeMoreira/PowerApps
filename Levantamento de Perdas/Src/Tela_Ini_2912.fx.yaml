@@ -13,6 +13,7 @@ Tela_Ini_2912 As screen:
         ZIndex: =1
 
     Button2_7 As button:
+        DisplayMode: =DisplayMode.Disabled
         Height: =95
         OnSelect: |-
             =Navigate(Usinagem_Engr_1ª);
@@ -34,15 +35,15 @@ Tela_Ini_2912 As screen:
         ZIndex: =3
 
     Button2_9 As button:
-        Height: =Button2_7.Height
+        Height: =205
         OnSelect: |-
-            =Navigate(Usinagem_Engr_2ª);
-            Set(vartela , "Usinagem_Engr_2ª");
+            =Navigate(Usinagem_Engr_1ª_2ª);
+            Set(vartela , "Usinagem_Engr_1ª/2ª");
         Size: =24
-        Text: ="Usinagem Engr. 2ª"
+        Text: ="Usinagem Engr. 1ª/2ª"
         Width: =Button2_7.Width
         X: =Button2_7.X
-        Y: =Button2_7.Y + Button2_7.Height + 15
+        Y: =150
         ZIndex: =4
 
     Button2_10 As button:
@@ -50,8 +51,8 @@ Tela_Ini_2912 As screen:
         Size: =24
         Text: ="Retífica Engr. 2ª"
         Width: =Button2_7.Width
-        X: =Button2_8.X
-        Y: =Button2_9.Y
+        X: =329
+        Y: =260
         ZIndex: =5
 
     Icon1_4 As icon.Home:
