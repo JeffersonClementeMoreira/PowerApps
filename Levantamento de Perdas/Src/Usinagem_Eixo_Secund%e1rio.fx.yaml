@@ -91,7 +91,7 @@ Usinagem_Eixo_Secundário As screen:
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
             Set(vartime , 1) ;
-            Set(varDelay,false);
+            Set(varDelay,true);
             Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24

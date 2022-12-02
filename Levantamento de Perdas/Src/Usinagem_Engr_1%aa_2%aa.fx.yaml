@@ -4,48 +4,20 @@ Usinagem_Engr_1ª_2ª As screen:
 
     Image3_6 As image:
         Height: =967
-        Image: =Usinagem_Engrenagem_2ª
+        Image: ='Usinagem_Engrenagem_1ª_2ª'
         ImagePosition: =ImagePosition.Stretch
         Width: =640
         Y: =168
         ZIndex: =1
 
-    Btnmaq_97 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_90.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "81500024");
-            Set( varsetor ,  Label_setor_6.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
-        Width: =Btnmaq_90.Width
-        X: =160
-        Y: =Btnmaq_90.Y + Btnmaq_90.Height + 32
-        ZIndex: =11
-
     Label_setor_6 As label:
         Height: =70
         Size: =21
-        Text: ="Usinagem Engr. 1ª"
+        Text: ="Usinagem Engr. 1ª/2ª"
         Visible: =false
         Width: =560
         X: =41
-        ZIndex: =12
+        ZIndex: =2
 
     Label_Local_6 As button:
         Align: =Align.Left
@@ -53,12 +25,12 @@ Usinagem_Engr_1ª_2ª As screen:
         Height: =88
         Size: =24
         Text: |-
-            ="Linha Usinagem Engr. 2ª
+            ="Linha Usinagem Engr. 1ª/2ª
             UTE 2912"
         Width: =622
         X: =18
         Y: =36
-        ZIndex: =13
+        ZIndex: =3
 
     Icon1_14 As icon.Home:
         BorderColor: =RGBA(255, 255, 255, 1)
@@ -74,7 +46,7 @@ Usinagem_Engr_1ª_2ª As screen:
         Width: =80
         X: =560
         Y: =36
-        ZIndex: =14
+        ZIndex: =4
 
     Btnmaq_90 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -97,10 +69,10 @@ Usinagem_Engr_1ª_2ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =165
-        X: =470
-        Y: =210
-        ZIndex: =15
+        Width: =85
+        X: =473
+        Y: =203
+        ZIndex: =5
 
     Btnmaq_91 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -124,13 +96,124 @@ Usinagem_Engr_1ª_2ª As screen:
         Size: =24
         Text: =""
         Width: =Btnmaq_90.Width
-        X: =Btnmaq_90.X
-        Y: =Btnmaq_90.Y + Btnmaq_90.Height + 32
-        ZIndex: =16
+        X: =236
+        Y: =387
+        ZIndex: =6
+
+    Btnmaq_97 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq_90.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "201405005856");
+            Set( varsetor ,  Label_setor_6.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
+        Width: =Btnmaq_90.Width
+        X: =394
+        Y: =387
+        ZIndex: =7
+
+    Btnmaq_99 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq_90.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "20145005161");
+            Set( varsetor ,  Label_setor_6.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
+        Width: =Btnmaq_90.Width
+        X: =552
+        Y: =387
+        ZIndex: =8
+
+    Btnmaq_100 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq_90.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "981501698");
+            Set( varsetor ,  Label_setor_6.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
+        Width: =Btnmaq_90.Width
+        X: =79
+        Y: =571
+        ZIndex: =9
+
+    Btnmaq_92 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq_90.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "961501699");
+            Set( varsetor ,  Label_setor_6.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =Btnmaq_90.Width
+        X: =236
+        Y: =571
+        ZIndex: =10
 
     Btnmaq_98 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Btnmaq_90.Height
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -149,14 +232,44 @@ Usinagem_Engr_1ª_2ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
         Width: =Btnmaq_90.Width
-        X: =Btnmaq_90.X
-        Y: =Btnmaq_91.Y + Btnmaq_91.Height + 32
-        ZIndex: =20
+        X: =394
+        Y: =571
+        ZIndex: =11
 
-    Btnmaq_99 As button:
+    Btnmaq_101 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq_90.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "961502079");
+            Set( varsetor ,  Label_setor_6.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
+        Width: =Btnmaq_90.Width
+        X: =552
+        Y: =571
+        ZIndex: =12
+
+    Btnmaq_102 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Btnmaq_90.Height
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -175,14 +288,44 @@ Usinagem_Engr_1ª_2ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
         Width: =Btnmaq_90.Width
-        X: =Btnmaq_90.X
-        Y: =Btnmaq_98.Y + Btnmaq_98.Height + 32
-        ZIndex: =21
+        X: =394
+        Y: =756
+        ZIndex: =13
 
-    Btnmaq_100 As button:
+    Btnmaq_103 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq_90.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "991500417");
+            Set( varsetor ,  Label_setor_6.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
+        Width: =Btnmaq_90.Width
+        X: =552
+        Y: =756
+        ZIndex: =14
+
+    Btnmaq_104 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Btnmaq_90.Height
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -201,8 +344,37 @@ Usinagem_Engr_1ª_2ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
         Width: =Btnmaq_90.Width
-        X: =Btnmaq_90.X
-        Y: =Btnmaq_99.Y + Btnmaq_99.Height + 32
-        ZIndex: =22
+        X: =394
+        Y: =940
+        ZIndex: =15
+
+    Btnmaq_105 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq_90.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "41500083");
+            Set( varsetor ,  Label_setor_6.Text );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Tooltip: ="Não encontrado o CAF da máquina no acompanhamento"
+        Width: =Btnmaq_90.Width
+        X: =552
+        Y: =940
+        ZIndex: =16
 

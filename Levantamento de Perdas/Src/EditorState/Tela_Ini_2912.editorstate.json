@@ -3783,11 +3783,12 @@
         "Italic",
         "Underline",
         "Strikethrough",
+        "OnSelect",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "false",
-          "InvariantPropertyName": "OnSelect",
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Visible",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -3981,6 +3982,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Design",
+          "PropertyName": "Visible",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
@@ -4073,7 +4079,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_8",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4354,7 +4360,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_9",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

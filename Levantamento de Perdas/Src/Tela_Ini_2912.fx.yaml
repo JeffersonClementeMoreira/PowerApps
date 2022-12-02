@@ -7,19 +7,16 @@ Tela_Ini_2912 As screen:
         Height: =70
         Size: =24
         Text: ="UTE - 2912"
-        Width: =550
-        X: =45
+        Width: =640
         Y: =36
         ZIndex: =1
 
     Button2_7 As button:
         DisplayMode: =DisplayMode.Disabled
         Height: =95
-        OnSelect: |-
-            =Navigate(Usinagem_Engr_1ª);
-            Set(vartela , "Usinagem_Engr_1ª");
         Size: =24
         Text: ="Usinagem Engr. 1ª"
+        Visible: =false
         Width: =280
         X: =24
         Y: =150
@@ -38,7 +35,7 @@ Tela_Ini_2912 As screen:
         Height: =205
         OnSelect: |-
             =Navigate(Usinagem_Engr_1ª_2ª);
-            Set(vartela , "Usinagem_Engr_1ª/2ª");
+            Set(vartela , "Usinagem_Engr_1ª_2ª");
         Size: =24
         Text: ="Usinagem Engr. 1ª/2ª"
         Width: =Button2_7.Width
@@ -67,8 +64,8 @@ Tela_Ini_2912 As screen:
         PaddingRight: =22
         PaddingTop: =22
         Width: =80
-        X: =515
-        Y: =28
+        X: =560
+        Y: =27
         ZIndex: =6
 
     Button2_11 As button:

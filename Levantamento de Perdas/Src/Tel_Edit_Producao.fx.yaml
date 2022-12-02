@@ -643,11 +643,11 @@
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione o tipo de peças"
-                IsSearchable: =false
-                Items: =Sort( Distinct( Filter(CreatePeca, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , PECA).Result , Result)
+                Items: =listapeças
                 NoSelectionText: ="Selecione o tipo de peças"
+                OnSelect: =ClearCollect( listapeças , Sort( Distinct( Filter(CreatePeca, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , PECA).Result , Result))
                 SearchFields: =["Result"]
-                SearchItems: =[]
+                SearchItems: =Search(listapeças,DataCardtipo_de_peca.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -1028,7 +1028,8 @@
             ZIndex: =1
 
     Timer1 As timer:
-        Duration: =2000
+        AutoStart: =true
+        Duration: =1500
         Height: =70
         OnTimerEnd: |-
             =Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
@@ -1043,6 +1044,7 @@
             Set(varDelay,false) ;
             
             Set(varprod_realizada , Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva)))
+        Repeat: =10
         Reset: =true
         Start: =varDelay
         Visible: =false
@@ -1106,9 +1108,6 @@
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE))
         Height: =63
-        OnChange: |-
-            =Set(varDelta, -1);
-            Select(Button1);
         Size: =21
         Width: =132
         X: =333
@@ -1141,13 +1140,16 @@
         Y: =934
         ZIndex: =14
 
-    Button1 As button:
-        Height: =70
+    Icon3 As icon.History:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =88
+        Icon: =Icon.History
         OnSelect: =Set(varDelay , true)
-        Size: =24
-        Text: ="Botão"
-        Width: =280
-        X: =334
-        Y: =103
+        PaddingBottom: =15
+        PaddingLeft: =15
+        PaddingRight: =15
+        PaddingTop: =15
+        Width: =70
+        X: =482
         ZIndex: =15
 
