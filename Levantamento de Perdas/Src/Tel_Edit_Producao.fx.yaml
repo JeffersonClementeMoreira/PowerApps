@@ -14,7 +14,6 @@
         OnSelect: |-
             =ResetForm('Form Produção');
             Set(varselect , 0) ;
-            Set(vartime , 0) ;
             UpdateContext({TelaAnterior : LookUp(colRoleKeys, Role = vartela)});
             Navigate(TelaAnterior.Screen)
         PaddingBottom: =22
@@ -511,7 +510,6 @@
                 OnChange: |-
                     =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ;
                     Set(varDelay , true);
-                    Set(varhora , DataCardhora_inicio.Selected.Result)
                 SearchFields: =["Result"]
                 SearchItems: =Search(Distinct(CreateHora,Hora),DataCardhora_inicio.SearchText,"Result")
                 SelectMultiple: =false
@@ -1077,6 +1075,7 @@
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE)
             
+        DisplayMode: =DisplayMode.View
         Height: =63
         Size: =21
         Width: =132
@@ -1091,6 +1090,7 @@
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE)
             
+        DisplayMode: =DisplayMode.View
         Height: =63
         Size: =21
         Width: =132
@@ -1107,6 +1107,7 @@
                     LancamentoPerdas,
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE))
+        DisplayMode: =DisplayMode.View
         Height: =63
         Size: =21
         Width: =132
@@ -1116,6 +1117,7 @@
 
     Prod_realizada As text:
         Default: =Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))
+        DisplayMode: =DisplayMode.View
         Height: =63
         OnChange: =Set(varDelay,true) ;
         Size: =21

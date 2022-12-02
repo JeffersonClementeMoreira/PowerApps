@@ -1321,3 +1321,57 @@
         Y: =13
         ZIndex: =7
 
+    Total_hora_produção_1 As text:
+        Default: |+
+            =Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)
+            
+        Height: =63
+        Size: =21
+        Width: =132
+        X: =39
+        Y: =1073
+        ZIndex: =8
+
+    Total_hora_perdas_1 As text:
+        Default: |+
+            =Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)
+            
+        Height: =63
+        Size: =21
+        Width: =132
+        X: =187
+        Y: =1073
+        ZIndex: =9
+
+    Total_lancamento_hora_1 As text:
+        Default: |
+            =Sum( Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE))
+        Height: =63
+        Size: =21
+        Width: =132
+        X: =337
+        Y: =1073
+        ZIndex: =10
+
+    Prod_realizada_1 As text:
+        Default: =Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))
+        Height: =63
+        OnChange: =Set(varDelay,true) ;
+        Size: =21
+        Width: =132
+        X: =486
+        Y: =1073
+        ZIndex: =11
+
