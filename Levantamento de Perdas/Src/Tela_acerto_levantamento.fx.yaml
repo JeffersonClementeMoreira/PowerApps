@@ -433,7 +433,7 @@
         Height: =20
         Size: =12
         Text: |
-            =If( IsBlank(Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)),0,Sum(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE))
+            =If( IsBlank(Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)),0,Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE))
         Width: =54
         X: =657
         ZIndex: =30

@@ -1325,7 +1325,7 @@
         Default: |+
             =Sum(Filter(
                     LancamentoProducao,
-                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE)
             
         Height: =63
@@ -1339,7 +1339,7 @@
         Default: |+
             =Sum(Filter(
                     LancamentoPerdas,
-                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE)
             
         Height: =63
@@ -1353,10 +1353,10 @@
         Default: |
             =Sum( Sum(Filter(
                     LancamentoProducao,
-                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
                     LancamentoPerdas,
-                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE))
         Height: =63
         Size: =21
@@ -1366,7 +1366,7 @@
         ZIndex: =10
 
     Prod_realizada_1 As text:
-        Default: =Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))
+        Default: =Sum(DataCardquantidade_1 - (Cap_Produtiva_1 - Cap_Produtiva_1))
         Height: =63
         OnChange: =Set(varDelay,true) ;
         Size: =21

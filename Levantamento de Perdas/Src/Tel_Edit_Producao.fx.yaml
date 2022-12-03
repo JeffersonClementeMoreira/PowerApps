@@ -27,7 +27,7 @@
 
     IconAccept1 As icon.Check:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(varDelta < 0 || varprod_realizada <=0 , DisplayMode.Disabled  ,DisplayMode.Edit)
+        DisplayMode: =If(varDelta < 0 || varprod_realizada <=0 || LabelAlertaDelta.Visible = true , DisplayMode.Disabled  ,DisplayMode.Edit)
         Height: =88
         Icon: =Icon.Check
         OnSelect: |
@@ -1160,13 +1160,18 @@
         X: =482
         ZIndex: =15
 
-    Label3 As label:
-        Height: =70
+    LabelAlertaDelta As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =924
         Size: =21
-        Text: ="Favor pressionar o botão de atualizar"
-        Visible: =If(Total_lancamento_hora = 
-        Width: =560
-        X: =35
-        Y: =962
+        Text: |-
+            ="Atenção!!!
+            
+            Favor pressionar o botão de atualizar ou cancelar lançamento"
+        Visible: =If(Total_lancamento_hora.Text = Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE && varDelta <> 0 , true , false)
+        Width: =609
+        X: =20
+        Y: =103
         ZIndex: =16
 
