@@ -36,7 +36,16 @@
         DisplayMode: =If(varDelta < 0 , DisplayMode.Disabled  ,DisplayMode.Edit)
         Height: =88
         Icon: =Icon.Check
-        OnSelect: =SubmitForm(Formperdas);
+        OnSelect: |-
+            =Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)))) ;
+            
+            SubmitForm(Formperdas);
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -61,7 +70,16 @@
         DataSource: =[@LancamentoPerdas]
         Height: =1033
         Item: =BrowseGallery1perdas.Selected
-        OnSuccess: =If(varDelta = 0 ,  Back() , NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas))
+        OnSuccess: |-
+            =Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)))) ;
+                
+            If(varDelta = 0 ,  Back() , NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas))
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
@@ -656,6 +674,7 @@
                         (Reset(DataCardtipo_de_falha) And Reset(DataCardGrupo) And Reset(DataCardSubGrupo) And Reset(DataCardComponente) And Reset(DataCard4ms) And Reset(DataCardObservacao)),
                         false
                     )
+                OnSelect: =Set(varDelay_2 , true)
                 SearchFields: =["Result"]
                 SearchItems: =Search(Sort( Distinct(CreateTipodePerda, TIPO_DE_PERDA) , Result),DataCardtipo_de_perda.SearchText,"Result")
                 SelectMultiple: =false
@@ -1069,8 +1088,6 @@
                               Reset(DataCardquantidade_1)
                     );
                     
-                    Set(varDelta , Cap_Produtiva_1 - DataCardquantidade_1) ; Set(varCapacidade, Cap_Produtiva_1);
-                    
                     Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
                             LancamentoProducao,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
@@ -1078,6 +1095,8 @@
                             LancamentoPerdas,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE)))) ;
+                    
+                    Set(varDelay_2 , true)
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -1338,10 +1357,37 @@
             ZIndex: =1
 
     Timer1_1 As timer:
-        Duration: =1000
+        Duration: =1500
         Height: =67
         OnSelect: =Set(varDelay_2 , true)
-        OnTimerEnd: =Set(varDelta , Cap_Produtiva_1 - DataCardquantidade_1) ; Set(varDelay,false) ; Set(varCapacidade, Cap_Produtiva_1) ; Timer1_1.Reset = true
+        OnTimerEnd: |-
+            =Set(
+                varDelta,
+                Cap_Produtiva_1 - (DataCardquantidade_1 + Sum(
+                    Sum(
+                        Filter(
+                            LancamentoProducao,
+                            ((MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result))
+                        ).QUANTIDADE,
+                        QUANTIDADE
+                    ) + Sum(
+                        Filter(
+                            LancamentoPerdas,
+                            ((MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result))
+                        ).QUANTIDADE,
+                        QUANTIDADE
+                    )
+                ))
+            );
+            Set(
+                varDelay_2,
+                false
+            );
+            Set(
+                varCapacidade,
+                Cap_Produtiva_1
+            );
+            Timer1_1.Reset = true
         Reset: =true
         Start: =varDelay_2
         Tooltip: ="Selecione para atualizar os dados de produção prevista e delta se não tiver atualizado automaticamente"
