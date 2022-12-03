@@ -11,7 +11,17 @@
         AccessibleLabel: =Self.Tooltip
         Height: =88
         Icon: =Icon.Cancel
-        OnSelect: =ResetForm(Formperdas);Back()
+        OnSelect: |-
+            =ResetForm(Formperdas);
+            NewForm('Form Produção');
+            Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)))) ;
+            Back()
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -51,7 +61,7 @@
         DataSource: =[@LancamentoPerdas]
         Height: =1033
         Item: =BrowseGallery1perdas.Selected
-        OnSuccess: =Back()
+        OnSuccess: =If(varDelta = 0 ,  Back() , NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas))
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
@@ -141,6 +151,7 @@
             MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "UTE")
             Required: =true
             Update: =DataCardute_1.Selected.Result
+            Visible: =false
             Width: =640
             X: =0
             Y: =1
@@ -489,7 +500,7 @@
 
             DataCardhora_inicio_1 As combobox:
                 DefaultSelectedItems: |
-                    =If( varselect = 0, LookUp(Distinct(CreateHora,Hora).Result, Result = ThisItem.HORA_INICIO) ,  LookUp(Distinct(CreateHora,Hora).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).HORA_INICIO))
+                    =If( varselect = 0, LookUp(Distinct(CreateHora,Hora).Result, Result = ThisItem.HORA_INICIO) ,  LookUp(Distinct(CreateHora,Hora).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)))).HORA_INICIO))
                     //)
                     
                     //LookUp(Distinct(CreateHora;Hora).Result; Result = ThisItem.HORA_INICIO)
@@ -531,7 +542,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Clear: =true
                 Default: |-
-                    =If( varselect = 0 , If(Formperdas.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).COLABORADOR)
+                    =If( varselect = 0 , If(Formperdas.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)))).COLABORADOR)
                     
                     //If(Formperdas.Mode <> FormMode.New ;COLABORADOR_Card.Default)
                 DelayOutput: =true
@@ -1036,7 +1047,16 @@
             DataCardquantidade_1 As text:
                 Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If(Formperdas.Mode=FormMode.New , 0 , Parent.Default)
+                Default: |-
+                    =//If(Formperdas.Mode=FormMode.New ; 0 ; Parent.Default);;
+                    
+                    If( varselect = 0 , If(Formperdas.Mode=FormMode.New , 0 , Parent.Default) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE) - Sum(Filter(
+                            LancamentoProducao,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE) - Sum(Filter(
+                            LancamentoPerdas,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE)
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -1047,7 +1067,17 @@
                           Value(DataCardquantidade_1.Text) <> RoundDown(Value(DataCardquantidade_1.Text),0),
                               Notify("Favor digitar apenas o número do Registro");
                               Reset(DataCardquantidade_1)
-                    ); Set(varDelta , Cap_Produtiva_1 - DataCardquantidade_1) ; Set(varCapacidade, Cap_Produtiva_1)
+                    );
+                    
+                    Set(varDelta , Cap_Produtiva_1 - DataCardquantidade_1) ; Set(varCapacidade, Cap_Produtiva_1);
+                    
+                    Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                            LancamentoProducao,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                            LancamentoPerdas,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE)))) ;
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
