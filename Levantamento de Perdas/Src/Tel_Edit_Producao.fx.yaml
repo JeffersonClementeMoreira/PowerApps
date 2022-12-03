@@ -147,6 +147,7 @@
             MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "UTE")
             Required: =true
             Update: =DataCardute.Selected.Result
+            Visible: =false
             Width: =640
             X: =0
             Y: =1
@@ -1065,10 +1066,11 @@
         Tooltip: ="Enviar item e ir para página de lançamento perdas"
         Width: =280
         X: =35
-        Y: =934
+        Y: =843
         ZIndex: =9
 
     Total_hora_produção As text:
+        Align: =Align.Center
         Default: |+
             =Sum(Filter(
                     LancamentoProducao,
@@ -1084,6 +1086,7 @@
         ZIndex: =10
 
     Total_hora_perdas As text:
+        Align: =Align.Center
         Default: |+
             =Sum(Filter(
                     LancamentoPerdas,
@@ -1099,6 +1102,7 @@
         ZIndex: =11
 
     Total_lancamento_hora As text:
+        Align: =Align.Center
         Default: |
             =Sum( Sum(Filter(
                     LancamentoProducao,
@@ -1116,6 +1120,7 @@
         ZIndex: =12
 
     Prod_realizada As text:
+        Align: =Align.Center
         Default: =Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))
         DisplayMode: =DisplayMode.View
         Height: =63
@@ -1139,7 +1144,7 @@
         Tooltip: ="Enviar item e manter nesta página"
         Width: =280
         X: =334
-        Y: =934
+        Y: =843
         ZIndex: =14
 
     Icon3 As icon.History:
@@ -1154,4 +1159,14 @@
         Width: =70
         X: =482
         ZIndex: =15
+
+    Label3 As label:
+        Height: =70
+        Size: =21
+        Text: ="Favor pressionar o botão de atualizar"
+        Visible: =If(Total_lancamento_hora = 
+        Width: =560
+        X: =35
+        Y: =962
+        ZIndex: =16
 
