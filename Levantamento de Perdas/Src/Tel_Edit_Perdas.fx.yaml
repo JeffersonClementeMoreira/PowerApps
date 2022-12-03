@@ -36,16 +36,7 @@
         DisplayMode: =If(varDelta < 0 , DisplayMode.Disabled  ,DisplayMode.Edit)
         Height: =88
         Icon: =Icon.Check
-        OnSelect: |-
-            =Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
-                    LancamentoProducao,
-                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
-                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
-                    LancamentoPerdas,
-                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
-                ).QUANTIDADE , QUANTIDADE)))) ;
-            
-            SubmitForm(Formperdas);
+        OnSelect: =SubmitForm(Formperdas);
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -668,12 +659,20 @@
                 InputTextPlaceholder: ="Selecione o tipo de perda"
                 Items: =Sort( Distinct(CreateTipodePerda, TIPO_DE_PERDA) , Result)
                 NoSelectionText: ="Tipo de perda"
-                OnChange: |-
+                OnChange: |
                     =If(
                         Not(DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO"),
                         (Reset(DataCardtipo_de_falha) And Reset(DataCardGrupo) And Reset(DataCardSubGrupo) And Reset(DataCardComponente) And Reset(DataCard4ms) And Reset(DataCardObservacao)),
                         false
-                    )
+                    );
+                    
+                    Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                            LancamentoProducao,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                            LancamentoPerdas,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE)))) ;
                 OnSelect: =Set(varDelay_2 , true)
                 SearchFields: =["Result"]
                 SearchItems: =Search(Sort( Distinct(CreateTipodePerda, TIPO_DE_PERDA) , Result),DataCardtipo_de_perda.SearchText,"Result")
@@ -972,6 +971,14 @@
                 IsSearchable: =false
                 Items: =Sort( Distinct( Filter(CreateTipodePerda, Text(DataCardtipo_de_perda.Selected.Result) in TIPO_DE_PERDA) , '4M''S' ).Result , Result)//Sort( Distinct(CreateTipodePerda;'4M''S') ; Result)
                 NoSelectionText: ="4M's + D"
+                OnChange: |-
+                    =Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                            LancamentoProducao,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                            LancamentoPerdas,
+                            ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                        ).QUANTIDADE , QUANTIDADE)))) ;
                 SearchFields: =["Result"]
                 SearchItems: =[]
                 SelectMultiple: =false
