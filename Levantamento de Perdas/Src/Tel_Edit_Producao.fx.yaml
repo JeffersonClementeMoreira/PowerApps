@@ -1069,7 +1069,7 @@
         ZIndex: =7
 
     Btn_lancar_perda_1 As button:
-        DisplayMode: =If((varDelta <= 0 || varprod_realizada <0 ), DisplayMode.Disabled  ,DisplayMode.Edit)
+        DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled , If((varDelta <= 0 || varprod_realizada <0 ), DisplayMode.Disabled  ,DisplayMode.Edit))
         Height: =98
         OnSelect: |-
             =If( varprod_realizada = 0, NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas),
@@ -1148,7 +1148,7 @@
         ZIndex: =13
 
     Btn_lancar_perda_2 As button:
-        DisplayMode: =If((varDelta < 0 || varprod_realizada <=0 ), DisplayMode.Disabled  ,DisplayMode.Edit)
+        DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled  , If((varDelta < 0 || varprod_realizada <=0 ), DisplayMode.Disabled  ,DisplayMode.Edit))
         Height: =98
         OnSelect: |-
             =SubmitForm('Form Produção') ;
