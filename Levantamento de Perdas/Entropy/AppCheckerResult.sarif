@@ -4882,6 +4882,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.Height"
                 }
               ],

@@ -27,7 +27,14 @@
         Height: =88
         Icon: =Icon.Edit
         OnSelect: |
-            =EditForm(Formperdas);Navigate(Tel_Edit_Perdas, ScreenTransition.None) ; Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , Cap_Produtiva - DataCardquantidade)
+            =EditForm(Formperdas);Navigate(Tel_Edit_Perdas, ScreenTransition.None) ; Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; 
+            Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                    LancamentoProducao,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
+                    LancamentoPerdas,
+                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
+                ).QUANTIDADE , QUANTIDADE)))) ;
         PaddingBottom: =24
         PaddingLeft: =24
         PaddingRight: =24

@@ -33,7 +33,7 @@
 
     IconAccept1_1 As icon.Check:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(varDelta < 0 , DisplayMode.Disabled  ,DisplayMode.Edit)
+        DisplayMode: =If(Formperdas.Mode <> FormMode.New , DisplayMode.Edit , If(varDelta < 0 , DisplayMode.Disabled  ,DisplayMode.Edit))
         Height: =88
         Icon: =Icon.Check
         OnSelect: =SubmitForm(Formperdas);
@@ -61,16 +61,7 @@
         DataSource: =[@LancamentoPerdas]
         Height: =1033
         Item: =BrowseGallery1perdas.Selected
-        OnSuccess: |-
-            =Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
-                    LancamentoProducao,
-                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
-                ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
-                    LancamentoPerdas,
-                    ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
-                ).QUANTIDADE , QUANTIDADE)))) ;
-                
-            If(varDelta = 0 ,  Back() , NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas))
+        OnSuccess: =If(varDelta = 0 ,  Back() , NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas))
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
@@ -455,6 +446,7 @@
 
             DataCarddata_1 As datepicker:
                 DefaultDate: =If(Formperdas.Mode <> FormMode.New ,DATA_Cardperdas.Default, If(Hour(Now()) > 0 , Today() , Today()-1))
+                DisplayMode: =If(Formperdas.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
                 Height: =73
                 OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result)
                 Size: =24
@@ -516,6 +508,7 @@
                     
                      // Distinct(CreateHora;Hora).Result           LookUp(Distinct(LancamentoProducao;TIPO_DE_PECA).Result; Result = ThisItem.TIPO_DE_PECA)          If('Form Produção'.Mode <> FormMode.New ;{Value:HORA_INICIO_Card.Default})   LookUp(Distinct(LancamentoProducao;HORA_INICIO).Result; Result = ThisItem.HORA_INICIO)
                 DisplayFields: =["Result"]
+                DisplayMode: =If(Formperdas.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
                 Height: =70
                 InputTextPlaceholder: ="Hora"
                 IsSearchable: =false
@@ -551,7 +544,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Clear: =true
                 Default: |-
-                    =If( varselect = 0 , If(Formperdas.Mode <> FormMode.New ,COLABORADOR_Card.Default) , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)))).COLABORADOR)
+                    =If( varselect = 0 , If(Formperdas.Mode <> FormMode.New ,COLABORADOR_Cardperdas.Default) , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)))).COLABORADOR)
                     
                     //If(Formperdas.Mode <> FormMode.New ;COLABORADOR_Card.Default)
                 DelayOutput: =true
@@ -1073,18 +1066,19 @@
             DataCardquantidade_1 As text:
                 Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: |-
-                    =//If(Formperdas.Mode=FormMode.New ; 0 ; Parent.Default);;
-                    
-                    If( varselect = 0 , If(Formperdas.Mode=FormMode.New , 0 , Parent.Default) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE) - Sum(Filter(
+                Default: |
+                    =If( varselect = 0 , If(Formperdas.Mode<>FormMode.New , DataCardValue8_1.Text) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - Sum(Filter(
                             LancamentoProducao,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE) - Sum(Filter(
                             LancamentoPerdas,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
-                        ).QUANTIDADE , QUANTIDADE)
+                        ).QUANTIDADE , QUANTIDADE))
+                    
+                    
+                    //If(Formperdas.Mode=FormMode.New ; 0 ; Parent.Default);;
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =If(Formperdas.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
                 Height: =70
                 HintText: ="Insira a quantidade produzida"
                 MaxLength: =Parent.MaxLength
