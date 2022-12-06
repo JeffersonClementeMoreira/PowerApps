@@ -1074,8 +1074,8 @@
     "Usinagem_Coroa_Cilíndrica": 115,
     "Usinagem_Eixo_Primário": 757,
     "Usinagem_Eixo_Secundário": 1108,
-    "Usinagem_Engr._CDT_3ª": 1121,
     "Usinagem_Engr_1ª_2ª": 962,
+    "Usinagem_Engr_CDT_3ª": 1121,
     "UTE_Card": 986,
     "UTE_Cardperdas": 886,
     "UTE_DataCard2": 787,
@@ -1131,7 +1131,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/06/2022 04:24:28",
+  "HeaderLastSavedDateTimeUTC": "12/06/2022 04:28:23",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "ff5d3d32-cc67-4b37-b86d-04a836b2b79e": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/bcdd6b5780564f7c9ee7f4696edec456\""
@@ -2273,8 +2273,8 @@
     "Usinagem_Coroa_Cilíndrica": 0,
     "Usinagem_Eixo_Primário": 0,
     "Usinagem_Eixo_Secundário": 0,
-    "Usinagem_Engr._CDT_3ª": 0,
     "Usinagem_Engr_1ª_2ª": 0,
+    "Usinagem_Engr_CDT_3ª": 0,
     "UTE_Card": 90,
     "UTE_Cardperdas": 126,
     "UTE_DataCard2": 188,
@@ -2363,7 +2363,7 @@
       "typedDataCard": 56
     },
     "DeserializationLoadTime": 10.236435,
-    "ErrorCount": 27
+    "ErrorCount": 16
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

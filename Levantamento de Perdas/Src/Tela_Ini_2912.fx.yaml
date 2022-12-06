@@ -70,6 +70,9 @@ Tela_Ini_2912 As screen:
 
     Button2_11 As button:
         Height: =Button2_7.Height
+        OnSelect: |-
+            =Navigate(Usinagem_Engr_CDT_3ª);
+            Set(vartela , "Usinagem_Engr._CDT_3ª");
         Size: =24
         Text: ="Usinagem Engr. CDT 3ª"
         Width: =Button2_7.Width
