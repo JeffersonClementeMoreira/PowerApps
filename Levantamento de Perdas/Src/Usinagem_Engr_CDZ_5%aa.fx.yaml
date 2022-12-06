@@ -1,38 +1,38 @@
-Usinagem_Engr_CDT_5ª As screen:
+Usinagem_Engr_CDZ_5ª As screen:
     BackgroundImage: =Transmissões_foto_bw
     ImagePosition: =ImagePosition.Fill
 
-    Image3_9 As image:
+    Image3_12 As image:
         Height: =968
-        Image: ='Usinagem_Engr._CDT_5ª'
+        Image: ='Usinagem_Engr._CDZ_5ª'
         ImagePosition: =ImagePosition.Stretch
         Width: =640
         Y: =168
         ZIndex: =1
 
-    Label_setor_9 As label:
+    Label_setor_12 As label:
         Height: =70
         Size: =21
-        Text: ="Usinagem Engr. CDT 5ª"
+        Text: ="Usinagem Engr. CDZ 5ª"
         Visible: =false
         Width: =560
         X: =41
         ZIndex: =2
 
-    Label_Local_9 As button:
+    Label_Local_12 As button:
         Align: =Align.Left
         DisplayMode: =DisplayMode.View
         Height: =88
         Size: =24
         Text: |-
-            ="Linha Usinagem Engr. 5ª CDT
+            ="Linha Usinagem Engr. 5ª CDZ
             UTE 2912"
         Width: =622
         X: =18
         Y: =36
         ZIndex: =3
 
-    Icon1_17 As icon.Home:
+    Icon1_20 As icon.Home:
         BorderColor: =RGBA(255, 255, 255, 1)
         Color: =RGBA(255, 255, 255, 1)
         FocusedBorderThickness: =1
@@ -48,7 +48,7 @@ Usinagem_Engr_CDT_5ª As screen:
         Y: =36
         ZIndex: =4
 
-    Btnmaq_106 As button:
+    Btnmaq_116 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
@@ -60,7 +60,7 @@ Usinagem_Engr_CDT_5ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "91500069");
-            Set( varsetor ,  Label_setor_9.Text );
+            Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -74,7 +74,7 @@ Usinagem_Engr_CDT_5ª As screen:
         Y: =223
         ZIndex: =5
 
-    Btnmaq_107 As button:
+    Btnmaq_121 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
@@ -86,7 +86,7 @@ Usinagem_Engr_CDT_5ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "91500071");
-            Set( varsetor ,  Label_setor_9.Text );
+            Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -100,7 +100,7 @@ Usinagem_Engr_CDT_5ª As screen:
         Y: =398
         ZIndex: =6
 
-    Btnmaq_108 As button:
+    Btnmaq_120 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.View
@@ -113,7 +113,7 @@ Usinagem_Engr_CDT_5ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "1500402");
-            Set( varsetor ,  Label_setor_9.Text );
+            Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -128,7 +128,7 @@ Usinagem_Engr_CDT_5ª As screen:
         Y: =572
         ZIndex: =7
 
-    Btnmaq_109 As button:
+    Btnmaq_119 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
@@ -140,7 +140,7 @@ Usinagem_Engr_CDT_5ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "961502085");
-            Set( varsetor ,  Label_setor_9.Text );
+            Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -154,7 +154,7 @@ Usinagem_Engr_CDT_5ª As screen:
         Y: =744
         ZIndex: =8
 
-    Btnmaq_110 As button:
+    Btnmaq_118 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
@@ -166,7 +166,7 @@ Usinagem_Engr_CDT_5ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "81500086");
-            Set( varsetor ,  Label_setor_9.Text );
+            Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -180,7 +180,7 @@ Usinagem_Engr_CDT_5ª As screen:
         Y: =917
         ZIndex: =9
 
-    Btnmaq_111 As button:
+    Btnmaq_117 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.View
@@ -193,7 +193,7 @@ Usinagem_Engr_CDT_5ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "1500402");
-            Set( varsetor ,  Label_setor_9.Text );
+            Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;

@@ -1,38 +1,38 @@
-Usinagem_Engr_CDT_4ª As screen:
+Usinagem_Engr_CDZ_4ª As screen:
     BackgroundImage: =Transmissões_foto_bw
     ImagePosition: =ImagePosition.Fill
 
-    Image3_8 As image:
+    Image3_11 As image:
         Height: =968
-        Image: ='Usinagem_Engr._CDT_4ª'
+        Image: ='Usinagem_Engr._CDZ_4ª'
         ImagePosition: =ImagePosition.Stretch
         Width: =640
         Y: =168
         ZIndex: =1
 
-    Label_setor_8 As label:
+    Label_setor_11 As label:
         Height: =70
         Size: =21
-        Text: ="Usinagem Engr. CDT 4ª"
+        Text: ="Usinagem Engr. CDZ 4ª"
         Visible: =false
         Width: =560
         X: =41
         ZIndex: =2
 
-    Label_Local_8 As button:
+    Label_Local_11 As button:
         Align: =Align.Left
         DisplayMode: =DisplayMode.View
         Height: =88
         Size: =24
         Text: |-
-            ="Linha Usinagem Engr. 4ª CDT
+            ="Linha Usinagem Engr. 4ª CDZ
             UTE 2912"
         Width: =622
         X: =18
         Y: =36
         ZIndex: =3
 
-    Icon1_16 As icon.Home:
+    Icon1_19 As icon.Home:
         BorderColor: =RGBA(255, 255, 255, 1)
         Color: =RGBA(255, 255, 255, 1)
         FocusedBorderThickness: =1
@@ -48,7 +48,7 @@ Usinagem_Engr_CDT_4ª As screen:
         Y: =36
         ZIndex: =4
 
-    Btnmaq_95 As button:
+    Btnmaq_115 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
@@ -60,7 +60,7 @@ Usinagem_Engr_CDT_4ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "815000019");
-            Set( varsetor ,  Label_setor_8.Text );
+            Set( varsetor ,  Label_setor_11.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -74,7 +74,7 @@ Usinagem_Engr_CDT_4ª As screen:
         Y: =674
         ZIndex: =5
 
-    Btnmaq_96 As button:
+    Btnmaq_114 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
@@ -86,7 +86,7 @@ Usinagem_Engr_CDT_4ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "201405005854");
-            Set( varsetor ,  Label_setor_8.Text );
+            Set( varsetor ,  Label_setor_11.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -99,18 +99,4 @@ Usinagem_Engr_CDT_4ª As screen:
         X: =360
         Y: =450
         ZIndex: =6
-
-    Label3 As label:
-        Align: =Align.Center
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =150
-        Size: =21
-        Text: |-
-            ="Dentadora
-            Gleason 5854
-            OP.20"
-        Width: =280
-        X: =80
-        Y: =466
-        ZIndex: =7
 
