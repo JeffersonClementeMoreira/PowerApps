@@ -511,12 +511,11 @@
                 DisplayMode: =If(Formperdas.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
                 Height: =70
                 InputTextPlaceholder: ="Hora"
-                IsSearchable: =false
                 Items: =Distinct(CreateHora,Hora)
                 NoSelectionText: ="Hora Inicial"
                 OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; Set(varCapacidade, Cap_Produtiva_1)
                 SearchFields: =["Result"]
-                SearchItems: =[]
+                SearchItems: =Search(Distinct(CreateHora,Hora),DataCardhora_inicio_1.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -1407,6 +1406,7 @@
             
         Height: =63
         Size: =21
+        Visible: =false
         Width: =132
         X: =39
         Y: =1073
@@ -1421,6 +1421,7 @@
             
         Height: =63
         Size: =21
+        Visible: =false
         Width: =132
         X: =187
         Y: =1073
@@ -1437,6 +1438,7 @@
                 ).QUANTIDADE , QUANTIDADE))
         Height: =63
         Size: =21
+        Visible: =false
         Width: =132
         X: =337
         Y: =1073
@@ -1447,8 +1449,22 @@
         Height: =63
         OnChange: =Set(varDelay,true) ;
         Size: =21
+        Visible: =false
         Width: =132
         X: =486
         Y: =1073
         ZIndex: =11
+
+    Icon3_1 As icon.History:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =88
+        Icon: =Icon.History
+        OnSelect: =Set(varDelay_2 , true)
+        PaddingBottom: =15
+        PaddingLeft: =15
+        PaddingRight: =15
+        PaddingTop: =15
+        Width: =70
+        X: =494
+        ZIndex: =12
 

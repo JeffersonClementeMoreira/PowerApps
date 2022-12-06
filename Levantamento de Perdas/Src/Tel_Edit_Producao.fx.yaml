@@ -1081,7 +1081,7 @@
         Text: ="Salvar e Lançar Perda"
         Tooltip: ="Enviar item e ir para página de lançamento perdas"
         Width: =280
-        X: =33
+        X: =30
         Y: =843
         ZIndex: =9
 
@@ -1096,6 +1096,7 @@
         DisplayMode: =DisplayMode.View
         Height: =63
         Size: =21
+        Visible: =false
         Width: =132
         X: =35
         Y: =1060
@@ -1112,6 +1113,7 @@
         DisplayMode: =DisplayMode.View
         Height: =63
         Size: =21
+        Visible: =false
         Width: =132
         X: =183
         Y: =1060
@@ -1130,6 +1132,7 @@
         DisplayMode: =DisplayMode.View
         Height: =63
         Size: =21
+        Visible: =false
         Width: =132
         X: =333
         Y: =1060
@@ -1142,6 +1145,7 @@
         Height: =63
         OnChange: =Set(varDelay,true) ;
         Size: =21
+        Visible: =false
         Width: =132
         X: =482
         Y: =1060
