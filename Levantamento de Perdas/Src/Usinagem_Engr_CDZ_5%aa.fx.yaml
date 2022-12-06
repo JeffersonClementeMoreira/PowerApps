@@ -48,44 +48,18 @@ Usinagem_Engr_CDZ_5ª As screen:
         Y: =36
         ZIndex: =4
 
-    Btnmaq_116 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =150
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "91500069");
-            Set( varsetor ,  Label_setor_12.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =167
-        X: =470
-        Y: =223
-        ZIndex: =5
-
     Btnmaq_121 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =150
+        Height: =175
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "91500071");
+            =Set( varmaquina , "961502074");
             Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -95,9 +69,8 @@ Usinagem_Engr_CDZ_5ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =167
-        X: =470
-        Y: =398
+        X: =473
+        Y: =372
         ZIndex: =6
 
     Btnmaq_120 As button:
@@ -105,14 +78,14 @@ Usinagem_Engr_CDZ_5ª As screen:
         DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =150
+        Height: =175
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "1500402");
+            =Set( varmaquina , "981501698");
             Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -123,23 +96,22 @@ Usinagem_Engr_CDZ_5ª As screen:
         Size: =24
         Text: =""
         Tooltip: ="Máquina sem CAF no sistema"
-        Width: =167
-        X: =470
-        Y: =572
+        X: =473
+        Y: =585
         ZIndex: =7
 
     Btnmaq_119 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =150
+        Height: =175
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "961502085");
+            =Set( varmaquina , "121500069");
             Set( varsetor ,  Label_setor_12.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -149,9 +121,8 @@ Usinagem_Engr_CDZ_5ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =167
-        X: =470
-        Y: =744
+        X: =473
+        Y: =799
         ZIndex: =8
 
     Btnmaq_118 As button:
@@ -185,7 +156,7 @@ Usinagem_Engr_CDZ_5ª As screen:
         DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =150
+        Height: =175
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
@@ -202,8 +173,7 @@ Usinagem_Engr_CDZ_5ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =167
-        X: =148
-        Y: =917
+        X: =155
+        Y: =372
         ZIndex: =10
 
