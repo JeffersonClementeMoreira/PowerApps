@@ -28,7 +28,6 @@ App As appinfo:
          { Role: "Usinagem_Engr._CDZ_4ª";Screen: Usinagem_Engr._CDZ_4ª };
          { Role: "Usinagem_Engr._CDZ_3ª";Screen: Usinagem_Engr._CDZ_3ª };
          { Role: "Usinagem_Engr._CDT_5ª";Screen: Usinagem_Engr._CDT_5ª };
-         { Role: "Usinagem_Engr._CDT_4ª";Screen: Usinagem_Engr._CDT_4ª };
          { Role: "Usinagem_Coroinha";Screen: Usinagem_Coroinha };
          { Role: "Usinagem_Caixa_Diferencial_Completa";Screen: Usinagem_Caixa_Diferencial_Completa };
          { Role: "Usinagem_Caixa_Diferencial";Screen: Usinagem_Caixa_Diferencial };
@@ -56,7 +55,8 @@ App As appinfo:
          { Role: "Engr._CDTs_3ª_e_4ª";Screen: Engr._CDTs_3ª_e_4ª };
          { Role: "Eixo_primário_e_secundário";Screen: Eixo_primário_e_secundário }; */
         
-         { Role: "Usinagem_Engr._CDT_3ª",Screen: Usinagem_Engr_CDT_3ª },
+         { Role: "Usinagem_Engr_CDT_4ª",Screen: Usinagem_Engr_CDT_4ª },
+         { Role: "Usinagem_Engr_CDT_3ª",Screen: Usinagem_Engr_CDT_3ª },
          { Role: "Usinagem_Engr_1ª_2ª",Screen: Usinagem_Engr_1ª_2ª },
          { Role: "Usinagem_Eixo_Secundário",Screen: Usinagem_Eixo_Secundário },
          { Role: "Usinagem_Eixo_Primário",Screen: Usinagem_Eixo_Primário },
