@@ -36,7 +36,7 @@ Tela_Ini_2913 As screen:
         Height: =Button2_24.Height
         OnSelect: |
             =Navigate(Usinagem_Luva_3ª4ª);
-            Set(vartela , "Navigate(Usinagem_Luva_3ª4ª);;
+            Set(vartela , "Usinagem_Luva_3ª4ª");
         Size: =24
         Text: ="Usinagem Luva 3ª4ª"
         Width: =Button2_24.Width
@@ -73,7 +73,7 @@ Tela_Ini_2913 As screen:
         Height: =Button2_24.Height
         OnSelect: |
             =Navigate(Usinagem_Luva_5ª);
-            Set(vartela , "Navigate(Usinagem_Luva_5ª);;
+            Set(vartela , "Usinagem_Luva_5ª");
         Size: =24
         Text: ="Usinagem Luva 5ª"
         Width: =Button2_24.Width

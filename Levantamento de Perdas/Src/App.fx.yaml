@@ -43,12 +43,16 @@ App As appinfo:
          { Role: "Luvas_1ª2ª_/_3ª4ª_/_5ª";Screen: Luvas_1ª2ª_/_3ª4ª_/_5ª };
          { Role: "Fornos_Cont";Screen: Fornos_Cont };
          { Role: "Engr._CDTs_3ª_e_4ª";Screen: Engr._CDTs_3ª_e_4ª };
-         { Role: "Eixo_primário_e_secundário";Screen: Eixo_primário_e_secundário }; */
+         { Role: "Eixo_primário_e_secundário";Screen: Eixo_primário_e_secundário }; 
+         
+         { Role: "Usinagem_Satélite";Screen: Usinagem_Satélite };
+         { Role: "Usinagem_Planetária";Screen: Usinagem_Planetária };
+         { Role: "Usinagem_Marcha_Ré";Screen: Usinagem_Marcha_Ré };
+         
+         */
         
         
-         { Role: "Usinagem_Satélite",Screen: Usinagem_Satélite },
-         { Role: "Usinagem_Planetária",Screen: Usinagem_Planetária },
-         { Role: "Usinagem_Marcha_Ré",Screen: Usinagem_Marcha_Ré },
+        
          { Role: "Usinagem_Luva_5ª",Screen: Usinagem_Luva_5ª },
          { Role: "Usinagem_Luva_3ª4ª",Screen: Usinagem_Luva_3ª4ª },
          { Role: "Usinagem_Luva_1ª2ª",Screen: Usinagem_Luva_1ª2ª },
