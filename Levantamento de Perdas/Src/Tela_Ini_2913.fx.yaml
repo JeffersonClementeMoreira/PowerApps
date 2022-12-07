@@ -157,32 +157,13 @@ Tela_Ini_2913 As screen:
 
     Button2_36 As button:
         Height: =Button2_24.Height
+        OnSelect: |-
+            =Navigate(Usinagem_Caixa_Diferencial_Completa);
+            Set(vartela , "Usinagem_Caixa_Diferencial_Completa");
         Size: =24
-        Text: ="Usinagem Tampa"
+        Text: ="Usinagem Diferencial"
         Width: =Button2_24.Width
         X: =Button2_24.X
         Y: =Button2_34.Y + Button2_34.Height + 15
         ZIndex: =15
-
-    Button2_38 As button:
-        Height: =Button2_24.Height
-        Size: =24
-        Text: ="Usinagem Caixa Diferencial"
-        Width: =Button2_24.Width
-        X: =Button2_24.X
-        Y: =Button2_36.Y + Button2_36.Height + 15
-        ZIndex: =17
-
-    Button2_40 As button:
-        Height: =Button2_24.Height * 2 +15
-        OnSelect: |+
-            =Navigate(Usinagem_Caixa_Diferencial_Completa);
-            Set(vartela , "Usinagem_Caixa_Diferencial_Completa");
-            
-        Size: =24
-        Text: ="Usinagem Caixa Diferencial Completa"
-        Width: =Button2_24.Width
-        X: =Button2_25.X
-        Y: =Button2_36.Y
-        ZIndex: =19
 
