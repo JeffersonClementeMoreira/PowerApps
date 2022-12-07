@@ -175,6 +175,10 @@ Tela_Ini_2913 As screen:
 
     Button2_40 As button:
         Height: =Button2_24.Height * 2 +15
+        OnSelect: |+
+            =Navigate(Usinagem_Caixa_Diferencial_Completa);
+            Set(vartela , "Usinagem_Caixa_Diferencial_Completa");
+            
         Size: =24
         Text: ="Usinagem Caixa Diferencial Completa"
         Width: =Button2_24.Width

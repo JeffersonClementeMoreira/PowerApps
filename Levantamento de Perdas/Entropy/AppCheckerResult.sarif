@@ -5274,6 +5274,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Usinagem_Caixa_Diferencial_Completa.Icon1_28.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Caixa_Diferencial_Completa.Icon1_28.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Usinagem_Caixa_Diferencial_Completa",
+                "type": "Usinagem_Caixa_Diferencial_Completa.Icon1_28"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Usinagem_Caixa_Diferencial_Completa.Icon1_28.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Caixa_Diferencial_Completa.Icon1_28.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Usinagem_Caixa_Diferencial_Completa",
+                "type": "Usinagem_Caixa_Diferencial_Completa.Icon1_28"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App"
                 }
               ],

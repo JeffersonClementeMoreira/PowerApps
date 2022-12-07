@@ -19,7 +19,7 @@ App As appinfo:
             Table(
          /*{ Role: "Usinagem_Tampa";Screen: Usinagem_Tampa };
         
-         { Role: "Usinagem_Caixa_Diferencial_Completa";Screen: Usinagem_Caixa_Diferencial_Completa };
+        
          { Role: "Usinagem_Caixa_Diferencial";Screen: Usinagem_Caixa_Diferencial };
          { Role: "Todas_Peças";Screen: Todas_Peças };
          { Role: "SottoP_LUVAS";Screen: SottoP_LUVAS };
@@ -50,6 +50,10 @@ App As appinfo:
          
          */
         
+        
+        
+        
+         { Role: "Usinagem_Caixa_Diferencial_Completa",Screen: Usinagem_Caixa_Diferencial_Completa },
          { Role: "Usinagem_Satelite",Screen: Usinagem_Satelite },
          { Role: "Usinagem_Planetaria",Screen: Usinagem_Planetaria },
          { Role: "Usinagem_Marcha_Re",Screen: Usinagem_Marcha_Re },
