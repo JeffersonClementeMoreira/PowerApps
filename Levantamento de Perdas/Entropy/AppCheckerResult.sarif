@@ -1644,19 +1644,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Usinagem_Planetária.Icon1_26.AccessibleLabel"
+                  "fullyQualifiedName": "Usinagem_Planetaria.Icon1_26.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Usinagem_Planetária.Icon1_26.AccessibleLabel",
+                  "fullyQualifiedName": "Usinagem_Planetaria.Icon1_26.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Usinagem_Planetária",
-                "type": "Usinagem_Planetária.Icon1_26"
+                "module": "Usinagem_Planetaria",
+                "type": "Usinagem_Planetaria.Icon1_26"
               }
             }
           ],
@@ -1674,19 +1674,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Usinagem_Planetária.Icon1_26.TabIndex"
+                  "fullyQualifiedName": "Usinagem_Planetaria.Icon1_26.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Usinagem_Planetária.Icon1_26.TabIndex",
+                  "fullyQualifiedName": "Usinagem_Planetaria.Icon1_26.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Usinagem_Planetária",
-                "type": "Usinagem_Planetária.Icon1_26"
+                "module": "Usinagem_Planetaria",
+                "type": "Usinagem_Planetaria.Icon1_26"
               }
             }
           ],
@@ -5208,6 +5208,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Usinagem_Satelite.Icon1_27.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Satelite.Icon1_27.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Usinagem_Satelite",
+                "type": "Usinagem_Satelite.Icon1_27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Usinagem_Satelite.Icon1_27.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Satelite.Icon1_27.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Usinagem_Satelite",
+                "type": "Usinagem_Satelite.Icon1_27"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
         },
         {
           "locations": [

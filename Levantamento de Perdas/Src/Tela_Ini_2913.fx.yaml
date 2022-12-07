@@ -92,6 +92,11 @@ Tela_Ini_2913 As screen:
 
     Button2_30 As button:
         Height: =Button2_24.Height
+        OnSelect: |+
+            =Navigate(Usinagem_Planetaria);
+            Set(vartela , "Usinagem_Planetaria");
+            
+            
         Size: =24
         Text: ="Usinagem Planetária"
         Width: =Button2_24.Width
@@ -110,6 +115,9 @@ Tela_Ini_2913 As screen:
 
     Button2_32 As button:
         Height: =Button2_24.Height
+        OnSelect: |-
+            =Navigate(Usinagem_Satelite);
+            Set(vartela , "Usinagem_Satelite");
         Size: =24
         Text: ="Usinagem Satélite"
         Width: =Button2_24.Width
@@ -128,6 +136,9 @@ Tela_Ini_2913 As screen:
 
     Button2_34 As button:
         Height: =Button2_24.Height
+        OnSelect: |
+            =Navigate(Usinagem_Marcha_Re);
+            Set(vartela , "Usinagem_Marcha_Re");
         Size: =24
         Text: ="Usinagem Marcha Ré"
         Width: =Button2_24.Width
