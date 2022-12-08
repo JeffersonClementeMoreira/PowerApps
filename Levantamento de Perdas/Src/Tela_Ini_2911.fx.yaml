@@ -25,6 +25,9 @@ Tela_Ini_2911 As screen:
 
     Button2_2 As button:
         Height: =Button2_1.Height
+        OnSelect: |-
+            =Navigate(Retífica_Eixo_Primário);
+            Set(vartela , "Retífica_Eixo_Primário");
         Size: =24
         Text: ="Retífica Eixo Primário"
         Width: =Button2_1.Width
@@ -46,6 +49,9 @@ Tela_Ini_2911 As screen:
 
     Button2_4 As button:
         Height: =Button2_1.Height
+        OnSelect: |-
+            =Navigate(Retífica_Eixo_Secundário);
+            Set(vartela , "Retífica_Eixo_Secundário");
         Size: =24
         Text: ="Retífica Eixo Secundário"
         Width: =Button2_1.Width
@@ -83,6 +89,9 @@ Tela_Ini_2911 As screen:
 
     Button2_6 As button:
         Height: =Button2_1.Height
+        OnSelect: |-
+            =Navigate(Retífica_Coroa_Cilíndrica);
+            Set(vartela , "Retífica_Coroa_Cilíndrica");
         Size: =24
         Text: ="Retífica Coroa Cilíndrica"
         Width: =Button2_1.Width
