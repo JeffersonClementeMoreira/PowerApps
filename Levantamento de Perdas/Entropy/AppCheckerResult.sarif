@@ -14,166 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 74,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "UTE"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 74,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "SETOR"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 76,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "SETOR"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 86,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "TIPO_DE_PERDA"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Tela_Inicial_Perdas.ComboBoxmaquinaperdas.Items"
                 }
               ],
@@ -654,799 +494,179 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.AccessibleLabel"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 74,
+                  "snippet": {
+                    "text": "in"
+                  }
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tela_Detail_Producao",
-                "type": "Tela_Detail_Producao.Gal_Capacidade_detail"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tela_Detail_Producao",
-                "type": "Tela_Detail_Producao.Gal_Capacidade_detail"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.Capacidade_detail.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.Capacidade_detail.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tela_Detail_Producao",
-                "type": "Tela_Detail_Producao.Gal_Capacidade_detail.Capacidade_detail"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Ini_2915.Icon1_7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Ini_2915.Icon1_7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tela_Ini_2915",
-                "type": "Tela_Ini_2915.Icon1_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Ini_2915.Icon1_7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Ini_2915.Icon1_7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tela_Ini_2915",
-                "type": "Tela_Ini_2915.Icon1_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Usinagem_Eixo_Secundário.Icon1_11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Usinagem_Eixo_Secundário.Icon1_11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Usinagem_Eixo_Secundário",
-                "type": "Usinagem_Eixo_Secundário.Icon1_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Usinagem_Eixo_Secundário.Icon1_11.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Usinagem_Eixo_Secundário.Icon1_11.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Usinagem_Eixo_Secundário",
-                "type": "Usinagem_Eixo_Secundário.Icon1_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Icon3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Icon3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
+                "member": "Items",
                 "module": "Tel_Edit_Perdas",
                 "type": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "UTE"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.AccessibleLabel"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 74,
+                  "snippet": {
+                    "text": "in"
+                  }
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "Items",
                 "module": "Tel_Edit_Perdas",
                 "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "SETOR"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.AccessibleLabel"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.Items",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 76,
+                  "snippet": {
+                    "text": "in"
+                  }
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "Items",
                 "module": "Tel_Edit_Perdas",
                 "type": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "SETOR"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.AccessibleLabel"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.Items",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 86,
+                  "snippet": {
+                    "text": "in"
+                  }
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
+                "member": "Items",
                 "module": "Tel_Edit_Perdas",
                 "type": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "TIPO_DE_PERDA"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.AccessibleLabel"
+                  "fullyQualifiedName": "Usinagem_Engr_CDT_3ª.Icon1_15.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.AccessibleLabel",
+                  "fullyQualifiedName": "Usinagem_Engr_CDT_3ª.Icon1_15.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao"
+                "module": "Usinagem_Engr_CDT_3ª",
+                "type": "Usinagem_Engr_CDT_3ª.Icon1_15"
               }
             }
           ],
@@ -1464,79 +684,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.AccessibleLabel"
+                  "fullyQualifiedName": "Usinagem_Engr_CDT_3ª.Icon1_15.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.TabIndex",
+                  "fullyQualifiedName": "Usinagem_Engr_CDT_3ª.Icon1_15.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1"
+                "module": "Usinagem_Engr_CDT_3ª",
+                "type": "Usinagem_Engr_CDT_3ª.Icon1_15"
               }
             }
           ],
@@ -1554,19 +714,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.AccessibleLabel"
+                  "fullyQualifiedName": "Tela_Ini_2914.Icon1_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.AccessibleLabel",
+                  "fullyQualifiedName": "Tela_Ini_2914.Icon1_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1"
+                "module": "Tela_Ini_2914",
+                "type": "Tela_Ini_2914.Icon1_6"
               }
             }
           ],
@@ -1584,19 +744,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.TabIndex"
+                  "fullyQualifiedName": "Tela_Ini_2914.Icon1_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.TabIndex",
+                  "fullyQualifiedName": "Tela_Ini_2914.Icon1_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1"
+                "module": "Tela_Ini_2914",
+                "type": "Tela_Ini_2914.Icon1_6"
               }
             }
           ],
@@ -1614,19 +774,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13.AccessibleLabel"
+                  "fullyQualifiedName": "Usinagem_Engr_1ª_2ª.Icon1_14.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13.AccessibleLabel",
+                  "fullyQualifiedName": "Usinagem_Engr_1ª_2ª.Icon1_14.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13"
+                "module": "Usinagem_Engr_1ª_2ª",
+                "type": "Usinagem_Engr_1ª_2ª.Icon1_14"
               }
             }
           ],
@@ -1644,19 +804,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_produção_1.AccessibleLabel"
+                  "fullyQualifiedName": "Usinagem_Engr_1ª_2ª.Icon1_14.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_produção_1.AccessibleLabel",
+                  "fullyQualifiedName": "Usinagem_Engr_1ª_2ª.Icon1_14.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Usinagem_Engr_1ª_2ª",
+                "type": "Usinagem_Engr_1ª_2ª.Icon1_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Usinagem_Engr_CDT_4ª.Icon1_16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Engr_CDT_4ª.Icon1_16.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Total_hora_produção_1"
+                "module": "Usinagem_Engr_CDT_4ª",
+                "type": "Usinagem_Engr_CDT_4ª.Icon1_16"
               }
             }
           ],
@@ -1674,19 +864,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_perdas_1.AccessibleLabel"
+                  "fullyQualifiedName": "Usinagem_Engr_CDT_4ª.Icon1_16.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_perdas_1.AccessibleLabel",
+                  "fullyQualifiedName": "Usinagem_Engr_CDT_4ª.Icon1_16.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Usinagem_Engr_CDT_4ª",
+                "type": "Usinagem_Engr_CDT_4ª.Icon1_16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Ini_2913.Icon1_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Ini_2913.Icon1_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Total_hora_perdas_1"
+                "module": "Tela_Ini_2913",
+                "type": "Tela_Ini_2913.Icon1_5"
               }
             }
           ],
@@ -1704,19 +924,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_lancamento_hora_1.AccessibleLabel"
+                  "fullyQualifiedName": "Tela_Ini_2913.Icon1_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_lancamento_hora_1.AccessibleLabel",
+                  "fullyQualifiedName": "Tela_Ini_2913.Icon1_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tela_Ini_2913",
+                "type": "Tela_Ini_2913.Icon1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_1ª.Icon1_31.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_1ª.Icon1_31.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Total_lancamento_hora_1"
+                "module": "Retífica_Engr_1ª",
+                "type": "Retífica_Engr_1ª.Icon1_31"
               }
             }
           ],
@@ -1734,19 +984,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Prod_realizada_1.AccessibleLabel"
+                  "fullyQualifiedName": "Retífica_Engr_1ª.Icon1_31.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Prod_realizada_1.AccessibleLabel",
+                  "fullyQualifiedName": "Retífica_Engr_1ª.Icon1_31.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Engr_1ª",
+                "type": "Retífica_Engr_1ª.Icon1_31"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_2ª.Icon1_32.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_2ª.Icon1_32.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Prod_realizada_1"
+                "module": "Retífica_Engr_2ª",
+                "type": "Retífica_Engr_2ª.Icon1_32"
               }
             }
           ],
@@ -1758,6 +1038,396 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_2ª.Icon1_32.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_2ª.Icon1_32.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Engr_2ª",
+                "type": "Retífica_Engr_2ª.Icon1_32"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_3ª.Icon1_33.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_3ª.Icon1_33.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Retífica_Engr_CDT_3ª",
+                "type": "Retífica_Engr_CDT_3ª.Icon1_33"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_3ª.Icon1_33.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_3ª.Icon1_33.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Engr_CDT_3ª",
+                "type": "Retífica_Engr_CDT_3ª.Icon1_33"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_3ª.Icon1_34.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_3ª.Icon1_34.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Retífica_Engr_CDZ_3ª",
+                "type": "Retífica_Engr_CDZ_3ª.Icon1_34"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_3ª.Icon1_34.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_3ª.Icon1_34.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Engr_CDZ_3ª",
+                "type": "Retífica_Engr_CDZ_3ª.Icon1_34"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_4ª.Icon1_35.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_4ª.Icon1_35.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Retífica_Engr_CDZ_4ª",
+                "type": "Retífica_Engr_CDZ_4ª.Icon1_35"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_4ª.Icon1_35.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_4ª.Icon1_35.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Engr_CDZ_4ª",
+                "type": "Retífica_Engr_CDZ_4ª.Icon1_35"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_4ª.Icon1_36.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_4ª.Icon1_36.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Retífica_Engr_CDT_4ª",
+                "type": "Retífica_Engr_CDT_4ª.Icon1_36"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_4ª.Icon1_36.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_4ª.Icon1_36.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Engr_CDT_4ª",
+                "type": "Retífica_Engr_CDT_4ª.Icon1_36"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_5ª.Icon1_37.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_5ª.Icon1_37.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Retífica_Engr_CDZ_5ª",
+                "type": "Retífica_Engr_CDZ_5ª.Icon1_37"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_5ª.Icon1_37.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDZ_5ª.Icon1_37.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Engr_CDZ_5ª",
+                "type": "Retífica_Engr_CDZ_5ª.Icon1_37"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_5ª.Icon1_38.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_5ª.Icon1_38.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Retífica_Engr_CDT_5ª",
+                "type": "Retífica_Engr_CDT_5ª.Icon1_38"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_5ª.Icon1_38.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Engr_CDT_5ª.Icon1_38.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Engr_CDT_5ª",
+                "type": "Retífica_Engr_CDT_5ª.Icon1_38"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2844,6 +2514,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tela_Detail_Producao",
+                "type": "Tela_Detail_Producao.Gal_Capacidade_detail"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tela_Detail_Producao",
+                "type": "Tela_Detail_Producao.Gal_Capacidade_detail"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.Capacidade_detail.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Detail_Producao.Gal_Capacidade_detail.Capacidade_detail.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tela_Detail_Producao",
+                "type": "Tela_Detail_Producao.Gal_Capacidade_detail.Capacidade_detail"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Retífica_Eixo_Secundário.Icon1_29.AccessibleLabel"
                 }
               ],
@@ -3468,6 +3228,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Ini_2915.Icon1_7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Ini_2915.Icon1_7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tela_Ini_2915",
+                "type": "Tela_Ini_2915.Icon1_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Ini_2915.Icon1_7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Ini_2915.Icon1_7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tela_Ini_2915",
+                "type": "Tela_Ini_2915.Icon1_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4674,6 +4494,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Usinagem_Eixo_Secundário.Icon1_11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Eixo_Secundário.Icon1_11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Usinagem_Eixo_Secundário",
+                "type": "Usinagem_Eixo_Secundário.Icon1_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Usinagem_Eixo_Secundário.Icon1_11.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Eixo_Secundário.Icon1_11.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Usinagem_Eixo_Secundário",
+                "type": "Usinagem_Eixo_Secundário.Icon1_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Usinagem_Engr_CDT_5ª.Icon1_17.AccessibleLabel"
                 }
               ],
@@ -5214,19 +5094,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Usinagem_Engr_CDT_3ª.Icon1_15.AccessibleLabel"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Usinagem_Engr_CDT_3ª.Icon1_15.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Usinagem_Engr_CDT_3ª",
-                "type": "Usinagem_Engr_CDT_3ª.Icon1_15"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Icon3_1"
               }
             }
           ],
@@ -5244,19 +5124,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Usinagem_Engr_CDT_3ª.Icon1_15.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Usinagem_Engr_CDT_3ª.Icon1_15.TabIndex",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Usinagem_Engr_CDT_3ª",
-                "type": "Usinagem_Engr_CDT_3ª.Icon1_15"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Icon3_1"
               }
             }
           ],
@@ -5274,19 +5154,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tela_Ini_2914.Icon1_6.AccessibleLabel"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tela_Ini_2914.Icon1_6.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tela_Ini_2914",
-                "type": "Tela_Ini_2914.Icon1_6"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1"
               }
             }
           ],
@@ -5304,19 +5184,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tela_Ini_2914.Icon1_6.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tela_Ini_2914.Icon1_6.TabIndex",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Tela_Ini_2914",
-                "type": "Tela_Ini_2914.Icon1_6"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1"
               }
             }
           ],
@@ -5334,19 +5214,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Usinagem_Engr_1ª_2ª.Icon1_14.AccessibleLabel"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Usinagem_Engr_1ª_2ª.Icon1_14.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Usinagem_Engr_1ª_2ª",
-                "type": "Usinagem_Engr_1ª_2ª.Icon1_14"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1"
               }
             }
           ],
@@ -5364,49 +5244,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Usinagem_Engr_1ª_2ª.Icon1_14.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Usinagem_Engr_1ª_2ª.Icon1_14.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Usinagem_Engr_1ª_2ª",
-                "type": "Usinagem_Engr_1ª_2ª.Icon1_14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Usinagem_Engr_CDT_4ª.Icon1_16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Usinagem_Engr_CDT_4ª.Icon1_16.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Usinagem_Engr_CDT_4ª",
-                "type": "Usinagem_Engr_CDT_4ª.Icon1_16"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1"
               }
             }
           ],
@@ -5424,49 +5274,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Usinagem_Engr_CDT_4ª.Icon1_16.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Usinagem_Engr_CDT_4ª.Icon1_16.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Usinagem_Engr_CDT_4ª",
-                "type": "Usinagem_Engr_CDT_4ª.Icon1_16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Ini_2913.Icon1_5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Ini_2913.Icon1_5.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Tela_Ini_2913",
-                "type": "Tela_Ini_2913.Icon1_5"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1"
               }
             }
           ],
@@ -5484,49 +5304,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tela_Ini_2913.Icon1_5.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Tela_Ini_2913.Icon1_5.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tela_Ini_2913",
-                "type": "Tela_Ini_2913.Icon1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Engr_1ª.Icon1_31.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Engr_1ª.Icon1_31.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Retífica_Engr_1ª",
-                "type": "Retífica_Engr_1ª.Icon1_31"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1"
               }
             }
           ],
@@ -5544,49 +5334,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Retífica_Engr_1ª.Icon1_31.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Retífica_Engr_1ª.Icon1_31.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Retífica_Engr_1ª",
-                "type": "Retífica_Engr_1ª.Icon1_31"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Engr_2ª.Icon1_32.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Engr_2ª.Icon1_32.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Retífica_Engr_2ª",
-                "type": "Retífica_Engr_2ª.Icon1_32"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
               }
             }
           ],
@@ -5604,49 +5364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Retífica_Engr_2ª.Icon1_32.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Retífica_Engr_2ª.Icon1_32.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Retífica_Engr_2ª",
-                "type": "Retífica_Engr_2ª.Icon1_32"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_3ª.Icon1_33.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_3ª.Icon1_33.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Retífica_Engr_CDT_3ª",
-                "type": "Retífica_Engr_CDT_3ª.Icon1_33"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1"
               }
             }
           ],
@@ -5664,49 +5394,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_3ª.Icon1_33.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_3ª.Icon1_33.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Retífica_Engr_CDT_3ª",
-                "type": "Retífica_Engr_CDT_3ª.Icon1_33"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_3ª.Icon1_34.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_3ª.Icon1_34.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Retífica_Engr_CDZ_3ª",
-                "type": "Retífica_Engr_CDZ_3ª.Icon1_34"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1"
               }
             }
           ],
@@ -5724,49 +5424,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_3ª.Icon1_34.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_3ª.Icon1_34.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Retífica_Engr_CDZ_3ª",
-                "type": "Retífica_Engr_CDZ_3ª.Icon1_34"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_4ª.Icon1_35.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_4ª.Icon1_35.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Retífica_Engr_CDZ_4ª",
-                "type": "Retífica_Engr_CDZ_4ª.Icon1_35"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1"
               }
             }
           ],
@@ -5784,49 +5454,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_4ª.Icon1_35.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_4ª.Icon1_35.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Retífica_Engr_CDZ_4ª",
-                "type": "Retífica_Engr_CDZ_4ª.Icon1_35"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_4ª.Icon1_36.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_4ª.Icon1_36.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Retífica_Engr_CDT_4ª",
-                "type": "Retífica_Engr_CDT_4ª.Icon1_36"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1"
               }
             }
           ],
@@ -5844,49 +5484,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_4ª.Icon1_36.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_4ª.Icon1_36.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Retífica_Engr_CDT_4ª",
-                "type": "Retífica_Engr_CDT_4ª.Icon1_36"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_5ª.Icon1_37.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_5ª.Icon1_37.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Retífica_Engr_CDZ_5ª",
-                "type": "Retífica_Engr_CDZ_5ª.Icon1_37"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda"
               }
             }
           ],
@@ -5904,49 +5514,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_5ª.Icon1_37.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDZ_5ª.Icon1_37.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Retífica_Engr_CDZ_5ª",
-                "type": "Retífica_Engr_CDZ_5ª.Icon1_37"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_5ª.Icon1_38.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_5ª.Icon1_38.AccessibleLabel",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Retífica_Engr_CDT_5ª",
-                "type": "Retífica_Engr_CDT_5ª.Icon1_38"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha"
               }
             }
           ],
@@ -5964,19 +5544,229 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_5ª.Icon1_38.TabIndex"
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Retífica_Engr_CDT_5ª.Icon1_38.TabIndex",
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Retífica_Engr_CDT_5ª",
-                "type": "Retífica_Engr_CDT_5ª.Icon1_38"
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1"
               }
             }
           ],
@@ -5988,6 +5778,216 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_produção_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_produção_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Total_hora_produção_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_perdas_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_perdas_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Total_hora_perdas_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_lancamento_hora_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_lancamento_hora_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Total_lancamento_hora_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Prod_realizada_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Prod_realizada_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Prod_realizada_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -6017,6 +6017,36 @@
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "Tela_Inicial_Perdas",
+                "type": "Tela_Inicial_Perdas.DatePickerPerdas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -6066,216 +6096,6 @@
                 "member": "Item",
                 "module": "Tela_Detail_Producao",
                 "type": "Tela_Detail_Producao.DetailForm1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.Item"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.Item",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Item",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.DefaultDate"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.DefaultDate",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DefaultDate",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.Height"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Inicial_Perdas.DatePickerPerdas.Height",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Height",
-                "module": "Tela_Inicial_Perdas",
-                "type": "Tela_Inicial_Perdas.DatePickerPerdas"
               }
             }
           ],
@@ -6496,6 +6316,186 @@
           },
           "ruleId": "app-ScreenHasManyControls",
           "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.DefaultDate"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.DefaultDate",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DefaultDate",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
         }
       ],
       "tool": {
