@@ -1,14 +1,6 @@
 Tela_Ini_2912 As screen:
     BackgroundImage: =Transmissões_foto_bw
-    Fill: |-
-        =
-         { Role: "Retífica_Engr_CDZ_5ª",Screen: Retífica_Engr_CDZ_5ª },
-         { Role: "Retífica_Engr_CDZ_4ª",Screen: Retífica_Engr_CDZ_4ª },
-         { Role: "Retífica_Engr_CDZ_3ª",Screen: Retífica_Engr_CDZ_3ª },
-         { Role: "Retífica_Engr_CDT_5ª",Screen: Retífica_Engr_CDT_5ª },
-         { Role: "Retífica_Engr_CDT_4ª",Screen: Retífica_Engr_CDT_4ª },
-         { Role: "Retífica_Engr_CDT_3ª",Screen: Retífica_Engr_CDT_3ª },
-         { Role: "Retífica_Engr_2ª",Screen: Retífica_Engr_2ª },
+    Fill: =
     ImagePosition: =ImagePosition.Fill
 
     Label_ute_1 As button:
