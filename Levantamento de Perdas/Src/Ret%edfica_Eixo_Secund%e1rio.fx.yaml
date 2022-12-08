@@ -10,33 +10,6 @@ Retífica_Eixo_Secundário As screen:
         Y: =168
         ZIndex: =1
 
-    Btnmaq_44 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =77
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "11500669");
-            Set( varsetor ,  Label_setor_21.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Tooltip: ="Dentadora Liebherr 669"
-        Width: =168
-        X: =175
-        Y: =184
-        ZIndex: =15
-
     Label_setor_21 As label:
         Height: =70
         Size: =21
@@ -79,14 +52,14 @@ Retífica_Eixo_Secundário As screen:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =77
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "1500572");
+            =Set( varmaquina , "20101500119");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -96,51 +69,23 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 572"
-        Width: =168
-        X: =175
-        Y: =270
+        Width: =113
+        X: =310
+        Y: =206
         ZIndex: =19
-
-    Btnmaq_45 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =77
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "11500668");
-            Set( varsetor ,  Label_setor_21.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Tooltip: ="Dentadora Liebherr 668"
-        Width: =168
-        X: =472
-        Y: =184
-        ZIndex: =20
 
     Btnmaq_189 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =77
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11500670");
+            =Set( varmaquina , "20101500115");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -150,24 +95,23 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Liebherr 670"
-        Width: =168
-        X: =472
-        Y: =270
-        ZIndex: =21
+        Width: =113
+        X: =310
+        Y: =358
+        ZIndex: =20
 
     Btnmaq_190 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =77
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "981500921");
+            =Set( varmaquina , "961502096");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -177,24 +121,23 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Dentadora Gleason 921"
-        Width: =168
-        X: =325
-        Y: =357
-        ZIndex: =22
+        Width: =113
+        X: =310
+        Y: =512
+        ZIndex: =21
 
     Btnmaq_191 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =77
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "201405004918");
+            =Set( varmaquina , "951500924");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -204,25 +147,23 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Chanfradora Prawema 918"
-        Width: =168
-        X: =325
-        Y: =441
-        ZIndex: =23
+        Width: =113
+        X: =523
+        Y: =512
+        ZIndex: =22
 
     Btnmaq_192 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_191.Height
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "1500572");
+            =Set( varmaquina , "961502094");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -232,24 +173,23 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Máquina sem CAF no acompanhamento"
-        Width: =Btnmaq_191.Width
-        X: =Btnmaq_191.X
-        Y: =Btnmaq_191.Y + Btnmaq_191.Height + 8
-        ZIndex: =24
+        Width: =113
+        X: =97
+        Y: =512
+        ZIndex: =23
 
     Btnmaq_193 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_192.Height
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "81500138");
+            =Set( varmaquina , "81500137");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -259,24 +199,23 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Etxe-tar 138"
-        Width: =Btnmaq_192.Width
-        X: =Btnmaq_192.X
-        Y: =Btnmaq_192.Y + Btnmaq_192.Height + 8
-        ZIndex: =25
+        Width: =113
+        X: =310
+        Y: =664
+        ZIndex: =24
 
     Btnmaq_194 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_193.Height
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "951500936");
+            =Set( varmaquina , "20101500022");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -286,24 +225,23 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Roladora Max Novo 936"
-        Width: =Btnmaq_193.Width
-        X: =Btnmaq_193.X
-        Y: =Btnmaq_193.Y + Btnmaq_193.Height + 8
-        ZIndex: =26
+        Width: =113
+        X: =310
+        Y: =818
+        ZIndex: =25
 
     Btnmaq_195 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_193.Height
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "971500328");
+            =Set( varmaquina , "911500389");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -313,24 +251,23 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Roladora Roto_Flo 328"
-        Width: =Btnmaq_193.Width
-        X: =Btnmaq_194.X
-        Y: =Btnmaq_194.Y + Btnmaq_194.Height + 8
-        ZIndex: =27
+        Width: =113
+        X: =97
+        Y: =664
+        ZIndex: =26
 
     Btnmaq_196 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_193.Height
+        Height: =125
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11500667");
+            =Set( varmaquina , "71500030");
             Set( varsetor ,  Label_setor_21.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -340,63 +277,8 @@ Retífica_Eixo_Secundário As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Raspadora Sicmat 667"
-        Width: =Btnmaq_193.Width
-        X: =Btnmaq_194.X
-        Y: =Btnmaq_195.Y + Btnmaq_194.Height + 8
-        ZIndex: =28
-
-    Btnmaq_197 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_193.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "11500666");
-            Set( varsetor ,  Label_setor_21.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Tooltip: ="Raspadora Sicmat 666"
-        Width: =Btnmaq_193.Width
-        X: =Btnmaq_194.X
-        Y: =Btnmaq_196.Y + Btnmaq_194.Height + 8
-        ZIndex: =29
-
-    Btnmaq_198 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq_193.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "41500084");
-            Set( varsetor ,  Label_setor_21.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Tooltip: ="Rasparadora Sicmat 084"
-        Width: =Btnmaq_193.Width
-        X: =Btnmaq_194.X
-        Y: =Btnmaq_197.Y + Btnmaq_194.Height + 8
-        ZIndex: =30
+        Width: =113
+        X: =310
+        Y: =969
+        ZIndex: =27
 
