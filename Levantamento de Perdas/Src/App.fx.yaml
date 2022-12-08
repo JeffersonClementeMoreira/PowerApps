@@ -29,14 +29,7 @@ App As appinfo:
          { Role: "Retífica_Luva_5ª";Screen: Retífica_Luva_5ª };
          { Role: "Retifica_Luva_3ª4ª";Screen: Retifica_Luva_3ª4ª };
          { Role: "Retífica_Luva_1ª2ª";Screen: Retífica_Luva_1ª2ª };
-         { Role: "Retífica_Engr._CDZ_5ª";Screen: Retífica_Engr._CDZ_5ª };
-         { Role: "Retífica_Engr._CDZ_4ª";Screen: Retífica_Engr._CDZ_4ª };
-         { Role: "Retífica_Engr._CDZ_3ª";Screen: Retífica_Engr._CDZ_3ª };
-         { Role: "Retífica_Engr._CDT_5ª";Screen: Retífica_Engr._CDT_5ª };
-         { Role: "Retífica_Engr._CDT_4ª";Screen: Retífica_Engr._CDT_4ª };
-         { Role: "Retífica_Engr._CDT_3ª";Screen: Retífica_Engr._CDT_3ª };
-         { Role: "Retífica_Engr._2ª";Screen: Retífica_Engr._2ª };
-         { Role: "Retífica_Engr._1ª";Screen: Retífica_Engr._1ª };
+        
         
          { Role: "Luvas_1ª2ª_/_3ª4ª_/_5ª";Screen: Luvas_1ª2ª_/_3ª4ª_/_5ª };
          { Role: "Fornos_Cont";Screen: Fornos_Cont };
@@ -49,10 +42,20 @@ App As appinfo:
          */
         
         
+        
+        
+         { Role: "Retífica_Engr_CDZ_5ª",Screen: Retífica_Engr_CDZ_5ª },
+         { Role: "Retífica_Engr_CDZ_4ª",Screen: Retífica_Engr_CDZ_4ª },
+         { Role: "Retífica_Engr_CDZ_3ª",Screen: Retífica_Engr_CDZ_3ª },
+         { Role: "Retífica_Engr_CDT_5ª",Screen: Retífica_Engr_CDT_5ª },
+         { Role: "Retífica_Engr_CDT_4ª",Screen: Retífica_Engr_CDT_4ª },
+         { Role: "Retífica_Engr_CDT_3ª",Screen: Retífica_Engr_CDT_3ª },
+         { Role: "Retífica_Engr_2ª",Screen: Retífica_Engr_2ª },
+         { Role: "Retífica_Engr_1ª",Screen: Retífica_Engr_1ª },
+        
          { Role: "Retífica_Eixo_Secundário",Screen: Retífica_Eixo_Secundário },
          { Role: "Retífica_Eixo_Primário",Screen: Retífica_Eixo_Primário },
          { Role: "Retífica_Coroa_Cilindrica",Screen: Retífica_Coroa_Cilíndrica },
-        
          { Role: "Usinagem_Caixa_Diferencial_Completa",Screen: Usinagem_Caixa_Diferencial_Completa },
          { Role: "Usinagem_Satelite",Screen: Usinagem_Satelite },
          { Role: "Usinagem_Planetaria",Screen: Usinagem_Planetaria },
