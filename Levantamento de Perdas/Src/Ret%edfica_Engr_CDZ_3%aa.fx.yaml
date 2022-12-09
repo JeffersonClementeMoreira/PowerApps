@@ -51,6 +51,7 @@ Retífica_Engr_CDZ_3ª As screen:
     Btnmaq_201 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =200
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -69,6 +70,7 @@ Retífica_Engr_CDZ_3ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
+        Tooltip: ="Máquina sem CAF"
         Width: =157
         X: =480
         Y: =380
@@ -85,7 +87,7 @@ Retífica_Engr_CDZ_3ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "81500020");
+            =Set( varmaquina , "201405004576");
             Set( varsetor ,  Label_setor_26.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -111,7 +113,7 @@ Retífica_Engr_CDZ_3ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "81500020");
+            =Set( varmaquina , "71500031");
             Set( varsetor ,  Label_setor_26.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));

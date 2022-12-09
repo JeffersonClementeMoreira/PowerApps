@@ -59,7 +59,7 @@ Retífica_Engr_CDT_4ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "81500020");
+            =Set( varmaquina , "961502097");
             Set( varsetor ,  Label_setor_28.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -84,7 +84,7 @@ Retífica_Engr_CDT_4ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "81500020");
+            =Set( varmaquina , "951500941");
             Set( varsetor ,  Label_setor_28.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -101,6 +101,7 @@ Retífica_Engr_CDT_4ª As screen:
     Btnmaq_227 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =182
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -119,6 +120,7 @@ Retífica_Engr_CDT_4ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
+        Tooltip: ="Máquina sem CAF"
         X: =472
         Y: =540
         ZIndex: =7
@@ -134,7 +136,7 @@ Retífica_Engr_CDT_4ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "81500020");
+            =Set( varmaquina , "951500950");
             Set( varsetor ,  Label_setor_28.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -151,6 +153,7 @@ Retífica_Engr_CDT_4ª As screen:
     Btnmaq_229 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =182
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -169,6 +172,7 @@ Retífica_Engr_CDT_4ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
+        Tooltip: ="Máquina sem CAF"
         X: =154
         Y: =764
         ZIndex: =9
