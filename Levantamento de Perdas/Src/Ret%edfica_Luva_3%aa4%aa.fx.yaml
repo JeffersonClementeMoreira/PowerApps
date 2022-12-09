@@ -59,7 +59,7 @@ Retífica_Luva_3ª4ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "961502075");
+            =Set( varmaquina , "971500257");
             Set( varsetor ,  Label_setor_32.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));

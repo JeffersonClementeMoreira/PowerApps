@@ -59,7 +59,7 @@ Retífica_Luva_1ª2ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "961502075");
+            =Set( varmaquina , "3346037006");
             Set( varsetor ,  Label_setor_31.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -85,7 +85,7 @@ Retífica_Luva_1ª2ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "961502075");
+            =Set( varmaquina , "3346037004");
             Set( varsetor ,  Label_setor_31.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -111,7 +111,7 @@ Retífica_Luva_1ª2ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "961502075");
+            =Set( varmaquina , "951500939");
             Set( varsetor ,  Label_setor_31.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
