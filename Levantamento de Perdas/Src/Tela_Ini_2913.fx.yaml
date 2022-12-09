@@ -25,6 +25,9 @@ Tela_Ini_2913 As screen:
 
     Button2_25 As button:
         Height: =Button2_24.Height
+        OnSelect: |-
+            =Navigate(Retífica_Luva_1ª2ª);
+            Set(vartela , "Retífica_Luva_1ª2ª");
         Size: =24
         Text: ="Retífica Luva 1ª2ª"
         Width: =Button2_24.Width
@@ -46,6 +49,9 @@ Tela_Ini_2913 As screen:
 
     Button2_27 As button:
         Height: =Button2_24.Height
+        OnSelect: |-
+            =Navigate(Retífica_Luva_3ª4ª);
+            Set(vartela , "Retífica_Luva_3ª4ª");
         Size: =24
         Text: ="Retifica Luva 3ª4ª"
         Width: =Button2_24.Width
@@ -83,6 +89,9 @@ Tela_Ini_2913 As screen:
 
     Button2_29 As button:
         Height: =Button2_24.Height
+        OnSelect: |-
+            =Navigate(Retífica_Luva_5ª);
+            Set(vartela , "Retífica_Luva_5ª");
         Size: =24
         Text: ="Retífica Luva 5ª"
         Width: =Button2_24.Width
@@ -106,6 +115,9 @@ Tela_Ini_2913 As screen:
 
     Button2_31 As button:
         Height: =Button2_24.Height
+        OnSelect: |-
+            =Navigate(Retífica_Planetária);
+            Set(vartela , "Retífica_Planetária");
         Size: =24
         Text: ="Retífica Planetária"
         Width: =Button2_24.Width
@@ -127,6 +139,9 @@ Tela_Ini_2913 As screen:
 
     Button2_33 As button:
         Height: =Button2_24.Height
+        OnSelect: |-
+            =Navigate(Retífica_Satélite);
+            Set(vartela , "Retífica_Satélite");
         Size: =24
         Text: ="Retífica Satélite"
         Width: =Button2_24.Width
@@ -148,6 +163,9 @@ Tela_Ini_2913 As screen:
 
     Button2_35 As button:
         Height: =Button2_24.Height
+        OnSelect: |-
+            =Navigate(Retífica_Marcha_Ré);
+            Set(vartela , "Retífica_Marcha_Ré");
         Size: =24
         Text: ="Retífica Marcha Ré"
         Width: =Button2_24.Width

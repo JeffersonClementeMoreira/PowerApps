@@ -18,18 +18,9 @@ App As appinfo:
             colRoleKeys,
             Table(
          /*{ Role: "Usinagem_Tampa";Screen: Usinagem_Tampa };
-        
-        
          { Role: "Usinagem_Caixa_Diferencial";Screen: Usinagem_Caixa_Diferencial };
          { Role: "Todas_Peças";Screen: Todas_Peças };
          { Role: "SottoP_LUVAS";Screen: SottoP_LUVAS };
-         { Role: "Retífica_Satélite";Screen: Retífica_Satélite };
-         { Role: "Retífica_Planetária";Screen: Retífica_Planetária };
-         { Role: "Retífica_Marcha_Ré";Screen: Retífica_Marcha_Ré };
-         { Role: "Retífica_Luva_5ª";Screen: Retífica_Luva_5ª };
-         { Role: "Retifica_Luva_3ª4ª";Screen: Retifica_Luva_3ª4ª };
-         { Role: "Retífica_Luva_1ª2ª";Screen: Retífica_Luva_1ª2ª };
-        
         
          { Role: "Luvas_1ª2ª_/_3ª4ª_/_5ª";Screen: Luvas_1ª2ª_/_3ª4ª_/_5ª };
          { Role: "Fornos_Cont";Screen: Fornos_Cont };
@@ -41,9 +32,12 @@ App As appinfo:
          
          */
         
-        
-        
-        
+         { Role: "Retífica_Satélite",Screen: Retífica_Satélite },
+         { Role: "Retífica_Planetária",Screen: Retífica_Planetária },
+         { Role: "Retífica_Marcha_Ré",Screen: Retífica_Marcha_Ré },
+         { Role: "Retífica_Luva_5ª",Screen: Retífica_Luva_5ª },
+         { Role: "Retífica_Luva_3ª4ª",Screen: Retífica_Luva_3ª4ª },
+         { Role: "Retífica_Luva_1ª2ª",Screen: Retífica_Luva_1ª2ª },
          { Role: "Retífica_Engr_CDZ_5ª",Screen: Retífica_Engr_CDZ_5ª },
          { Role: "Retífica_Engr_CDZ_4ª",Screen: Retífica_Engr_CDZ_4ª },
          { Role: "Retífica_Engr_CDZ_3ª",Screen: Retífica_Engr_CDZ_3ª },
@@ -52,7 +46,6 @@ App As appinfo:
          { Role: "Retífica_Engr_CDT_3ª",Screen: Retífica_Engr_CDT_3ª },
          { Role: "Retífica_Engr_2ª",Screen: Retífica_Engr_2ª },
          { Role: "Retífica_Engr_1ª",Screen: Retífica_Engr_1ª },
-        
          { Role: "Retífica_Eixo_Secundário",Screen: Retífica_Eixo_Secundário },
          { Role: "Retífica_Eixo_Primário",Screen: Retífica_Eixo_Primário },
          { Role: "Retífica_Coroa_Cilindrica",Screen: Retífica_Coroa_Cilíndrica },
