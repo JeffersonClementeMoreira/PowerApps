@@ -41,12 +41,13 @@
 
     IconAccept1 As icon.Check:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Edit , If(varDelta < 0 || varprod_realizada <=0 || LabelAlertaDelta.Visible = true , DisplayMode.Disabled  ,DisplayMode.Edit))
+        DisplayMode: |
+            =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Edit , If(varDelta < 0 || varprod_realizada <=0 || LabelAlertaDelta.Visible = true , DisplayMode.Disabled  ,DisplayMode.Edit))
         Height: =88
         Icon: =Icon.Check
         OnSelect: |
             =SubmitForm('Form Produção');
-            Set(varenviado ,1)
+            //Set(varenviado ;1)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -71,7 +72,10 @@
         DataSource: =[@LancamentoProducao]
         Height: =831
         Item: =BrowseGallery1.Selected
-        OnSuccess: =If(varenviado = 1, Navigate(TelaAnterior.Screen)) //; NewForm(Formperdas);;Navigate(Tel_Edit_Producao));;
+        OnSuccess: |-
+            =//If(varenviado = 1; Navigate(TelaAnterior.Screen)) //; NewForm(Formperdas);;Navigate(Tel_Edit_Producao));;
+            
+            If(varDelta = 0 ,  Navigate(TelaAnterior.Screen) , NewForm('Form Produção') ; Navigate(Tel_Edit_Producao))
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
