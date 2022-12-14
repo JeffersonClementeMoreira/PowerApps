@@ -59,7 +59,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "91500041");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -85,7 +85,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003001");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -111,7 +111,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "971500718");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -137,7 +137,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "101500104");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -163,7 +163,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "51500033");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -189,7 +189,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "1500678");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -207,6 +207,7 @@ Luvas_2915 As screen:
     Btnmaq_251 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =108
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -225,6 +226,7 @@ Luvas_2915 As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
+        Tooltip: ="Caf não cadastrado"
         Width: =80
         X: =555
         Y: =993
@@ -241,7 +243,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003002");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -267,7 +269,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003003");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -293,7 +295,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "971500011");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -319,7 +321,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "901500701");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -345,7 +347,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "101500111");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));

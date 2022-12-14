@@ -59,7 +59,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "91500031");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -85,7 +85,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "21500830");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -111,7 +111,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "71500101");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -137,7 +137,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "91500041");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -163,7 +163,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003001");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -189,7 +189,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "101500104");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -215,7 +215,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003002");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -241,7 +241,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003003");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -267,7 +267,7 @@ Engr_3ª_4ª_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "971500011");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));

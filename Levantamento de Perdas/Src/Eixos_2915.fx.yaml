@@ -59,7 +59,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "91500041");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -85,7 +85,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003001");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -111,7 +111,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "101500104");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -137,7 +137,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "51500033");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -149,7 +149,7 @@ Eixos_2915 As screen:
         Text: =""
         Width: =80
         X: =549
-        Y: =747
+        Y: =748
         ZIndex: =18
 
     Btnmaq_287 As button:
@@ -163,7 +163,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "101500120");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -189,7 +189,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "101500111");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -200,8 +200,8 @@ Eixos_2915 As screen:
         Size: =24
         Text: =""
         Width: =80
-        X: =390
-        Y: =747
+        X: =388
+        Y: =748
         ZIndex: =20
 
     Btnmaq_289 As button:
@@ -215,7 +215,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003002");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -226,7 +226,7 @@ Eixos_2915 As screen:
         Size: =24
         Text: =""
         Width: =80
-        X: =390
+        X: =388
         Y: =416
         ZIndex: =21
 
@@ -241,7 +241,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "211003003");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -267,7 +267,7 @@ Eixos_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "971500011");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -278,7 +278,7 @@ Eixos_2915 As screen:
         Size: =24
         Text: =""
         Width: =80
-        X: =76
-        Y: =415
+        X: =78
+        Y: =416
         ZIndex: =23
 
