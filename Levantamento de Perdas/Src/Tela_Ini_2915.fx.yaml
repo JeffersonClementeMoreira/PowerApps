@@ -13,6 +13,9 @@ Tela_Ini_2915 As screen:
 
     Button2_41 As button:
         Height: =95
+        OnSelect: |
+            =//Navigate(Luvas_2915);;
+            //Set(vartela ; "Luvas_2915");; 
         Size: =24
         Text: ="Luvas"
         Width: =280
@@ -22,6 +25,9 @@ Tela_Ini_2915 As screen:
 
     Button2_42 As button:
         Height: =Button2_41.Height
+        OnSelect: |-
+            =//Navigate(Engr_3ª_4ª_2915);;
+            //Set(vartela ; "Engr_3ª_4ª_2915");; 
         Size: =24
         Text: ="Engr. 3ª/4ª"
         Width: =Button2_41.Width
@@ -31,6 +37,9 @@ Tela_Ini_2915 As screen:
 
     Button2_43 As button:
         Height: =Button2_41.Height
+        OnSelect: |-
+            =//Navigate(Eixos_2915);;
+            //Set(vartela ; "Eixos_2915");; 
         Size: =24
         Text: ="Eixos Primário e Secundário"
         Width: =Button2_41.Width
@@ -40,6 +49,9 @@ Tela_Ini_2915 As screen:
 
     Button2_44 As button:
         Height: =Button2_41.Height
+        OnSelect: |-
+            =//Navigate(Vários_2915);;
+            //Set(vartela ; "Vários_2915");; 
         Size: =24
         Text: ="Vários"
         Width: =Button2_41.Width
