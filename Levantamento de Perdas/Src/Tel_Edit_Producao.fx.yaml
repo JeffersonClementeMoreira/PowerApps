@@ -1084,7 +1084,7 @@
         Size: =24
         Text: ="Salvar e Lançar Perda"
         Tooltip: ="Enviar item e ir para página de lançamento perdas"
-        Width: =280
+        Width: =584
         X: =30
         Y: =843
         ZIndex: =9
@@ -1166,6 +1166,7 @@
         Size: =24
         Text: ="Adicionar nova produção"
         Tooltip: ="Enviar item e manter nesta página"
+        Visible: =false
         Width: =280
         X: =334
         Y: =843
@@ -1185,6 +1186,7 @@
         ZIndex: =15
 
     LabelAlertaDelta As label:
+        Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(255, 0, 0, 1)
         Height: =915
