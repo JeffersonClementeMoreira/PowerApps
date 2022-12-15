@@ -1189,12 +1189,13 @@
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(255, 0, 0, 1)
-        Height: =915
+        Height: =559
         Size: =21
         Text: |-
             ="Atenção!!!
             
-            Favor pressionar o botão de atualizar ou cancelar lançamento"
+            Favor pressionar o botão de atualizar ou altere a Prod. Realizada para 0.
+            "
         Visible: =If(Total_lancamento_hora.Text = Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE && varDelta <> 0 && 'Form Produção'.Mode = FormMode.New , true , false)
         Width: =609
         X: =20
