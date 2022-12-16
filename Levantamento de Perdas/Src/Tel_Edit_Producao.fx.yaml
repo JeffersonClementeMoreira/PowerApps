@@ -75,7 +75,7 @@
         OnSuccess: |-
             =//If(varenviado = 1; Navigate(TelaAnterior.Screen)) //; NewForm(Formperdas);;Navigate(Tel_Edit_Producao));;
             
-            If(varenviado = 1,  NewForm('Form Produção') ; Navigate(Tel_Edit_Producao) , NewForm(Formperdas) ; Navigate(Tel_Edit_Producao))
+            If(varenviado = 1,  NewForm('Form Produção') ; Navigate(Tel_Edit_Producao) , NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas))
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
@@ -1077,7 +1077,7 @@
         Height: =98
         OnSelect: |-
             =Set(varenviado ,0);
-            If( varprod_realizada = 0, NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas , SubmitForm('Form Produção') ),
+            If( varprod_realizada = 0, NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas) , SubmitForm('Form Produção') )
             
             //NewForm(Formperdas);;
             //Navigate(Tel_Edit_Perdas));;
