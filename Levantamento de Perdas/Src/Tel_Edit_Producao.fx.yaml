@@ -75,7 +75,7 @@
         OnSuccess: |-
             =//If(varenviado = 1; Navigate(TelaAnterior.Screen)) //; NewForm(Formperdas);;Navigate(Tel_Edit_Producao));;
             
-            NewForm('Form Produção') ; Navigate(Tel_Edit_Producao)
+            If(varenviado = 1,  NewForm('Form Produção') ; Navigate(Tel_Edit_Producao) , NewForm(Formperdas);Navigate(Tel_Edit_Producao))
         Width: =Parent.Width
         Y: =103
         ZIndex: =5
