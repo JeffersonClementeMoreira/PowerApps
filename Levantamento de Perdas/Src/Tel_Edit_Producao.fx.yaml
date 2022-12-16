@@ -1076,11 +1076,11 @@
         DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled , If((varDelta <= 0 || varprod_realizada <0 ), DisplayMode.Disabled  ,DisplayMode.Edit))
         Height: =98
         OnSelect: |-
-            =If( varprod_realizada = 0, NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas),
-            Set(varenviado ,0);
-            SubmitForm('Form Produção');
-            NewForm(Formperdas);
-            Navigate(Tel_Edit_Perdas));
+            =Set(varenviado ,0);
+            If( varprod_realizada = 0, NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas , SubmitForm('Form Produção') ),
+            
+            //NewForm(Formperdas);;
+            //Navigate(Tel_Edit_Perdas));;
         Size: =24
         Text: ="Salvar e Lançar Perda"
         Tooltip: ="Enviar item e ir para página de lançamento perdas"
