@@ -1194,7 +1194,7 @@
         Text: |-
             ="Atenção!!!
             
-            Favor pressionar o botão de atualizar ou altere a Prod. Realizada para 0.
+            Favor pressionar o botão de atualizar ou caso a Prod. Realizada esteja negativa altere a Prod. Realizada para 0.
             "
         Visible: =If(Total_lancamento_hora.Text = Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE && varDelta <> 0 && 'Form Produção'.Mode = FormMode.New , true , false)
         Width: =609
