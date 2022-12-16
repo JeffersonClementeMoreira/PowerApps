@@ -47,7 +47,7 @@
 
     IconDelete1_1 As icon.Trash:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@LancamentoProducao], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(!IsBlank(BrowseGallery1perdas.Selected) && DataSourceInfo([@LancamentoPerdas], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =88
         Icon: =Icon.Trash
         OnSelect: |
