@@ -289,7 +289,8 @@
         Icon: =Icon.Home
         OnSelect: |-
             =Select(Icon2_2);
-            Navigate(Tela_acerto_levantamento,ScreenTransition.None);
+            Back()
+            //Navigate(Tela_acerto_levantamento;ScreenTransition.None);;
             //Navigate(Tela_Inicial_app;ScreenTransition.None)
         PaddingBottom: =22
         PaddingLeft: =22

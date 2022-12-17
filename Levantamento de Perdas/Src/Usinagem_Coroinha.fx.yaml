@@ -27,9 +27,8 @@ Usinagem_Coroinha As screen:
         Text: |-
             ="Linha Usinagem Engr. Coroa
             Sincronizadora  - UTE 2912"
-        Width: =622
-        X: =18
-        Y: =36
+        Width: =640
+        Y: =13
         ZIndex: =3
 
     Icon1_21 As icon.Home:
@@ -45,7 +44,7 @@ Usinagem_Coroinha As screen:
         PaddingTop: =22
         Width: =80
         X: =560
-        Y: =36
+        Y: =13
         ZIndex: =4
 
     Btnmaq_122 As button:
@@ -103,7 +102,6 @@ Usinagem_Coroinha As screen:
     Btnmaq_124 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =190
         HoverColor: =RGBA(0, 0, 0, 0)

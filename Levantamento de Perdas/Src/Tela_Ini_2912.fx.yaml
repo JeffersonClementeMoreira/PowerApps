@@ -9,7 +9,7 @@ Tela_Ini_2912 As screen:
         Size: =24
         Text: ="UTE - 2912"
         Width: =640
-        Y: =36
+        Y: =10
         ZIndex: =1
 
     Button2_7 As button:
@@ -32,7 +32,7 @@ Tela_Ini_2912 As screen:
         Text: ="Retífica Engr. 1ª"
         Width: =Button2_7.Width
         X: =Button2_7.X+ Button2_7.Width + 25
-        Y: =Button2_7.Y
+        Y: =150
         ZIndex: =3
 
     Button2_9 As button:
@@ -72,7 +72,7 @@ Tela_Ini_2912 As screen:
         PaddingTop: =22
         Width: =80
         X: =560
-        Y: =27
+        Y: =1
         ZIndex: =6
 
     Button2_11 As button:
@@ -84,7 +84,7 @@ Tela_Ini_2912 As screen:
         Text: ="Usinagem Engr. CDT 3ª"
         Width: =Button2_7.Width
         X: =Button2_7.X
-        Y: =Button2_9.Y + Button2_9.Height + 15
+        Y: =370
         ZIndex: =7
 
     Button2_12 As button:
@@ -96,7 +96,7 @@ Tela_Ini_2912 As screen:
         Text: ="Retífica Engr. CDT 3ª"
         Width: =Button2_7.Width
         X: =Button2_8.X
-        Y: =Button2_11.Y 
+        Y: =370
         ZIndex: =8
 
     Button2_13 As button:
@@ -108,7 +108,7 @@ Tela_Ini_2912 As screen:
         Text: ="Usinagem Engr. CDZ 3ª"
         Width: =Button2_7.Width
         X: =Button2_7.X
-        Y: =Button2_11.Y + Button2_11.Height + 15
+        Y: =480
         ZIndex: =9
 
     Button2_14 As button:
@@ -120,7 +120,7 @@ Tela_Ini_2912 As screen:
         Text: ="Retífica Engr. CDZ 3ª"
         Width: =Button2_7.Width
         X: =Button2_8.X
-        Y: =Button2_13.Y 
+        Y: =480
         ZIndex: =10
 
     Button2_15 As button:
@@ -132,7 +132,7 @@ Tela_Ini_2912 As screen:
         Text: ="Usinagem Engr. CDT 4ª"
         Width: =Button2_7.Width
         X: =Button2_7.X
-        Y: =Button2_13.Y + Button2_13.Height + 15
+        Y: =590
         ZIndex: =11
 
     Button2_16 As button:
@@ -144,7 +144,7 @@ Tela_Ini_2912 As screen:
         Text: ="Retífica Engr. CDT 4ª"
         Width: =Button2_7.Width
         X: =Button2_8.X
-        Y: =Button2_15.Y 
+        Y: =590
         ZIndex: =12
 
     Button2_17 As button:
@@ -156,7 +156,7 @@ Tela_Ini_2912 As screen:
         Text: ="Usinagem Engr. CDZ 4ª"
         Width: =Button2_7.Width
         X: =Button2_7.X
-        Y: =Button2_15.Y + Button2_15.Height + 15
+        Y: =700
         ZIndex: =13
 
     Button2_18 As button:
@@ -168,7 +168,7 @@ Tela_Ini_2912 As screen:
         Text: ="Retífica Engr. CDZ 4ª"
         Width: =Button2_7.Width
         X: =Button2_8.X
-        Y: =Button2_17.Y 
+        Y: =700
         ZIndex: =14
 
     Button2_19 As button:
@@ -180,7 +180,7 @@ Tela_Ini_2912 As screen:
         Text: ="Usinagem Engr. CDT 5ª"
         Width: =Button2_7.Width
         X: =Button2_7.X
-        Y: =Button2_17.Y + Button2_17.Height + 15
+        Y: =810
         ZIndex: =15
 
     Button2_20 As button:
@@ -192,7 +192,7 @@ Tela_Ini_2912 As screen:
         Text: ="Retífica Engr. CDT 5ª"
         Width: =Button2_7.Width
         X: =Button2_8.X
-        Y: =Button2_19.Y 
+        Y: =810
         ZIndex: =16
 
     Button2_21 As button:
@@ -204,7 +204,7 @@ Tela_Ini_2912 As screen:
         Text: ="Usinagem Engr. CDZ 5ª"
         Width: =Button2_7.Width
         X: =Button2_7.X
-        Y: =Button2_19.Y + Button2_19.Height + 15
+        Y: =920
         ZIndex: =17
 
     Button2_22 As button:
@@ -216,7 +216,7 @@ Tela_Ini_2912 As screen:
         Text: ="Retífica Engr. CDZ 5ª"
         Width: =Button2_7.Width
         X: =Button2_8.X
-        Y: =Button2_21.Y 
+        Y: =920
         ZIndex: =18
 
     Button2_23 As button:
@@ -228,6 +228,54 @@ Tela_Ini_2912 As screen:
         Text: ="Usinagem Coroinha"
         Width: =Button2_7.Width
         X: =Button2_7.X
-        Y: =Button2_21.Y + Button2_21.Height + 15
+        Y: =1028
         ZIndex: =19
+
+    btn_edit_prod_2 As button:
+        Align: =Align.Right
+        Height: =32
+        OnSelect: =Navigate(Tela_Inicial_Producao,ScreenTransition.None)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =8
+        PaddingTop: =0
+        Size: =20
+        Text: ="Editar Produção"
+        Tooltip: ="Ir para a tela de editar produção"
+        Width: =269
+        X: =29
+        Y: =95
+        ZIndex: =20
+
+    Icon_edit_prod_2 As icon.Edit:
+        Height: =26
+        Icon: =Icon.Edit
+        Width: =53
+        X: =29
+        Y: =95
+        ZIndex: =21
+
+    btn_edit_perdas_2 As button:
+        Align: =Align.Right
+        Height: =32
+        OnSelect: =Navigate(Tela_Inicial_Perdas,ScreenTransition.None)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =25
+        PaddingTop: =0
+        Size: =20
+        Text: ="Editar Perdas"
+        Tooltip: ="Ir para a tela de editar perdas"
+        Width: =280
+        X: =329
+        Y: =95
+        ZIndex: =22
+
+    Icon_edit_perdas_2 As icon.Edit:
+        Height: =30
+        Icon: =Icon.Edit
+        Width: =38
+        X: =343
+        Y: =95
+        ZIndex: =23
 

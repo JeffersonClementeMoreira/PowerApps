@@ -8,7 +8,7 @@ Tela_Ini_2915 As screen:
         Size: =24
         Text: ="UTE - 2915"
         Width: =640
-        Y: =36
+        Y: =10
         ZIndex: =1
 
     Button2_41 As button:
@@ -19,8 +19,8 @@ Tela_Ini_2915 As screen:
         Size: =24
         Text: ="Luvas"
         Width: =280
-        X: =24
-        Y: =150
+        X: =27
+        Y: =182
         ZIndex: =2
 
     Button2_42 As button:
@@ -31,8 +31,8 @@ Tela_Ini_2915 As screen:
         Size: =24
         Text: ="Engr. 3ª/4ª"
         Width: =Button2_41.Width
-        X: =Button2_41.X+ Button2_41.Width + 25
-        Y: =Button2_41.Y
+        X: =332
+        Y: =182
         ZIndex: =3
 
     Button2_43 As button:
@@ -43,8 +43,8 @@ Tela_Ini_2915 As screen:
         Size: =24
         Text: ="Eixos Primário e Secundário"
         Width: =Button2_41.Width
-        X: =Button2_41.X
-        Y: =Button2_41.Y + Button2_41.Height + 15
+        X: =27
+        Y: =292
         ZIndex: =4
 
     Button2_44 As button:
@@ -55,8 +55,8 @@ Tela_Ini_2915 As screen:
         Size: =24
         Text: ="Vários"
         Width: =Button2_41.Width
-        X: =Button2_42.X
-        Y: =Button2_43.Y
+        X: =332
+        Y: =292
         ZIndex: =5
 
     Icon1_7 As icon.Home:
@@ -72,6 +72,54 @@ Tela_Ini_2915 As screen:
         PaddingTop: =22
         Width: =80
         X: =560
-        Y: =27
+        Y: =1
         ZIndex: =6
+
+    btn_edit_prod_5 As button:
+        Align: =Align.Right
+        Height: =30
+        OnSelect: =Navigate(Tela_Inicial_Producao,ScreenTransition.None)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =8
+        PaddingTop: =0
+        Size: =20
+        Text: ="Editar Produção"
+        Tooltip: ="Ir para a tela de editar produção"
+        Width: =280
+        X: =27
+        Y: =101
+        ZIndex: =7
+
+    Icon_edit_prod_5 As icon.Edit:
+        Height: =26
+        Icon: =Icon.Edit
+        Width: =53
+        X: =38
+        Y: =101
+        ZIndex: =8
+
+    btn_edit_perdas_5 As button:
+        Align: =Align.Right
+        Height: =32
+        OnSelect: =Navigate(Tela_Inicial_Perdas,ScreenTransition.None)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =25
+        PaddingTop: =0
+        Size: =20
+        Text: ="Editar Perdas"
+        Tooltip: ="Ir para a tela de editar perdas"
+        Width: =280
+        X: =332
+        Y: =99
+        ZIndex: =9
+
+    Icon_edit_perdas_5 As icon.Edit:
+        Height: =30
+        Icon: =Icon.Edit
+        Width: =38
+        X: =352
+        Y: =101
+        ZIndex: =10
 

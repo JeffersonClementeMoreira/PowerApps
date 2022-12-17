@@ -54,9 +54,8 @@ Usinagem_Eixo_Primário As screen:
         Text: |-
             ="Linha Usinagem Eixo Primário 
             UTE 2911"
-        Width: =622
-        X: =18
-        Y: =36
+        Width: =640
+        Y: =13
         ZIndex: =17
 
     Icon1_10 As icon.Home:
@@ -72,7 +71,7 @@ Usinagem_Eixo_Primário As screen:
         PaddingTop: =22
         Width: =80
         X: =560
-        Y: =36
+        Y: =13
         ZIndex: =18
 
     Btnmaq_70 As button:
@@ -213,7 +212,6 @@ Usinagem_Eixo_Primário As screen:
     Btnmaq_74 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =Btnmaq_73.Height
         HoverColor: =RGBA(0, 0, 0, 0)

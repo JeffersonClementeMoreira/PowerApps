@@ -8,7 +8,7 @@ Tela_Ini_2911 As screen:
         Size: =24
         Text: ="UTE - 2911"
         Width: =640
-        Y: =36
+        Y: =10
         ZIndex: =1
 
     Button2_1 As button:
@@ -20,7 +20,7 @@ Tela_Ini_2911 As screen:
         Text: ="Usinagem Eixo Primário"
         Width: =280
         X: =24
-        Y: =198
+        Y: =159
         ZIndex: =2
 
     Button2_2 As button:
@@ -32,7 +32,7 @@ Tela_Ini_2911 As screen:
         Text: ="Retífica Eixo Primário"
         Width: =Button2_1.Width
         X: =Button2_1.X+ Button2_1.Width + 25
-        Y: =Button2_1.Y
+        Y: =159
         ZIndex: =3
 
     Button2_3 As button:
@@ -44,7 +44,7 @@ Tela_Ini_2911 As screen:
         Text: ="Usinagem Eixo Secundário"
         Width: =Button2_1.Width
         X: =Button2_1.X
-        Y: =Button2_1.Y + Button2_1.Height + 25
+        Y: =306
         ZIndex: =4
 
     Button2_4 As button:
@@ -56,7 +56,7 @@ Tela_Ini_2911 As screen:
         Text: ="Retífica Eixo Secundário"
         Width: =Button2_1.Width
         X: =Button2_2.X
-        Y: =Button2_3.Y
+        Y: =306
         ZIndex: =5
 
     Icon1_3 As icon.Home:
@@ -72,7 +72,7 @@ Tela_Ini_2911 As screen:
         PaddingTop: =22
         Width: =80
         X: =560
-        Y: =27
+        Y: =1
         ZIndex: =6
 
     Button2_5 As button:
@@ -84,7 +84,7 @@ Tela_Ini_2911 As screen:
         Text: ="Usinagem Coroa Cilíndrica"
         Width: =Button2_1.Width
         X: =Button2_1.X
-        Y: =Button2_3.Y + Button2_3.Height + 25
+        Y: =453
         ZIndex: =7
 
     Button2_6 As button:
@@ -96,6 +96,54 @@ Tela_Ini_2911 As screen:
         Text: ="Retífica Coroa Cilíndrica"
         Width: =Button2_1.Width
         X: =Button2_2.X
-        Y: =Button2_4.Y + Button2_4.Height + 25
+        Y: =453
         ZIndex: =8
+
+    btn_edit_prod_1 As button:
+        Align: =Align.Right
+        Height: =32
+        OnSelect: =Navigate(Tela_Inicial_Producao,ScreenTransition.None)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =8
+        PaddingTop: =0
+        Size: =20
+        Text: ="Editar Produção"
+        Tooltip: ="Ir para a tela de editar produção"
+        Width: =280
+        X: =24
+        Y: =101
+        ZIndex: =9
+
+    Icon_edit_prod_1 As icon.Edit:
+        Height: =26
+        Icon: =Icon.Edit
+        Width: =53
+        X: =35
+        Y: =101
+        ZIndex: =10
+
+    btn_edit_perdas_1 As button:
+        Align: =Align.Right
+        Height: =32
+        OnSelect: =Navigate(Tela_Inicial_Perdas,ScreenTransition.None)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =25
+        PaddingTop: =0
+        Size: =20
+        Text: ="Editar Perdas"
+        Tooltip: ="Ir para a tela de editar perdas"
+        Width: =280
+        X: =329
+        Y: =101
+        ZIndex: =11
+
+    Icon_edit_perdas_1 As icon.Edit:
+        Height: =30
+        Icon: =Icon.Edit
+        Width: =38
+        X: =349
+        Y: =101
+        ZIndex: =12
 

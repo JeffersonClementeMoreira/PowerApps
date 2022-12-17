@@ -8,7 +8,7 @@ Tela_Ini_2914 As screen:
         Size: =24
         Text: ="UTE - 2914"
         Width: =640
-        Y: =36
+        Y: =10
         ZIndex: =1
 
     Button2_37 As button:
@@ -48,6 +48,54 @@ Tela_Ini_2914 As screen:
         PaddingTop: =22
         Width: =80
         X: =560
-        Y: =27
+        Y: =1
         ZIndex: =6
+
+    btn_edit_prod_4 As button:
+        Align: =Align.Right
+        Height: =32
+        OnSelect: =Navigate(Tela_Inicial_Producao,ScreenTransition.None)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =8
+        PaddingTop: =0
+        Size: =20
+        Text: ="Editar Produção"
+        Tooltip: ="Ir para a tela de editar produção"
+        Width: =280
+        X: =27
+        Y: =101
+        ZIndex: =7
+
+    Icon_edit_prod_4 As icon.Edit:
+        Height: =26
+        Icon: =Icon.Edit
+        Width: =53
+        X: =38
+        Y: =106
+        ZIndex: =8
+
+    btn_edit_perdas_4 As button:
+        Align: =Align.Right
+        Height: =32
+        OnSelect: =Navigate(Tela_Inicial_Perdas,ScreenTransition.None)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =25
+        PaddingTop: =0
+        Size: =20
+        Text: ="Editar Perdas"
+        Tooltip: ="Ir para a tela de editar perdas"
+        Width: =280
+        X: =332
+        Y: =104
+        ZIndex: =9
+
+    Icon_edit_perdas_4 As icon.Edit:
+        Height: =26
+        Icon: =Icon.Edit
+        Width: =38
+        X: =352
+        Y: =106
+        ZIndex: =10
 
