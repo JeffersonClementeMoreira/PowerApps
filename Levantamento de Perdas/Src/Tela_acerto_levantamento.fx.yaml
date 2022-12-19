@@ -502,7 +502,20 @@
         Items: =listasetor
         NoSelectionText: ="SETOR"
         OnChange: =Reset(Cbox_Maquina)
-        OnSelect: =ClearCollect( listasetor , Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE)) , SETOR ).Result , Result))
+        OnSelect: |-
+            =ClearCollect(
+                listasetor,
+                Sort(
+                    Distinct(
+                        Filter(
+                            CreateMaquina,
+                            (Text(Cbox_UTE.Selected.Result) in UTE)
+                        ),
+                        SETOR
+                    ).Result,
+                    Result
+                )
+            )
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingTop: =0
