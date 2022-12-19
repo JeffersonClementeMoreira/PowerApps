@@ -29,7 +29,7 @@
         TabIndex: =0
         Tooltip: ="Atualizar lista"
         Width: =80
-        X: =Parent.Width - IconNewItem1_1.Width - IconSortUpDown1_1.Width - Self.Width
+        X: =480
         ZIndex: =3
 
     IconSortUpDown1_1 As icon.ArrowsUpDown:
@@ -45,7 +45,7 @@
         TabIndex: =0
         Tooltip: =If(SortDescending1, "Classificar lista em ordem alfabética inversa", "Classificar lista em ordem alfabética")
         Width: =80
-        X: =Parent.Width - IconNewItem1_1.Width - Self.Width
+        X: =400
         ZIndex: =4
 
     SearchIcon1_1 As icon.Search:
