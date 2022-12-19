@@ -460,9 +460,19 @@
             ClearCollect(Listaproducao , Filter(LancamentoProducao , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
             Set( varmaquina , Cbox_Maquina.Selected.Result );
         OnSelect: |-
-            =ClearCollect( listamaquina , 
-            
-            Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE) && (Text(Cbox_Setor.Selected.Result) in SETOR)) , CAF ).Result , Result))
+            =ClearCollect(
+                listamaquina,
+                Sort(
+                    Distinct(
+                        Filter(
+                            CreateMaquina,
+                            (Text(Cbox_UTE.Selected.Result) in UTE) && (Text(Cbox_Setor.Selected.Result) in SETOR)
+                        ),
+                        CAF
+                    ).Result,
+                    Result
+                )
+            )
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingTop: =0
