@@ -48,23 +48,6 @@
         X: =Parent.Width - IconNewItem1_1.Width - Self.Width
         ZIndex: =4
 
-    IconNewItem1_1 As icon.Add:
-        AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(DataSourceInfo([@LancamentoProducao], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
-        Height: =88
-        Icon: =Icon.Add
-        OnSelect: |
-            =NewForm(Formperdas);Navigate(Tel_Edit_Perdas, ScreenTransition.None); Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0)
-        PaddingBottom: =22
-        PaddingLeft: =22
-        PaddingRight: =22
-        PaddingTop: =22
-        TabIndex: =0
-        Tooltip: ="Criar novo item"
-        Width: =80
-        X: =Parent.Width - Self.Width
-        ZIndex: =5
-
     SearchIcon1_1 As icon.Search:
         Color: =RGBA(191, 190, 190, 1)
         Height: =Self.Width
