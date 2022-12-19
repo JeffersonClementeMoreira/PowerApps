@@ -54,7 +54,9 @@ Tela_Ini_2914 As screen:
     btn_edit_prod_4 As button:
         Align: =Align.Right
         Height: =32
-        OnSelect: =Navigate(Tela_Inicial_Producao,ScreenTransition.None)
+        OnSelect: |-
+            =Navigate(Tela_Inicial_Producao,ScreenTransition.None);
+            Set(vartela , "Tela_Ini_2914");
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =8
@@ -78,7 +80,9 @@ Tela_Ini_2914 As screen:
     btn_edit_perdas_4 As button:
         Align: =Align.Right
         Height: =29
-        OnSelect: =Navigate(Tela_Inicial_Perdas,ScreenTransition.None)
+        OnSelect: |-
+            =Navigate(Tela_Inicial_Perdas,ScreenTransition.None);
+            Set(vartela , "Tela_Ini_2914");
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =25
