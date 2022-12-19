@@ -78,7 +78,7 @@
         OnSelect: |-
             =Select(Icon2_3);
             Navigate(Tela_Inicial_app,ScreenTransition.None)
-        Width: =23
+        Width: =50
         X: =1
         Y: =1
         ZIndex: =6
@@ -486,9 +486,10 @@
         Height: =23
         InputTextPlaceholder: ="SETOR"
         IsSearchable: =false
-        Items: =Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE)) , SETOR ).Result , Result)
+        Items: =listasetor
         NoSelectionText: ="SETOR"
         OnChange: =Reset(Cbox_Maquina)
+        OnSelect: =ClearCollect( listasetor , Sort(Distinct( Filter(CreateMaquina,(Text(Cbox_UTE.Selected.Result) in UTE)) , SETOR ).Result , Result))
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingTop: =0
@@ -8267,7 +8268,7 @@
     IconRefresh1_3 As icon.Reload:
         AccessibleLabel: =Self.Tooltip
         Fill: =RGBA(0, 16, 96, 1)
-        Height: =23
+        Height: =27
         Icon: =Icon.Reload
         OnSelect: =Refresh([@LancamentoProducao]) ; Refresh([@LancamentoPerdas])
         PaddingBottom: =2
@@ -8276,7 +8277,7 @@
         PaddingTop: =2
         TabIndex: =0
         Tooltip: ="Atualizar informações"
-        Width: =23
+        Width: =50
         X: =1
         Y: =26
         ZIndex: =591
@@ -8292,8 +8293,8 @@
         PaddingRight: =2
         PaddingTop: =2
         Tooltip: ="Limpar Filtros"
-        Width: =23
-        X: =730
+        Width: =42
+        X: =711
         Y: =1
         ZIndex: =594
 
@@ -8303,8 +8304,8 @@
         Size: =16
         Text: ="Levantamento de Perdas - CAF " & Cbox_Maquina.Selected.Result
         Width: =294
-        X: =37
-        Y: =3
+        X: =60
+        Y: =6
         ZIndex: =595
 
     btn_edit_prod As button:

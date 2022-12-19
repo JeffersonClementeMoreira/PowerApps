@@ -1074,7 +1074,7 @@
 
     Btn_lancar_perda_1 As button:
         DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled , If((varDelta <= 0 || varprod_realizada <0 ), DisplayMode.Disabled  ,DisplayMode.Edit))
-        Height: =98
+        Height: =70
         OnSelect: |-
             =Set(varenviado ,0);
             If( varprod_realizada = 0, NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas) , SubmitForm('Form Produção') )
@@ -1201,4 +1201,151 @@
         X: =20
         Y: =103
         ZIndex: =16
+
+    "BrowseGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        FocusedBorderColor: =
+        Height: =202
+        Items: |-
+            =Filter(
+                        LancamentoProducao,
+                        ((UTE = varute)) && ((MAQUINA = varmaquina) ) && ((DATA = Text(DataCarddata.SelectedDate)))
+                    ) 
+        Layout: =Layout.Vertical
+        NavigationStep: =2
+        OnSelect: =Navigate(Tela_Detail_Producao, ScreenTransition.None)
+        ShowScrollbar: =false
+        TemplatePadding: =1
+        TemplateSize: =Min(168, Self.Height - 60)
+        Transition: =Transition.Pop
+        Width: =Parent.Width
+        Y: =934
+        ZIndex: =17
+
+        Label1_2 As label:
+            Fill: =If(ThisItem.IsSelected,RGBA(6,72,34,1))
+            Height: =168
+            OnSelect: =Select(Parent);Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & Value(DataCardhora_inicio.Selected.Result)) ; Set(varDelta , Cap_Produtiva - DataCardquantidade)
+            Size: =21
+            Text: =
+            Width: =638
+            ZIndex: =1
+
+        Title1_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="CAF " & ThisItem.MAQUINA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =2
+
+        Subtitle1_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="UTE: " & ThisItem.UTE
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title1_2.Y + Title1_2.Height + 2
+            ZIndex: =3
+
+        Body1_9 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Data: " & ThisItem.DATA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =196
+            X: =32
+            Y: =Subtitle1_2.Y + Subtitle1_2.Height + 4
+            ZIndex: =4
+
+        NextArrow1_2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent);Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & Value(DataCardhora_inicio.Selected.Result)) ; Set(varDelta , Cap_Produtiva - DataCardquantidade)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="Exibir detalhes do item"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =5
+
+        Separator1_2 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
+
+        Body1_11 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Hora Início: " & ThisItem.HORA_INICIO
+            VerticalAlign: =VerticalAlign.Top
+            Width: =211
+            X: =32
+            Y: =Body1_9.Y + Body1_9.Height + 4
+            ZIndex: =7
+
+        Body1_8 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =24
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Tipo de Peça: " & ThisItem.TIPO_DE_PECA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =405
+            X: =228
+            Y: =90
+            ZIndex: =8
+
+        Body1_10 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Quantidade: " & ThisItem.QUANTIDADE
+            VerticalAlign: =VerticalAlign.Top
+            Width: =410
+            X: =228
+            Y: =126
+            ZIndex: =9
 
