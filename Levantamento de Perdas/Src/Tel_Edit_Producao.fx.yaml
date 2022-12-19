@@ -1208,7 +1208,7 @@
         Items: |-
             =Filter(
                         LancamentoProducao,
-                        ((UTE = varute)) && ((MAQUINA = varmaquina) ) && ((DATA = Text(DataCarddata.SelectedDate)))
+                        ((UTE = varute)) && ((MAQUINA = varmaquina) ) && ((DATA = Text(DataCarddata.SelectedDate)) && HORA_INICIO = DataCardhora_inicio.Selected.Result)
                     ) 
         Layout: =Layout.Vertical
         NavigationStep: =2
