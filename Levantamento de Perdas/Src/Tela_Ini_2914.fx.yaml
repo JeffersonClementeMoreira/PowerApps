@@ -53,7 +53,7 @@ Tela_Ini_2914 As screen:
 
     btn_edit_prod_4 As button:
         Align: =Align.Right
-        Height: =32
+        Height: =30
         OnSelect: |-
             =Navigate(Tela_Inicial_Producao,ScreenTransition.None);
             Set(vartela , "Tela_Ini_2914");
@@ -70,16 +70,16 @@ Tela_Ini_2914 As screen:
         ZIndex: =7
 
     Icon_edit_prod_4 As icon.Edit:
-        Height: =26
+        Height: =30
         Icon: =Icon.Edit
-        Width: =53
-        X: =38
+        Width: =38
+        X: =25
         Y: =106
         ZIndex: =8
 
     btn_edit_perdas_4 As button:
         Align: =Align.Right
-        Height: =29
+        Height: =30
         OnSelect: |-
             =Navigate(Tela_Inicial_Perdas,ScreenTransition.None);
             Set(vartela , "Tela_Ini_2914");
@@ -96,10 +96,10 @@ Tela_Ini_2914 As screen:
         ZIndex: =9
 
     Icon_edit_perdas_4 As icon.Edit:
-        Height: =26
+        Height: =30
         Icon: =Icon.Edit
         Width: =38
-        X: =352
+        X: =339
         Y: =106
         ZIndex: =10
 
