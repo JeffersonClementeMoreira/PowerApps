@@ -50,7 +50,6 @@ Usinagem_Engr_CDZ_4ª As screen:
     Btnmaq_114 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =180
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -59,7 +58,7 @@ Usinagem_Engr_CDZ_4ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "981500922");
+            =Set( varmaquina , "3353217002");
             Set( varsetor ,  Label_setor_10.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -69,7 +68,6 @@ Usinagem_Engr_CDZ_4ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Máquina com CAF não cadastrado"
         X: =155
         Y: =352
         ZIndex: =5
@@ -86,7 +84,7 @@ Usinagem_Engr_CDZ_4ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "961502074");
-            Set( varsetor ,  Label_setor_10.Text );
+            Set( varsetor ,  Label_setor_11.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -111,7 +109,7 @@ Usinagem_Engr_CDZ_4ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "91500070");
-            Set( varsetor ,  Label_setor_10.Text );
+            Set( varsetor ,  Label_setor_11.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -136,7 +134,7 @@ Usinagem_Engr_CDZ_4ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "41500087");
-            Set( varsetor ,  Label_setor_10.Text );
+            Set( varsetor ,  Label_setor_11.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
