@@ -1077,13 +1077,16 @@
         Height: =70
         OnSelect: |-
             =Set(varenviado ,0);
-            If( varprod_realizada = 0, NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas) , SubmitForm('Form Produção') )
+            //If( varprod_realizada = 0; NewForm(Formperdas) ;; Navigate(Tel_Edit_Perdas) ; SubmitForm('Form Produção') )
+            
+            NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas)
+            
             
             //NewForm(Formperdas);;
             //Navigate(Tel_Edit_Perdas));;
         Size: =24
-        Text: ="Salvar e Lançar Perda"
-        Tooltip: ="Enviar item e ir para página de lançamento perdas"
+        Text: ="Lançar Perda"
+        Tooltip: ="Ir para página de lançamento perdas sem salvar o que está na tela"
         Width: =584
         X: =30
         Y: =843
