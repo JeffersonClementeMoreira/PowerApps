@@ -1218,7 +1218,6 @@
                     ) 
         Layout: =Layout.Vertical
         NavigationStep: =2
-        OnSelect: =Navigate(Tela_Detail_Producao, ScreenTransition.None)
         TemplatePadding: =1
         TemplateSize: =63
         Transition: =Transition.Pop

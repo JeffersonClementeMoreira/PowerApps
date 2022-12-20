@@ -215,7 +215,7 @@ Luvas_2915 As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "11501401");
+            =Set( varmaquina , "71500034");
             Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
