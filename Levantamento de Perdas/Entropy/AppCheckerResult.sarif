@@ -6704,6 +6704,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.Usinagem_Luva_3ª4ª_1"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.Usinagem_Luva_3ª4ª_1",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Usinagem_Luva_3ª4ª_1",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App"
                 }
               ],

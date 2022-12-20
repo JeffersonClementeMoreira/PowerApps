@@ -4,7 +4,7 @@ Usinagem_Luva_3ª4ª As screen:
 
     Image3_15 As image:
         Height: =968
-        Image: =Usinagem_Luva_3ª4ª_1
+        Image: ='Usinagem_Luva_3ª4ª_2'
         ImagePosition: =ImagePosition.Stretch
         Width: =640
         Y: =168
@@ -51,7 +51,7 @@ Usinagem_Luva_3ª4ª As screen:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =90
+        Height: =122
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
@@ -68,9 +68,9 @@ Usinagem_Luva_3ª4ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =270
-        X: =341
-        Y: =206
+        Width: =220
+        X: =405
+        Y: =227
         ZIndex: =5
 
     Btnmaq_143 As button:
@@ -78,7 +78,7 @@ Usinagem_Luva_3ª4ª As screen:
         DisabledFill: =RGBA(0, 0, 0, 0)
         DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =90
+        Height: =122
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
@@ -96,44 +96,16 @@ Usinagem_Luva_3ª4ª As screen:
         Size: =24
         Text: =""
         Tooltip: ="CAF máquina não cadastrado"
-        Width: =270
-        X: =341
-        Y: =319
+        Width: =220
+        X: =405
+        Y: =372
         ZIndex: =6
-
-    Btnmaq_144 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =90
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "961502075");
-            Set( varsetor ,  Label_setor_15.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Tooltip: ="CAF máquina não cadastrado"
-        Width: =270
-        X: =341
-        Y: =432
-        ZIndex: =7
 
     Btnmaq_145 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =90
+        Height: =122
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
@@ -150,9 +122,9 @@ Usinagem_Luva_3ª4ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =270
-        X: =341
-        Y: =547
+        Width: =220
+        X: =405
+        Y: =518
         ZIndex: =8
 
     Btnmaq_146 As button:
