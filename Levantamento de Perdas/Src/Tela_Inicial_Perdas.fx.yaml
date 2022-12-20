@@ -29,7 +29,7 @@
         TabIndex: =0
         Tooltip: ="Atualizar lista"
         Width: =80
-        X: =480
+        X: =560
         ZIndex: =3
 
     IconSortUpDown1_1 As icon.ArrowsUpDown:
@@ -45,7 +45,7 @@
         TabIndex: =0
         Tooltip: =If(SortDescending1, "Classificar lista em ordem alfabética inversa", "Classificar lista em ordem alfabética")
         Width: =80
-        X: =400
+        X: =480
         ZIndex: =4
 
     SearchIcon1_1 As icon.Search:
@@ -288,7 +288,7 @@
         PaddingRight: =22
         PaddingTop: =22
         Width: =80
-        X: =333
+        X: =400
         ZIndex: =13
 
     LabelLancamentos_iniperdas As label:
@@ -317,7 +317,7 @@
         PaddingTop: =22
         Tooltip: ="Limpar Filtros"
         Width: =80
-        X: =560
+        X: =320
         ZIndex: =15
 
     DatePickerPerdas As datepicker:
