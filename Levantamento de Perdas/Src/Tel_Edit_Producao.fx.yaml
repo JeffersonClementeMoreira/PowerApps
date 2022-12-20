@@ -46,8 +46,11 @@
         Height: =88
         Icon: =Icon.Check
         OnSelect: |-
-            =Set(varenviado ,1);
-            SubmitForm('Form Produção');
+            =Set(varDelay , true);
+            
+            If(varDelta <= 0 , LabelAlertaDelta.Visible = true ,
+            Set(varenviado ,1);
+            SubmitForm('Form Produção');)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -1073,7 +1076,7 @@
         ZIndex: =7
 
     Btn_lancar_perda_1 As button:
-        DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled , If((varDelta <= 0 || varprod_realizada <0 ), DisplayMode.Disabled  ,DisplayMode.Edit))
+        DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
         Height: =70
         OnSelect: |-
             =Set(varenviado ,0);
@@ -1089,7 +1092,7 @@
         Tooltip: ="Ir para página de lançamento perdas sem salvar o que está na tela"
         Width: =584
         X: =30
-        Y: =843
+        Y: =833
         ZIndex: =9
 
     Total_hora_produção As text:
@@ -1268,4 +1271,14 @@
             Width: =132
             X: =506
             ZIndex: =9
+
+    LblAppName3_2 As label:
+        Align: =Align.Center
+        Fill: =RGBA(149, 149, 149, 1)
+        Height: =28
+        Text: ="Histórico Lançamento"
+        Width: =640
+        Wrap: =false
+        Y: =923
+        ZIndex: =18
 

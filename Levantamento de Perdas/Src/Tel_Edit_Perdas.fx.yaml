@@ -1107,7 +1107,7 @@
                 VirtualKeyboardMode: =VirtualKeyboardMode.Numeric
                 Width: =150
                 X: =45
-                Y: =86
+                Y: =64
                 ZIndex: =2
 
             ErrorMessage8_1 As label:
@@ -1143,7 +1143,7 @@
             Label_Prod_Realizada_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
-                Height: =86
+                Height: =64
                 Size: =21
                 Text: ="Peças Perdidas"
                 X: =45
@@ -1152,7 +1152,7 @@
             Label_Prod_Prevista_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
-                Height: =86
+                Height: =64
                 Size: =21
                 Text: ="Cap. Máquina"
                 X: =258
@@ -1181,13 +1181,13 @@
                 Tooltip: =Parent.DisplayName
                 Width: =150
                 X: =466
-                Y: =86
+                Y: =64
                 ZIndex: =8
 
             Label_Delta_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
-                Height: =86
+                Height: =64
                 Size: =21
                 Text: ="Delta"
                 X: =466
@@ -1214,7 +1214,7 @@
                 Tooltip: =Parent.DisplayName
                 Width: =150
                 X: =258
-                Y: =86
+                Y: =64
                 ZIndex: =10
 
         ID_DataCard2 As typedDataCard.textualViewCard:
@@ -1467,4 +1467,68 @@
         Width: =70
         X: =494
         ZIndex: =12
+
+    "BrowseGallery1_2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        FocusedBorderColor: =
+        Height: =170
+        Items: |-
+            =Filter(
+                        LancamentoPerdas,
+                        ((UTE = varute)) && ((MAQUINA = varmaquina) ) && ((DATA = Text(DataCarddata_1.SelectedDate)) && HORA_INICIO = DataCardhora_inicio_1.Selected.Result)
+                    ) 
+        Layout: =Layout.Vertical
+        NavigationStep: =2
+        OnSelect: =Navigate(Tela_Detail_Producao, ScreenTransition.None)
+        TemplatePadding: =1
+        TemplateSize: =63
+        Transition: =Transition.Pop
+        Width: =Parent.Width
+        Y: =966
+        ZIndex: =13
+
+        Label1_3 As label:
+            Fill: =If(ThisItem.IsSelected,RGBA(6,72,34,1))
+            Height: =62
+            OnSelect: =Select(Parent);Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & Value(DataCardhora_inicio.Selected.Result)) ; Set(varDelta , Cap_Produtiva - DataCardquantidade)
+            Size: =21
+            Text: =
+            Width: =638
+            ZIndex: =1
+
+        Separator1_3 As rectangle:
+            Height: =0
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
+
+        Body1_9 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =47
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Tipo de Perda: " & ThisItem.TIPO_DE_PERDA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =506
+            ZIndex: =8
+
+        Body1_11 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =47
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Quantidade: " & ThisItem.QUANTIDADE
+            VerticalAlign: =VerticalAlign.Top
+            Width: =132
+            X: =506
+            ZIndex: =9
 

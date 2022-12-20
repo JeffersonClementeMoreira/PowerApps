@@ -51,7 +51,7 @@ Usinagem_Luva_5ª As screen:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =125
+        Height: =135
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
@@ -68,23 +68,23 @@ Usinagem_Luva_5ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =272
-        X: =341
-        Y: =206
+        Width: =230
+        X: =395
+        Y: =245
         ZIndex: =5
 
     Btnmaq_158 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =125
+        Height: =135
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "3353217007");
+            =Set( varmaquina , "81500015");
             Set( varsetor ,  Label_setor_17.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -94,44 +94,16 @@ Usinagem_Luva_5ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =272
-        X: =341
-        Y: =356
+        Width: =230
+        X: =395
+        Y: =408
         ZIndex: =6
-
-    Btnmaq_159 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =125
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "961502075");
-            Set( varsetor ,  Label_setor_17.Text );
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Tooltip: ="CAF máquina não cadastrado"
-        Width: =272
-        X: =341
-        Y: =507
-        ZIndex: =7
 
     Btnmaq_160 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =125
+        Height: =135
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
@@ -148,16 +120,16 @@ Usinagem_Luva_5ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =272
-        X: =341
-        Y: =657
+        Width: =230
+        X: =395
+        Y: =569
         ZIndex: =8
 
     Btnmaq_161 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =125
+        Height: =135
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
@@ -174,17 +146,16 @@ Usinagem_Luva_5ª As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Width: =272
-        X: =341
-        Y: =808
+        Width: =230
+        X: =395
+        Y: =730
         ZIndex: =9
 
     Btnmaq_153 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =125
+        Height: =135
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
             =RGBA(4, 114, 14, 0.9)
@@ -202,8 +173,8 @@ Usinagem_Luva_5ª As screen:
         Size: =24
         Text: =""
         Tooltip: ="CAF máquina não cadastrado"
-        Width: =272
-        X: =341
-        Y: =958
+        Width: =230
+        X: =395
+        Y: =892
         ZIndex: =10
 
