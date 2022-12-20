@@ -1106,7 +1106,7 @@
                 Tooltip: =Parent.DisplayName
                 VirtualKeyboardMode: =VirtualKeyboardMode.Numeric
                 Width: =150
-                X: =45
+                X: =35
                 Y: =64
                 ZIndex: =2
 
@@ -1146,7 +1146,7 @@
                 Height: =64
                 Size: =21
                 Text: ="Peças Perdidas"
-                X: =45
+                X: =35
                 ZIndex: =5
 
             Label_Prod_Prevista_1 As label:
@@ -1155,7 +1155,7 @@
                 Height: =64
                 Size: =21
                 Text: ="Cap. Máquina"
-                X: =258
+                X: =250
                 ZIndex: =7
 
             CardProd_Delta_1 As text:
@@ -1180,7 +1180,7 @@
                 TabIndex: =-1
                 Tooltip: =Parent.DisplayName
                 Width: =150
-                X: =466
+                X: =460
                 Y: =64
                 ZIndex: =8
 
@@ -1190,7 +1190,7 @@
                 Height: =64
                 Size: =21
                 Text: ="Delta"
-                X: =466
+                X: =460
                 ZIndex: =9
 
             CardProd_Prev_1 As text:
@@ -1213,7 +1213,7 @@
                 TabIndex: =-1
                 Tooltip: =Parent.DisplayName
                 Width: =150
-                X: =258
+                X: =250
                 Y: =64
                 ZIndex: =10
 
@@ -1482,13 +1482,13 @@
         TemplateSize: =63
         Transition: =Transition.Pop
         Width: =Parent.Width
-        Y: =QUANTIDADE_DataCard2_1.Y + QUANTIDADE_DataCard2_1.Height
+        Y: =QUANTIDADE_DataCard2_1.Y + QUANTIDADE_DataCard2_1.Height+ QUANTIDADE_DataCard2_1.Height - 35
         ZIndex: =13
 
         Label1_3 As label:
             Fill: =If(ThisItem.IsSelected,RGBA(6,72,34,1))
             Height: =62
-            OnSelect: =Select(Parent);Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & Value(DataCardhora_inicio.Selected.Result)) ; Set(varDelta , Cap_Produtiva - DataCardquantidade)
+            OnSelect: =Navigate(Tela_Inicial_Perdas)
             Size: =21
             Text: =
             Width: =638
