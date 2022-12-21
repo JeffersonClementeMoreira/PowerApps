@@ -32,12 +32,15 @@ App As appinfo:
          
          */
         
+         { Role: "Tel_Edit_Producao",Screen: Tel_Edit_Producao },
+         { Role: "Tel_Edit_Perdas",Screen: Tel_Edit_Perdas },
+         { Role: "Tela_acerto_levantamento",Screen: Tela_acerto_levantamento },
+        
          { Role: "Tela_Ini_2911",Screen: Tela_Ini_2911 },
          { Role: "Tela_Ini_2912",Screen: Tela_Ini_2912 },
          { Role: "Tela_Ini_2913",Screen: Tela_Ini_2913 },
          { Role: "Tela_Ini_2914",Screen: Tela_Ini_2914 },
          { Role: "Tela_Ini_2915",Screen: Tela_Ini_2915 },
-        
          { Role: "Luvas_2915",Screen: Luvas_2915 },
          { Role: "Engr_3ª_4ª_2915",Screen: Engr_3ª_4ª_2915 },
          { Role: "Eixos_2915",Screen: Eixos_2915 },
