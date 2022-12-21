@@ -46,9 +46,7 @@
         Height: =88
         Icon: =Icon.Check
         OnSelect: |-
-            =Set(varDelay , true);
-            
-            If(varDelta <= 0 , LabelAlertaDelta.Visible = true ,
+            =If(varDelta <= 0 , LabelAlertaDelta.Visible = true ,
             Set(varenviado ,1);
             SubmitForm('Form Produção');)
         PaddingBottom: =22
