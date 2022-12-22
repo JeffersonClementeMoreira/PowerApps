@@ -1,5 +1,5 @@
 "Tela_acerto_levantamento As screen.'printableLayout_A4Landscape_ver1.0'":
-    Height: =794
+    Height: =790
     Width: =1123
 
     Image1 As image:
@@ -647,7 +647,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_00.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_00.X + Delta_prod_00.Width
         Y: =Hora_00.Y
@@ -970,7 +970,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_1.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_1.X + Delta_prod_1.Width
         Y: =Hora_1.Y
@@ -1293,7 +1293,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_2.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_2.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_2.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_2.X + Delta_prod_2.Width
         Y: =Hora_2.Y
@@ -1616,7 +1616,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_3.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_3.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_3.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_3.X + Delta_prod_3.Width
         Y: =Hora_3.Y
@@ -1939,7 +1939,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_4.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_4.X + Delta_prod_4.Width
         Y: =Hora_4.Y
@@ -2262,7 +2262,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_5.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_5.X + Delta_prod_5.Width
         Y: =Hora_5.Y
@@ -2585,7 +2585,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_6.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_6.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_6.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_6.X + Delta_prod_6.Width
         Y: =Hora_6.Y
@@ -2908,7 +2908,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_7.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_7.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_7.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_7.X + Delta_prod_7.Width
         Y: =Hora_7.Y
@@ -3231,7 +3231,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_8.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_8.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_8.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_8.X + Delta_prod_8.Width
         Y: =Hora_8.Y
@@ -3554,7 +3554,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_9.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_9.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_9.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_9.X + Delta_prod_9.Width
         Y: =Hora_9.Y
@@ -3877,7 +3877,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_10.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_10.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_10.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_10.X + Delta_prod_10.Width
         Y: =Hora_10.Y
@@ -4200,7 +4200,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_11.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_11.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_11.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_11.X + Delta_prod_11.Width
         Y: =Hora_11.Y
@@ -4523,7 +4523,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_12.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_12.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_12.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_12.X + Delta_prod_12.Width
         Y: =Hora_12.Y
@@ -4846,7 +4846,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_13.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_13.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_13.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_13.X + Delta_prod_13.Width
         Y: =Hora_13.Y
@@ -5169,7 +5169,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_14.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_14.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_14.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_14.X + Delta_prod_14.Width
         Y: =Hora_14.Y
@@ -5492,7 +5492,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_15.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_15.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_15.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_15.X + Delta_prod_15.Width
         Y: =Hora_15.Y
@@ -5815,7 +5815,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_16.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_16.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_16.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_16.X + Delta_prod_16.Width
         Y: =Hora_16.Y
@@ -6138,7 +6138,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_17.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_17.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_17.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_17.X + Delta_prod_17.Width
         Y: =Hora_17.Y
@@ -6461,7 +6461,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_18.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_18.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_18.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_18.X + Delta_prod_18.Width
         Y: =Hora_18.Y
@@ -6784,7 +6784,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_19.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_19.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_19.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_19.X + Delta_prod_19.Width
         Y: =Hora_19.Y
@@ -7107,7 +7107,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_20.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_20.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_20.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_20.X + Delta_prod_20.Width
         Y: =Hora_20.Y
@@ -7430,7 +7430,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_21.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_21.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_21.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_21.X + Delta_prod_21.Width
         Y: =Hora_21.Y
@@ -7753,7 +7753,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_22.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_22.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_22.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_22.X + Delta_prod_22.Width
         Y: =Hora_22.Y
@@ -8076,7 +8076,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =11
-        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_23.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE)
+        Text: =Sum(Filter(Listaperdas , (HORA_INICIO = Hora_23.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "NÃO PREVISTO PRODUÇÃO")),QUANTIDADE) + Sum(Filter(Listaperdas , (HORA_INICIO = Hora_23.Text) && (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) && (TIPO_DE_PERDA = "DESBALANCEAMENTO ENTRE OP.")),QUANTIDADE)
         Width: =47
         X: =Delta_prod_23.X + Delta_prod_23.Width
         Y: =Hora_23.Y
@@ -8384,4 +8384,28 @@
         X: =377
         Y: =29
         ZIndex: =599
+
+    HtmlText1 As htmlViewer:
+        Fill: =RGBA(209, 232, 178, 1)
+        Height: =87
+        HtmlText: |-
+            ="<div 
+                style='
+                text-align:center;
+                position: absolute;
+                left: "&-Round((Self.Height-Self.Width)/2,0)&"px;
+                top: "&Round((Self.Height-Self.Width)/2,0)&"px;
+                width: "&Self.Height&"px;
+                height:"&Self.Width&"px;
+                transform: rotate(-90deg);
+              '>
+                
+                Não Previsto e Desbalanceamento
+                
+                </div>"
+        Size: =8
+        Width: =47
+        X: =145
+        Y: =53
+        ZIndex: =601
 
