@@ -26,6 +26,7 @@ Tela_Inicial_app As screen:
         SelectMultiple: =false
         Size: =21
         Width: =160
+        X: =2
         Y: =Titulo_ini.Y + Titulo_ini.Height + 15
         ZIndex: =2
 
@@ -322,7 +323,7 @@ Tela_Inicial_app As screen:
         Height: =ComboBoxmaquina_ini.Height
         Size: =24
         Width: =220
-        X: =ComboBoxmaquina_ini.X + ComboBoxmaquina_ini.Width + 4
+        X: =ComboBoxmaquina_ini.X + ComboBoxmaquina_ini.Width + 3
         Y: =ComboBoxmaquina_ini.Y
         ZIndex: =26
 
