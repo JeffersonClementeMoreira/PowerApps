@@ -13,7 +13,7 @@ Luvas_2915 As screen:
     Label_setor_37 As label:
         Height: =70
         Size: =21
-        Text: ="Retífica Satélite"
+        Text: ="SottoP_LUVAS"
         Visible: =false
         Width: =560
         X: =41
@@ -206,7 +206,6 @@ Luvas_2915 As screen:
     Btnmaq_251 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
-        DisplayMode: =DisplayMode.View
         Fill: =RGBA(0, 0, 0, 0)
         Height: =108
         HoverColor: =RGBA(0, 0, 0, 0)
@@ -225,7 +224,6 @@ Luvas_2915 As screen:
             NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
         Size: =24
         Text: =""
-        Tooltip: ="Caf não cadastrado"
         Width: =80
         X: =555
         Y: =993
