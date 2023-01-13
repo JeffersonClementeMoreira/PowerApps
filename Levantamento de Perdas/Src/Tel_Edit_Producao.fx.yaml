@@ -2,10 +2,73 @@
     BackgroundImage: =Transmissões_foto_bw
     ImagePosition: =ImagePosition.Fill
 
+    "BrowseGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        FocusedBorderColor: =
+        Height: =170
+        Items: |-
+            =Filter(
+                        LancamentoProducao,
+                        ((UTE = varute)) && ((MAQUINA = varmaquina) ) && ((DATA = Text(DataCarddata.SelectedDate)) && HORA_INICIO = DataCardhora_inicio.Selected.Result)
+                    ) 
+        Layout: =Layout.Vertical
+        NavigationStep: =2
+        TemplatePadding: =1
+        TemplateSize: =63
+        Transition: =Transition.Pop
+        Width: =Parent.Width
+        Y: =960
+        ZIndex: =1
+
+        Label1_2 As label:
+            Fill: =If(ThisItem.IsSelected,RGBA(6,72,34,1))
+            Height: =62
+            OnSelect: =Navigate(Tela_Inicial_Producao)
+            Size: =21
+            Text: =
+            Width: =638
+            ZIndex: =1
+
+        Separator1_2 As rectangle:
+            Height: =0
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
+
+        Body1_8 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =62
+            OnSelect: =Navigate(Tela_Inicial_Producao)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Tipo de Peça: " & ThisItem.TIPO_DE_PECA
+            VerticalAlign: =VerticalAlign.Top
+            Width: =487
+            ZIndex: =8
+
+        Body1_10 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =62
+            OnSelect: =Navigate(Tela_Inicial_Producao)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Quantidade: " & ThisItem.QUANTIDADE
+            VerticalAlign: =VerticalAlign.Top
+            Width: =132
+            X: =506
+            ZIndex: =9
+
     RectQuickActionBar3 As rectangle:
         Height: =88
         Width: =Parent.Width
-        ZIndex: =1
+        ZIndex: =2
 
     IconCancel1 As icon.Cancel:
         AccessibleLabel: =Self.Tooltip
@@ -37,7 +100,7 @@
         TabIndex: =0
         Tooltip: ="Cancelar item"
         Width: =88
-        ZIndex: =2
+        ZIndex: =3
 
     IconAccept1 As icon.Check:
         AccessibleLabel: =Self.Tooltip
@@ -61,7 +124,7 @@
         Tooltip: ="Enviar item e retornar a página inicial"
         Width: =88
         X: =Parent.Width - Self.Width
-        ZIndex: =3
+        ZIndex: =4
 
     LblAppName3 As label:
         Fill: =RGBA(58, 58, 58, 0)
@@ -71,7 +134,7 @@
         Width: =Parent.Width - IconCancel1.Width - IconAccept1.Width
         Wrap: =false
         X: =80
-        ZIndex: =4
+        ZIndex: =5
 
     "'Form Produção' As form":
         DataSource: =[@LancamentoProducao]
@@ -83,7 +146,7 @@
             If(varenviado = 1,  NewForm('Form Produção') ; Navigate(Tel_Edit_Producao) , NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas))
         Width: =Parent.Width
         Y: =103
-        ZIndex: =5
+        ZIndex: =6
 
         IDPAI_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -719,7 +782,7 @@
                           Value(DataCardquantidade.Text) <> RoundDown(Value(DataCardquantidade.Text),0),
                               Notify("Favor digitar apenas números");
                               Reset(DataCardquantidade)
-                    ); Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
+                    ); Set(varDelta , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - (DataCardquantidade + Sum( Sum(Filter(
                             LancamentoProducao,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -1038,11 +1101,11 @@
         Width: =187
         X: =223
         Y: =826
-        ZIndex: =6
+        ZIndex: =7
 
         Cap_Produtiva As text:
             Align: =Align.Center
-            Default: =ThisItem.CAPACIDADE
+            Default: =Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE
             DisplayMode: =DisplayMode.View
             Height: =70
             OnSelect: =Select(Parent)
@@ -1056,7 +1119,7 @@
         Duration: =1500
         Height: =70
         OnTimerEnd: |-
-            =Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
+            =Set(varDelta , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - (DataCardquantidade + Sum( Sum(Filter(
                     LancamentoProducao,
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -1075,7 +1138,7 @@
         Width: =280
         X: =360
         Y: =1060
-        ZIndex: =7
+        ZIndex: =8
 
     Btn_lancar_perda_1 As button:
         DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
@@ -1210,69 +1273,6 @@
         Y: =103
         ZIndex: =16
 
-    "BrowseGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
-        FocusedBorderColor: =
-        Height: =170
-        Items: |-
-            =Filter(
-                        LancamentoProducao,
-                        ((UTE = varute)) && ((MAQUINA = varmaquina) ) && ((DATA = Text(DataCarddata.SelectedDate)) && HORA_INICIO = DataCardhora_inicio.Selected.Result)
-                    ) 
-        Layout: =Layout.Vertical
-        NavigationStep: =2
-        TemplatePadding: =1
-        TemplateSize: =63
-        Transition: =Transition.Pop
-        Width: =Parent.Width
-        Y: =960
-        ZIndex: =17
-
-        Label1_2 As label:
-            Fill: =If(ThisItem.IsSelected,RGBA(6,72,34,1))
-            Height: =62
-            OnSelect: =Navigate(Tela_Inicial_Producao)
-            Size: =21
-            Text: =
-            Width: =638
-            ZIndex: =1
-
-        Separator1_2 As rectangle:
-            Height: =0
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - 1
-            ZIndex: =6
-
-        Body1_8 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =62
-            OnSelect: =Navigate(Tela_Inicial_Producao)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: |-
-                ="Tipo de Peça: " & ThisItem.TIPO_DE_PECA
-            VerticalAlign: =VerticalAlign.Top
-            Width: =487
-            ZIndex: =8
-
-        Body1_10 As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =62
-            OnSelect: =Navigate(Tela_Inicial_Producao)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: |-
-                ="Quantidade: " & ThisItem.QUANTIDADE
-            VerticalAlign: =VerticalAlign.Top
-            Width: =132
-            X: =506
-            ZIndex: =9
-
     LblAppName3_2 As label:
         Align: =Align.Center
         Fill: =RGBA(149, 149, 149, 1)
@@ -1281,5 +1281,5 @@
         Width: =640
         Wrap: =false
         Y: =923
-        ZIndex: =18
+        ZIndex: =17
 

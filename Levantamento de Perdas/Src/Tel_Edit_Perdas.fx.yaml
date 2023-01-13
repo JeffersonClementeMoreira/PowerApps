@@ -1345,7 +1345,7 @@
 
         Cap_Produtiva_1 As text:
             Align: =Align.Center
-            Default: =ThisItem.CAPACIDADE
+            Default: =Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE
             DisplayMode: =DisplayMode.View
             Height: =70
             OnChange: =

@@ -407,3 +407,14 @@ Tela_Inicial_app As screen:
         Y: =btn_2913.Y + btn_2913.Height + 10
         ZIndex: =32
 
+    Label4 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =41
+        Size: =14
+        Text: ="Versão 3.22122.15.5"
+        Width: =207
+        X: =433
+        Y: =1095
+        ZIndex: =33
+
