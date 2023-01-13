@@ -6944,6 +6944,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.Retífica_Coroa_Cilíndrica_1"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.Retífica_Coroa_Cilíndrica_1",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Retífica_Coroa_Cilíndrica_1",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Retífica_4ª_CDT"
                 }
               ],
