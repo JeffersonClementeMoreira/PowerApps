@@ -744,7 +744,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
             MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "GRUPO")
-            Required: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
+            Required: =//If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") ; true; false)
             Update: =DataCardGrupo.Selected.Result
             Visible: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
             Width: =640
@@ -803,7 +803,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
             MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "SUB_GRUPO")
-            Required: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
+            Required: =//If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") ; true; false)
             Update: =DataCardSubGrupo.Selected.Result
             Visible: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
             Width: =640
@@ -862,7 +862,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
             MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "COMPONENTE")
-            Required: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
+            Required: =//If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") ; true; false)
             Update: =DataCardComponente.Selected.Result
             Visible: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
             Width: =640
@@ -921,7 +921,9 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
             MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "OData__x0034_M_x0027_S")
-            Required: =true
+            Required: |-
+                =false
+                //true
             Update: =DataCard4ms.Selected.Result
             Width: =640
             X: =0
