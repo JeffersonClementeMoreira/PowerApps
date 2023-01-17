@@ -84,7 +84,7 @@ Retífica_Planetária As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "201405005162");
+            =Set( varmaquina , "3316027025");
             Set( varsetor ,  Label_setor_35.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
