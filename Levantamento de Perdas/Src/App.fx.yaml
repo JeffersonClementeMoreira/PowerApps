@@ -81,5 +81,6 @@ App As appinfo:
          { Role: "Caixa_Câmbio_2914", Screen: Caixa_Câmbio_2914 }
             )
         );
-        // { Role: "Usinagem_Engr_1ª";Screen: Usinagem_Engr_1ª  };
+        
+        Set(ctxLoading , false);
 

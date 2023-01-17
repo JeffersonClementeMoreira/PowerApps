@@ -111,7 +111,8 @@
         OnSelect: |-
             =If(varDelta < 0 , LabelAlertaDelta.Visible = true ,
             Set(varenviado ,1);
-            SubmitForm('Form Produção'))
+            SubmitForm('Form Produção'));
+            IconAccept1.DisplayMode.Disabled
             
             /*If(varDelta <= 0 ; LabelAlertaDelta.Visible = true ;
             Set(varenviado ;1);;
@@ -1147,8 +1148,7 @@
             =Set(varenviado ,0);
             //If( varprod_realizada = 0; NewForm(Formperdas) ;; Navigate(Tel_Edit_Perdas) ; SubmitForm('Form Produção') )
             
-            NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas)
-            
+            NewForm(Formperdas) ; Navigate(Tel_Edit_Perdas);
             
             //NewForm(Formperdas);;
             //Navigate(Tel_Edit_Perdas));;
