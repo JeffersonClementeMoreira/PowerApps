@@ -8297,7 +8297,11 @@
         Fill: =RGBA(0, 16, 96, 1)
         Height: =27
         Icon: =Icon.Reload
-        OnSelect: =Refresh([@LancamentoProducao]) ; Refresh([@LancamentoPerdas])
+        OnSelect: |-
+            =Refresh([@LancamentoProducao]) ;
+            Refresh([@LancamentoPerdas]) ;
+            ClearCollect(Listaperdas , Filter(LancamentoPerdas , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
+            ClearCollect(Listaproducao , Filter(LancamentoProducao , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
         PaddingBottom: =2
         PaddingLeft: =2
         PaddingRight: =2
@@ -8387,7 +8391,7 @@
 
     HtmlText1 As htmlViewer:
         Fill: =RGBA(209, 232, 178, 1)
-        Height: =87
+        Height: =82
         HtmlText: |-
             ="<div 
                 style='
