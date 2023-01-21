@@ -31,13 +31,16 @@ Tela_Inicial_app As screen:
         ZIndex: =2
 
     ComboBoxmaquina_ini As combobox:
-        DisplayFields: =["Result"]
+        DisplayFields: =["CAF"]
         Height: =63
         InputTextPlaceholder: ="MÁQUINA"
         IsSearchable: =false
-        Items: =Sort(Distinct( Filter(CreateMaquina, Text(ComboBoxute_ini.Selected.Result) in UTE) , CAF ).Result , Result)
+        Items: |-
+            =Distinct(Filter(CreateMaquina , Text(ComboBoxute_ini.Selected.Result) = UTE) , UTE)
+            
+            //Sort(Distinct( Filter(CreateMaquina; Text(ComboBoxute_ini.Selected.Result) in UTE) ; CAF ).Result ; Result)
         NoSelectionText: ="MÁQUINA"
-        SearchFields: =["Result"]
+        SearchFields: =["CAF"]
         SearchItems: =[]
         Size: =21
         Width: =555
@@ -48,54 +51,144 @@ Tela_Inicial_app As screen:
     Prod_Real_ini As text:
         Align: =Align.Center
         Default: |-
-            =Sum(Filter( LancamentoProducao , 
-             Or(
-                 IsBlank(ComboBoxmaquina_ini.SelectedItems),
-                 IsEmpty(ComboBoxmaquina_ini.SelectedItems),
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,1)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,2)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,3)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,4)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,5)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,6)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,7)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,8)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,9)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,10)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,11)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,12)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,13)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,14)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,15)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,16)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,17)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,18)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,19)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,20)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,21)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,22)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,23)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,24)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,25)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,26)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,27)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,28)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,29)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,30)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,31)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,32)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,33)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,34)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,35)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,36)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,37)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,38)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,39)).Result)).QUANTIDADE
-                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,40)).Result)).QUANTIDADE
-                  , QUANTIDADE
-            
+            =Sum(
+                Filter(
+                    LancamentoProducao,
+                    Or(
+                        IsBlank(ComboBoxmaquina_ini.SelectedItems),
+                        IsEmpty(ComboBoxmaquina_ini.SelectedItems),
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            1
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            2
+                        ).Result
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            3
+                        ).Result
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            4
+                        ).Result
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            5
+                        ).Result
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            6
+                        ).Result
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            7
+                        ).Result
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            8
+                        ).Result
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            9
+                        ).Result
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            10
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            11
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            12
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            13
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            14
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            15
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            16
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            17
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            18
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            19
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            20
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            21
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            22
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            23
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            24
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            25
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            26
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            27
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            28
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            29
+                        ).Result,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            30
+                        ).Result
+                    )
+                ),
+                QUANTIDADE
             )
-            
             /*
             
             Sum(Filter(
