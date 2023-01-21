@@ -442,7 +442,11 @@
         Align: =Align.Center
         Height: =20
         Size: =12
-        Text: =24*Prod_Horária
+        Text: |-
+            =24*If( IsBlank(Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)),0,Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE))
+            
+            
+            //24*Prod_Horária
         Width: =54
         X: =657
         Y: =26
@@ -606,7 +610,7 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =12
-        Text: ="Capacidade Hora"
+        Text: ="Produção Dia"
         Width: =142
         X: =515
         ZIndex: =43
