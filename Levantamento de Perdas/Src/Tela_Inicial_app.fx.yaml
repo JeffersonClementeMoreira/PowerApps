@@ -186,6 +186,8 @@ Tela_Inicial_app As screen:
                             30
                         ).Result
                     )
+                    &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())
+                    &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
                 ),
                 QUANTIDADE
             )
