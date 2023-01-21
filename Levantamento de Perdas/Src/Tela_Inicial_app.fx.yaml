@@ -17,7 +17,7 @@ Tela_Inicial_app As screen:
 
     ComboBoxute_ini As combobox:
         DisplayFields: =["Result"]
-        Height: =68
+        Height: =63
         InputTextPlaceholder: ="UTE"
         Items: =Sort(Distinct( CreateMaquina , UTE ).Result,Result)
         NoSelectionText: ="UTE"
@@ -25,34 +25,85 @@ Tela_Inicial_app As screen:
         SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result,Result),ComboBoxute_ini.SearchText,"Result")
         SelectMultiple: =false
         Size: =21
-        Width: =160
-        X: =2
-        Y: =Titulo_ini.Y + Titulo_ini.Height + 15
+        Width: =250
+        X: =40
+        Y: =119
         ZIndex: =2
 
     ComboBoxmaquina_ini As combobox:
         DisplayFields: =["Result"]
-        Height: =ComboBoxute_ini.Height
+        Height: =63
         InputTextPlaceholder: ="MÁQUINA"
         IsSearchable: =false
         Items: =Sort(Distinct( Filter(CreateMaquina, Text(ComboBoxute_ini.Selected.Result) in UTE) , CAF ).Result , Result)
         NoSelectionText: ="MÁQUINA"
         SearchFields: =["Result"]
         SearchItems: =[]
-        SelectMultiple: =false
         Size: =21
-        Width: =250
-        X: =ComboBoxute_ini.X+ComboBoxute_ini.Width+2
-        Y: =ComboBoxute_ini.Y 
+        Width: =555
+        X: =45
+        Y: =191
         ZIndex: =3
 
     Prod_Real_ini As text:
         Align: =Align.Center
         Default: |-
-            =Sum(Filter(
-                    LancamentoProducao,
+            =Sum(Filter( LancamentoProducao , 
+             Or(
+                 IsBlank(ComboBoxmaquina_ini.SelectedItems),
+                 IsEmpty(ComboBoxmaquina_ini.SelectedItems),
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,1)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,2)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,3)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,4)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,5)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,6)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,7)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,8)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,9)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,10)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,11)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,12)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,13)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,14)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,15)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,16)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,17)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,18)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,19)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,20)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,21)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,22)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,23)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,24)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,25)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,26)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,27)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,28)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,29)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,30)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,31)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,32)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,33)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,34)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,35)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,36)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,37)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,38)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,39)).Result)).QUANTIDADE
+                 MAQUINA = Last(FirstN(ComboBoxmaquina_ini.SelectedItems,40)).Result)).QUANTIDADE
+                  , QUANTIDADE
+            
+            )
+            
+            /*
+            
+            Sum(Filter(
+                    LancamentoProducao;
                     ((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
-                ).QUANTIDADE , QUANTIDADE)
+                ).QUANTIDADE ; QUANTIDADE)
+                
+                */
         DisplayMode: =DisplayMode.Disabled
         Height: =Label_prod_real_ini.Height
         Size: =21
@@ -80,12 +131,12 @@ Tela_Inicial_app As screen:
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 1)
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =70
+        Height: =36
         Size: =21
         Text: ="RESUMO LANÇAMENTOS"
         Width: =545
         X: =40
-        Y: =DatePicker_ini.Y+ DatePicker_ini.Height + 15
+        Y: =271
         ZIndex: =6
 
     Label_perda_real_ini As label:
@@ -194,12 +245,12 @@ Tela_Inicial_app As screen:
         BorderThickness: =3
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(0, 0, 0, 1)
-        Height: =70
+        Height: =45
         Size: =21
         Text: ="RESUMO OEE"
         Width: =545
         X: =40
-        Y: =Label_perda_real_ini_1.Y + Label_perda_real_ini_1.Height +15
+        Y: =535
         ZIndex: =15
 
     Label_perdaimpact_ini As label:
@@ -322,9 +373,9 @@ Tela_Inicial_app As screen:
     DatePicker_ini As datepicker:
         Height: =ComboBoxmaquina_ini.Height
         Size: =24
-        Width: =220
-        X: =ComboBoxmaquina_ini.X + ComboBoxmaquina_ini.Width + 3
-        Y: =ComboBoxmaquina_ini.Y
+        Width: =300
+        X: =300
+        Y: =119
         ZIndex: =26
 
     txt_date_ini As label:
