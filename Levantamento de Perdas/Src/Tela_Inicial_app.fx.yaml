@@ -21,6 +21,7 @@ Tela_Inicial_app As screen:
         InputTextPlaceholder: ="UTE"
         Items: =Sort(Distinct( CreateMaquina , UTE ).Result,Result)
         NoSelectionText: ="UTE"
+        OnChange: =Reset(ComboBoxmaquina_ini)
         SearchFields: =["Result"]
         SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result,Result),ComboBoxute_ini.SearchText,"Result")
         SelectMultiple: =false
@@ -36,7 +37,7 @@ Tela_Inicial_app As screen:
         InputTextPlaceholder: ="MÁQUINA"
         IsSearchable: =false
         Items: |-
-            =Distinct(Filter(CreateMaquina , Text(ComboBoxute_ini.Selected.Result) = UTE) , UTE)
+            =Filter(CreateMaquina , Text(ComboBoxute_ini.Selected.Result) = UTE).CAF
             
             //Sort(Distinct( Filter(CreateMaquina; Text(ComboBoxute_ini.Selected.Result) in UTE) ; CAF ).Result ; Result)
         NoSelectionText: ="MÁQUINA"
@@ -60,131 +61,211 @@ Tela_Inicial_app As screen:
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             1
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             2
-                        ).Result
+                        ).CAF
                         ,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             3
-                        ).Result
+                        ).CAF
                         ,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             4
-                        ).Result
+                        ).CAF
                         ,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             5
-                        ).Result
+                        ).CAF
                         ,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             6
-                        ).Result
+                        ).CAF
                         ,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             7
-                        ).Result
+                        ).CAF
                         ,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             8
-                        ).Result
+                        ).CAF
                         ,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             9
-                        ).Result
+                        ).CAF
                         ,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             10
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             11
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             12
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             13
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             14
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             15
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             16
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             17
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             18
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             19
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             20
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             21
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             22
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             23
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             24
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             25
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             26
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             27
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             28
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             29
-                        ).Result,
+                        ).CAF,
                         MAQUINA = Index(
                             ComboBoxmaquina_ini.SelectedItems,
                             30
-                        ).Result
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            31
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            32
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            33
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            34
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            35
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            36
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            37
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            38
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            39
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            40
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            41
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            42
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            43
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            44
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            45
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            46
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            47
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            48
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            49
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            50
+                        ).CAF
                     )
                     &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())
                     &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
@@ -195,7 +276,7 @@ Tela_Inicial_app As screen:
             
             Sum(Filter(
                     LancamentoProducao;
-                    ((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                    ((UTE = ComboBoxute_ini.Selected.CAF) || ComboBoxute_ini.Selected.CAF = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.CAF) || ComboBoxmaquina_ini.Selected.CAF = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
                 ).QUANTIDADE ; QUANTIDADE)
                 
                 */
@@ -248,10 +329,233 @@ Tela_Inicial_app As screen:
     Perda_Real_ini As text:
         Align: =Align.Center
         Default: |-
-            =Sum(Filter(
+            =Sum(
+                Filter(
                     LancamentoPerdas,
+                    Or(
+                        IsBlank(ComboBoxmaquina_ini.SelectedItems),
+                        IsEmpty(ComboBoxmaquina_ini.SelectedItems),
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            1
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            2
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            3
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            4
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            5
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            6
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            7
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            8
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            9
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            10
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            11
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            12
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            13
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            14
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            15
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            16
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            17
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            18
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            19
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            20
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            21
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            22
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            23
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            24
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            25
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            26
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            27
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            28
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            29
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            30
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            31
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            32
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            33
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            34
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            35
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            36
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            37
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            38
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            39
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            40
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            41
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            42
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            43
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            44
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            45
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            46
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            47
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            48
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            49
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            50
+                        ).CAF
+                    )
+                    &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())
+                    &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                ),
+                QUANTIDADE
+            )
+            
+            
+            
+            /*Sum(Filter(
+                    LancamentoPerdas;
                     ((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
-                ).QUANTIDADE , QUANTIDADE)
+                ).QUANTIDADE ; QUANTIDADE) */
         DisplayMode: =DisplayMode.Disabled
         Height: =Prod_Real_ini.Height
         Size: =21
@@ -318,13 +622,239 @@ Tela_Inicial_app As screen:
     Perdanaoimpact_ini As text:
         Align: =Align.Center
         Default: |-
-            =Sum(Filter(
+            =Sum(
+                Filter(
                     LancamentoPerdas,
-                    (((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
-                ) && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
-                ).QUANTIDADE,
+                    Or(
+                        IsBlank(ComboBoxmaquina_ini.SelectedItems),
+                        IsEmpty(ComboBoxmaquina_ini.SelectedItems),
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            1
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            2
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            3
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            4
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            5
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            6
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            7
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            8
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            9
+                        ).CAF
+                        ,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            10
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            11
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            12
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            13
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            14
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            15
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            16
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            17
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            18
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            19
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            20
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            21
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            22
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            23
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            24
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            25
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            26
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            27
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            28
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            29
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            30
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            31
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            32
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            33
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            34
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            35
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            36
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            37
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            38
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            39
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            40
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            41
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            42
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            43
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            44
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            45
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            46
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            47
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            48
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            49
+                        ).CAF,
+                        MAQUINA = Index(
+                            ComboBoxmaquina_ini.SelectedItems,
+                            50
+                        ).CAF
+                    )
+                    &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())
+                    &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                    && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
+                ),
                 QUANTIDADE
             )
+            
+            
+            
+            
+            /*Sum(Filter(
+                    LancamentoPerdas;
+                    (((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                ) && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
+                ).QUANTIDADE;
+                QUANTIDADE
+            )
+            */
         DisplayMode: =DisplayMode.Disabled
         Height: =Perda_Real_ini.Height
         Size: =21
