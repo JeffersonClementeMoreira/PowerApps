@@ -82,8 +82,8 @@
                     "HORA_INICIO",
                     If(
                         SortDescending1,
-                        Descending,
-                        Ascending
+                        SortOrder.Descending,
+                        SortOrder.Ascending
                         
                     )
                 ),

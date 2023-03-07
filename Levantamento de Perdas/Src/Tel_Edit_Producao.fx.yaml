@@ -773,7 +773,7 @@
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE))
                 DelayOutput: =true
-                DisplayMode: =If('Form Produção'.Mode <> FormMode.New , Disabled, DisplayMode.Edit)
+                DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled, DisplayMode.Edit)
                 FontWeight: =FontWeight.Bold
                 Height: =70
                 HintText: ="Insira a quantidade produzida"
