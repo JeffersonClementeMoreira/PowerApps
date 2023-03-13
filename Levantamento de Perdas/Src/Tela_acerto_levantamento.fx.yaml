@@ -443,11 +443,11 @@
         Align: =Align.Center
         Height: =20
         Size: =12
-        Text: |-
-            =24*If( IsBlank(Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE)),0,Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE))
+        Text: |+
+            =Max(Filter( LancamentoProducao , Cbox_Maquina.Selected.Result = MAQUINA).CAPACIDADE , CAPACIDADE)
             
+            //24*If( IsBlank(Max(Filter( CreateMaquina ; Cbox_Maquina.Selected.Result = CAF).CAPACIDADE ; CAPACIDADE));0;Max(Filter( CreateMaquina ; Cbox_Maquina.Selected.Result = CAF).CAPACIDADE ; CAPACIDADE))
             
-            //24*Prod_Horária
         Width: =54
         X: =657
         Y: =26
