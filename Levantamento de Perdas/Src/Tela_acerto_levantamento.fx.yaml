@@ -444,7 +444,7 @@
         Height: =20
         Size: =12
         Text: |+
-            =If(IsBlank(Max(Filter( LancamentoProducao , Cbox_Maquina.Selected.Result = MAQUINA).CAPACIDADE , CAPACIDADE)),0)
+            =24 * If(IsBlank(Max(Filter( LancamentoProducao , Cbox_Maquina.Selected.Result = MAQUINA).CAPACIDADE , CAPACIDADE)),Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE),Max(Filter( LancamentoProducao , Cbox_Maquina.Selected.Result = MAQUINA).CAPACIDADE , CAPACIDADE))
             
             //24*If( IsBlank(Max(Filter( CreateMaquina ; Cbox_Maquina.Selected.Result = CAF).CAPACIDADE ; CAPACIDADE));0;Max(Filter( CreateMaquina ; Cbox_Maquina.Selected.Result = CAF).CAPACIDADE ; CAPACIDADE))
             
