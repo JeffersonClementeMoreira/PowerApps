@@ -235,10 +235,12 @@
         DisplayFields: =["Result"]
         Height: =71
         InputTextPlaceholder: ="UTE"
-        Items: =Sort(Distinct( CreateMaquina , UTE ).Result , Result)
+        Items: |-
+            =Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result , Result)
         NoSelectionText: ="UTE"
         SearchFields: =["Result"]
-        SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result , Result),ComboBoxuteperdas.SearchText,"Result")
+        SearchItems: |-
+            =Search(Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result , Result),ComboBoxuteperdas.SearchText,"Result")
         SelectMultiple: =false
         Size: =21
         Width: =160
@@ -247,13 +249,14 @@
         ZIndex: =10
 
     ComboBoxmaquinaperdas As combobox:
-        DefaultSelectedItems: =LookUp(Distinct(CreateMaquina,CAF).Result, Result = varmaquina)
+        DefaultSelectedItems: |-
+            =LookUp(ForAll(Distinct(CreateMaquina,CAF), {Result: ThisRecord.Value}).Result, Result = varmaquina)
         DisplayFields: =["Result"]
         Height: =70
         InputTextPlaceholder: ="MÁQUINA"
         IsSearchable: =false
         Items: |
-            =Sort(Distinct( Filter(CreateMaquina, Text(ComboBoxuteperdas.Selected.Result) in UTE) , CAF ).Result , Result)
+            =Sort(ForAll(Distinct( Filter(CreateMaquina, Text(ComboBoxuteperdas.Selected.Result) in UTE) , CAF ), {Result: ThisRecord.Value}).Result , Result)
         NoSelectionText: ="MÁQUINA"
         SearchFields: =["Result"]
         SearchItems: =[]

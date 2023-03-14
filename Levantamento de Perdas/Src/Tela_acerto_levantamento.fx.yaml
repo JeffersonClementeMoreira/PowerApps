@@ -43,14 +43,16 @@
         DisplayFields: =["Result"]
         Height: =23
         InputTextPlaceholder: ="UTE"
-        Items: =Sort(Distinct( CreateMaquina , UTE ).Result,Result)
+        Items: |-
+            =Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result,Result)
         OnChange: =Reset(Cbox_Setor)
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
         PaddingTop: =0
         SearchFields: =["Result"]
-        SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result,Result),Cbox_UTE.SearchText,"Result")
+        SearchItems: |-
+            =Search(Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result,Result),Cbox_UTE.SearchText,"Result")
         SelectMultiple: =false
         Size: =12
         Width: =195
@@ -433,7 +435,7 @@
         Height: =20
         Size: =12
         Text: |
-            =If(IsBlank(Max(Filter( LancamentoProducao , Cbox_Maquina.Selected.Result = MAQUINA).CAPACIDADE , CAPACIDADE)),Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE),Max(Filter( LancamentoProducao , Cbox_Maquina.Selected.Result = MAQUINA).CAPACIDADE , CAPACIDADE))
+            =If(IsBlank(Max(Filter( LancamentoProducao , Cbox_Maquina.Selected.Result = MAQUINA && (DATA = LabelDate.Text)).CAPACIDADE , CAPACIDADE)),Max(Filter( CreateMaquina , Cbox_Maquina.Selected.Result = CAF).CAPACIDADE , CAPACIDADE),Max(Filter( LancamentoProducao , Cbox_Maquina.Selected.Result = MAQUINA && (DATA = LabelDate.Text)).CAPACIDADE , CAPACIDADE))
             
             //If( IsBlank(Max(Filter( CreateMaquina ; Cbox_Maquina.Selected.Result = CAF).CAPACIDADE ; CAPACIDADE));0;Max(Filter( CreateMaquina ; Cbox_Maquina.Selected.Result = CAF).CAPACIDADE ; CAPACIDADE))
         Visible: =false
@@ -500,13 +502,13 @@
             ClearCollect(
                 listamaquina,
                 Sort(
-                    Distinct(
+                    ForAll(Distinct(
                         Filter(
                             CreateMaquina,
                             (Text(Cbox_Setor.Selected.Result) in SETOR)
                         ),
                         CAF
-                    ).Result,
+                    ), {Result: ThisRecord.Value}).Result,
                     Result
                 )
             )
@@ -514,13 +516,13 @@
             =ClearCollect(
                 listasetor,
                 Sort(
-                    Distinct(
+                    ForAll(Distinct(
                         Filter(
                             CreateMaquina,
                             (Text(Cbox_UTE.Selected.Result) in UTE)
                         ),
                         SETOR
-                    ).Result,
+                    ), {Result: ThisRecord.Value}).Result,
                     Result
                 )
             ) ;

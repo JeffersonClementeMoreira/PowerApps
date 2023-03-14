@@ -187,13 +187,15 @@
                 ZIndex: =4
 
             DataCardute_1 As combobox:
-                DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreateMaquina,UTE).Result, Result = ThisItem.UTE) , LookUp(Distinct(CreateMaquina,UTE).Result, Result = varute))
+                DefaultSelectedItems: |-
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,UTE), {Result: ThisRecord.Value}).Result, Result = ThisItem.UTE) , LookUp(ForAll(Distinct(CreateMaquina,UTE), {Result: ThisRecord.Value}).Result, Result = varute))
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="Selecione a UTE"
                 IsSearchable: =false
-                Items: =Sort( Distinct(CreateMaquina,UTE) , Result)
+                Items: |-
+                    =Sort( ForAll(Distinct(CreateMaquina,UTE), {Result: ThisRecord.Value}) , Result)
                 NoSelectionText: ="Selecione a UTE"
                 OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; Reset(DataCardsetor_1) ; Reset(DataCardtipo_de_perda) ; Reset(DataCardmaquina_1) ; Reset(DataCardoperacao_1) ; Reset(DataCardquantidade_1) ; Reset(DataCardtipo_de_falha) ; Reset(DataCardGrupo) ; Reset(DataCardSubGrupo) ; Reset(DataCardComponente) ; Reset(DataCard4ms) ; Reset(DataCardObservacao)
                 OnSelect: |
@@ -253,13 +255,14 @@
 
             DataCardsetor_1 As combobox:
                 DefaultSelectedItems: |
-                    =If( varselect = 0 , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = ThisItem.SETOR) , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = varsetor)) // Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,SETOR), {Result: ThisRecord.Value}).Result, Result = ThisItem.SETOR) , LookUp(ForAll(Distinct(CreateMaquina,SETOR), {Result: ThisRecord.Value}).Result, Result = varsetor)) // Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="Insira o Setor"
                 IsSearchable: =false
-                Items: =Sort( Distinct( Filter(CreateMaquina, Text(DataCardute_1.Selected.Result) in UTE) , SETOR ).Result , Result) // Distinct(CreateMaquina;SETOR)
+                Items: |-
+                    =Sort( ForAll(Distinct( Filter(CreateMaquina, Text(DataCardute_1.Selected.Result) in UTE) , SETOR ), {Result: ThisRecord.Value}).Result , Result) // Distinct(CreateMaquina;SETOR)
                 NoSelectionText: ="Insira o Setor"
                 OnChange: =Reset(DataCardtipo_de_perda) ; Reset(DataCardmaquina_1) ; Reset(DataCardoperacao_1) ; Reset(DataCardoperacao_1) ; Reset(DataCardquantidade_1) ; Reset(DataCardtipo_de_falha) ; Reset(DataCardGrupo) ; Reset(DataCardSubGrupo) ; Reset(DataCardComponente) ; Reset(DataCard4ms) ; Reset(DataCardObservacao)
                 SearchFields: =["Result"]
@@ -317,14 +320,14 @@
 
             DataCardoperacao_1 As combobox:
                 DefaultSelectedItems: |
-                    =If( varselect = 0 , LookUp(Distinct(CreateMaquina,OPERACAO).Result, Result = ThisItem.OPERACAO) , LookUp(Distinct(CreateMaquina,OPERACAO).Result, Result = varoperacao)) //LookUp(Distinct(LancamentoPerdas;OPERACAO).Result; Result = ThisItem.OPERACAO)
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,OPERACAO), {Result: ThisRecord.Value}).Result, Result = ThisItem.OPERACAO) , LookUp(ForAll(Distinct(CreateMaquina,OPERACAO), {Result: ThisRecord.Value}).Result, Result = varoperacao)) //LookUp(Distinct(LancamentoPerdas;OPERACAO).Result; Result = ThisItem.OPERACAO)
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="Insira a Operação"
                 IsSearchable: =false
                 Items: |
-                    =Sort( Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , OPERACAO ).Result , Result) //Distinct(CreateMaquina;OPERACAO).Result
+                    =Sort( ForAll(Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , OPERACAO ), {Result: ThisRecord.Value}).Result , Result) //Distinct(CreateMaquina;OPERACAO).Result
                 NoSelectionText: ="Insira a Operação"
                 OnChange: =Reset(DataCardtipo_de_perda) ; Reset(DataCardmaquina_1) ; Reset(DataCardquantidade_1) ; Reset(DataCardtipo_de_falha) ; Reset(DataCardGrupo) ; Reset(DataCardSubGrupo) ; Reset(DataCardComponente) ; Reset(DataCard4ms) ; Reset(DataCardObservacao)
                 SearchFields: =["Result"]
@@ -381,13 +384,15 @@
                 ZIndex: =4
 
             DataCardmaquina_1 As combobox:
-                DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreateMaquina,CAF).Result, Result = ThisItem.MAQUINA) , LookUp(Distinct(CreateMaquina,CAF).Result, Result = varmaquina)) //LookUp(Distinct(LancamentoProducao;MAQUINA).Result; Result = ThisItem.MAQUINA)
+                DefaultSelectedItems: |-
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,CAF), {Result: ThisRecord.Value}).Result, Result = ThisItem.MAQUINA) , LookUp(ForAll(Distinct(CreateMaquina,CAF), {Result: ThisRecord.Value}).Result, Result = varmaquina)) //LookUp(Distinct(LancamentoProducao;MAQUINA).Result; Result = ThisItem.MAQUINA)
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="CAF Máquina - Somente Números"
                 IsSearchable: =false
-                Items: =Sort( Distinct( Filter(CreateMaquina, Text(DataCardsetor_1.Selected.Result) in SETOR , Text(DataCardute_1.Selected.Result) in UTE, Text(DataCardoperacao_1.Selected.Result) in OPERACAO) , CAF).Result , Result) //Distinct(CreateMaquina;CAF)
+                Items: |-
+                    =Sort( ForAll(Distinct( Filter(CreateMaquina, Text(DataCardsetor_1.Selected.Result) in SETOR , Text(DataCardute_1.Selected.Result) in UTE, Text(DataCardoperacao_1.Selected.Result) in OPERACAO) , CAF), {Result: ThisRecord.Value}).Result , Result) //Distinct(CreateMaquina;CAF)
                 NoSelectionText: ="CAF Máquina - Somente Números"
                 OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; Set(varDelta , Cap_Produtiva_1 - DataCardquantidade_1) ; Set(varCapacidade, Cap_Produtiva_1) ; Set(varDelay_2,true) ; Reset(DataCardtipo_de_perda) ; Reset(DataCardquantidade_1) ; Reset(DataCardtipo_de_falha) ; Reset(DataCardGrupo) ; Reset(DataCardSubGrupo) ; Reset(DataCardComponente) ; Reset(DataCard4ms) ; Reset(DataCardObservacao)
                 SearchFields: =["Result"]
@@ -503,7 +508,7 @@
 
             DataCardhora_inicio_1 As combobox:
                 DefaultSelectedItems: |
-                    =If( varselect = 0, LookUp(Distinct(CreateHora,Hora).Result, Result = ThisItem.HORA_INICIO) ,  LookUp(Distinct(CreateHora,Hora).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)))).HORA_INICIO))
+                    =If( varselect = 0, LookUp(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}).Result, Result = ThisItem.HORA_INICIO) ,  LookUp(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)))).HORA_INICIO))
                     //)
                     
                     //LookUp(Distinct(CreateHora;Hora).Result; Result = ThisItem.HORA_INICIO)
@@ -513,12 +518,14 @@
                 DisplayMode: =If(Formperdas.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
                 Height: =70
                 InputTextPlaceholder: ="Hora"
-                Items: =Distinct(CreateHora,Hora)
+                Items: |-
+                    =ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value})
                 NoSelectionText: ="Hora Inicial"
                 OnChange: |
                     =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; Set(varCapacidade, Cap_Produtiva_1);
                 SearchFields: =["Result"]
-                SearchItems: =Search(Distinct(CreateHora,Hora),DataCardhora_inicio_1.SearchText,"Result")
+                SearchItems: |-
+                    =Search(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}),DataCardhora_inicio_1.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -648,11 +655,13 @@
                 ZIndex: =4
 
             DataCardtipo_de_perda As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(CreateTipodePerda,TIPO_DE_PERDA).Result, Result = ThisItem.TIPO_DE_PERDA)
+                DefaultSelectedItems: |-
+                    =LookUp(ForAll(Distinct(CreateTipodePerda,TIPO_DE_PERDA), {Result: ThisRecord.Value}).Result, Result = ThisItem.TIPO_DE_PERDA)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione o tipo de perda"
-                Items: =Sort( Distinct(CreateTipodePerda, TIPO_DE_PERDA) , Result)
+                Items: |-
+                    =Sort( ForAll(Distinct(CreateTipodePerda, TIPO_DE_PERDA), {Result: ThisRecord.Value}) , Result)
                 NoSelectionText: ="Tipo de perda"
                 OnChange: |
                     =If(
@@ -670,7 +679,8 @@
                         ).QUANTIDADE , QUANTIDADE)))) ;
                 OnSelect: =Set(varDelay_2 , true)
                 SearchFields: =["Result"]
-                SearchItems: =Search(Sort( Distinct(CreateTipodePerda, TIPO_DE_PERDA) , Result),DataCardtipo_de_perda.SearchText,"Result")
+                SearchItems: |-
+                    =Search(Sort( ForAll(Distinct(CreateTipodePerda, TIPO_DE_PERDA), {Result: ThisRecord.Value}) , Result),DataCardtipo_de_perda.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -724,14 +734,17 @@
                 ZIndex: =4
 
             DataCardtipo_de_falha As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(CreateTipodePerda , LISTA_FALHAS).Result, Result = ThisItem.FALHA)
+                DefaultSelectedItems: |-
+                    =LookUp(ForAll(Distinct(CreateTipodePerda , LISTA_FALHAS), {Result: ThisRecord.Value}).Result, Result = ThisItem.FALHA)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Descrição da Falha"
-                Items: =Sort( Distinct(CreateTipodePerda , LISTA_FALHAS) , Result)
+                Items: |-
+                    =Sort( ForAll(Distinct(CreateTipodePerda , LISTA_FALHAS), {Result: ThisRecord.Value}) , Result)
                 NoSelectionText: ="Descrição da Falha"
                 SearchFields: =["Result"]
-                SearchItems: =Search(Sort( Distinct(CreateTipodePerda , LISTA_FALHAS) , Result),DataCardtipo_de_falha.SearchText,"Result")
+                SearchItems: |-
+                    =Search(Sort( ForAll(Distinct(CreateTipodePerda , LISTA_FALHAS), {Result: ThisRecord.Value}) , Result),DataCardtipo_de_falha.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -783,14 +796,17 @@
                 ZIndex: =4
 
             DataCardGrupo As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(CreateGrupo,GRUPO).Result, Result = ThisItem.GRUPO)
+                DefaultSelectedItems: |-
+                    =LookUp(ForAll(Distinct(CreateGrupo,GRUPO), {Result: ThisRecord.Value}).Result, Result = ThisItem.GRUPO)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Grupo"
-                Items: =Sort( Distinct(CreateGrupo,GRUPO) , Result)
+                Items: |-
+                    =Sort( ForAll(Distinct(CreateGrupo,GRUPO), {Result: ThisRecord.Value}) , Result)
                 NoSelectionText: ="Grupo"
                 SearchFields: =["Result"]
-                SearchItems: =Search(Sort( Distinct(CreateGrupo,GRUPO) , Result),DataCardGrupo.SearchText,"Result")
+                SearchItems: |-
+                    =Search(Sort( ForAll(Distinct(CreateGrupo,GRUPO), {Result: ThisRecord.Value}) , Result),DataCardGrupo.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -842,14 +858,17 @@
                 ZIndex: =4
 
             DataCardSubGrupo As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(CreateSubGrupo, SUBGRUPO).Result, Result = ThisItem.SUB_GRUPO)
+                DefaultSelectedItems: |-
+                    =LookUp(ForAll(Distinct(CreateSubGrupo, SUBGRUPO), {Result: ThisRecord.Value}).Result, Result = ThisItem.SUB_GRUPO)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Sub Grupo"
-                Items: =Sort( Distinct(CreateSubGrupo, SUBGRUPO) , Result)
+                Items: |-
+                    =Sort( ForAll(Distinct(CreateSubGrupo, SUBGRUPO), {Result: ThisRecord.Value}) , Result)
                 NoSelectionText: ="Sub Grupo"
                 SearchFields: =["Result"]
-                SearchItems: =Search(Sort( Distinct(CreateSubGrupo, SUBGRUPO) , Result),DataCardSubGrupo.SearchText,"Result")
+                SearchItems: |-
+                    =Search(Sort( ForAll(Distinct(CreateSubGrupo, SUBGRUPO), {Result: ThisRecord.Value}) , Result),DataCardSubGrupo.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -901,14 +920,17 @@
                 ZIndex: =4
 
             DataCardComponente As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(CreateComponentes,COMPONENTES).Result, Result = ThisItem.COMPONENTE)
+                DefaultSelectedItems: |-
+                    =LookUp(ForAll(Distinct(CreateComponentes,COMPONENTES), {Result: ThisRecord.Value}).Result, Result = ThisItem.COMPONENTE)
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Componente"
-                Items: =Sort( Distinct(CreateComponentes,COMPONENTES) , Result)
+                Items: |-
+                    =Sort( ForAll(Distinct(CreateComponentes,COMPONENTES), {Result: ThisRecord.Value}) , Result)
                 NoSelectionText: ="Componente"
                 SearchFields: =["Result"]
-                SearchItems: =Search(Sort( Distinct(CreateComponentes,COMPONENTES) , Result),DataCardComponente.SearchText,"Result")
+                SearchItems: |-
+                    =Search(Sort( ForAll(Distinct(CreateComponentes,COMPONENTES), {Result: ThisRecord.Value}) , Result),DataCardComponente.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -961,12 +983,14 @@
                 ZIndex: =4
 
             DataCard4ms As combobox:
-                DefaultSelectedItems: =LookUp(Distinct(CreateTipodePerda,'4M''S').Result, Result = ThisItem.'4M''S')
+                DefaultSelectedItems: |-
+                    =LookUp(ForAll(Distinct(CreateTipodePerda,'4M''S'), {Result: ThisRecord.Value}).Result, Result = ThisItem.'4M''S')
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="4M's + D"
                 IsSearchable: =false
-                Items: =Sort( Distinct( Filter(CreateTipodePerda, Text(DataCardtipo_de_perda.Selected.Result) in TIPO_DE_PERDA) , '4M''S' ).Result , Result)//Sort( Distinct(CreateTipodePerda;'4M''S') ; Result)
+                Items: |-
+                    =Sort( ForAll(Distinct( Filter(CreateTipodePerda, Text(DataCardtipo_de_perda.Selected.Result) in TIPO_DE_PERDA) , '4M''S' ), {Result: ThisRecord.Value}).Result , Result)//Sort( Distinct(CreateTipodePerda;'4M''S') ; Result)
                 NoSelectionText: ="4M's + D"
                 OnChange: |-
                     =Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(

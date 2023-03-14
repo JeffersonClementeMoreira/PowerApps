@@ -269,7 +269,7 @@
 
             DataCardute As combobox:
                 DefaultSelectedItems: |-
-                    =If( varselect = 0 , LookUp(Distinct(CreateMaquina,UTE).Result, Result = ThisItem.UTE) , LookUp(Distinct(CreateMaquina,UTE).Result, Result = varute))
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,UTE), {Result: ThisRecord.Value}).Result, Result = ThisItem.UTE) , LookUp(ForAll(Distinct(CreateMaquina,UTE), {Result: ThisRecord.Value}).Result, Result = varute))
                     
                     
                     //LookUp(Distinct(LancamentoProducao;UTE).Result; Result = ThisItem.UTE)
@@ -279,7 +279,7 @@
                 InputTextPlaceholder: ="Selecione a UTE"
                 IsSearchable: =false
                 Items: |
-                    =Sort(Distinct(CreateMaquina,UTE),Result)
+                    =Sort(ForAll(Distinct(CreateMaquina,UTE), {Result: ThisRecord.Value}),Result)
                 NoSelectionText: ="Selecione a UTE"
                 OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Reset(DataCardsetor) ; Reset(DataCardtipo_de_peca) ; Reset(DataCardmaquina) ; Reset(DataCardoperacao) ; Reset(DataCardquantidade)
                 OnSelect: |
@@ -339,13 +339,14 @@
 
             DataCardsetor As combobox:
                 DefaultSelectedItems: |
-                    =If( varselect = 0 , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = ThisItem.SETOR) , LookUp(Distinct(CreateMaquina,SETOR).Result, Result = varsetor))// Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,SETOR), {Result: ThisRecord.Value}).Result, Result = ThisItem.SETOR) , LookUp(ForAll(Distinct(CreateMaquina,SETOR), {Result: ThisRecord.Value}).Result, Result = varsetor))// Versão antiga -> If('Form Produção'.Mode <> FormMode.New ;{Value:SETOR_Card.Default})
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="Insira o Setor"
                 IsSearchable: =false
-                Items: =Sort(Distinct( Filter(CreateMaquina, Text(DataCardute.Selected.Result) in UTE) , SETOR ).Result , Result) // Distinct(CreateMaquina;SETOR)
+                Items: |-
+                    =Sort(ForAll(Distinct( Filter(CreateMaquina, Text(DataCardute.Selected.Result) in UTE) , SETOR ), {Result: ThisRecord.Value}).Result , Result) // Distinct(CreateMaquina;SETOR)
                 NoSelectionText: ="Insira o Setor"
                 OnChange: =Reset(DataCardtipo_de_peca) ; Reset(DataCardmaquina) ; Reset(DataCardoperacao) 
                 SearchFields: =["Result"]
@@ -403,14 +404,14 @@
 
             DataCardoperacao As combobox:
                 DefaultSelectedItems: |
-                    = If( varselect = 0 , LookUp(Distinct(CreateMaquina,OPERACAO).Result, Result = ThisItem.OPERACAO) , LookUp(Distinct(CreateMaquina,OPERACAO).Result, Result = varoperacao))
+                    = If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,OPERACAO), {Result: ThisRecord.Value}).Result, Result = ThisItem.OPERACAO) , LookUp(ForAll(Distinct(CreateMaquina,OPERACAO), {Result: ThisRecord.Value}).Result, Result = varoperacao))
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="Insira a Operação"
                 IsSearchable: =false
                 Items: |
-                    =Sort( Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , OPERACAO ).Result , Result) //Distinct(CreateMaquina;OPERACAO).Result
+                    =Sort( ForAll(Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , OPERACAO ), {Result: ThisRecord.Value}).Result , Result) //Distinct(CreateMaquina;OPERACAO).Result
                 NoSelectionText: ="Insira a Operação"
                 OnChange: =Reset(DataCardtipo_de_peca) ; Reset(DataCardmaquina) ; 
                 SearchFields: =["Result"]
@@ -467,13 +468,15 @@
                 ZIndex: =4
 
             DataCardmaquina As combobox:
-                DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreateMaquina,CAF).Result, Result = ThisItem.MAQUINA) , LookUp(Distinct(CreateMaquina,CAF).Result, Result = varmaquina))
+                DefaultSelectedItems: |-
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,CAF), {Result: ThisRecord.Value}).Result, Result = ThisItem.MAQUINA) , LookUp(ForAll(Distinct(CreateMaquina,CAF), {Result: ThisRecord.Value}).Result, Result = varmaquina))
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
                 InputTextPlaceholder: ="CAF Máquina - Somente Números"
                 IsSearchable: =false
-                Items: =Sort(Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE, Text(DataCardoperacao.Selected.Result) in OPERACAO) , CAF).Result , Result) //Distinct(CreateMaquina;CAF)
+                Items: |-
+                    =Sort(ForAll(Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE, Text(DataCardoperacao.Selected.Result) in OPERACAO) , CAF), {Result: ThisRecord.Value}).Result , Result) //Distinct(CreateMaquina;CAF)
                 NoSelectionText: ="CAF Máquina - Somente Números"
                 OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , CardProd_Prev - DataCardquantidade) ; Reset(DataCardquantidade) ; Set(varDelay,true) ; Reset(DataCardtipo_de_peca)
                 SearchFields: =["Result"]
@@ -588,20 +591,22 @@
 
             DataCardhora_inicio As combobox:
                 DefaultSelectedItems: |
-                    =If( varselect = 0, LookUp(Distinct(CreateHora,Hora).Result, Result = ThisItem.HORA_INICIO) ,  LookUp(Distinct(CreateHora,Hora).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).HORA_INICIO))
+                    =If( varselect = 0, LookUp(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}).Result, Result = ThisItem.HORA_INICIO) ,  LookUp(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).HORA_INICIO))
                     
                      // Distinct(CreateHora;Hora).Result           LookUp(Distinct(LancamentoProducao;TIPO_DE_PECA).Result; Result = ThisItem.TIPO_DE_PECA)          If('Form Produção'.Mode <> FormMode.New ;{Value:HORA_INICIO_Card.Default})   LookUp(Distinct(LancamentoProducao;HORA_INICIO).Result; Result = ThisItem.HORA_INICIO)
                 DisplayFields: =["Result"]
                 DisplayMode: =If('Form Produção'.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
                 Height: =70
                 InputTextPlaceholder: ="Hora"
-                Items: =Distinct(CreateHora,Hora)
+                Items: |-
+                    =ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value})
                 NoSelectionText: ="Hora Inicial"
                 OnChange: |-
                     =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ;
                     Set(varDelay , true);
                 SearchFields: =["Result"]
-                SearchItems: =Search(Distinct(CreateHora,Hora),DataCardhora_inicio.SearchText,"Result")
+                SearchItems: |-
+                    =Search(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}),DataCardhora_inicio.SearchText,"Result")
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -727,13 +732,15 @@
                 ZIndex: =4
 
             DataCardtipo_de_peca As combobox:
-                DefaultSelectedItems: =If( varselect = 0 , LookUp(Distinct(CreatePeca,PECA).Result, Result = ThisItem.TIPO_DE_PECA) , LookUp(Distinct(CreatePeca,PECA).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).TIPO_DE_PECA))
+                DefaultSelectedItems: |-
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreatePeca,PECA), {Result: ThisRecord.Value}).Result, Result = ThisItem.TIPO_DE_PECA) , LookUp(ForAll(Distinct(Filter(CreatePeca, DataCardsetor.Selected.Result),PECA), {Result: ThisRecord.Value}).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).TIPO_DE_PECA))
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione o tipo de peças"
                 Items: =listapeças
                 NoSelectionText: ="Selecione o tipo de peças"
-                OnSelect: =ClearCollect( listapeças , Sort( Distinct( Filter(CreatePeca, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , PECA).Result , Result))
+                OnSelect: |-
+                    =ClearCollect( listapeças , Sort( ForAll(Distinct( Filter(CreatePeca, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , PECA), {Result: ThisRecord.Value}).Result , Result))
                 SearchFields: =["Result"]
                 SearchItems: =Search(listapeças,DataCardtipo_de_peca.SearchText,"Result")
                 SelectMultiple: =false

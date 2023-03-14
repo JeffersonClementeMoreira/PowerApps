@@ -19,11 +19,13 @@ Tela_Inicial_app As screen:
         DisplayFields: =["Result"]
         Height: =63
         InputTextPlaceholder: ="UTE"
-        Items: =Sort(Distinct( CreateMaquina , UTE ).Result,Result)
+        Items: |-
+            =Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result,Result)
         NoSelectionText: ="UTE"
         OnChange: =Reset(ComboBoxmaquina_ini)
         SearchFields: =["Result"]
-        SearchItems: =Search(Sort(Distinct( CreateMaquina , UTE ).Result,Result),ComboBoxute_ini.SearchText,"Result")
+        SearchItems: |-
+            =Search(Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result,Result),ComboBoxute_ini.SearchText,"Result")
         SelectMultiple: =false
         Size: =21
         Width: =250
