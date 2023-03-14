@@ -733,7 +733,7 @@
 
             DataCardtipo_de_peca As combobox:
                 DefaultSelectedItems: |-
-                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreatePeca,PECA), {Result: ThisRecord.Value}).Result, Result = ThisItem.TIPO_DE_PECA) , LookUp(ForAll(Distinct(Filter(CreatePeca, DataCardsetor.Selected.Result),PECA), {Result: ThisRecord.Value}).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).TIPO_DE_PECA))
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreatePeca,PECA), {Result: ThisRecord.Value}).Result, Result = ThisItem.TIPO_DE_PECA) , LookUp(ForAll(Distinct(Filter(CreatePeca, SETOR = DataCardsetor.Selected.Result),PECA), {Result: ThisRecord.Value}).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata.SelectedDate)))).TIPO_DE_PECA))
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione o tipo de peças"
