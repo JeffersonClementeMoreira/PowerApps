@@ -44,7 +44,10 @@
         DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@LancamentoProducao], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =88
         Icon: =Icon.Trash
-        OnSelect: =Remove([@LancamentoProducao], BrowseGallery1.Selected); If (IsEmpty(Errors([@LancamentoProducao], BrowseGallery1.Selected)), Back())
+        OnSelect: |
+            =Remove([@LancamentoProducao], BrowseGallery1.Selected); 
+            RemoveIf(LancamentoProducaoGeral, ID_ORIGINAL_PROD = BrowseGallery1.Selected.ID);
+            If (IsEmpty(Errors([@LancamentoProducao], BrowseGallery1.Selected)), Back());
         PaddingBottom: =24
         PaddingLeft: =24
         PaddingRight: =24
@@ -71,6 +74,44 @@
         Width: =Parent.Width
         Y: =RectQuickActionBar2.Y + RectQuickActionBar2.Height
         ZIndex: =6
+
+        ID_DataCard3 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ID"
+            Default: =ThisItem.ID
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"ID")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey15 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue14 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey15.Y + DataCardKey15.Height + 5
+                ZIndex: =2
 
         UTE_Card As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid

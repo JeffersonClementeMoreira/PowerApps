@@ -38,8 +38,14 @@
           "LancamentoPerdas": {
             "tableName": "77f05682-3e2a-4560-9042-11761111f154"
           },
+          "LancamentoPerdasGeral": {
+            "tableName": "65469ad2-715e-4a14-8f50-e8eaab944f0d"
+          },
           "LancamentoProducao": {
             "tableName": "17c64ada-b498-4ca5-ae0c-66cbc45e4b8e"
+          },
+          "LancamentoProducaoGeral": {
+            "tableName": "9b517001-0f2a-4e7e-a858-405f64541b30"
           }
         }
       }
@@ -54,7 +60,9 @@
       "CreateTipodePerda",
       "CreateHora",
       "LancamentoPerdas",
-      "DatasPowerapps"
+      "DatasPowerapps",
+      "LancamentoPerdasGeral",
+      "LancamentoProducaoGeral"
     ],
     "dependencies": {},
     "dependents": [],

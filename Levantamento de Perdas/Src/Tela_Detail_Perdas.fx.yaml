@@ -51,7 +51,9 @@
         Height: =88
         Icon: =Icon.Trash
         OnSelect: |
-            =Remove([@LancamentoPerdas], BrowseGallery1perdas.Selected); If (IsEmpty(Errors([@LancamentoPerdas], BrowseGallery1perdas.Selected)), Back())
+            =Remove([@LancamentoPerdas], BrowseGallery1perdas.Selected);
+            RemoveIf(LancamentoPerdasGeral, ID_ORIGINAL_PERDAS = BrowseGallery1perdas.Selected.ID);
+             If (IsEmpty(Errors([@LancamentoPerdas], BrowseGallery1perdas.Selected)), Back())
         PaddingBottom: =24
         PaddingLeft: =24
         PaddingRight: =24
