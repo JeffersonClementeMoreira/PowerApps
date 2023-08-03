@@ -26,7 +26,7 @@ Tela_Ini_2912 As screen:
     Button2_8 As button:
         Height: =Button2_7.Height
         OnSelect: |-
-            =Navigate(Retífica_Engr_1ª_Teste);
+            =Navigate(Retífica_Engr_1ª);
             Set(vartela , "Retífica_Engr_1ª");
         Size: =24
         Text: ="Retífica Engr. 1ª"
