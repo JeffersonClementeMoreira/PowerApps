@@ -403,8 +403,9 @@
                 ZIndex: =4
 
             DataCardoperacao_2 As combobox:
-                DefaultSelectedItems: |
-                    = If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,OPERACAO), {Result: ThisRecord.Value}).Result, Result = ThisItem.OPERACAO) , LookUp(ForAll(Distinct(CreateMaquina,OPERACAO), {Result: ThisRecord.Value}).Result, Result = varoperacao))
+                DefaultSelectedItems: |+
+                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreateMaquina,OPERACAO), {Result: ThisRecord.Value}).Result, Result = ThisItem.OPERACAO) , LookUp(ForAll(Distinct(CreateMaquina,OPERACAO), {Result: ThisRecord.Value}).Result, Result = varoperacao))
+                    
                 DisplayFields: =["Result"]
                 DisplayMode: =DisplayMode.View
                 Height: =70
@@ -591,7 +592,7 @@
 
             DataCardhora_inicio_2 As combobox:
                 DefaultSelectedItems: |
-                    =If( varselect = 0, LookUp(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}).Result, Result = ThisItem.HORA_INICIO) ,  LookUp(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_2.SelectedDate)))).HORA_INICIO))
+                    =//If( varselect = 0; LookUp(ForAll(Distinct(CreateHora;Hora); {Result: ThisRecord.Value}).Result; Result = ThisItem.HORA_INICIO) ;  LookUp(ForAll(Distinct(CreateHora;Hora); {Result: ThisRecord.Value}).Result; Result = Last(Filter(LancamentoProducao ; (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_2.SelectedDate)))).HORA_INICIO))
                     
                      // Distinct(CreateHora;Hora).Result           LookUp(Distinct(LancamentoProducao;TIPO_DE_PECA).Result; Result = ThisItem.TIPO_DE_PECA)          If('Form Produção'.Mode <> FormMode.New ;{Value:HORA_INICIO_Card.Default})   LookUp(Distinct(LancamentoProducao;HORA_INICIO).Result; Result = ThisItem.HORA_INICIO)
                 DisplayFields: =["Result"]
@@ -733,7 +734,7 @@
 
             DataCardtipo_de_peca_1 As combobox:
                 DefaultSelectedItems: |-
-                    =If( varselect = 0 , LookUp(ForAll(Distinct(CreatePeca,PECA), {Result: ThisRecord.Value}).Result, Result = ThisItem.TIPO_DE_PECA) , LookUp(ForAll(Distinct(Filter(CreatePeca, SETOR = DataCardsetor_2.Selected.Result),PECA), {Result: ThisRecord.Value}).Result, Result = Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_2.SelectedDate)))).TIPO_DE_PECA))
+                    =//If( varselect = 0 ; LookUp(ForAll(Distinct(CreatePeca;PECA); {Result: ThisRecord.Value}).Result; Result = ThisItem.TIPO_DE_PECA) ; LookUp(ForAll(Distinct(Filter(CreatePeca; SETOR = DataCardsetor_2.Selected.Result);PECA); {Result: ThisRecord.Value}).Result; Result = Last(Filter(LancamentoProducao ; (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_2.SelectedDate)))).TIPO_DE_PECA))
                 DisplayFields: =["Result"]
                 Height: =70
                 InputTextPlaceholder: ="Selecione o tipo de peças"
