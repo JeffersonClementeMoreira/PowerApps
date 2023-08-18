@@ -83,6 +83,7 @@ App As appinfo:
         );
         
         Set(ctxLoading , false);
+    Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false

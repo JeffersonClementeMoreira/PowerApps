@@ -149,18 +149,6 @@ Tela_Ini_2913 As screen:
         Y: =615
         ZIndex: =12
 
-    Button2_34 As button:
-        Height: =Button2_24.Height
-        OnSelect: |
-            =Navigate(Usinagem_Marcha_Re);
-            Set(vartela , "Usinagem_Marcha_Re");
-        Size: =24
-        Text: ="Usinagem Marcha Ré"
-        Width: =Button2_24.Width
-        X: =Button2_24.X
-        Y: =725
-        ZIndex: =13
-
     Button2_35 As button:
         Height: =Button2_24.Height
         OnSelect: |-
@@ -182,7 +170,7 @@ Tela_Ini_2913 As screen:
         Text: ="Usinagem Diferencial"
         Width: =Button2_24.Width
         X: =Button2_24.X
-        Y: =835
+        Y: =725
         ZIndex: =15
 
     btn_edit_prod_3 As button:

@@ -17740,166 +17740,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 81,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "UTE"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 81,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "SETOR"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 83,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "SETOR"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 93,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "TIPO_DE_PERDA"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Tel_Edit_Producao.'Form Produção'.SETOR_DataCard1.DataCardsetor.Items"
                 }
               ],
@@ -18110,7 +17950,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 434,
+                  "charOffset": 428,
                   "snippet": {
                     "text": "in"
                   }
@@ -18149,10 +17989,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 9022,
+                  "charLength": 8723,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Sum(\r\n    Filter(\r\n        LancamentoProducao;\r\n        Or(\r\n            IsBlank(ComboBoxmaquina_ini.SelectedItems);\r\n            IsEmpty(ComboBoxmaquina_ini.SelectedItems);\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                1\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                2\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                3\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                4\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                5\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                6\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                7\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                8\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                9\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                10\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                11\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                12\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                13\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                14\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                15\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                16\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                17\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                18\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                19\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                20\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                21\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                22\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                23\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                24\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                25\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                26\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                27\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                28\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                29\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                30\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                31\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                32\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                33\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                34\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                35\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                36\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                37\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                38\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                39\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                40\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                41\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                42\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                43\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                44\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                45\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                46\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                47\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                48\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                49\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                50\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                51\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                52\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                53\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                54\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                55\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                56\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                57\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                58\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                59\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                60\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                61\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                62\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                63\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                64\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                65\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                66\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                67\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                68\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                69\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                70\r\n            ).CAF\r\n        )\r\n        &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())\r\n        &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())\r\n    );\r\n    QUANTIDADE\r\n)"
+                    "text": "Sum(\n    Filter(\n        LancamentoProducao;\n        Or(\n            IsBlank(ComboBoxmaquina_ini.SelectedItems);\n            IsEmpty(ComboBoxmaquina_ini.SelectedItems);\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                1\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                2\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                3\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                4\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                5\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                6\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                7\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                8\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                9\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                10\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                11\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                12\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                13\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                14\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                15\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                16\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                17\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                18\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                19\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                20\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                21\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                22\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                23\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                24\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                25\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                26\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                27\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                28\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                29\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                30\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                31\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                32\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                33\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                34\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                35\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                36\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                37\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                38\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                39\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                40\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                41\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                42\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                43\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                44\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                45\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                46\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                47\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                48\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                49\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                50\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                51\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                52\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                53\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                54\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                55\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                56\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                57\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                58\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                59\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                60\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                61\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                62\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                63\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                64\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                65\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                66\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                67\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                68\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                69\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                70\n            ).CAF\n        )\n        &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())\n        &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())\n    );\n    QUANTIDADE\n)"
                   }
                 }
               },
@@ -18189,10 +18029,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 9020,
+                  "charLength": 8721,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Sum(\r\n    Filter(\r\n        LancamentoPerdas;\r\n        Or(\r\n            IsBlank(ComboBoxmaquina_ini.SelectedItems);\r\n            IsEmpty(ComboBoxmaquina_ini.SelectedItems);\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                1\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                2\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                3\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                4\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                5\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                6\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                7\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                8\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                9\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                10\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                11\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                12\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                13\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                14\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                15\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                16\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                17\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                18\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                19\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                20\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                21\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                22\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                23\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                24\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                25\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                26\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                27\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                28\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                29\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                30\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                31\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                32\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                33\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                34\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                35\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                36\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                37\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                38\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                39\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                40\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                41\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                42\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                43\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                44\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                45\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                46\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                47\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                48\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                49\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                50\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                51\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                52\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                53\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                54\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                55\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                56\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                57\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                58\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                59\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                60\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                61\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                62\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                63\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                64\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                65\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                66\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                67\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                68\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                69\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                70\r\n            ).CAF\r\n        )\r\n        &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())\r\n        &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())\r\n    );\r\n    QUANTIDADE\r\n)"
+                    "text": "Sum(\n    Filter(\n        LancamentoPerdas;\n        Or(\n            IsBlank(ComboBoxmaquina_ini.SelectedItems);\n            IsEmpty(ComboBoxmaquina_ini.SelectedItems);\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                1\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                2\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                3\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                4\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                5\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                6\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                7\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                8\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                9\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                10\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                11\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                12\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                13\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                14\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                15\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                16\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                17\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                18\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                19\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                20\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                21\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                22\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                23\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                24\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                25\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                26\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                27\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                28\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                29\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                30\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                31\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                32\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                33\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                34\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                35\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                36\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                37\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                38\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                39\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                40\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                41\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                42\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                43\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                44\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                45\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                46\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                47\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                48\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                49\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                50\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                51\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                52\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                53\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                54\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                55\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                56\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                57\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                58\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                59\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                60\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                61\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                62\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                63\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                64\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                65\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                66\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                67\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                68\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                69\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                70\n            ).CAF\n        )\n        &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())\n        &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())\n    );\n    QUANTIDADE\n)"
                   }
                 }
               },
@@ -18229,10 +18069,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 9182,
+                  "charLength": 8882,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Sum(\r\n    Filter(\r\n        LancamentoPerdas;\r\n        Or(\r\n            IsBlank(ComboBoxmaquina_ini.SelectedItems);\r\n            IsEmpty(ComboBoxmaquina_ini.SelectedItems);\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                1\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                2\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                3\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                4\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                5\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                6\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                7\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                8\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                9\r\n            ).CAF\r\n            ;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                10\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                11\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                12\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                13\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                14\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                15\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                16\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                17\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                18\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                19\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                20\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                21\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                22\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                23\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                24\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                25\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                26\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                27\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                28\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                29\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                30\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                31\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                32\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                33\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                34\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                35\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                36\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                37\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                38\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                39\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                40\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                41\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                42\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                43\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                44\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                45\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                46\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                47\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                48\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                49\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                50\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                51\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                52\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                53\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                54\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                55\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                56\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                57\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                58\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                59\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                60\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                61\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                62\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                63\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                64\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                65\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                66\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                67\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                68\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                69\r\n            ).CAF;\r\n            MAQUINA = Index(\r\n                ComboBoxmaquina_ini.SelectedItems;\r\n                70\r\n            ).CAF\r\n        )\r\n        &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())\r\n        &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())\r\n        && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))\r\n    );\r\n    QUANTIDADE\r\n)"
+                    "text": "Sum(\n    Filter(\n        LancamentoPerdas;\n        Or(\n            IsBlank(ComboBoxmaquina_ini.SelectedItems);\n            IsEmpty(ComboBoxmaquina_ini.SelectedItems);\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                1\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                2\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                3\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                4\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                5\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                6\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                7\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                8\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                9\n            ).CAF\n            ;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                10\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                11\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                12\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                13\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                14\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                15\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                16\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                17\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                18\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                19\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                20\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                21\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                22\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                23\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                24\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                25\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                26\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                27\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                28\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                29\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                30\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                31\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                32\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                33\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                34\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                35\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                36\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                37\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                38\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                39\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                40\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                41\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                42\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                43\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                44\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                45\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                46\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                47\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                48\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                49\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                50\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                51\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                52\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                53\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                54\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                55\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                56\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                57\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                58\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                59\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                60\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                61\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                62\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                63\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                64\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                65\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                66\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                67\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                68\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                69\n            ).CAF;\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems;\n                70\n            ).CAF\n        )\n        &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())\n        &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())\n        && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))\n    );\n    QUANTIDADE\n)"
                   }
                 }
               },
@@ -18310,7 +18150,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 400,
+                  "charOffset": 394,
                   "snippet": {
                     "text": "in"
                   }
@@ -18340,6 +18180,166 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 81,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "UTE"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 81,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "SETOR"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 83,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "SETOR"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 93,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "TIPO_DE_PERDA"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Tela_acerto_levantamento.Cbox_Setor.OnChange"
                 }
               ],
@@ -18350,7 +18350,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 197,
+                  "charOffset": 190,
                   "snippet": {
                     "text": "in"
                   }
@@ -18390,7 +18390,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 170,
+                  "charOffset": 164,
                   "snippet": {
                     "text": "in"
                   }
@@ -18414,66 +18414,6 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Usinagem_Coroinha.Icon1_21.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Usinagem_Coroinha.Icon1_21.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Usinagem_Coroinha",
-                "type": "Usinagem_Coroinha.Icon1_21"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Usinagem_Coroinha.Icon1_21.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Usinagem_Coroinha.Icon1_21.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Usinagem_Coroinha",
-                "type": "Usinagem_Coroinha.Icon1_21"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
         },
         {
           "locations": [
@@ -18534,1296 +18474,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Marcha_Ré.Icon1_42.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Marcha_Ré.Icon1_42.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Retífica_Marcha_Ré",
-                "type": "Retífica_Marcha_Ré.Icon1_42"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Retífica_Marcha_Ré.Icon1_42.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Retífica_Marcha_Ré.Icon1_42.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Retífica_Marcha_Ré",
-                "type": "Retífica_Marcha_Ré.Icon1_42"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tela_Detail_Perdas",
-                "type": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tela_Detail_Perdas",
-                "type": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.Capacidade_detail_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.Capacidade_detail_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tela_Detail_Perdas",
-                "type": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.Capacidade_detail_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Icon3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Icon3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.BrowseGallery1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.BrowseGallery1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_produção_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_produção_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Total_hora_produção_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_perdas_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_perdas_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Total_hora_perdas_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_lancamento_hora_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_lancamento_hora_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Total_lancamento_hora_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Prod_realizada_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Tel_Edit_Perdas.Prod_realizada_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Tel_Edit_Perdas",
-                "type": "Tel_Edit_Perdas.Prod_realizada_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -20790,6 +19440,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Retífica_Marcha_Ré.Icon1_42.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Marcha_Ré.Icon1_42.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Retífica_Marcha_Ré",
+                "type": "Retífica_Marcha_Ré.Icon1_42"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Retífica_Marcha_Ré.Icon1_42.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Retífica_Marcha_Ré.Icon1_42.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Retífica_Marcha_Ré",
+                "type": "Retífica_Marcha_Ré.Icon1_42"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Usinagem_Eixo_Primário.Icon1_10.AccessibleLabel"
                 }
               ],
@@ -20844,6 +19554,96 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tela_Detail_Perdas",
+                "type": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tela_Detail_Perdas",
+                "type": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.Capacidade_detail_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.Capacidade_detail_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tela_Detail_Perdas",
+                "type": "Tela_Detail_Perdas.Gal_Capacidade_detailperdas.Capacidade_detail_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -21294,6 +20094,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Usinagem_Coroinha.Icon1_21.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Coroinha.Icon1_21.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Usinagem_Coroinha",
+                "type": "Usinagem_Coroinha.Icon1_21"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Usinagem_Coroinha.Icon1_21.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Usinagem_Coroinha.Icon1_21.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Usinagem_Coroinha",
+                "type": "Usinagem_Coroinha.Icon1_21"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -24343,6 +23203,1146 @@
                 "member": "AccessibleLabel",
                 "module": "Tela_Inicial_Producao",
                 "type": "Tela_Inicial_Producao.SliderProd"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Icon3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Icon3_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Icon3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.IDPAI_DataCard2_1.DataCardidpai_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.UTE_DataCard2_1.DataCardute_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.SETOR_DataCard1_1.DataCardsetor_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.OPERACAO_DataCard2_1.DataCardoperacao_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.MAQUINA_DataCard2_1.DataCardmaquina_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.DATA_DataCard1_1.DataCarddata_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.HORA_INICIO_DataCard2_1.DataCardhora_inicio_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.COLABORADOR_DataCard2_1.DataCardcolaborador_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.TIPO_DE_PERDA_DataCard2_1.DataCardtipo_de_perda"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.FALHA_DataCard1.DataCardtipo_de_falha"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.GRUPO_DataCard1.DataCardGrupo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.SUB_GRUPO_DataCard1.DataCardSubGrupo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.COMPONENTE_DataCard1.DataCardComponente"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.'4M''S_DataCard1'.DataCard4ms"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.OBSERVACAO_DataCard1.DataCardObservacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.DataCardquantidade_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Prev_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.QUANTIDADE_DataCard2_1.CardProd_Delta_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Formperdas.IdEspelhoPerdas_DataCard1.DataCardValue13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Gal_Producao_Maxima_1.Cap_Produtiva_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.BrowseGallery1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.BrowseGallery1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Label1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.BrowseGallery1_2.Body1_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_produção_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_produção_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Total_hora_produção_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_perdas_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_hora_perdas_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Total_hora_perdas_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_lancamento_hora_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Total_lancamento_hora_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Total_lancamento_hora_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Prod_realizada_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tel_Edit_Perdas.Prod_realizada_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tel_Edit_Perdas",
+                "type": "Tel_Edit_Perdas.Prod_realizada_1"
               }
             }
           ],

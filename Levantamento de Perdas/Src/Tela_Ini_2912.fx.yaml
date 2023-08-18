@@ -247,3 +247,15 @@ Tela_Ini_2912 As screen:
         Y: =95
         ZIndex: =23
 
+    Button2_34 As button:
+        Height: =Button2_24.Height
+        OnSelect: |
+            =Navigate(Usinagem_Marcha_Re);
+            Set(vartela , "Usinagem_Marcha_Re");
+        Size: =24
+        Text: ="Usinagem Marcha Ré"
+        Width: =Button2_24.Width
+        X: =329
+        Y: =700
+        ZIndex: =24
+
