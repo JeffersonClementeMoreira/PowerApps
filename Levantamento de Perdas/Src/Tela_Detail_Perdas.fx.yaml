@@ -41,6 +41,7 @@
         PaddingTop: =24
         TabIndex: =0
         Tooltip: ="Editar esse item"
+        Visible: =false
         Width: =88
         X: =Parent.Width - Self.Width
         ZIndex: =3
@@ -52,7 +53,7 @@
         Icon: =Icon.Trash
         OnSelect: |
             =Remove([@LancamentoPerdas], BrowseGallery1perdas.Selected);
-            RemoveIf(LancamentoPerdasGeral, ID_ORIGINAL_PERDAS = BrowseGallery1perdas.Selected.ID);
+            RemoveIf(LancamentoPerdas_BD, ID_Origem = BrowseGallery1perdas.Selected.ID);
              If (IsEmpty(Errors([@LancamentoPerdas], BrowseGallery1perdas.Selected)), Back())
         PaddingBottom: =24
         PaddingLeft: =24
