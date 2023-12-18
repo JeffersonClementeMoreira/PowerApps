@@ -62,7 +62,7 @@ Tela_Ini_2914 As screen:
         PaddingRight: =8
         PaddingTop: =0
         Size: =20
-        Text: ="Editar Produção"
+        Text: ="Excluir Produção"
         Tooltip: ="Ir para a tela de editar produção"
         Width: =280
         X: =24
@@ -71,10 +71,10 @@ Tela_Ini_2914 As screen:
 
     Icon_edit_prod_4 As icon.Edit:
         Height: =30
-        Icon: =Icon.Edit
+        Icon: =Icon.Trash
         Width: =38
-        X: =25
-        Y: =106
+        X: =24
+        Y: =101
         ZIndex: =8
 
     btn_edit_perdas_4 As button:

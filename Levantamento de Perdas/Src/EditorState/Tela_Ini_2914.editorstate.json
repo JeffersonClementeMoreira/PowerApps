@@ -146,7 +146,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_edit_perdas_4",
-      "ParentIndex": 3,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -497,6 +498,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_edit_prod_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -773,6 +775,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_37",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1052,6 +1055,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_39",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1290,6 +1294,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_edit_perdas_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1415,7 +1420,14 @@
     "Icon_edit_prod_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Color",
         "DisabledColor",
         "PressedColor",
@@ -1470,7 +1482,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon_edit_prod_4",
-      "ParentIndex": 4,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1711,6 +1724,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1_6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1928,6 +1942,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label_ute_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2146,6 +2161,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Tela_Ini_2914",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

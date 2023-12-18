@@ -45,10 +45,11 @@
         DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@LancamentoProducao], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =88
         Icon: =Icon.Trash
-        OnSelect: |
-            =Remove([@LancamentoProducao], BrowseGallery1.Selected); 
-            RemoveIf(LancamentoProducao_BD, ID_Origem = BrowseGallery1.Selected.ID);
+        OnSelect: |+
+            =RemoveIf(LancamentoProducao_BD,ID_Origem = BrowseGallery1.Selected.ID);
+            Remove([@LancamentoProducao], BrowseGallery1.Selected);
             If (IsEmpty(Errors([@LancamentoProducao], BrowseGallery1.Selected)), Back());
+            
         PaddingBottom: =24
         PaddingLeft: =24
         PaddingRight: =24
@@ -56,7 +57,7 @@
         TabIndex: =0
         Tooltip: ="Excluir esse item"
         Width: =88
-        X: =Parent.Width - IconEdit1.Width - Self.Width
+        X: =477
         ZIndex: =4
 
     LblAppName2 As label:
