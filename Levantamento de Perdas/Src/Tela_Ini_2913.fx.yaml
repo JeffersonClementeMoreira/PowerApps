@@ -184,7 +184,7 @@ Tela_Ini_2913 As screen:
         PaddingRight: =8
         PaddingTop: =0
         Size: =20
-        Text: ="Editar Produção"
+        Text: ="Excluir Produção"
         Tooltip: ="Ir para a tela de editar produção"
         Width: =280
         X: =24
@@ -192,8 +192,8 @@ Tela_Ini_2913 As screen:
         ZIndex: =16
 
     Icon_edit_prod_3 As icon.Edit:
-        Height: =26
-        Icon: =Icon.Edit
+        Height: =32
+        Icon: =Icon.Trash
         Width: =53
         X: =22
         Y: =101
@@ -210,7 +210,7 @@ Tela_Ini_2913 As screen:
         PaddingRight: =25
         PaddingTop: =0
         Size: =20
-        Text: ="Editar Perdas"
+        Text: ="Excluir Perdas"
         Tooltip: ="Ir para a tela de editar perdas"
         Width: =280
         X: =329
@@ -219,7 +219,7 @@ Tela_Ini_2913 As screen:
 
     Icon_edit_perdas_3 As icon.Edit:
         Height: =30
-        Icon: =Icon.Edit
+        Icon: =Icon.Trash
         Width: =38
         X: =336
         Y: =101
