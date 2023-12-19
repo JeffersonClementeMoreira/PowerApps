@@ -452,7 +452,7 @@
                 ZIndex: =4
 
             DataCarddata_1 As datepicker:
-                DefaultDate: =If(Formperdas.Mode <> FormMode.New ,DATA_Cardperdas.Default, If(Hour(Now()) > 0 , Today() , Today()-1))
+                DefaultDate: =If(Formperdas.Mode <> FormMode.New ,DATA_DataCard1.Default, If(Hour(Now()) > 0 , Today() , Today()-1))
                 DisplayMode: =If(Formperdas.Mode <> FormMode.New , DisplayMode.Disabled , DisplayMode.Edit)
                 Height: =73
                 OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result)
@@ -553,7 +553,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Clear: =true
                 Default: |-
-                    =If( varselect = 0 , If(Formperdas.Mode <> FormMode.New ,COLABORADOR_Cardperdas.Default) , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)))).COLABORADOR)
+                    =If( varselect = 0 , If(Formperdas.Mode <> FormMode.New ,COLABORADOR_DataCard2.Default) , Last(Filter(LancamentoProducao , (MAQUINA = varmaquina) && (DATA = Text(DataCarddata_1.SelectedDate)))).COLABORADOR)
                     
                     //If(Formperdas.Mode <> FormMode.New ;COLABORADOR_Card.Default)
                 DelayOutput: =true
@@ -1028,7 +1028,7 @@
             DataCardObservacao As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Clear: =true
-                Default: =If(Formperdas.Mode <> FormMode.New , OBSERVACAO_DataCard2.Default)
+                Default: =If(Formperdas.Mode <> FormMode.New ,OBSERVACAO_DataCard1.Default)
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 EnableSpellCheck: =true
@@ -1095,7 +1095,7 @@
                 Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: |
-                    =If( varselect = 0 , If(Formperdas.Mode<>FormMode.New , DataCardValue8_1.Text) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - Sum(Filter(
+                    =If( varselect = 0 , If(Formperdas.Mode<>FormMode.New , DataCardquantidade.Text) , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - Sum(Filter(
                             LancamentoProducao,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE) - Sum(Filter(
