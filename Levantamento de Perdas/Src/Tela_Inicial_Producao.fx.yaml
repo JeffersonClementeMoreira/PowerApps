@@ -76,7 +76,7 @@
                 varDataCount < varDelegationLimit,
                 SortByColumns(
                 Filter(Filter(
-                        LancamentoProducao,
+                        LancamentoProducao_BD,
                         ((UTE = ComboBoxute.Selected.Result) || ComboBoxute.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina.Selected.Result) || ComboBoxmaquina.Selected.Result = Blank()) && ((DATA = txt_date_prod.Text) || txt_date_prod.Text = Blank())
                     ) , txt_date_prod.Text in DATA),
                     "HORA_INICIO",
@@ -88,7 +88,7 @@
                     )
                 ),
                 Filter(
-                    LancamentoProducao,
+                    LancamentoProducao_BD,
                     ((UTE = ComboBoxute.Selected.Result) || ComboBoxute.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina.Selected.Result) || ComboBoxmaquina.Selected.Result = Blank()) && ((DATA = txt_date_prod.Text) || txt_date_prod.Text = Blank())
                 )
             )

@@ -45,18 +45,16 @@
         DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@LancamentoProducao], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =88
         Icon: =Icon.Trash
-        OnSelect: |+
-            =RemoveIf(LancamentoProducao_BD,ID_Origem = BrowseGallery1.Selected.ID);
-            Remove([@LancamentoProducao], BrowseGallery1.Selected);
+        OnSelect: |-
+            =RemoveIf(LancamentoProducao,ID = Value(DataCardValue23.Text));
+            Remove([@LancamentoProducao_BD], BrowseGallery1.Selected);
             If (IsEmpty(Errors([@LancamentoProducao], BrowseGallery1.Selected)), Back());
-            
         PaddingBottom: =24
         PaddingLeft: =24
         PaddingRight: =24
         PaddingTop: =24
         TabIndex: =0
         Tooltip: ="Excluir esse item"
-        Visible: =false
         Width: =88
         X: =477
         ZIndex: =4
@@ -71,7 +69,7 @@
         ZIndex: =5
 
     DetailForm1 As formViewer:
-        DataSource: =[@LancamentoProducao]
+        DataSource: =[@LancamentoProducao_BD]
         Height: =888
         Item: =BrowseGallery1.Selected
         Width: =Parent.Width
@@ -213,7 +211,7 @@
         OPERACAO_Card As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="HORA_INICIO"
-            Default: =ThisItem.OPERACAO
+            Default: =ThisItem.OPERAÇÃO
             DisplayMode: =DisplayMode.View
             DisplayName: ="OPERAÇÃO"
             Fill: =RGBA(0, 0, 0, 0)
@@ -487,6 +485,7 @@
 
             DataCardKey15 As label:
                 AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
@@ -509,6 +508,44 @@
                 Y: =DataCardKey15.Y + DataCardKey15.Height + 5
                 ZIndex: =2
 
+        ID_Origem_DataCard1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ID_Origem"
+            Default: =ThisItem.ID_Origem
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@LancamentoProducao_BD],DataSourceInfo.DisplayName,"ID_Origem")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey24 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue23 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey24.Y + DataCardKey24.Height + 5
+                ZIndex: =2
+
     Gal_Capacidade_detail As gallery.galleryVertical:
         Height: =159
         Items: |
@@ -527,15 +564,4 @@
             Width: =630
             Y: =40
             ZIndex: =2
-
-    TextInput1_1 As text:
-        Align: =Align.Center
-        Default: ="EM MANUTENÇÃO"
-        Fill: =RGBA(255, 255, 0, 1)
-        Height: =70
-        Size: =15
-        Width: =188
-        X: =427
-        Y: =9
-        ZIndex: =8
 
