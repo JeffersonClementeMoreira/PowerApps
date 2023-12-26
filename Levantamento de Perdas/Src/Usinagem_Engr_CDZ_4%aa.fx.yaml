@@ -83,7 +83,7 @@ Usinagem_Engr_CDZ_4ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "961502074");
+            =Set( varmaquina , "961502074-4");
             Set( varsetor ,  Label_setor_11.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
