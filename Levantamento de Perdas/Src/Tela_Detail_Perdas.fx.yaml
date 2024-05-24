@@ -28,7 +28,7 @@
         Icon: =Icon.Edit
         OnSelect: |
             =EditForm(Formperdas);Navigate(Tel_Edit_Perdas, ScreenTransition.None) ; Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; 
-            Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+            Set(varDelta , Cap_Produtiva_1.Text - (DataCardquantidade_1.Text + Sum( Sum(Filter(
                     LancamentoProducao,
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -87,7 +87,7 @@
             DataField: ="TIPO_DE_PERDA"
             Default: =ThisItem.TIPO_DE_PERDA
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"TIPO_DE_PERDA")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,TIPO_DE_PERDA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -130,7 +130,7 @@
             DataField: ="QUANTIDADE"
             Default: =ThisItem.QUANTIDADE
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"QUANTIDADE")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,QUANTIDADE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -173,7 +173,7 @@
             DataField: ="ID_Origem"
             Default: =ThisItem.ID_Origem
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"ID_Origem")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,ID_Origem)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -211,7 +211,7 @@
             DataField: ="UTE"
             Default: =ThisItem.UTE
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"UTE")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,UTE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -254,7 +254,7 @@
             DataField: ="Data"
             Default: =ThisItem.Data
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"Data")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,Data)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -297,7 +297,7 @@
             DataField: ="HORA_INICIO"
             Default: =ThisItem.HORA_INICIO
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"HORA_INICIO")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,HORA_INICIO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -340,7 +340,7 @@
             DataField: ="OPERACAO"
             Default: =ThisItem.OPERACAO
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"OPERACAO")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,OPERACAO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -383,7 +383,7 @@
             DataField: ="COLABORADOR"
             Default: =ThisItem.COLABORADOR
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"COLABORADOR")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,COLABORADOR)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -426,7 +426,7 @@
             DataField: ="MAQUINA"
             Default: =ThisItem.MAQUINA
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,"MAQUINA")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas_BD],DataSourceInfo.DisplayName,MAQUINA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -465,6 +465,7 @@
                 ZIndex: =2
 
     Gal_Capacidade_detailperdas As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtrada"
         Height: =159
         Items: |
             =Filter(CreateMaquina , DataCardValue44.Text = CAF)

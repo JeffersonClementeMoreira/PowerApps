@@ -14,7 +14,7 @@
         OnSelect: |-
             =ResetForm(Formperdas);
             NewForm('Form Produção');
-            Set(varDelta , Cap_Produtiva - (DataCardquantidade + Sum( Sum(Filter(
+            Set(varDelta , Cap_Produtiva.Text - (DataCardquantidade.Text + Sum( Sum(Filter(
                     LancamentoProducao,
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -73,10 +73,10 @@
             DataField: ="Title"
             Default: =varIDpai
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"Title")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,IDPAI)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "Title")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, IDPAI)
             Required: =true
             Update: =DataCardidpai_1.Text
             Visible: =false
@@ -147,10 +147,10 @@
             DataField: ="UTE"
             Default: =ThisItem.UTE
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"UTE")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,UTE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "UTE")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, UTE)
             Required: =true
             Update: =DataCardute_1.Selected.Result
             Visible: =false
@@ -215,10 +215,10 @@
             DataField: ="SETOR"
             Default: =ThisItem.SETOR
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"SETOR")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,SETOR)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "SETOR")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, SETOR)
             Required: =true
             Update: =DataCardsetor_1.Selected.Result
             Width: =640
@@ -280,10 +280,10 @@
             DataField: ="OPERACAO"
             Default: =ThisItem.OPERACAO
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"OPERACAO")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,OPERACAO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "OPERACAO")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, OPERACAO)
             Required: =true
             Update: =DataCardoperacao_1.Selected.Result
             Width: =640
@@ -345,10 +345,10 @@
             DataField: ="MAQUINA"
             Default: =ThisItem.MAQUINA
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"MAQUINA")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,MAQUINA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "MAQUINA")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, MAQUINA)
             Required: =true
             Update: =DataCardmaquina_1.Selected.Result
             Width: =640
@@ -394,7 +394,7 @@
                 Items: |-
                     =Sort( ForAll(Distinct( Filter(CreateMaquina, Text(DataCardsetor_1.Selected.Result) in SETOR , Text(DataCardute_1.Selected.Result) in UTE, Text(DataCardoperacao_1.Selected.Result) in OPERACAO) , CAF), {Result: ThisRecord.Value}).Result , Result) //Distinct(CreateMaquina;CAF)
                 NoSelectionText: ="CAF Máquina - Somente Números"
-                OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; Set(varDelta , Cap_Produtiva_1 - DataCardquantidade_1) ; Set(varCapacidade, Cap_Produtiva_1) ; Set(varDelay_2,true) ; Reset(DataCardtipo_de_perda) ; Reset(DataCardquantidade_1) ; Reset(DataCardtipo_de_falha) ; Reset(DataCardGrupo) ; Reset(DataCardSubGrupo) ; Reset(DataCardComponente) ; Reset(DataCard4ms) ; Reset(DataCardObservacao)
+                OnChange: =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; Set(varDelta , Cap_Produtiva_1.Text - DataCardquantidade_1.Text) ; Set(varCapacidade, Cap_Produtiva_1) ; Set(varDelay_2,true) ; Reset(DataCardtipo_de_perda) ; Reset(DataCardquantidade_1) ; Reset(DataCardtipo_de_falha) ; Reset(DataCardGrupo) ; Reset(DataCardSubGrupo) ; Reset(DataCardComponente) ; Reset(DataCard4ms) ; Reset(DataCardObservacao)
                 SearchFields: =["Result"]
                 SearchItems: =[]
                 SelectMultiple: =false
@@ -411,11 +411,11 @@
             DataField: ="Data"
             Default: =ThisItem.DATA
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName, "Data")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName, DATA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: |
-                =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "Data")
+                =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, DATA)
             Required: =true
             Update: =DataCarddata_1.SelectedDate
             Width: =640
@@ -467,10 +467,10 @@
             DataField: ="HORA_INICIO"
             Default: =
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"HORA_INICIO")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,HORA_INICIO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "HORA_INICIO")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, HORA_INICIO)
             Required: =true
             Update: =DataCardhora_inicio_1.Selected.Result
             Width: =640
@@ -525,7 +525,7 @@
                     =Set(varIDpai,  Value(DataCardute_1.Selected.Result) & Value(DataCardmaquina_1.Selected.Result) & DataCardcolaborador_1.Text & DataCarddata_1.SelectedDate & DataCardhora_inicio_1.Selected.Result) ; Set(varCapacidade, Cap_Produtiva_1);
                 SearchFields: =["Result"]
                 SearchItems: |-
-                    =Search(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}),DataCardhora_inicio_1.SearchText,"Result")
+                    =Search(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}),DataCardhora_inicio_1.SearchText,Result)
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -538,10 +538,10 @@
             DataField: ="COLABORADOR"
             Default: =ThisItem.COLABORADOR
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"COLABORADOR")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,COLABORADOR)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "COLABORADOR")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, COLABORADOR)
             Required: =true
             Update: =DataCardcolaborador_1.Text
             Width: =640
@@ -614,10 +614,10 @@
             DataField: ="TIPO_DE_PERDA"
             Default: =
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"TIPO_DE_PERDA")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,TIPO_DE_PERDA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "TIPO_DE_PERDA")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, TIPO_DE_PERDA)
             Required: =true
             Update: |
                 =DataCardtipo_de_perda.Selected.Result
@@ -670,7 +670,7 @@
                         false
                     );
                     
-                    Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                    Set(varDelta , Cap_Produtiva_1.Text - (DataCardquantidade_1.Text + Sum( Sum(Filter(
                             LancamentoProducao,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -680,7 +680,7 @@
                 OnSelect: =Set(varDelay_2 , true)
                 SearchFields: =["Result"]
                 SearchItems: |-
-                    =Search(Sort( ForAll(Distinct(CreateTipodePerda, TIPO_DE_PERDA), {Result: ThisRecord.Value}) , Result),DataCardtipo_de_perda.SearchText,"Result")
+                    =Search(Sort( ForAll(Distinct(CreateTipodePerda, TIPO_DE_PERDA), {Result: ThisRecord.Value}) , Result),DataCardtipo_de_perda.SearchText,Result)
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -694,10 +694,10 @@
             DataField: ="FALHA"
             Default: =ThisItem.FALHA
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"FALHA")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,FALHA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "FALHA")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, FALHA)
             Required: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
             Update: =DataCardtipo_de_falha.Selected.Result
             Visible: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
@@ -744,7 +744,7 @@
                 NoSelectionText: ="Descrição da Falha"
                 SearchFields: =["Result"]
                 SearchItems: |-
-                    =Search(Sort( ForAll(Distinct(CreateTipodePerda , LISTA_FALHAS), {Result: ThisRecord.Value}) , Result),DataCardtipo_de_falha.SearchText,"Result")
+                    =Search(Sort( ForAll(Distinct(CreateTipodePerda , LISTA_FALHAS), {Result: ThisRecord.Value}) , Result),DataCardtipo_de_falha.SearchText,Result)
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -756,10 +756,10 @@
             DataField: ="GRUPO"
             Default: =ThisItem.GRUPO
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"GRUPO")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,GRUPO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "GRUPO")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, GRUPO)
             Required: =//If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") ; true; false)
             Update: =DataCardGrupo.Selected.Result
             Visible: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
@@ -806,7 +806,7 @@
                 NoSelectionText: ="Grupo"
                 SearchFields: =["Result"]
                 SearchItems: |-
-                    =Search(Sort( ForAll(Distinct(CreateGrupo,GRUPO), {Result: ThisRecord.Value}) , Result),DataCardGrupo.SearchText,"Result")
+                    =Search(Sort( ForAll(Distinct(CreateGrupo,GRUPO), {Result: ThisRecord.Value}) , Result),DataCardGrupo.SearchText,Result)
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -818,10 +818,10 @@
             DataField: ="SUB_GRUPO"
             Default: =ThisItem.SUB_GRUPO
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"SUB_GRUPO")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,SUB_GRUPO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "SUB_GRUPO")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, SUB_GRUPO)
             Required: =//If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") ; true; false)
             Update: =DataCardSubGrupo.Selected.Result
             Visible: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
@@ -868,7 +868,7 @@
                 NoSelectionText: ="Sub Grupo"
                 SearchFields: =["Result"]
                 SearchItems: |-
-                    =Search(Sort( ForAll(Distinct(CreateSubGrupo, SUBGRUPO), {Result: ThisRecord.Value}) , Result),DataCardSubGrupo.SearchText,"Result")
+                    =Search(Sort( ForAll(Distinct(CreateSubGrupo, SUBGRUPO), {Result: ThisRecord.Value}) , Result),DataCardSubGrupo.SearchText,Result)
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -880,10 +880,10 @@
             DataField: ="COMPONENTE"
             Default: =ThisItem.COMPONENTE
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"COMPONENTE")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,COMPONENTE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "COMPONENTE")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, COMPONENTE)
             Required: =//If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") ; true; false)
             Update: =DataCardComponente.Selected.Result
             Visible: =If((DataCardtipo_de_perda.Selected.Result = "AJUSTES / REGULAGENS" Or DataCardtipo_de_perda.Selected.Result = "MANUTENÇÃO  PLANEJADA" Or DataCardtipo_de_perda.Selected.Result = "MICRO PARADA" Or DataCardtipo_de_perda.Selected.Result = "QUEBRAS" Or DataCardtipo_de_perda.Selected.Result = "SISTEMA DE TRANSPORTE" Or DataCardtipo_de_perda.Selected.Result = "VELOCIDADE DE PRODUÇÃO") , true, false)
@@ -930,7 +930,7 @@
                 NoSelectionText: ="Componente"
                 SearchFields: =["Result"]
                 SearchItems: |-
-                    =Search(Sort( ForAll(Distinct(CreateComponentes,COMPONENTES), {Result: ThisRecord.Value}) , Result),DataCardComponente.SearchText,"Result")
+                    =Search(Sort( ForAll(Distinct(CreateComponentes,COMPONENTES), {Result: ThisRecord.Value}) , Result),DataCardComponente.SearchText,Result)
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -942,10 +942,10 @@
             DataField: ="OData__x0034_M_x0027_S"
             Default: =ThisItem.'4M''S'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"OData__x0034_M_x0027_S")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,'4M''S')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "OData__x0034_M_x0027_S")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, '4M''S')
             Required: |-
                 =false
                 //true
@@ -993,7 +993,7 @@
                     =Sort( ForAll(Distinct( Filter(CreateTipodePerda, Text(DataCardtipo_de_perda.Selected.Result) in TIPO_DE_PERDA) , '4M''S' ), {Result: ThisRecord.Value}).Result , Result)//Sort( Distinct(CreateTipodePerda;'4M''S') ; Result)
                 NoSelectionText: ="4M's + D"
                 OnChange: |-
-                    =Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                    =Set(varDelta , Cap_Produtiva_1.Text - (DataCardquantidade_1.Text + Sum( Sum(Filter(
                             LancamentoProducao,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -1014,10 +1014,10 @@
             DataField: ="OBSERVACAO"
             Default: =ThisItem.OBSERVACAO
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"OBSERVACAO")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,OBSERVACAO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
-            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, "OBSERVACAO")
+            MaxLength: =DataSourceInfo([@LancamentoPerdas], DataSourceInfo.MaxLength, OBSERVACAO)
             Required: =false
             Update: =DataCardObservacao.Text
             Width: =640
@@ -1080,10 +1080,10 @@
             DataField: ="QUANTIDADE"
             Default: =ThisItem.QUANTIDADE
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"QUANTIDADE")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,QUANTIDADE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =138
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "QUANTIDADE")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, QUANTIDADE)
             Required: =true
             Update: =DataCardquantidade_1.Text
             Width: =640
@@ -1117,7 +1117,7 @@
                               Reset(DataCardquantidade_1)
                     );
                     
-                    Set(varDelta , Cap_Produtiva_1 - (DataCardquantidade_1 + Sum( Sum(Filter(
+                    Set(varDelta , Cap_Produtiva_1.Text - (DataCardquantidade_1.Text + Sum( Sum(Filter(
                             LancamentoProducao,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata_1.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio_1.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -1225,7 +1225,7 @@
             CardProd_Prev_1 As text:
                 Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =varCapacidade
+                Default: =varCapacidade.Text
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.Disabled
                 Format: =TextFormat.Number
@@ -1251,7 +1251,7 @@
             DataField: ="ID"
             Default: =ThisItem.ID
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"ID")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,ID)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -1290,7 +1290,7 @@
             DataField: ="IdEspelhoPerdas"
             Default: =If(IsBlank(ThisItem.ID),Max(Listaperdas,IdEspelhoPerdas)+5000,ThisItem.ID)
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,"IdEspelhoPerdas")
+            DisplayName: =DataSourceInfo([@LancamentoPerdas],DataSourceInfo.DisplayName,IdEspelhoPerdas)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -1359,6 +1359,7 @@
                 ZIndex: =4
 
     Gal_Producao_Maxima_1 As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtrada"
         Height: =108
         Items: =If(Formperdas.Mode <> FormMode.New , Filter(CreateMaquina , DataCardmaquina_1.Selected.Result = CAF).CAPACIDADE , Filter( CreateMaquina , DataCardmaquina_1.Selected.Result = CAF).CAPACIDADE)
         Layout: =Layout.Vertical
@@ -1392,7 +1393,7 @@
         OnTimerEnd: |-
             =Set(
                 varDelta,
-                Cap_Produtiva_1 - (DataCardquantidade_1 + Sum(
+                Cap_Produtiva_1.Text - (DataCardquantidade_1.Text + Sum(
                     Sum(
                         Filter(
                             LancamentoProducao,
@@ -1474,7 +1475,7 @@
         ZIndex: =10
 
     Prod_realizada_1 As text:
-        Default: =Sum(DataCardquantidade_1 - (Cap_Produtiva_1 - Cap_Produtiva_1))
+        Default: =Sum(DataCardquantidade_1.Text - (Cap_Produtiva_1.Text - Cap_Produtiva_1.Text))
         Height: =63
         OnChange: =Set(varDelay,true) ;
         Size: =21
@@ -1500,6 +1501,7 @@
         ZIndex: =12
 
     "BrowseGallery1_2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        '#CopilotOverlayLabel': ="Filtrada"
         FocusedBorderColor: =
         Height: =170
         Items: |-

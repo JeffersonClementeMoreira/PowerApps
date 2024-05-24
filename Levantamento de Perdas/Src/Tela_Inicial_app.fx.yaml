@@ -25,7 +25,7 @@ Tela_Inicial_app As screen:
         OnChange: =Reset(ComboBoxmaquina_ini)
         SearchFields: =["Result"]
         SearchItems: |-
-            =Search(Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result,Result),ComboBoxute_ini.SearchText,"Result")
+            =Search(Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result,Result),ComboBoxute_ini.SearchText,Result)
         SelectMultiple: =false
         Size: =21
         Width: =250
@@ -739,7 +739,7 @@ Tela_Inicial_app As screen:
 
     Total As text:
         Align: =Align.Center
-        Default: =Perda_Real_ini+Prod_Real_ini
+        Default: =Perda_Real_ini.Text+Prod_Real_ini.Text
         DisplayMode: =DisplayMode.Disabled
         Height: =Perda_Real_ini.Height
         Size: =21
@@ -1133,7 +1133,7 @@ Tela_Inicial_app As screen:
 
     Perdaimpact_ini As text:
         Align: =Align.Center
-        Default: =Perda_Real_ini - Perdanaoimpact_ini
+        Default: =Perda_Real_ini.Text - Perdanaoimpact_ini.Text
         DisplayMode: =DisplayMode.Disabled
         Height: =Perda_Real_ini.Height
         Size: =21
@@ -1155,7 +1155,7 @@ Tela_Inicial_app As screen:
 
     OEE_ini As text:
         Align: =Align.Center
-        Default: =Round(Prod_Real_ini / If(Perdaimpact_ini.Text = "0", Prod_Real_ini.Text , Perdaimpact_ini+Prod_Real_ini.Text) , 4) * 100 &"%"
+        Default: =Round(Prod_Real_ini.Text / If(Perdaimpact_ini.Text = "0", Prod_Real_ini.Text , Perdaimpact_ini.Text+Prod_Real_ini.Text) , 4) * 100 &"%"
         DisplayMode: =DisplayMode.Disabled
         Height: =Perda_Real_ini.Height
         Size: =21

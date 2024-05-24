@@ -3,6 +3,7 @@
     ImagePosition: =ImagePosition.Fill
 
     "BrowseGallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        '#CopilotOverlayLabel': ="Filtrada"
         FocusedBorderColor: =
         Height: =170
         Items: |-
@@ -154,10 +155,10 @@
             DataField: ="Title"
             Default: =varIDpai
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"Title")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,IDPAI)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "Title")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, IDPAI)
             Required: =true
             Update: =DataCardidpai.Text
             Visible: =false
@@ -228,10 +229,10 @@
             DataField: ="UTE"
             Default: =ThisItem.UTE
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"UTE")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,UTE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "UTE")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, UTE)
             Required: =true
             Update: =DataCardute.Selected.Result
             Visible: =false
@@ -299,10 +300,10 @@
             DataField: ="SETOR"
             Default: =ThisItem.SETOR
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"SETOR")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,SETOR)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "SETOR")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, SETOR)
             Required: =true
             Update: =DataCardsetor.Selected.Result
             Width: =640
@@ -364,10 +365,10 @@
             DataField: ="OPERA_x00c7__x00c3_O"
             Default: =ThisItem.OPERACAO
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"OPERA_x00c7__x00c3_O")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,OPERACAO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "OPERA_x00c7__x00c3_O")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, OPERACAO)
             Required: =true
             Update: =DataCardoperacao.Selected.Result
             Width: =640
@@ -429,10 +430,10 @@
             DataField: ="MAQUINA"
             Default: =ThisItem.MAQUINA
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"MAQUINA")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,MAQUINA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "MAQUINA")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, MAQUINA)
             Required: =true
             Update: =DataCardmaquina.Selected.Result
             Width: =640
@@ -478,7 +479,7 @@
                 Items: |-
                     =Sort(ForAll(Distinct( Filter(CreateMaquina, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE, Text(DataCardoperacao.Selected.Result) in OPERACAO) , CAF), {Result: ThisRecord.Value}).Result , Result) //Distinct(CreateMaquina;CAF)
                 NoSelectionText: ="CAF Máquina - Somente Números"
-                OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , CardProd_Prev - DataCardquantidade) ; Reset(DataCardquantidade) ; Set(varDelay,true) ; Reset(DataCardtipo_de_peca)
+                OnChange: =Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , CardProd_Prev.Text - DataCardquantidade.Text) ; Reset(DataCardquantidade) ; Set(varDelay,true) ; Reset(DataCardtipo_de_peca)
                 SearchFields: =["Result"]
                 SearchItems: =[]
                 SelectMultiple: =false
@@ -495,10 +496,10 @@
             DataField: ="DATA"
             Default: =ThisItem.DATA
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"DATA")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,DATA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "DATA")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, DATA)
             Required: =true
             Update: =DataCarddata.SelectedDate
             Width: =640
@@ -550,10 +551,10 @@
             DataField: ="HORA_INICIO"
             Default: =
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"HORA_INICIO")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,HORA_INICIO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =75
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "HORA_INICIO")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, HORA_INICIO)
             Required: =true
             Update: =DataCardhora_inicio.Selected.Result
             Width: =640
@@ -606,7 +607,7 @@
                     Set(varDelay , true);
                 SearchFields: =["Result"]
                 SearchItems: |-
-                    =Search(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}),DataCardhora_inicio.SearchText,"Result")
+                    =Search(ForAll(Distinct(CreateHora,Hora), {Result: ThisRecord.Value}),DataCardhora_inicio.SearchText,Result)
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -619,10 +620,10 @@
             DataField: ="COLABORADOR"
             Default: =ThisItem.COLABORADOR
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"COLABORADOR")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,COLABORADOR)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "COLABORADOR")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, COLABORADOR)
             Required: =true
             Update: =DataCardcolaborador.Text
             Width: =640
@@ -692,10 +693,10 @@
             DataField: ="TIPO_DE_PECA"
             Default: =ThisItem.TIPO_DE_PECA
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"TIPO_DE_PECA")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,TIPO_DE_PECA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "TIPO_DE_PECA")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, TIPO_DE_PECA)
             Required: =true
             Update: =DataCardtipo_de_peca.Selected.Result
             Width: =640
@@ -742,7 +743,7 @@
                 OnSelect: |-
                     =ClearCollect( listapeças , Sort( ForAll(Distinct( Filter(CreatePeca, Text(DataCardsetor.Selected.Result) in SETOR , Text(DataCardute.Selected.Result) in UTE) , PECA), {Result: ThisRecord.Value}).Result , Result))
                 SearchFields: =["Result"]
-                SearchItems: =Search(listapeças,DataCardtipo_de_peca.SearchText,"Result")
+                SearchItems: =Search(listapeças,DataCardtipo_de_peca.SearchText,Result)
                 SelectMultiple: =false
                 Size: =21
                 Width: =Parent.Width - 60
@@ -757,10 +758,10 @@
             DataField: ="QUANTIDADE"
             Default: =ThisItem.QUANTIDADE
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"QUANTIDADE")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,QUANTIDADE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =178
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "QUANTIDADE")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, QUANTIDADE)
             Required: =true
             Update: =DataCardquantidade.Text
             Width: =640
@@ -790,7 +791,7 @@
                           Value(DataCardquantidade.Text) <> RoundDown(Value(DataCardquantidade.Text),0),
                               Notify("Favor digitar apenas números");
                               Reset(DataCardquantidade)
-                    ); Set(varDelta , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - (DataCardquantidade + Sum( Sum(Filter(
+                    ); Set(varDelta , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - (DataCardquantidade.Text + Sum( Sum(Filter(
                             LancamentoProducao,
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -798,7 +799,7 @@
                             ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                         ).QUANTIDADE , QUANTIDADE)))) ;
                     
-                    Set(varprod_realizada , Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))) ;
+                    Set(varprod_realizada , Sum(DataCardquantidade.Text - (Cap_Produtiva.Text - Cap_Produtiva.Text))) ;
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -917,7 +918,7 @@
             DataField: ="ID"
             Default: =ThisItem.ID
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"ID")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,ID)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -956,7 +957,7 @@
             DataField: ="IDEspelho"
             Default: =If(IsBlank(ThisItem.ID),Max(Listaproducao,IDEspelho)+5000,ThisItem.ID)
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"IDEspelho")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,IDEspelho)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -1028,10 +1029,10 @@
             DataField: ="CAPACIDADE"
             Default: =ThisItem.CAPACIDADE
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"CAPACIDADE")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,CAPACIDADE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, "CAPACIDADE")
+            MaxLength: =DataSourceInfo([@LancamentoProducao], DataSourceInfo.MaxLength, CAPACIDADE)
             Required: =false
             Update: =DataCardValue15.Text
             Visible: =false
@@ -1099,6 +1100,7 @@
                 ZIndex: =4
 
     Gal_Producao_Maxima As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtrada"
         Height: =108
         Items: |
             =If('Form Produção'.Mode <> FormMode.New , Filter(CreateMaquina , DataCardmaquina.Selected.Result = CAF).CAPACIDADE , Filter( CreateMaquina , DataCardmaquina.Selected.Result = CAF).CAPACIDADE)
@@ -1127,7 +1129,7 @@
         Duration: =1500
         Height: =70
         OnTimerEnd: |-
-            =Set(varDelta , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - (DataCardquantidade + Sum( Sum(Filter(
+            =Set(varDelta , Last(Filter(CreateMaquina , (CAF = varmaquina))).CAPACIDADE - (DataCardquantidade.Text + Sum( Sum(Filter(
                     LancamentoProducao,
                     ((MAQUINA = varmaquina)  && (DATA = Text(DataCarddata.SelectedDate)) && (HORA_INICIO = DataCardhora_inicio.Selected.Result)) 
                 ).QUANTIDADE , QUANTIDADE) + Sum(Filter(
@@ -1138,7 +1140,7 @@
                 
             Set(varDelay,false) ;
             
-            Set(varprod_realizada , Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva)))
+            Set(varprod_realizada , Sum(DataCardquantidade.Text - (Cap_Produtiva.Text - Cap_Produtiva.Text)))
         Repeat: =10
         Reset: =true
         Start: =varDelay
@@ -1222,7 +1224,7 @@
 
     Prod_realizada As text:
         Align: =Align.Center
-        Default: =Sum(DataCardquantidade - (Cap_Produtiva - Cap_Produtiva))
+        Default: =Sum(DataCardquantidade.Text - (Cap_Produtiva.Text - Cap_Produtiva.Text))
         DisplayMode: =DisplayMode.View
         Height: =63
         OnChange: =Set(varDelay,true) ;

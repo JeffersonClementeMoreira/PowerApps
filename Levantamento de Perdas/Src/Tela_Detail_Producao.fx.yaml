@@ -27,7 +27,7 @@
         Height: =88
         Icon: =Icon.Edit
         OnSelect: |
-            =EditForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None) ; Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , CardProd_Prev - DataCardquantidade);
+            =EditForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None) ; Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , CardProd_Prev.Text - DataCardquantidade.Text);
             Set(varselect , 0)
         PaddingBottom: =24
         PaddingLeft: =24
@@ -81,7 +81,7 @@
             DataField: ="Title"
             Default: =ThisItem.UTE
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"UTE")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,UTE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
@@ -125,7 +125,7 @@
             DataField: ="DATA"
             Default: =ThisItem.DATA
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"DATA")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,DATA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -169,7 +169,7 @@
             DataField: ="OPERA_x00c7__x00c3_O"
             Default: =ThisItem.HORA_INICIO
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"HORA_INICIO")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,HORA_INICIO)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -257,7 +257,7 @@
             DataField: ="COLABORADOR"
             Default: =ThisItem.COLABORADOR
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"COLABORADOR")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,COLABORADOR)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -301,7 +301,7 @@
             DataField: ="MAQUINA"
             Default: =ThisItem.MAQUINA
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"MAQUINA")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,MAQUINA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -345,7 +345,7 @@
             DataField: ="TIPO_DE_PECA"
             Default: =ThisItem.TIPO_DE_PECA
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"TIPO_DE_PECA")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,TIPO_DE_PECA)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -389,7 +389,7 @@
             DataField: ="QUANTIDADE"
             Default: =ThisItem.QUANTIDADE
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"QUANTIDADE")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,QUANTIDADE)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -433,7 +433,7 @@
             DataField: ="SETOR"
             Default: =ThisItem.SETOR
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"SETOR")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,SETOR)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -474,7 +474,7 @@
             DataField: ="ID"
             Default: =ThisItem.ID
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,"ID")
+            DisplayName: =DataSourceInfo([@LancamentoProducao],DataSourceInfo.DisplayName,ID)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -513,7 +513,7 @@
             DataField: ="ID_Origem"
             Default: =ThisItem.ID_Origem
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@LancamentoProducao_BD],DataSourceInfo.DisplayName,"ID_Origem")
+            DisplayName: =DataSourceInfo([@LancamentoProducao_BD],DataSourceInfo.DisplayName,ID_Origem)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -547,6 +547,7 @@
                 ZIndex: =2
 
     Gal_Capacidade_detail As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtrada"
         Height: =159
         Items: |
             =Filter(CreateMaquina , DataCardValue6.Text = CAF)
