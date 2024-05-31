@@ -37,11 +37,13 @@ AcertoPerdas As screen:
         Height: =518
         Items: |-
             =Sort(
-                Filter(        
-                        Sort('Diário de Bordo Máquinas',ID,SortOrder.Descending), 
-                         StartsWith(MÁQUINA,Metrologista_Atividade_3.Selected.Value) Or IsBlank(Metrologista_Atividade_3.Selected.Value),
-                          StartsWith(TIPO,Metrologista_Atividade_4.Selected.Value) Or IsBlank(Metrologista_Atividade_4.Selected.Value)),
-                    Criado,
+                Filter(   
+                        LancamentoProducao,
+                            StartsWith(DATA,DatePicker2_1.SelectedDate) Or IsBlank(DatePicker2_1.SelectedDate),
+                            StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
+                            StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
+                            StartsWith(OPERACAO,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
+                    HORA_INICIO,
                 SortOrder.Descending
             )
         Layout: =Layout.Vertical
