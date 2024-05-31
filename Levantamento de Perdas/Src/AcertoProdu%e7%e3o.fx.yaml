@@ -35,7 +35,17 @@ AcertoProdução As screen:
         BorderThickness: =2
         DelayItemLoading: =true
         Height: =518
-        Items: =LancamentoProducao
+        Items: |-
+            =Sort(
+                Filter(   
+                        LancamentoProducao,
+                            StartsWith(DATA,DatePicker2.SelectedDate) Or IsBlank(DatePicker2.SelectedDate),
+                            StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
+                            StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value),
+                            StartsWith(OPERACAO,SelectOp.Selected.Value) Or IsBlank(SelectOp.Selected.Value)),
+                    HORA_INICIO,
+                SortOrder.Descending
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =28
