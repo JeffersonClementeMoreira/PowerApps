@@ -13,7 +13,7 @@ AcertoPerdas As screen:
         FontWeight: =FontWeight.Bold
         Height: =37
         Size: =24
-        Text: ="Acerto Produção"
+        Text: ="Acerto Perdas"
         Width: =317
         X: =464
         ZIndex: =2
@@ -27,7 +27,7 @@ AcertoPerdas As screen:
         OnSelect: |
             =Navigate(Tela_Inicial_app)
         Width: =45
-        X: =173
+        X: =109
         Y: =60
         ZIndex: =3
 
@@ -42,7 +42,7 @@ AcertoPerdas As screen:
                             StartsWith(DATA,Data2.Text) Or IsBlank(Data2.Text),
                             StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
                             StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
-                            StartsWith(OPERACAO,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
+                            StartsWith(TIPO_DE_PERDA,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
                     HORA_INICIO,
                 SortOrder.Ascending
             )
@@ -97,7 +97,7 @@ AcertoPerdas As screen:
             Align: =Align.Center
             Height: =44
             OnSelect: =Select(Parent)
-            Size: =9
+            Size: =10
             Text: =ThisItem.TIPO_DE_PERDA
             Width: =121
             X: =372
@@ -219,17 +219,17 @@ AcertoPerdas As screen:
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoProducao, UTE = SelectUte_1.Selected.Value),MAQUINA)
+        Items: =Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),MAQUINA)
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
-        SearchFields: =[""]
-        SearchItems: =[]
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),MAQUINA),SelectCaf_1.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =188
-        X: =635
+        X: =571
         Y: =70
         ZIndex: =13
 
@@ -239,17 +239,17 @@ AcertoPerdas As screen:
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Sort(Distinct(LancamentoProducao,UTE),Value)
+        Items: =Sort(Distinct(LancamentoPerdas,UTE),Value)
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =[]
+        SearchItems: =Search(Sort(Distinct(LancamentoPerdas,UTE),Value),SelectUte_1.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =138
-        X: =462
+        X: =398
         Y: =70
         ZIndex: =14
 
@@ -257,7 +257,7 @@ AcertoPerdas As screen:
         Height: =35
         Size: =13
         Width: =175
-        X: =245
+        X: =181
         Y: =70
         ZIndex: =15
 
@@ -272,12 +272,12 @@ AcertoPerdas As screen:
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
-        SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),OPERACAO),SelectOp_1.SearchText,Value)
+        SearchFields: =[""]
+        SearchItems: =[]
         SelectMultiple: =false
         Size: =12
-        Width: =154
-        X: =860
+        Width: =314
+        X: =796
         Y: =70
         ZIndex: =16
 
@@ -297,8 +297,8 @@ AcertoPerdas As screen:
         PaddingRight: =5
         PaddingTop: =5
         Width: =44
-        X: =1042
-        Y: =62
+        X: =1147
+        Y: =68
         ZIndex: =17
 
     Label6_28 As label:
@@ -307,7 +307,7 @@ AcertoPerdas As screen:
         Size: =15
         Text: ="Data"
         Width: =77
-        X: =245
+        X: =181
         Y: =46
         ZIndex: =18
 
@@ -317,7 +317,7 @@ AcertoPerdas As screen:
         Size: =15
         Text: ="Ute"
         Width: =77
-        X: =462
+        X: =398
         Y: =42
         ZIndex: =19
 
@@ -327,7 +327,7 @@ AcertoPerdas As screen:
         Size: =14
         Text: ="CAF"
         Width: =77
-        X: =635
+        X: =571
         Y: =43
         ZIndex: =20
 
@@ -337,102 +337,9 @@ AcertoPerdas As screen:
         Size: =14
         Text: ="Tipo de Perda"
         Width: =154
-        X: =860
+        X: =796
         Y: =43
         ZIndex: =21
-
-    Gallery1_3 As gallery.galleryVertical:
-        BorderThickness: =2
-        DelayItemLoading: =true
-        Height: =518
-        Items: =LancamentoProducao_BD
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =28
-        Width: =617
-        X: =661
-        Y: =186
-        ZIndex: =22
-
-        Label7_18 As label:
-            Align: =Align.Center
-            Height: =26
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.DATA
-            Width: =105
-            X: =7
-            ZIndex: =1
-
-        Rectangle2_3 As rectangle:
-            Height: =2
-            OnSelect: =Select(Parent)
-            Width: =607
-            Y: =26
-            ZIndex: =2
-
-        Label7_19 As label:
-            Align: =Align.Center
-            Height: =26
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: |
-                =ThisItem.UTE
-            Width: =63
-            X: =135
-            ZIndex: =3
-
-        Label7_20 As label:
-            Align: =Align.Center
-            Height: =26
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: |
-                =ThisItem.MAQUINA
-            Width: =135
-            X: =204
-            Y: =2
-            ZIndex: =4
-
-        Label7_21 As label:
-            Align: =Align.Center
-            Height: =26
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.HORA_INICIO
-            Width: =69
-            X: =344
-            ZIndex: =5
-
-        Label7_22 As label:
-            Align: =Align.Center
-            Height: =26
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.OPERAÇÃO
-            Width: =69
-            X: =425
-            ZIndex: =6
-
-        Label7_23 As label:
-            Align: =Align.Center
-            Height: =26
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.QUANTIDADE
-            Width: =69
-            X: =495
-            Y: =2
-            ZIndex: =7
-
-        Icon4_3 As icon.OpenInNewWindow:
-            Height: =20
-            Icon: =Icon.Trash
-            OnSelect: =Remove(LancamentoProducao_BD,Gallery1_3.Selected);
-            Width: =30
-            X: =555
-            Y: =4
-            ZIndex: =8
 
     Label6_32 As label:
         Align: =Align.Center
@@ -517,6 +424,162 @@ AcertoPerdas As screen:
         Height: =37
         Size: =15
         Text: =DatePicker2_1.SelectedDate
+        Visible: =false
         Width: =139
         ZIndex: =31
+
+    Gallery1_3 As gallery.galleryVertical:
+        BorderThickness: =2
+        DelayItemLoading: =true
+        Height: =518
+        Items: |-
+            =Sort(
+                Filter(   
+                        LancamentoPerdas_BD,
+                            StartsWith(Data,Data2.Text) Or IsBlank(Data2.Text),
+                            StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
+                            StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
+                            StartsWith(TIPO_DE_PERDA,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
+                    HORA_INICIO,
+                SortOrder.Ascending
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =46
+        Width: =617
+        X: =662
+        Y: =186
+        ZIndex: =32
+
+        Label7_18 As label:
+            Align: =Align.Center
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Data
+            Width: =105
+            ZIndex: =1
+
+        Rectangle2_3 As rectangle:
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =607
+            Y: =44
+            ZIndex: =2
+
+        Label7_19 As label:
+            Align: =Align.Center
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |
+                =ThisItem.UTE
+            Width: =63
+            X: =121
+            ZIndex: =3
+
+        Label7_20 As label:
+            Align: =Align.Center
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: |
+                =ThisItem.MAQUINA
+            Width: =117
+            X: =185
+            Y: =2
+            ZIndex: =4
+
+        Label7_22 As label:
+            Align: =Align.Center
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.TIPO_DE_PERDA
+            Width: =121
+            X: =372
+            ZIndex: =6
+
+        Label7_23 As label:
+            Align: =Align.Center
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.QUANTIDADE
+            Width: =69
+            X: =488
+            Y: =2
+            ZIndex: =7
+
+        Icon4_3 As icon.OpenInNewWindow:
+            Height: =30
+            Icon: =Icon.Trash
+            OnSelect: =Remove(LancamentoPerdas_BD,Gallery1_3.Selected);
+            Width: =50
+            X: =550
+            Y: =7
+            ZIndex: =8
+
+        Label7_21 As label:
+            Align: =Align.Center
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |
+                =ThisItem.HORA_INICIO
+            Width: =57
+            X: =307
+            ZIndex: =9
+
+    Icon1_51 As icon.Home:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =1
+        Height: =45
+        Icon: =Icon.BackArrow
+        OnSelect: |
+            =Back()
+        Width: =45
+        ZIndex: =33
+
+    POPUP_PERDA As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =37
+
+        Rectangle4_1 As rectangle:
+            Height: =448
+            Visible: =ALARME_PERDAS
+            Width: =877
+            X: =202
+            Y: =199
+            ZIndex: =34
+
+        Label13_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =205
+            Size: =35
+            Text: ="PARA ACERTO DAS PERDAS É OBRIGATÓRIO EXCLUIR DO APLICATIVO E DO POWER BI"
+            Visible: =ALARME_PERDAS
+            Width: =690
+            X: =301
+            Y: =228
+            ZIndex: =35
+
+        Icon1_53 As icon.Home:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =90
+            Icon: =Icon.CancelBadge
+            OnSelect: |
+                =Set(ALARME_PERDAS,false)
+            Visible: =ALARME_PERDAS
+            Width: =100
+            X: =602
+            Y: =477
+            ZIndex: =36
 

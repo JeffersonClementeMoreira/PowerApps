@@ -79,8 +79,14 @@ Tela_Ini_2915 As screen:
         Align: =Align.Right
         Height: =30
         OnSelect: |-
-            =Navigate(Tela_Inicial_Producao,ScreenTransition.None);
-            Set(vartela , "Tela_Ini_2915");
+            =//Navigate(Tela_Inicial_Producao;ScreenTransition.None);;
+            //Set(vartela ; "Tela_Ini_2915");;
+            Navigate(AcertoProdução);
+            Reset(DatePicker2);
+            Reset(SelectUte);
+            Reset(SelectCaf);
+            Reset(SelectOp);
+            Set(ALARME_PROD,true)
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =8
@@ -105,8 +111,14 @@ Tela_Ini_2915 As screen:
         Align: =Align.Right
         Height: =32
         OnSelect: |-
-            =Navigate(Tela_Inicial_Perdas,ScreenTransition.None);
-            Set(vartela , "Tela_Ini_2915");
+            =//Navigate(Tela_Inicial_Perdas;ScreenTransition.None);;
+            //Set(vartela ; "Tela_Ini_2915");;
+            Navigate(AcertoPerdas);
+            Reset(DatePicker2_1);
+            Reset(SelectUte_1);
+            Reset(SelectCaf_1);
+            Reset(SelectOp_1);
+            Set(ALARME_PERDAS,true)
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =25
