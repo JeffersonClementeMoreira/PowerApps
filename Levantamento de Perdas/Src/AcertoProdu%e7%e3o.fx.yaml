@@ -37,14 +37,14 @@ AcertoProdução As screen:
         Height: =518
         Items: |-
             =Sort(
-                Filter(   
+                Filter(
                         LancamentoProducao,
-                            StartsWith(DATA,DatePicker2.SelectedDate) Or IsBlank(DatePicker2.SelectedDate),
+                            StartsWith(DATA,Data.Text) Or IsBlank(Data.Text),
                             StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
                             StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value),
                             StartsWith(OPERACAO,SelectOp.Selected.Value) Or IsBlank(SelectOp.Selected.Value)),
                     HORA_INICIO,
-                SortOrder.Descending
+                SortOrder.Ascending
             )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -345,7 +345,17 @@ AcertoProdução As screen:
         BorderThickness: =2
         DelayItemLoading: =true
         Height: =518
-        Items: =LancamentoProducao_BD
+        Items: |-
+            =Sort(
+                Filter(
+                        LancamentoProducao_BD,
+                            StartsWith(DATA,Data.Text) Or IsBlank(Data.Text),
+                            StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
+                            StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value),
+                            StartsWith(OPERAÇÃO,SelectOp.Selected.Value) Or IsBlank(SelectOp.Selected.Value)),
+                    HORA_INICIO,
+                SortOrder.Ascending
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =28
@@ -512,4 +522,14 @@ AcertoProdução As screen:
         X: =1174
         Y: =157
         ZIndex: =30
+
+    Data As label:
+        Align: =Align.Center
+        Height: =45
+        Size: =15
+        Text: =DatePicker2.SelectedDate
+        Width: =125
+        X: =1153
+        Y: =60
+        ZIndex: =31
 
