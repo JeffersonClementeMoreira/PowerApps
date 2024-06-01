@@ -26,6 +26,7 @@ AcertoPerdas As screen:
         Icon: =Icon.Home
         OnSelect: |
             =Navigate(Tela_Inicial_app)
+        Tooltip: ="Menu"
         Width: =45
         X: =109
         Y: =60
@@ -118,6 +119,7 @@ AcertoPerdas As screen:
             Height: =30
             Icon: =Icon.Trash
             OnSelect: =Remove(LancamentoPerdas,Gallery1_2.Selected);
+            Tooltip: ="Deletar"
             Width: =50
             X: =550
             Y: =7
@@ -207,9 +209,9 @@ AcertoPerdas As screen:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Height: =25
-        Text: ="QTD"
-        Width: =65
-        X: =523
+        Text: ="QTD."
+        Width: =71
+        X: =520
         Y: =157
         ZIndex: =12
 
@@ -296,6 +298,7 @@ AcertoPerdas As screen:
         PaddingLeft: =5
         PaddingRight: =5
         PaddingTop: =5
+        Tooltip: ="Limpar Filtros"
         Width: =44
         X: =1147
         Y: =68
@@ -539,6 +542,7 @@ AcertoPerdas As screen:
         Icon: =Icon.BackArrow
         OnSelect: |
             =Back()
+        Tooltip: ="Voltar"
         Width: =45
         ZIndex: =33
 
@@ -577,6 +581,7 @@ AcertoPerdas As screen:
             Icon: =Icon.CancelBadge
             OnSelect: |
                 =Set(ALARME_PERDAS,false)
+            Tooltip: ="Fechar"
             Visible: =ALARME_PERDAS
             Width: =100
             X: =602

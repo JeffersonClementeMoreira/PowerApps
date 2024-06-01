@@ -26,8 +26,9 @@ AcertoProdução As screen:
         Icon: =Icon.Home
         OnSelect: |
             =Navigate(Tela_Inicial_app)
+        Tooltip: ="Menu"
         Width: =45
-        X: =173
+        X: =292
         Y: =60
         ZIndex: =3
 
@@ -41,8 +42,7 @@ AcertoProdução As screen:
                         LancamentoProducao,
                             StartsWith(DATA,Data.Text) Or IsBlank(Data.Text),
                             StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
-                            StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value),
-                            StartsWith(OPERACAO,SelectOp.Selected.Value) Or IsBlank(SelectOp.Selected.Value)),
+                            StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value)),
                     HORA_INICIO,
                 SortOrder.Ascending
             )
@@ -130,6 +130,7 @@ AcertoProdução As screen:
             Height: =20
             Icon: =Icon.Trash
             OnSelect: =Remove(LancamentoProducao,Gallery1.Selected);
+            Tooltip: ="Deletar"
             Width: =30
             X: =555
             Y: =4
@@ -230,7 +231,7 @@ AcertoProdução As screen:
         SelectMultiple: =false
         Size: =12
         Width: =188
-        X: =635
+        X: =754
         Y: =70
         ZIndex: =13
 
@@ -250,7 +251,7 @@ AcertoProdução As screen:
         SelectMultiple: =false
         Size: =12
         Width: =138
-        X: =462
+        X: =581
         Y: =70
         ZIndex: =14
 
@@ -258,29 +259,9 @@ AcertoProdução As screen:
         Height: =35
         Size: =13
         Width: =175
-        X: =245
+        X: =364
         Y: =70
         ZIndex: =15
-
-    SelectOp As combobox:
-        BorderThickness: =1
-        DisplayFields: =["Value"]
-        Height: =35
-        HoverFill: =RGBA(0, 0, 0, 0)
-        IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoProducao, MAQUINA = SelectCaf.Selected.Value),OPERACAO)
-        PaddingBottom: =2
-        PaddingLeft: =10
-        PaddingRight: =10
-        PaddingTop: =2
-        SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoProducao, MAQUINA = SelectCaf.Selected.Value),OPERACAO),SelectOp.SearchText,Value)
-        SelectMultiple: =false
-        Size: =12
-        Width: =154
-        X: =860
-        Y: =70
-        ZIndex: =16
 
     Icon1_36 As icon.Home:
         BorderColor: =RGBA(255, 255, 255, 1)
@@ -288,17 +269,18 @@ AcertoProdução As screen:
         FocusedBorderThickness: =1
         Height: =43
         Icon: =Icon.Erase
-        OnSelect: |
+        OnSelect: |+
             =Reset(DatePicker2);
             Reset(SelectUte);
-            Reset(SelectCaf);
-            Reset(SelectOp)
+            Reset(SelectCaf)
+            
         PaddingBottom: =5
         PaddingLeft: =5
         PaddingRight: =5
         PaddingTop: =5
+        Tooltip: ="Limpar filtros"
         Width: =44
-        X: =1042
+        X: =965
         Y: =62
         ZIndex: =17
 
@@ -308,17 +290,17 @@ AcertoProdução As screen:
         Size: =15
         Text: ="Data"
         Width: =77
-        X: =245
+        X: =364
         Y: =46
         ZIndex: =18
 
     Label6_10 As label:
         Color: =RGBA(255, 255, 255, 1)
         Height: =25
-        Size: =15
-        Text: ="Ute"
+        Size: =14
+        Text: ="UTE"
         Width: =77
-        X: =462
+        X: =581
         Y: =42
         ZIndex: =19
 
@@ -328,19 +310,9 @@ AcertoProdução As screen:
         Size: =14
         Text: ="CAF"
         Width: =77
-        X: =635
+        X: =754
         Y: =43
         ZIndex: =20
-
-    Label6_12 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =25
-        Size: =14
-        Text: ="OP."
-        Width: =77
-        X: =860
-        Y: =43
-        ZIndex: =21
 
     Gallery1_1 As gallery.galleryVertical:
         BorderThickness: =2
@@ -352,8 +324,7 @@ AcertoProdução As screen:
                         LancamentoProducao_BD,
                             StartsWith(DATA,Data.Text) Or IsBlank(Data.Text),
                             StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
-                            StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value),
-                            StartsWith(OPERAÇÃO,SelectOp.Selected.Value) Or IsBlank(SelectOp.Selected.Value)),
+                            StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value)),
                     HORA_INICIO,
                 SortOrder.Ascending
             )
@@ -544,6 +515,7 @@ AcertoProdução As screen:
         Icon: =Icon.BackArrow
         OnSelect: |
             =Back()
+        Tooltip: ="Voltar"
         Width: =45
         ZIndex: =32
 
@@ -582,6 +554,7 @@ AcertoProdução As screen:
             Icon: =Icon.CancelBadge
             OnSelect: |
                 =Set(ALARME_PROD,false)
+            Tooltip: ="Fechar"
             Visible: =ALARME_PROD
             Width: =100
             X: =602
