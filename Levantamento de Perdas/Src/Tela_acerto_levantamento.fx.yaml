@@ -8357,6 +8357,7 @@
             Navigate(AcertoProdução);
             Reset(DatePicker2);
             Reset(SelectUte);
+            Reset(SelectSetor);
             Reset(SelectCaf);
             Set(ALARME_PROD,true)
         PaddingBottom: =0
@@ -8388,6 +8389,7 @@
             Reset(SelectUte_1);
             Reset(SelectCaf_1);
             Reset(SelectOp_1);
+            Reset(SelectSetor2);
             Set(ALARME_PERDAS,true)
         PaddingBottom: =0
         PaddingLeft: =0

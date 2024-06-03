@@ -28,7 +28,7 @@ AcertoProdução As screen:
             =Navigate(Tela_Inicial_app)
         Tooltip: ="Menu"
         Width: =45
-        X: =292
+        X: =152
         Y: =60
         ZIndex: =3
 
@@ -221,18 +221,18 @@ AcertoProdução As screen:
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoProducao, UTE = SelectUte.Selected.Value),MAQUINA)
+        Items: =Distinct(Filter(LancamentoProducao, SETOR = SelectSetor.Selected.Value),MAQUINA)
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
-        SearchFields: =[""]
-        SearchItems: =[]
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct(Filter(LancamentoProducao, SETOR = SelectSetor.Selected.Value),MAQUINA),SelectCaf.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =188
-        X: =754
-        Y: =70
+        X: =949
+        Y: =69
         ZIndex: =13
 
     SelectUte As combobox:
@@ -251,7 +251,7 @@ AcertoProdução As screen:
         SelectMultiple: =false
         Size: =12
         Width: =138
-        X: =581
+        X: =441
         Y: =70
         ZIndex: =14
 
@@ -259,7 +259,7 @@ AcertoProdução As screen:
         Height: =35
         Size: =13
         Width: =175
-        X: =364
+        X: =224
         Y: =70
         ZIndex: =15
 
@@ -272,6 +272,7 @@ AcertoProdução As screen:
         OnSelect: |+
             =Reset(DatePicker2);
             Reset(SelectUte);
+            Reset(SelectSetor);
             Reset(SelectCaf)
             
         PaddingBottom: =5
@@ -280,17 +281,17 @@ AcertoProdução As screen:
         PaddingTop: =5
         Tooltip: ="Limpar filtros"
         Width: =44
-        X: =965
-        Y: =62
+        X: =1160
+        Y: =61
         ZIndex: =17
 
     Label6_9 As label:
         Color: =RGBA(255, 255, 255, 1)
         Height: =25
-        Size: =15
-        Text: ="Data"
+        Size: =14
+        Text: ="DATA"
         Width: =77
-        X: =364
+        X: =224
         Y: =46
         ZIndex: =18
 
@@ -300,7 +301,7 @@ AcertoProdução As screen:
         Size: =14
         Text: ="UTE"
         Width: =77
-        X: =581
+        X: =441
         Y: =42
         ZIndex: =19
 
@@ -310,8 +311,8 @@ AcertoProdução As screen:
         Size: =14
         Text: ="CAF"
         Width: =77
-        X: =754
-        Y: =43
+        X: =949
+        Y: =42
         ZIndex: =20
 
     Gallery1_1 As gallery.galleryVertical:
@@ -503,8 +504,7 @@ AcertoProdução As screen:
         Text: =DatePicker2.SelectedDate
         Visible: =false
         Width: =125
-        X: =1153
-        Y: =60
+        X: =1175
         ZIndex: =31
 
     Icon1_50 As icon.Home:
@@ -518,6 +518,26 @@ AcertoProdução As screen:
         Tooltip: ="Voltar"
         Width: =45
         ZIndex: =32
+
+    SelectSetor As combobox:
+        BorderThickness: =1
+        DisplayFields: =["Value"]
+        Height: =35
+        HoverFill: =RGBA(0, 0, 0, 0)
+        IsSearchable: =false
+        Items: =Distinct(Filter(LancamentoProducao, UTE = SelectUte.Selected.Value),SETOR)
+        PaddingBottom: =2
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =2
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct(Filter(LancamentoProducao, UTE = SelectUte.Selected.Value),SETOR),SelectSetor.SearchText,Value)
+        SelectMultiple: =false
+        Size: =12
+        Width: =314
+        X: =609
+        Y: =69
+        ZIndex: =36
 
     POPUP_PROD As group:
         Height: =5
@@ -560,4 +580,14 @@ AcertoProdução As screen:
             X: =602
             Y: =477
             ZIndex: =35
+
+    Label6_12 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =14
+        Text: ="SETOR"
+        Width: =77
+        X: =609
+        Y: =42
+        ZIndex: =37
 
