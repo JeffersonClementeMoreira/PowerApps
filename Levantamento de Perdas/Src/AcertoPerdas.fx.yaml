@@ -221,17 +221,17 @@ AcertoPerdas As screen:
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),MAQUINA)
+        Items: =Distinct(Filter(LancamentoPerdas, SETOR = SelectSetor2.Selected.Value),MAQUINA)
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),MAQUINA),SelectCaf_1.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, SETOR = SelectSetor2.Selected.Value),MAQUINA),SelectCaf_1.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =188
-        X: =445
+        X: =718
         Y: =70
         ZIndex: =13
 
@@ -269,13 +269,13 @@ AcertoPerdas As screen:
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoPerdas, SETOR = SelectSetor2.Selected.Value),TIPO_DE_PERDA)
+        Items: =Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),TIPO_DE_PERDA)
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, SETOR = SelectSetor2.Selected.Value),TIPO_DE_PERDA),SelectOp_1.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),TIPO_DE_PERDA),SelectOp_1.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =296
@@ -331,7 +331,7 @@ AcertoPerdas As screen:
         Size: =14
         Text: ="CAF"
         Width: =77
-        X: =445
+        X: =718
         Y: =43
         ZIndex: =20
 
@@ -553,18 +553,18 @@ AcertoPerdas As screen:
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),SETOR)
+        Items: =Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),SETOR)
         PaddingBottom: =2
-        PaddingLeft: =10
+        PaddingLeft: =0
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),SETOR),SelectSetor2.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),SETOR),SelectSetor2.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =254
-        X: =650
-        Y: =70
+        X: =446
+        Y: =69
         ZIndex: =37
 
     POPUP_PERDA As group:
@@ -615,7 +615,7 @@ AcertoPerdas As screen:
         Size: =14
         Text: ="SETOR"
         Width: =154
-        X: =647
-        Y: =43
+        X: =443
+        Y: =42
         ZIndex: =38
 
