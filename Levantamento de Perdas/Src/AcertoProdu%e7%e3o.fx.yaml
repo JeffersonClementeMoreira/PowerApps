@@ -591,3 +591,43 @@ AcertoProdução As screen:
         Y: =42
         ZIndex: =37
 
+    Label8 As label:
+        Height: =33
+        Size: =12
+        Text: =Sum(Gallery1.AllItems,QUANTIDADE)
+        Width: =57
+        X: =569
+        Y: =119
+        ZIndex: =38
+
+    Label10 As label:
+        Height: =33
+        Size: =12
+        Text: =Sum(Gallery1_1.AllItems,QUANTIDADE)
+        Width: =62
+        X: =1177
+        Y: =120
+        ZIndex: =39
+
+    Label11 As label:
+        Align: =Align.Right
+        Height: =34
+        Size: =12
+        Text: |-
+            ="Total:"
+        Width: =67
+        X: =500
+        Y: =119
+        ZIndex: =40
+
+    Label12 As label:
+        Align: =Align.Right
+        Height: =35
+        Size: =12
+        Text: |-
+            ="Total:"
+        Width: =65
+        X: =1110
+        Y: =118
+        ZIndex: =41
+

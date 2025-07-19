@@ -110,7 +110,7 @@ Usinagem_Luva_1ª2ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "3352007043");
+            =Set( varmaquina , "911500708");
             Set( varsetor ,  Label_setor_14.Text );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -332,4 +332,25 @@ Usinagem_Luva_1ª2ª As screen:
         X: =155
         Y: =940
         ZIndex: =15
+
+    Image5 As image:
+        Height: =75
+        Image: ='Captura de tela 2025-07-19 091725'
+        ImagePosition: =ImagePosition.Fill
+        Width: =130
+        X: =337
+        Y: =380
+        ZIndex: =16
+
+    Label15 As label:
+        Align: =Align.Center
+        Height: =83
+        Size: =14
+        Text: |-
+            ="Brevet 708
+            OP.50"
+        Width: =119
+        X: =352
+        Y: =376
+        ZIndex: =17
 

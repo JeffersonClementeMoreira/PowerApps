@@ -152,7 +152,7 @@ Screens:
 
               //ColorFade(RGBA(56; 96; 178; 1); -20%)
             OnSelect: |
-              =Set( varmaquina , "3352007043");
+              =Set( varmaquina , "911500708");
               Set( varsetor ,  Label_setor_14.Text );
               Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
               Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
@@ -431,3 +431,27 @@ Screens:
             Width: =155
             X: =155
             Y: =940
+      - Image5:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =75
+            Image: ='Captura de tela 2025-07-19 091725'
+            ImagePosition: =ImagePosition.Fill
+            Width: =130
+            X: =337
+            Y: =380
+      - Label15:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =83
+            Size: =14
+            Text: |-
+              ="Brevet 708
+              OP.50"
+            Width: =119
+            X: =352
+            Y: =376

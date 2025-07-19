@@ -715,3 +715,49 @@ Screens:
             Width: =77
             X: =609
             Y: =42
+      - Label8:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =33
+            Size: =12
+            Text: =Sum(Gallery1.AllItems,QUANTIDADE)
+            Width: =57
+            X: =569
+            Y: =119
+      - Label10:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =33
+            Size: =12
+            Text: =Sum(Gallery1_1.AllItems,QUANTIDADE)
+            Width: =62
+            X: =1177
+            Y: =120
+      - Label11:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =34
+            Size: =12
+            Text: ="Total:"
+            Width: =67
+            X: =500
+            Y: =119
+      - Label12:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =35
+            Size: =12
+            Text: ="Total:"
+            Width: =65
+            X: =1110
+            Y: =118
