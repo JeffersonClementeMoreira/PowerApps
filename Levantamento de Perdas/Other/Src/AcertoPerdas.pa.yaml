@@ -1,0 +1,755 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  AcertoPerdas:
+    Properties:
+      Height: =720
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+      Width: =1300
+    Children:
+      - Rectangle1_1:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Height: =118
+            Width: =1300
+      - Label6_20:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 191, 0, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =37
+            Size: =24
+            Text: ="Acerto Perdas"
+            Width: =317
+            X: =464
+      - Icon1_37:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =45
+            Icon: =Icon.Home
+            OnSelect: |
+              =Navigate(Tela_Inicial_app)
+            Tooltip: ="Menu"
+            Width: =45
+            X: =18
+            Y: =60
+      - Gallery1_2:
+          Control: Gallery@2.15.0
+          Variant: Vertical
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =2
+            Height: =518
+            Items: |-
+              =Sort(
+                  Filter(   
+                          LancamentoPerdas,
+                              StartsWith(DATA,Data2.Text) Or IsBlank(Data2.Text),
+                              StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
+                              StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
+                              StartsWith(TIPO_DE_PERDA,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
+                      HORA_INICIO,
+                  SortOrder.Ascending
+              )
+            TemplateSize: =46
+            Width: =617
+            X: =24
+            Y: =186
+          Children:
+            - Label7_12:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: =ThisItem.DATA
+                  Width: =105
+            - Rectangle2_2:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(56, 96, 178, 1)
+                  Height: =2
+                  OnSelect: =Select(Parent)
+                  Width: =607
+                  Y: =44
+            - Label7_13:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: |
+                    =ThisItem.UTE
+                  Width: =63
+                  X: =121
+            - Label7_14:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =42
+                  OnSelect: =Select(Parent)
+                  Size: =10
+                  Text: |
+                    =ThisItem.MAQUINA
+                  Width: =117
+                  X: =185
+                  Y: =2
+            - Label7_16:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =10
+                  Text: =ThisItem.TIPO_DE_PERDA
+                  Width: =121
+                  X: =372
+            - Label7_17:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: =ThisItem.QUANTIDADE
+                  Width: =69
+                  X: =488
+                  Y: =2
+            - Icon4_2:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(0, 18, 107, 1)
+                  Height: =30
+                  Icon: =Icon.Trash
+                  OnSelect: =Remove(LancamentoPerdas,Gallery1_2.Selected);
+                  Tooltip: ="Deletar"
+                  Width: =50
+                  X: =550
+                  Y: =7
+            - Label7_15:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: |
+                    =ThisItem.HORA_INICIO
+                  Width: =57
+                  X: =307
+      - Label6_21:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Semibold
+            Height: =37
+            Text: ="Aplicativo"
+            Width: =155
+            X: =239
+            Y: =118
+      - Rectangle3_2:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =2
+            Fill: =RGBA(56, 96, 178, 1)
+            Height: =31
+            Width: =616
+            X: =25
+            Y: =154
+      - Label6_22:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="DATA"
+            Width: =101
+            X: =38
+            Y: =157
+      - Label6_23:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="UTE"
+            Width: =53
+            X: =158
+            Y: =157
+      - Label6_24:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="CAF"
+            Width: =53
+            X: =245
+            Y: =157
+      - Label6_25:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="HORA"
+            Width: =65
+            X: =335
+            Y: =157
+      - Label6_26:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="PERDA"
+            Width: =71
+            X: =431
+            Y: =157
+      - Label6_27:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="QTD."
+            Width: =71
+            X: =520
+            Y: =157
+      - SelectCaf_1:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["Value"]
+            Font: =Font.'Open Sans'
+            Height: =35
+            HoverFill: =RGBA(0, 0, 0, 0)
+            IsSearchable: =false
+            Items: =Distinct(Filter(LancamentoPerdas, SETOR = SelectSetor2.Selected.Value),MAQUINA)
+            PaddingBottom: =2
+            PaddingTop: =2
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Value"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =12
+            Width: =188
+            X: =718
+            Y: =70
+      - SelectUte_1:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["Value"]
+            Font: =Font.'Open Sans'
+            Height: =35
+            HoverFill: =RGBA(0, 0, 0, 0)
+            IsSearchable: =false
+            Items: =Sort(Distinct(LancamentoPerdas,UTE),Value)
+            PaddingBottom: =2
+            PaddingTop: =2
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Value"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =12
+            Width: =138
+            X: =286
+            Y: =70
+      - DatePicker2_1:
+          Control: Classic/DatePicker@2.6.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =35
+            IconBackground: =RGBA(56, 96, 178, 1)
+            IconFill: =RGBA(255, 255, 255, 1)
+            Size: =13
+            Width: =175
+            X: =90
+            Y: =70
+      - SelectOp_1:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["Value"]
+            Font: =Font.'Open Sans'
+            Height: =35
+            HoverFill: =RGBA(0, 0, 0, 0)
+            IsSearchable: =false
+            Items: =Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),TIPO_DE_PERDA)
+            PaddingBottom: =2
+            PaddingTop: =2
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Value"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =12
+            Width: =296
+            X: =924
+            Y: =70
+      - Icon1_49:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =43
+            Icon: =Icon.Erase
+            OnSelect: |
+              =Reset(DatePicker2_1);
+              Reset(SelectUte_1);
+              Reset(SelectCaf_1);
+              Reset(SelectSetor2);
+              Reset(SelectOp_1)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Tooltip: ="Limpar Filtros"
+            Width: =44
+            X: =1238
+            Y: =68
+      - Label6_28:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =15
+            Text: ="Data"
+            Width: =77
+            X: =90
+            Y: =46
+      - Label6_29:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =15
+            Text: ="Ute"
+            Width: =77
+            X: =286
+            Y: =42
+      - Label6_30:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =14
+            Text: ="CAF"
+            Width: =77
+            X: =718
+            Y: =43
+      - Label6_31:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =28
+            Size: =14
+            Text: ="Tipo de Perda"
+            Width: =154
+            X: =922
+            Y: =43
+      - Label6_32:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Semibold
+            Height: =37
+            Text: ="Power Bi"
+            Width: =155
+            X: =876
+            Y: =118
+      - Rectangle3_3:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =2
+            Fill: =RGBA(56, 96, 178, 1)
+            Height: =31
+            Width: =616
+            X: =662
+            Y: =154
+      - Label6_33:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="DATA"
+            Width: =101
+            X: =675
+            Y: =157
+      - Label6_34:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="UTE"
+            Width: =53
+            X: =792
+            Y: =157
+      - Label6_35:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="CAF"
+            Width: =53
+            X: =890
+            Y: =157
+      - Label6_36:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="HORA"
+            Width: =65
+            X: =974
+            Y: =157
+      - Label6_37:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="PERDA"
+            Width: =83
+            X: =1066
+            Y: =157
+      - Label6_38:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =25
+            Size: =13
+            Text: ="QTD."
+            Width: =65
+            X: =1164
+            Y: =157
+      - Data2:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =37
+            Size: =15
+            Text: =DatePicker2_1.SelectedDate
+            Visible: =false
+            Width: =139
+      - Gallery1_3:
+          Control: Gallery@2.15.0
+          Variant: Vertical
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =2
+            Height: =518
+            Items: |-
+              =Sort(
+                  Filter(   
+                          LancamentoPerdas_BD,
+                              StartsWith(Data,Data2.Text) Or IsBlank(Data2.Text),
+                              StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
+                              StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
+                              StartsWith(TIPO_DE_PERDA,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
+                      HORA_INICIO,
+                  SortOrder.Ascending
+              )
+            TemplateSize: =46
+            Width: =617
+            X: =662
+            Y: =186
+          Children:
+            - Label7_18:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: =ThisItem.Data
+                  Width: =105
+            - Rectangle2_3:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(56, 96, 178, 1)
+                  Height: =2
+                  OnSelect: =Select(Parent)
+                  Width: =607
+                  Y: =44
+            - Label7_19:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: |
+                    =ThisItem.UTE
+                  Width: =63
+                  X: =121
+            - Label7_20:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =42
+                  OnSelect: =Select(Parent)
+                  Size: =10
+                  Text: |
+                    =ThisItem.MAQUINA
+                  Width: =117
+                  X: =185
+                  Y: =2
+            - Label7_22:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =10
+                  Text: =ThisItem.TIPO_DE_PERDA
+                  Width: =121
+                  X: =372
+            - Label7_23:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: =ThisItem.QUANTIDADE
+                  Width: =69
+                  X: =488
+                  Y: =2
+            - Icon4_3:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(0, 18, 107, 1)
+                  Height: =30
+                  Icon: =Icon.Trash
+                  OnSelect: =Remove(LancamentoPerdas_BD,Gallery1_3.Selected);
+                  Width: =50
+                  X: =550
+                  Y: =7
+            - Label7_21:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =44
+                  OnSelect: =Select(Parent)
+                  Size: =12
+                  Text: |
+                    =ThisItem.HORA_INICIO
+                  Width: =57
+                  X: =307
+      - Icon1_51:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =35
+            Icon: =Icon.BackArrow
+            OnSelect: |
+              =Back()
+            Tooltip: ="Voltar"
+            Width: =35
+      - Rectangle4_1:
+          Control: Rectangle@2.3.0
+          Group: POPUP_PERDA
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Height: =448
+            Visible: =ALARME_PERDAS
+            Width: =877
+            X: =202
+            Y: =199
+      - Label13_1:
+          Control: Label@2.5.1
+          Group: POPUP_PERDA
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =205
+            Size: =35
+            Text: ="PARA ACERTO DAS PERDAS É OBRIGATÓRIO EXCLUIR DO APLICATIVO E DO POWER BI"
+            Visible: =ALARME_PERDAS
+            Width: =690
+            X: =301
+            Y: =228
+      - Icon1_53:
+          Control: Classic/Icon@2.5.0
+          Group: POPUP_PERDA
+          Properties:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =90
+            Icon: =Icon.CancelBadge
+            OnSelect: |
+              =Set(ALARME_PERDAS,false)
+            Tooltip: ="Fechar"
+            Visible: =ALARME_PERDAS
+            Width: =100
+            X: =602
+            Y: =477
+      - SelectSetor2:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["Value"]
+            Font: =Font.'Open Sans'
+            Height: =35
+            HoverFill: =RGBA(0, 0, 0, 0)
+            IsSearchable: =false
+            Items: =Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),SETOR)
+            PaddingBottom: =2
+            PaddingLeft: =0
+            PaddingTop: =2
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Value"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =12
+            Width: =254
+            X: =446
+            Y: =69
+      - Label6_39:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =28
+            Size: =14
+            Text: ="SETOR"
+            Width: =154
+            X: =443
+            Y: =42

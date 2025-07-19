@@ -1,0 +1,534 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Suporte_União_2914:
+    Properties:
+      BackgroundImage: =Transmissões_foto_bw
+      ImagePosition: =ImagePosition.Fill
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - Image3_1:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =968
+            Image: ='Linha Suporte 2914'
+            ImagePosition: =ImagePosition.Stretch
+            Width: =640
+            Y: =168
+      - Btnmaq_14:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =106
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |+
+              =Set( varmaquina , "41500071");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =78
+            X: =18
+            Y: =175
+      - Btnmaq_15:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "81500070");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_14.X + Btnmaq_14.Width + 14
+            Y: =Btnmaq_14.Y
+      - Btnmaq_16:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "81500004");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_15.X + Btnmaq_15.Width + 10
+            Y: =Btnmaq_14.Y
+      - Btnmaq_17:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "101500024");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_16.X + Btnmaq_16.Width + 13
+            Y: =Btnmaq_14.Y
+      - Btnmaq_18:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "11501403");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_17.X + Btnmaq_17.Width + 12
+            Y: =Btnmaq_14.Y
+      - Btnmaq_19:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "11501404");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_18.X + Btnmaq_18.Width + 12
+            Y: =Btnmaq_14.Y
+      - Btnmaq_20:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "21500911");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+
+              // Caso a máquina faça peças para outro tipo de setor, operação precisa ser escrita manualmente conforme modelo abaixo: 
+              // Set(varsetor; "Usinagem Caixa Diferencial Completa")
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_19.X + Btnmaq_19.Width + 12
+            Y: =Btnmaq_14.Y
+      - Btnmaq_21:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "51500031");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =110
+            Y: =430
+      - Btnmaq_22:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "51500032");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_21.X + Btnmaq_21.Width + 12
+            Y: =Btnmaq_21.Y
+      - Btnmaq_23:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "201405003556");
+              Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_22.X + Btnmaq_22.Width + 10 + Btnmaq_22.Width + 14
+            Y: =Btnmaq_21.Y
+      - Btnmaq_24:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "11501393");
+              Set( varsetor ,  Label_setor_1.Text );
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_21.X + Btnmaq_21.Width + 12
+            Y: =Btnmaq_21.Y + 197
+      - Btnmaq_25:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "91500122");
+              Set( varsetor ,  Label_setor_1.Text);
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_22.X + Btnmaq_22.Width + 10 + Btnmaq_22.Width + 13
+            Y: =Btnmaq_21.Y + 197
+      - Btnmaq_27:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "091500123 - 122");
+              Set( varsetor ,  Label_setor_1.Text );
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_22.X + Btnmaq_22.Width + 10 + Btnmaq_22.Width + 13
+            Y: =Btnmaq_21.Y + 200 + 200
+      - Btnmaq_26:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Btnmaq_14.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "091500123 - 393");
+              Set( varsetor ,  Label_setor_1.Text );
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =Btnmaq_14.Width
+            X: =Btnmaq_21.X + Btnmaq_21.Width + 13
+            Y: =Btnmaq_21.Y + 200 + 200
+      - Label_setor_1:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Text: ="Acabamento Suporte união"
+            Visible: =false
+            X: =41
+      - Label_Local_1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Align: =Align.Left
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            Height: =88
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Linha Suporte União - UTE 2914"
+            Width: =640
+            Y: =16
+      - Icon1_9:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =88
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Tela_Ini_2914)
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            Width: =80
+            X: =560
+            Y: =16

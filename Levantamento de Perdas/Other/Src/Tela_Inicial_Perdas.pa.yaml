@@ -1,0 +1,407 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Tela_Inicial_Perdas:
+    Properties:
+      BackgroundImage: =Transmissões_foto_bw
+      ImagePosition: =ImagePosition.Fill
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - RectQuickActionBar1_1:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Height: =88
+            Width: =Parent.Width
+      - LblAppName1_1:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(58, 58, 58, 0)
+            Font: =Font.'Open Sans'
+            Height: =88
+            Size: =27
+            Text: ="Perdas"
+            Width: =278
+            Wrap: =false
+            X: =20
+      - IconRefresh1_1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =88
+            Icon: =Icon.Reload
+            OnSelect: =Refresh([@LancamentoPerdas]);
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            PressedFill: =RGBA(255, 255, 255, 0.3)
+            TabIndex: =0
+            Tooltip: ="Atualizar lista"
+            Width: =80
+            X: =560
+      - IconSortUpDown1_1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =88
+            Icon: =Icon.Sort
+            OnSelect: |-
+              =UpdateContext({SortDescending1: !SortDescending1})
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            PressedFill: =RGBA(255, 255, 255, 0.3)
+            TabIndex: =0
+            Tooltip: =If(SortDescending1, "Classificar lista em ordem alfabética inversa", "Classificar lista em ordem alfabética")
+            Width: =80
+            X: =480
+      - SearchIcon1_1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(191, 190, 190, 1)
+            Height: =Self.Width
+            Icon: =Icon.Search
+            PaddingBottom: =14
+            PaddingLeft: =14
+            PaddingRight: =14
+            PaddingTop: =14
+            Tooltip: ="Pesquisar"
+            Width: =ComboBoxuteperdas.Height
+            X: =ComboBoxuteperdas.X
+            Y: =ComboBoxuteperdas.Y
+      - Rectangle11_1:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Height: =2
+            Width: =Parent.Width
+            Y: =ComboBoxuteperdas.Y + ComboBoxuteperdas.Height
+      - BrowseGallery1perdas:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_ThreeTextVariant_ver4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            FocusedBorderColor: =
+            Height: =856
+            Items: "=If(\n    varDataCountperdas < varDelegationLimit,\n    SortByColumns(\n    Filter(Filter(\n            LancamentoPerdas_BD,\n            ((UTE = ComboBoxuteperdas.Selected.Result) || ComboBoxuteperdas.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquinaperdas.Selected.Result) || ComboBoxmaquinaperdas.Selected.Result = Blank()) && ((Data = txt_date_perdas.Text) || txt_date_perdas.Text = Blank())\n        ) , txt_date_perdas.Text in Data),\n        \"HORA_INICIO\",\n        If(\n            SortDescending1,\n            SortOrder.Descending,\n            SortOrder.Ascending\n            \n        )\n    ),\n    Filter(\n        LancamentoPerdas_BD,\n        ((UTE = ComboBoxuteperdas.Selected.Result) || ComboBoxuteperdas.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquinaperdas.Selected.Result) || ComboBoxmaquinaperdas.Selected.Result = Blank()) && ((Data = txt_date_perdas.Text) || txt_date_perdas.Text = Blank())\n    )\n)"
+            NavigationStep: =2
+            OnSelect: =Navigate(Tela_Detail_Perdas, ScreenTransition.None)
+            ShowScrollbar: =false
+            TemplatePadding: =1
+            TemplateSize: =Min(168, Self.Height - 60)
+            Transition: =Transition.Pop
+            Width: =637
+            Y: =263
+          Children:
+            - Label1_1:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =If(ThisItem.IsSelected,RGBA(6,72,34,1))
+                  Font: =Font.'Open Sans'
+                  Height: =168
+                  OnSelect: =Select(Parent);Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & Value(DataCardhora_inicio.Selected.Result)) ; Set(varDelta , Cap_Produtiva.Text - DataCardquantidade.Text)
+                  Text: =
+                  Width: =638
+            - Title1_1:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(255, 255, 255, 1)
+                  Font: =Font.'Open Sans'
+                  FontWeight: =FontWeight.Semibold
+                  Height: =Self.Size * 1.8
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =20
+                  Text: ="CAF " & ThisItem.MAQUINA
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =Parent.TemplateWidth - 104
+                  X: =32
+                  Y: =16
+            - Subtitle1_1:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(255, 255, 255, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Self.Size * 1.8
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =18
+                  Text: |-
+                    ="UTE: " & ThisItem.UTE
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =Parent.TemplateWidth - 104
+                  X: =32
+                  Y: =Title1_1.Y + Title1_1.Height + 2
+            - Body1_2:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(255, 255, 255, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =32
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =16
+                  Text: |-
+                    ="Data: " & ThisItem.Data
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =216
+                  X: =32
+                  Y: =Subtitle1_1.Y + Subtitle1_1.Height + 4
+            - NextArrow1_1:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  AccessibleLabel: =Self.Tooltip
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(255, 255, 255, 1)
+                  Height: =60
+                  Icon: =Icon.ChevronRight
+                  OnSelect: =Select(Parent);Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & Value(DataCardhora_inicio.Selected.Result)) ; Set(varDelta , CardProd_Prev.Text - DataCardquantidade.Text)
+                  PaddingBottom: =10
+                  PaddingLeft: =10
+                  PaddingRight: =10
+                  PaddingTop: =10
+                  TabIndex: =0
+                  Tooltip: ="Exibir detalhes do item"
+                  Width: =60
+                  X: =Parent.TemplateWidth - Self.Width - 5
+                  Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            - Separator1_1:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(0, 18, 107, 1)
+                  Height: =1
+                  OnSelect: =Select(Parent)
+                  Width: =Parent.TemplateWidth
+                  Y: =Parent.TemplateHeight - 1
+            - Body1_3:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(255, 255, 255, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =37
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =16
+                  Text: |-
+                    ="Hora Início: " & ThisItem.HORA_INICIO
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =261
+                  X: =32
+                  Y: =Body1_2.Y + Body1_2.Height + 4
+            - Body1_4:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(255, 255, 255, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =37
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =16
+                  Text: |-
+                    ="Quantidade: " & ThisItem.QUANTIDADE
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =326
+                  X: =303
+                  Y: =130
+            - Body1_5:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =RGBA(255, 255, 255, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =60
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =16
+                  Text: |-
+                    ="Tipo de Perda: " & ThisItem.TIPO_DE_PERDA
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =284
+                  X: =301
+                  Y: =54
+      - ComboBoxuteperdas:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["Result"]
+            Font: =Font.'Open Sans'
+            Height: =71
+            HoverFill: =RGBA(186, 202, 226, 1)
+            InputTextPlaceholder: ="UTE"
+            Items: |-
+              =Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result , Result)
+            NoSelectionText: ="UTE"
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Result"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Width: =160
+            X: =2
+            Y: =101
+      - ComboBoxmaquinaperdas:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DefaultSelectedItems: |-
+              =LookUp(ForAll(Distinct(CreateMaquina,CAF), {Result: ThisRecord.Value}).Result, Result = varmaquina)
+            DisplayFields: =["Result"]
+            Font: =Font.'Open Sans'
+            HoverFill: =RGBA(186, 202, 226, 1)
+            InputTextPlaceholder: ="MÁQUINA"
+            IsSearchable: =false
+            Items: |
+              =Sort(ForAll(Distinct( Filter(CreateMaquina, Text(ComboBoxuteperdas.Selected.Result) in UTE) , CAF ), {Result: ThisRecord.Value}).Result , Result)
+            NoSelectionText: ="MÁQUINA"
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Result"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Width: =250
+            X: =ComboBoxuteperdas.X + ComboBoxuteperdas.Width + 2
+            Y: =ComboBoxuteperdas.Y
+      - Icon1_1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =1
+            Height: =88
+            Icon: =Icon.Home
+            OnSelect: |-
+              =Select(Icon2_2);
+              UpdateContext(
+                      {
+                          TelaAnterior: LookUp(
+                              colRoleKeys,
+                              Role = vartela
+                          )
+                      }
+                  );
+                  Navigate(TelaAnterior.Screen)
+              //Navigate(Tela_acerto_levantamento;ScreenTransition.None);;
+              //Navigate(Tela_Inicial_app;ScreenTransition.None)
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            Width: =80
+            X: =400
+      - LabelLancamentos_iniperdas:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderStyle: =BorderStyle.Dotted
+            BorderThickness: =3
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =64
+            Text: ="Filtro lançamentos perdas"
+            X: =40
+            Y: |
+              =185
+      - Icon2_2:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =88
+            Icon: =Icon.Erase
+            OnSelect: =Reset(DatePickerPerdas) ; Reset(ComboBoxmaquinaperdas) ; Reset(ComboBoxuteperdas)
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            Tooltip: ="Limpar Filtros"
+            Width: =80
+            X: =320
+      - DatePickerPerdas:
+          Control: Classic/DatePicker@2.6.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =ComboBoxmaquina.Height
+            IconBackground: =RGBA(56, 96, 178, 1)
+            IconFill: =RGBA(255, 255, 255, 1)
+            Size: =22
+            Width: =220
+            X: =ComboBoxmaquinaperdas.X + ComboBoxmaquinaperdas.Width + 3
+            Y: =ComboBoxmaquinaperdas.Y
+      - SliderPerdas:
+          Control: Classic/Slider@2.1.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: =CountRows(BrowseGallery1perdas.AllItems)
+            Height: =50
+            Max: =varDelegationLimit
+            OnChange: =Set(varDataCountperdas , Self.Value)
+            ValueFill: =RGBA(0, 18, 107, 1)
+            Visible: =false
+            Width: =160
+            X: =480
+            Y: =1086
+      - txt_date_perdas:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =57
+            Text: =Text(DatePickerPerdas.SelectedDate)
+            Visible: =false
+            Width: =160
+            X: =480
+            Y: =185

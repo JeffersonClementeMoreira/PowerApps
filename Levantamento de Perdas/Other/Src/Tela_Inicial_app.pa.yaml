@@ -1,0 +1,1172 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Tela_Inicial_app:
+    Properties:
+      BackgroundImage: =Transmissões_foto_bw
+      Fill: =RGBA(0, 0, 0, 1)
+      ImagePosition: =ImagePosition.Fill
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - Titulo_ini:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(50, 86, 160, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =111
+            Size: =23
+            Text: ="LEVANTAMENTO DE PERDAS - TRANSMISSÕES"
+            Width: =640
+      - ComboBoxute_ini:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["Result"]
+            Font: =Font.'Open Sans'
+            Height: =63
+            HoverFill: =RGBA(186, 202, 226, 1)
+            InputTextPlaceholder: ="UTE"
+            Items: |-
+              =Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result,Result)
+            NoSelectionText: ="UTE"
+            OnChange: =Reset(ComboBoxmaquina_ini)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Result"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Width: =250
+            X: =40
+            Y: =119
+      - ComboBoxmaquina_ini:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["CAF"]
+            Font: =Font.'Open Sans'
+            Height: =63
+            HoverFill: =RGBA(186, 202, 226, 1)
+            InputTextPlaceholder: ="MÁQUINA"
+            IsSearchable: =false
+            Items: |-
+              =Filter(CreateMaquina , Text(ComboBoxute_ini.Selected.Result) = UTE).CAF
+
+              //Sort(Distinct( Filter(CreateMaquina; Text(ComboBoxute_ini.Selected.Result) in UTE) ; CAF ).Result ; Result)
+            NoSelectionText: ="MÁQUINA"
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["CAF"]
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Width: =560
+            X: =40
+            Y: =191
+      - Prod_Real_ini:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: "=Sum(\n    Filter(\n        LancamentoProducao,\n        Or(\n            IsBlank(ComboBoxmaquina_ini.SelectedItems),\n            IsEmpty(ComboBoxmaquina_ini.SelectedItems),\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                1\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                2\n            ).CAF\n            ,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                3\n            ).CAF\n            ,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                4\n            ).CAF\n            ,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                5\n            ).CAF\n            ,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                6\n            ).CAF\n            ,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                7\n            ).CAF\n            ,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                8\n            ).CAF\n            ,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                9\n            ).CAF\n            ,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                10\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                11\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                12\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                13\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                14\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                15\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                16\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                17\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                18\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                19\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                20\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                21\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                22\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                23\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                24\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                25\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                26\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                27\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                28\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                29\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                30\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                31\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                32\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                33\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                34\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                35\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                36\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                37\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                38\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                39\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                40\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                41\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                42\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                43\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                44\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                45\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                46\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                47\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                48\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                49\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                50\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                51\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                52\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                53\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                54\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                55\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                56\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                57\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                58\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                59\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                60\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                61\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                62\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                63\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                64\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                65\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                66\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                67\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                68\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                69\n            ).CAF,\n            MAQUINA = Index(\n                ComboBoxmaquina_ini.SelectedItems,\n                70\n            ).CAF\n        )\n        &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())\n        &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())\n    ),\n    QUANTIDADE\n)\n/*\n\nSum(Filter(\n        LancamentoProducao;\n        ((UTE = ComboBoxute_ini.Selected.CAF) || ComboBoxute_ini.Selected.CAF = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.CAF) || ComboBoxmaquina_ini.Selected.CAF = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())\n    ).QUANTIDADE ; QUANTIDADE)\n    \n    */"
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Open Sans'
+            Height: =Label_prod_real_ini.Height
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Width: =200
+            X: =Label_prod_real_ini.X + Label_prod_real_ini.Width + 30
+            Y: =Label_resumo_ini.Y+ Label_resumo_ini.Height + 15
+      - Label_prod_real_ini:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            Font: =Font.'Open Sans'
+            Height: =57
+            Text: ="Produção Realizada"
+            Width: =340
+            X: =30
+            Y: =Label_resumo_ini.Y+ Label_resumo_ini.Height + 15
+      - Label_resumo_ini:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderStyle: =BorderStyle.Dashed
+            BorderThickness: =3
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Open Sans'
+            Height: =36
+            Text: ="RESUMO LANÇAMENTOS"
+            Width: =545
+            X: =40
+            Y: =271
+      - Label_perda_real_ini:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            Font: =Font.'Open Sans'
+            Height: =Label_prod_real_ini.Height
+            Text: ="Perdas Totais"
+            Width: =Label_prod_real_ini.Width
+            X: =Label_prod_real_ini.X
+            Y: =Label_prod_real_ini.Y + Label_prod_real_ini.Height + 15
+      - Perda_Real_ini:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: |-
+              =Sum(
+                  Filter(
+                      LancamentoPerdas,
+                      Or(
+                          IsBlank(ComboBoxmaquina_ini.SelectedItems),
+                          IsEmpty(ComboBoxmaquina_ini.SelectedItems),
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              1
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              2
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              3
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              4
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              5
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              6
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              7
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              8
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              9
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              10
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              11
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              12
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              13
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              14
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              15
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              16
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              17
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              18
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              19
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              20
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              21
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              22
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              23
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              24
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              25
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              26
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              27
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              28
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              29
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              30
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              31
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              32
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              33
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              34
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              35
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              36
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              37
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              38
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              39
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              40
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              41
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              42
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              43
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              44
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              45
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              46
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              47
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              48
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              49
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              50
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              51
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              52
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              53
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              54
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              55
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              56
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              57
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              58
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              59
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              60
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              61
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              62
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              63
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              64
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              65
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              66
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              67
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              68
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              69
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              70
+                          ).CAF
+                      )
+                      &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())
+                      &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                  ),
+                  QUANTIDADE
+              )
+
+
+
+              /*Sum(Filter(
+                      LancamentoPerdas;
+                      ((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                  ).QUANTIDADE ; QUANTIDADE) */
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Open Sans'
+            Height: =Prod_Real_ini.Height
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Width: =Prod_Real_ini.Width
+            X: =Prod_Real_ini.X
+            Y: =Prod_Real_ini.Y + Prod_Real_ini.Height + 15
+      - Label_perda_real_ini_1:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            Font: =Font.'Open Sans'
+            Height: =Label_perda_real_ini.Height
+            Text: ="Total Lançado"
+            Width: =Label_perda_real_ini.Width
+            X: =Label_perda_real_ini.X
+            Y: =Label_perda_real_ini.Y + Label_perda_real_ini.Height + 15
+      - Total:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: =Perda_Real_ini.Text+Prod_Real_ini.Text
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Open Sans'
+            Height: =Perda_Real_ini.Height
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Width: =Perda_Real_ini.Width
+            X: =Perda_Real_ini.X
+            Y: =Perda_Real_ini.Y + Perda_Real_ini.Height + 15
+      - Btn_lancar_prod:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Tela_Inicial_Producao)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Lançar Produção"
+            Visible: =false
+            X: =30
+            Y: =703
+      - Btn_lancar_perda:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            Height: =Btn_lancar_prod.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Tela_Inicial_Perdas)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Lançar Perda"
+            Visible: =false
+            X: =320
+            Y: =703
+      - Label_perdanaoimpact_ini:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            Font: =Font.'Open Sans'
+            Height: =Label_perda_real_ini.Height
+            Text: ="Perdas não Impactam OEE"
+            Width: =Label_perda_real_ini.Width
+            X: =Label_perda_real_ini.X
+            Y: =Label_resumo_ini_1.Y + Label_resumo_ini_1.Height +20
+      - Perdanaoimpact_ini:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: |-
+              =Sum(
+                  Filter(
+                      LancamentoPerdas,
+                      Or(
+                          IsBlank(ComboBoxmaquina_ini.SelectedItems),
+                          IsEmpty(ComboBoxmaquina_ini.SelectedItems),
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              1
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              2
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              3
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              4
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              5
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              6
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              7
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              8
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              9
+                          ).CAF
+                          ,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              10
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              11
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              12
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              13
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              14
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              15
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              16
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              17
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              18
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              19
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              20
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              21
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              22
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              23
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              24
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              25
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              26
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              27
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              28
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              29
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              30
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              31
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              32
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              33
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              34
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              35
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              36
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              37
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              38
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              39
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              40
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              41
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              42
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              43
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              44
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              45
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              46
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              47
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              48
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              49
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              50
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              51
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              52
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              53
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              54
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              55
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              56
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              57
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              58
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              59
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              60
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              61
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              62
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              63
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              64
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              65
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              66
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              67
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              68
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              69
+                          ).CAF,
+                          MAQUINA = Index(
+                              ComboBoxmaquina_ini.SelectedItems,
+                              70
+                          ).CAF
+                      )
+                      &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())
+                      &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                      && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
+                  ),
+                  QUANTIDADE
+              )
+
+
+
+
+              /*Sum(Filter(
+                      LancamentoPerdas;
+                      (((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank()) && ((MAQUINA = ComboBoxmaquina_ini.Selected.Result) || ComboBoxmaquina_ini.Selected.Result = Blank()) && ((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
+                  ) && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
+                  ).QUANTIDADE;
+                  QUANTIDADE
+              )
+              */
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Open Sans'
+            Height: =Perda_Real_ini.Height
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Width: =Perda_Real_ini.Width
+            X: =Label_perdanaoimpact_ini.X + Label_perdanaoimpact_ini.Width + 30
+            Y: =Label_perdanaoimpact_ini.Y
+      - Label_resumo_ini_1:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderStyle: =BorderStyle.Dashed
+            BorderThickness: =3
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Open Sans'
+            Height: =45
+            Text: ="RESUMO OEE"
+            Width: =545
+            X: =40
+            Y: =535
+      - Label_perdaimpact_ini:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            Font: =Font.'Open Sans'
+            Height: =Label_perda_real_ini.Height
+            Text: ="Perdas Impactam OEE"
+            Width: =Label_perda_real_ini.Width
+            X: =Label_perda_real_ini.X
+            Y: =Label_perdanaoimpact_ini.Y + Label_perdanaoimpact_ini.Height + 25
+      - Perdaimpact_ini:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: =Perda_Real_ini.Text - Perdanaoimpact_ini.Text
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Open Sans'
+            Height: =Perda_Real_ini.Height
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Width: =Perda_Real_ini.Width
+            X: =Perdanaoimpact_ini.X
+            Y: =Label_perdanaoimpact_ini.Y + Label_perdanaoimpact_ini.Height + 25
+      - Label_oee_ini:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(230, 230, 230, 1)
+            Font: =Font.'Open Sans'
+            Height: =Label_perda_real_ini.Height
+            Text: ="OEE"
+            Width: =Label_perda_real_ini.Width
+            X: =Label_perda_real_ini.X
+            Y: =Label_perdaimpact_ini.Y + Label_perdaimpact_ini.Height + 25
+      - OEE_ini:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: =Round(Prod_Real_ini.Text / If(Perdaimpact_ini.Text = "0", Prod_Real_ini.Text , Perdaimpact_ini.Text+Prod_Real_ini.Text) , 4) * 100 &"%"
+            DisplayMode: =DisplayMode.Disabled
+            Font: =Font.'Open Sans'
+            Height: =Perda_Real_ini.Height
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Width: =Perda_Real_ini.Width
+            X: =Perdanaoimpact_ini.X
+            Y: =Label_perdaimpact_ini.Y + Label_perdaimpact_ini.Height + 25
+      - Filtro_naoprevistoprod:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: ="NÃO PREVISTO PRODUÇÃO"
+            Font: =Font.'Open Sans'
+            Height: =20
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Visible: =false
+            Width: =182
+            Y: =887
+      - Filtro_refeicao_intervalo:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: ="REFEIÇÃO / INTERVALO"
+            Font: =Font.'Open Sans'
+            Height: =20
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Visible: =false
+            Width: =150
+            X: =261
+            Y: =887
+      - Filtro_desbalanceamento:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: ="NÃO PREVISTO PRODUÇÃO"
+            Font: =Font.'Open Sans'
+            Height: =30
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Visible: =false
+            Width: =140
+            X: =477
+            Y: =868
+      - Icon2_1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =80
+            Icon: =Icon.Erase
+            OnSelect: =Reset(DatePicker_ini) ; Reset(ComboBoxmaquina_ini) ; Reset(ComboBoxute_ini)
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            Tooltip: ="Limpar Filtros"
+            Width: =69
+            X: =571
+            Y: =45
+      - IconRefresh1_2:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            Icon: =Icon.Reload
+            OnSelect: =Refresh([@LancamentoProducao]) ; Refresh([@LancamentoPerdas]);
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            PressedFill: =RGBA(255, 255, 255, 0.3)
+            TabIndex: =0
+            Tooltip: ="Atualizar informações"
+            Width: =69
+            X: =571
+      - Btn_vis_lev_perdas:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            Height: =42
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Tela_acerto_levantamento)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =16
+            Text: ="Visualização Levantamento de Perdas"
+            Width: =574
+            X: =26
+            Y: =Label_oee_ini.Y + Label_oee_ini.Height + 15
+      - DatePicker_ini:
+          Control: Classic/DatePicker@2.6.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =ComboBoxmaquina_ini.Height
+            IconBackground: =RGBA(56, 96, 178, 1)
+            IconFill: =RGBA(255, 255, 255, 1)
+            Width: =300
+            X: =300
+            Y: =119
+      - txt_date_ini:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =45
+            Text: =Text(DatePicker_ini.SelectedDate)
+            Visible: =false
+            Width: =165
+            X: =475
+            Y: =198
+      - btn_2911:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Tela_Ini_2911)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="UTE 2911"
+            X: =Btn_vis_lev_perdas.X
+            Y: =Btn_vis_lev_perdas.Y + Btn_vis_lev_perdas.Height+14
+      - btn_2912:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Tela_Ini_2912)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="UTE 2912"
+            X: =Btn_vis_lev_perdas.X + 295
+            Y: =btn_2911.Y
+      - btn_2913:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Tela_Ini_2913)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="UTE 2913"
+            X: =Btn_vis_lev_perdas.X
+            Y: =btn_2911.Y + btn_2911.Height + 8
+      - btn_2914:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Tela_Ini_2914)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="UTE 2914"
+            X: =Btn_vis_lev_perdas.X + 295
+            Y: =btn_2913.Y
+      - btn_2915:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Tela_Ini_2915)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="UTE 2915"
+            X: =Btn_vis_lev_perdas.X
+            Y: =btn_2913.Y + btn_2913.Height + 10
+      - Label4:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Open Sans'
+            Height: =41
+            Size: =14
+            Text: ="Versão 03/06/2024"
+            Width: =207
+            X: =433
+            Y: =1095
