@@ -8448,6 +8448,7 @@
         ZIndex: =602
 
     Label_Capacidade_Hora_1 As label:
+        Align: =Align.Center
         Height: =20
         PaddingBottom: =2
         PaddingLeft: =2
@@ -8456,13 +8457,13 @@
         Size: =12
         Text: ="Prod. 1º"
         Width: =82
-        X: =58
+        X: =50
         ZIndex: =603
 
     Label19 As label:
         Align: =Align.Center
         Height: =22
-        Size: =16
+        Size: =12
         Text: |
             =Sum(Quebras_00.Text, Quebras_1.Text, Quebras_2.Text, Quebras_3.Text, Quebras_4.Text, Quebras_5.Text, Quebras_6.Text, Quebras_7.Text, Quebras_8.Text, Quebras_9.Text, Quebras_10.Text, Quebras_11.Text, Quebras_12.Text, Quebras_13.Text, Quebras_14.Text, Quebras_15.Text, Quebras_16.Text, Quebras_17.Text, Quebras_18.Text, Quebras_19.Text, Quebras_20.Text, Quebras_21.Text, Quebras_22.Text, Quebras_23.Text,
             Troca_Ferramentas_00.Text, Troca_Ferramentas_1.Text, Troca_Ferramentas_2.Text, Troca_Ferramentas_3.Text, Troca_Ferramentas_4.Text, Troca_Ferramentas_5.Text, Troca_Ferramentas_6.Text, Troca_Ferramentas_7.Text, Troca_Ferramentas_8.Text, Troca_Ferramentas_9.Text, Troca_Ferramentas_10.Text, Troca_Ferramentas_11.Text, Troca_Ferramentas_12.Text, Troca_Ferramentas_13.Text, Troca_Ferramentas_14.Text, Troca_Ferramentas_15.Text, Troca_Ferramentas_16.Text, Troca_Ferramentas_17.Text, Troca_Ferramentas_18.Text, Troca_Ferramentas_19.Text, Troca_Ferramentas_20.Text, Troca_Ferramentas_21.Text, Troca_Ferramentas_22.Text, Troca_Ferramentas_23.Text,
@@ -8482,23 +8483,24 @@
             OPI_foraPDT_00.Text, OPI_foraPDT_1.Text, OPI_foraPDT_2.Text, OPI_foraPDT_3.Text, OPI_foraPDT_4.Text, OPI_foraPDT_5.Text, OPI_foraPDT_6.Text, OPI_foraPDT_7.Text, OPI_foraPDT_8.Text, OPI_foraPDT_9.Text, OPI_foraPDT_10.Text, OPI_foraPDT_11.Text, OPI_foraPDT_12.Text, OPI_foraPDT_13.Text, OPI_foraPDT_14.Text, OPI_foraPDT_15.Text, OPI_foraPDT_16.Text, OPI_foraPDT_17.Text, OPI_foraPDT_18.Text, OPI_foraPDT_19.Text, OPI_foraPDT_20.Text, OPI_foraPDT_21.Text, OPI_foraPDT_22.Text, OPI_foraPDT_23.Text,
             Refugo_00.Text, Refugo_1.Text, Refugo_2.Text, Refugo_3.Text, Refugo_4.Text, Refugo_5.Text, Refugo_6.Text, Refugo_7.Text, Refugo_8.Text, Refugo_9.Text, Refugo_10.Text, Refugo_11.Text, Refugo_12.Text, Refugo_13.Text, Refugo_14.Text, Refugo_15.Text, Refugo_16.Text, Refugo_17.Text, Refugo_18.Text, Refugo_19.Text, Refugo_20.Text, Refugo_21.Text, Refugo_22.Text, Refugo_23.Text,
             Retrabalho_00.Text, Retrabalho_1.Text, Retrabalho_2.Text, Retrabalho_3.Text, Retrabalho_4.Text, Retrabalho_5.Text, Retrabalho_6.Text, Retrabalho_7.Text, Retrabalho_8.Text, Retrabalho_9.Text, Retrabalho_10.Text, Retrabalho_11.Text, Retrabalho_12.Text, Retrabalho_13.Text, Retrabalho_14.Text, Retrabalho_15.Text, Retrabalho_16.Text, Retrabalho_17.Text, Retrabalho_18.Text, Retrabalho_19.Text, Retrabalho_20.Text, Retrabalho_21.Text, Retrabalho_22.Text, Retrabalho_23.Text)
-        Width: =72
+        Width: =70
         X: =285
-        Y: =33
+        Y: =26
         ZIndex: =604
 
     Label20 As label:
         Align: =Align.Center
         Height: =20
-        Size: =16
+        Size: =12
         Text: |
             =Sum(Prod_0.Text , Prod_1.Text , Prod_2.Text , Prod_3.Text , Prod_4.Text , Prod_5.Text)
-        Width: =80
-        X: =45
-        Y: =28
+        Width: =70
+        X: =53
+        Y: =26
         ZIndex: =605
 
     Label_Capacidade_Hora_2 As label:
+        Align: =Align.Center
         Height: =20
         PaddingBottom: =2
         PaddingLeft: =2
@@ -8507,21 +8509,22 @@
         Size: =12
         Text: ="Prod. 2º"
         Width: =82
-        X: =140
+        X: =124
         ZIndex: =606
 
     Label20_1 As label:
         Align: =Align.Center
         Height: =20
-        Size: =16
+        Size: =12
         Text: |
             =Sum(Prod_6.Text , Prod_7.Text , Prod_8.Text , Prod_9.Text , Prod_10.Text , Prod_11.Text,Prod_12.Text,Prod_13.Text,Prod_14.Text,Prod_15.Text)
-        Width: =80
+        Width: =70
         X: =129
         Y: =26
         ZIndex: =607
 
     Label_Capacidade_Hora_3 As label:
+        Align: =Align.Center
         Height: =20
         PaddingBottom: =2
         PaddingLeft: =2
@@ -8530,30 +8533,36 @@
         Size: =12
         Text: ="Prod. 2º"
         Width: =82
-        X: =217
+        X: =209
         ZIndex: =608
 
     Label20_2 As label:
         Align: =Align.Center
         Height: =20
-        Size: =16
+        Size: =12
         Text: |
             =Sum(Prod_16.Text , Prod_17.Text , Prod_18.Text , Prod_19.Text , Prod_20.Text , Prod_21.Text,Prod_22.Text,Prod_23.Text)
-        Width: =80
-        X: =207
-        Y: =28
+        Width: =70
+        X: =215
+        Y: =26
         ZIndex: =609
 
     Label_Capacidade_Hora_4 As label:
+        Align: =Align.Center
         Height: =20
         PaddingBottom: =2
         PaddingLeft: =2
         PaddingRight: =2
         PaddingTop: =2
         Size: =12
-        Text: ="Prod. 2º"
-        Width: =82
-        X: =237
-        Y: =20
+        Text: ="Perdas"
+        Width: =70
+        X: =287
         ZIndex: =610
+
+    Rectangle5 As rectangle:
+        Height: =49
+        Width: =232
+        X: =37
+        ZIndex: =611
 
