@@ -9533,9 +9533,10 @@ Screens:
             Height: =43
             Size: =16
             Text: ="Levantamento de Perdas - CAF " & Cbox_Maquina.Selected.Result
+            Visible: =false
             Width: =294
-            X: =60
-            Y: =6
+            X: =54
+            Y: =7
       - btn_edit_prod:
           Control: Classic/Button@2.2.0
           Properties:
@@ -9649,3 +9650,17 @@ Screens:
               =Sum(Prod_0.Text,Prod_1.Text,Prod_2.Text,Prod_3.Text,Prod_4.Text,Prod_5.Text,Prod_6.Text,Prod_7.Text,Prod_8.Text,Prod_9.Text,Prod_10.Text,Prod_11.Text,Prod_12.Text,Prod_13.Text,Prod_14.Text,Prod_15.Text,Prod_16.Text,Prod_17.Text,Prod_18.Text,Prod_19.Text,Prod_20.Text,Prod_21.Text,Prod_22.Text,Prod_23.Text,0)
             Width: =54
             X: =657
+      - Label_Capacidade_Hora_1:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =20
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =12
+            Text: ="Prod. 1º"
+            Width: =118
+            X: =62

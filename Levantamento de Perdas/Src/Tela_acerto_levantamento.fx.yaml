@@ -8343,9 +8343,10 @@
         Height: =43
         Size: =16
         Text: ="Levantamento de Perdas - CAF " & Cbox_Maquina.Selected.Result
+        Visible: =false
         Width: =294
-        X: =60
-        Y: =6
+        X: =54
+        Y: =7
         ZIndex: =595
 
     btn_edit_prod As button:
@@ -8445,4 +8446,16 @@
         Width: =54
         X: =657
         ZIndex: =602
+
+    Label_Capacidade_Hora_1 As label:
+        Height: =20
+        PaddingBottom: =2
+        PaddingLeft: =2
+        PaddingRight: =2
+        PaddingTop: =2
+        Size: =12
+        Text: ="Prod. 1º"
+        Width: =118
+        X: =62
+        ZIndex: =603
 
