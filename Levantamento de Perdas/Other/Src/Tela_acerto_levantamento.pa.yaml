@@ -9662,5 +9662,117 @@ Screens:
             PaddingTop: =2
             Size: =12
             Text: ="Prod. 1º"
-            Width: =118
-            X: =62
+            Width: =82
+            X: =58
+      - Label19:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =22
+            Size: =16
+            Text: |+
+              =Sum(Quebras_00.Text, Quebras_1.Text, Quebras_2.Text, Quebras_3.Text, Quebras_4.Text, Quebras_5.Text, Quebras_6.Text, Quebras_7.Text, Quebras_8.Text, Quebras_9.Text, Quebras_10.Text, Quebras_11.Text, Quebras_12.Text, Quebras_13.Text, Quebras_14.Text, Quebras_15.Text, Quebras_16.Text, Quebras_17.Text, Quebras_18.Text, Quebras_19.Text, Quebras_20.Text, Quebras_21.Text, Quebras_22.Text, Quebras_23.Text,
+              Troca_Ferramentas_00.Text, Troca_Ferramentas_1.Text, Troca_Ferramentas_2.Text, Troca_Ferramentas_3.Text, Troca_Ferramentas_4.Text, Troca_Ferramentas_5.Text, Troca_Ferramentas_6.Text, Troca_Ferramentas_7.Text, Troca_Ferramentas_8.Text, Troca_Ferramentas_9.Text, Troca_Ferramentas_10.Text, Troca_Ferramentas_11.Text, Troca_Ferramentas_12.Text, Troca_Ferramentas_13.Text, Troca_Ferramentas_14.Text, Troca_Ferramentas_15.Text, Troca_Ferramentas_16.Text, Troca_Ferramentas_17.Text, Troca_Ferramentas_18.Text, Troca_Ferramentas_19.Text, Troca_Ferramentas_20.Text, Troca_Ferramentas_21.Text, Troca_Ferramentas_22.Text, Troca_Ferramentas_23.Text,
+              Ajustes_Regulagens_00.Text, Ajustes_Regulagens_1.Text, Ajustes_Regulagens_2.Text, Ajustes_Regulagens_3.Text, Ajustes_Regulagens_4.Text, Ajustes_Regulagens_5.Text, Ajustes_Regulagens_6.Text, Ajustes_Regulagens_7.Text, Ajustes_Regulagens_8.Text, Ajustes_Regulagens_9.Text, Ajustes_Regulagens_10.Text, Ajustes_Regulagens_11.Text, Ajustes_Regulagens_12.Text, Ajustes_Regulagens_13.Text, Ajustes_Regulagens_14.Text, Ajustes_Regulagens_15.Text, Ajustes_Regulagens_16.Text, Ajustes_Regulagens_17.Text, Ajustes_Regulagens_18.Text, Ajustes_Regulagens_19.Text, Ajustes_Regulagens_20.Text, Ajustes_Regulagens_21.Text, Ajustes_Regulagens_22.Text, Ajustes_Regulagens_23.Text,
+              Troca_tipo_00.Text, Troca_tipo_1.Text, Troca_tipo_2.Text, Troca_tipo_3.Text, Troca_tipo_4.Text, Troca_tipo_5.Text, Troca_tipo_6.Text, Troca_tipo_7.Text, Troca_tipo_8.Text, Troca_tipo_9.Text, Troca_tipo_10.Text, Troca_tipo_11.Text, Troca_tipo_12.Text, Troca_tipo_13.Text, Troca_tipo_14.Text, Troca_tipo_15.Text, Troca_tipo_16.Text, Troca_tipo_17.Text, Troca_tipo_18.Text, Troca_tipo_19.Text, Troca_tipo_20.Text, Troca_tipo_21.Text, Troca_tipo_22.Text, Troca_tipo_23.Text,
+              Sist_Medicao_00.Text, Sist_Medicao_1.Text, Sist_Medicao_2.Text, Sist_Medicao_3.Text, Sist_Medicao_4.Text, Sist_Medicao_5.Text, Sist_Medicao_6.Text, Sist_Medicao_7.Text, Sist_Medicao_8.Text, Sist_Medicao_9.Text, Sist_Medicao_10.Text, Sist_Medicao_11.Text, Sist_Medicao_12.Text, Sist_Medicao_13.Text, Sist_Medicao_14.Text, Sist_Medicao_15.Text, Sist_Medicao_16.Text, Sist_Medicao_17.Text, Sist_Medicao_18.Text, Sist_Medicao_19.Text, Sist_Medicao_20.Text, Sist_Medicao_21.Text, Sist_Medicao_22.Text, Sist_Medicao_23.Text,
+              Sist_Transporte_00.Text, Sist_Transporte_1.Text, Sist_Transporte_2.Text, Sist_Transporte_3.Text, Sist_Transporte_4.Text, Sist_Transporte_5.Text, Sist_Transporte_6.Text, Sist_Transporte_7.Text, Sist_Transporte_8.Text, Sist_Transporte_9.Text, Sist_Transporte_10.Text, Sist_Transporte_11.Text, Sist_Transporte_12.Text, Sist_Transporte_13.Text, Sist_Transporte_14.Text, Sist_Transporte_15.Text, Sist_Transporte_16.Text, Sist_Transporte_17.Text, Sist_Transporte_18.Text, Sist_Transporte_19.Text, Sist_Transporte_20.Text, Sist_Transporte_21.Text, Sist_Transporte_22.Text, Sist_Transporte_23.Text,
+              AM_00.Text, AM_1.Text, AM_2.Text, AM_3.Text, AM_4.Text, AM_5.Text, AM_6.Text, AM_7.Text, AM_8.Text, AM_9.Text, AM_10.Text, AM_11.Text, AM_12.Text, AM_13.Text, AM_14.Text, AM_15.Text, AM_16.Text, AM_17.Text, AM_18.Text, AM_19.Text, AM_20.Text, AM_21.Text, AM_22.Text, AM_23.Text,
+              WO_5S_00.Text, WO_5S_1.Text, WO_5S_2.Text, WO_5S_3.Text, WO_5S_4.Text, WO_5S_5.Text, WO_5S_6.Text, WO_5S_7.Text, WO_5S_8.Text, WO_5S_9.Text, WO_5S_10.Text, WO_5S_11.Text, WO_5S_12.Text, WO_5S_13.Text, WO_5S_14.Text, WO_5S_15.Text, WO_5S_16.Text, WO_5S_17.Text, WO_5S_18.Text, WO_5S_19.Text, WO_5S_20.Text, WO_5S_21.Text, WO_5S_22.Text, WO_5S_23.Text,
+              Manutencao_planejada_00.Text, Manutencao_planejada_1.Text, Manutencao_planejada_2.Text, Manutencao_planejada_3.Text, Manutencao_planejada_4.Text, Manutencao_planejada_5.Text, Manutencao_planejada_6.Text, Manutencao_planejada_7.Text, Manutencao_planejada_8.Text, Manutencao_planejada_9.Text, Manutencao_planejada_10.Text, Manutencao_planejada_11.Text, Manutencao_planejada_12.Text, Manutencao_planejada_13.Text, Manutencao_planejada_14.Text, Manutencao_planejada_15.Text, Manutencao_planejada_16.Text, Manutencao_planejada_17.Text, Manutencao_planejada_18.Text, Manutencao_planejada_19.Text, Manutencao_planejada_20.Text, Manutencao_planejada_21.Text, Manutencao_planejada_22.Text, Manutencao_planejada_23.Text,
+              Limpeza_tecnica_00.Text, Limpeza_tecnica_1.Text, Limpeza_tecnica_2.Text, Limpeza_tecnica_3.Text, Limpeza_tecnica_4.Text, Limpeza_tecnica_5.Text, Limpeza_tecnica_6.Text, Limpeza_tecnica_7.Text, Limpeza_tecnica_8.Text, Limpeza_tecnica_9.Text, Limpeza_tecnica_10.Text, Limpeza_tecnica_11.Text, Limpeza_tecnica_12.Text, Limpeza_tecnica_13.Text, Limpeza_tecnica_14.Text, Limpeza_tecnica_15.Text, Limpeza_tecnica_16.Text, Limpeza_tecnica_17.Text, Limpeza_tecnica_18.Text, Limpeza_tecnica_19.Text, Limpeza_tecnica_20.Text, Limpeza_tecnica_21.Text, Limpeza_tecnica_22.Text, Limpeza_tecnica_23.Text,
+              Ajuste_inicio_turno_00.Text, Ajuste_inicio_turno_1.Text, Ajuste_inicio_turno_2.Text, Ajuste_inicio_turno_3.Text, Ajuste_inicio_turno_4.Text, Ajuste_inicio_turno_5.Text, Ajuste_inicio_turno_6.Text, Ajuste_inicio_turno_7.Text, Ajuste_inicio_turno_8.Text, Ajuste_inicio_turno_9.Text, Ajuste_inicio_turno_10.Text, Ajuste_inicio_turno_11.Text, Ajuste_inicio_turno_12.Text, Ajuste_inicio_turno_13.Text, Ajuste_inicio_turno_14.Text, Ajuste_inicio_turno_15.Text, Ajuste_inicio_turno_16.Text, Ajuste_inicio_turno_17.Text, Ajuste_inicio_turno_18.Text, Ajuste_inicio_turno_19.Text, Ajuste_inicio_turno_20.Text, Ajuste_inicio_turno_21.Text, Ajuste_inicio_turno_22.Text, Ajuste_inicio_turno_23.Text,
+              MicroParada_00.Text, MicroParada_1.Text, MicroParada_2.Text, MicroParada_3.Text, MicroParada_4.Text, MicroParada_5.Text, MicroParada_6.Text, MicroParada_7.Text, MicroParada_8.Text, MicroParada_9.Text, MicroParada_10.Text, MicroParada_11.Text, MicroParada_12.Text, MicroParada_13.Text, MicroParada_14.Text, MicroParada_15.Text, MicroParada_16.Text, MicroParada_17.Text, MicroParada_18.Text, MicroParada_19.Text, MicroParada_20.Text, MicroParada_21.Text, MicroParada_22.Text, MicroParada_23.Text,
+              FaltaMaterial_00.Text, FaltaMaterial_1.Text, FaltaMaterial_2.Text, FaltaMaterial_3.Text, FaltaMaterial_4.Text, FaltaMaterial_5.Text, FaltaMaterial_6.Text, FaltaMaterial_7.Text, FaltaMaterial_8.Text, FaltaMaterial_9.Text, FaltaMaterial_10.Text, FaltaMaterial_11.Text, FaltaMaterial_12.Text, FaltaMaterial_13.Text, FaltaMaterial_14.Text, FaltaMaterial_15.Text, FaltaMaterial_16.Text, FaltaMaterial_17.Text, FaltaMaterial_18.Text, FaltaMaterial_19.Text, FaltaMaterial_20.Text, FaltaMaterial_21.Text, FaltaMaterial_22.Text, FaltaMaterial_23.Text,
+              Velocidade_producao_00.Text, Velocidade_producao_1.Text, Velocidade_producao_2.Text, Velocidade_producao_3.Text, Velocidade_producao_4.Text, Velocidade_producao_5.Text, Velocidade_producao_6.Text, Velocidade_producao_7.Text, Velocidade_producao_8.Text, Velocidade_producao_9.Text, Velocidade_producao_10.Text, Velocidade_producao_11.Text, Velocidade_producao_12.Text, Velocidade_producao_13.Text, Velocidade_producao_14.Text, Velocidade_producao_15.Text, Velocidade_producao_16.Text, Velocidade_producao_17.Text, Velocidade_producao_18.Text, Velocidade_producao_19.Text, Velocidade_producao_20.Text, Velocidade_producao_21.Text, Velocidade_producao_22.Text, Velocidade_producao_23.Text,
+              Carga_Descarga_00.Text, Carga_Descarga_1.Text, Carga_Descarga_2.Text, Carga_Descarga_3.Text, Carga_Descarga_4.Text, Carga_Descarga_5.Text, Carga_Descarga_6.Text, Carga_Descarga_7.Text, Carga_Descarga_8.Text, Carga_Descarga_9.Text, Carga_Descarga_10.Text, Carga_Descarga_11.Text, Carga_Descarga_12.Text, Carga_Descarga_13.Text, Carga_Descarga_14.Text, Carga_Descarga_15.Text, Carga_Descarga_16.Text, Carga_Descarga_17.Text, Carga_Descarga_18.Text, Carga_Descarga_19.Text, Carga_Descarga_20.Text, Carga_Descarga_21.Text, Carga_Descarga_22.Text, Carga_Descarga_23.Text,
+              OPI_foraPDT_00.Text, OPI_foraPDT_1.Text, OPI_foraPDT_2.Text, OPI_foraPDT_3.Text, OPI_foraPDT_4.Text, OPI_foraPDT_5.Text, OPI_foraPDT_6.Text, OPI_foraPDT_7.Text, OPI_foraPDT_8.Text, OPI_foraPDT_9.Text, OPI_foraPDT_10.Text, OPI_foraPDT_11.Text, OPI_foraPDT_12.Text, OPI_foraPDT_13.Text, OPI_foraPDT_14.Text, OPI_foraPDT_15.Text, OPI_foraPDT_16.Text, OPI_foraPDT_17.Text, OPI_foraPDT_18.Text, OPI_foraPDT_19.Text, OPI_foraPDT_20.Text, OPI_foraPDT_21.Text, OPI_foraPDT_22.Text, OPI_foraPDT_23.Text,
+              Refugo_00.Text, Refugo_1.Text, Refugo_2.Text, Refugo_3.Text, Refugo_4.Text, Refugo_5.Text, Refugo_6.Text, Refugo_7.Text, Refugo_8.Text, Refugo_9.Text, Refugo_10.Text, Refugo_11.Text, Refugo_12.Text, Refugo_13.Text, Refugo_14.Text, Refugo_15.Text, Refugo_16.Text, Refugo_17.Text, Refugo_18.Text, Refugo_19.Text, Refugo_20.Text, Refugo_21.Text, Refugo_22.Text, Refugo_23.Text,
+              Retrabalho_00.Text, Retrabalho_1.Text, Retrabalho_2.Text, Retrabalho_3.Text, Retrabalho_4.Text, Retrabalho_5.Text, Retrabalho_6.Text, Retrabalho_7.Text, Retrabalho_8.Text, Retrabalho_9.Text, Retrabalho_10.Text, Retrabalho_11.Text, Retrabalho_12.Text, Retrabalho_13.Text, Retrabalho_14.Text, Retrabalho_15.Text, Retrabalho_16.Text, Retrabalho_17.Text, Retrabalho_18.Text, Retrabalho_19.Text, Retrabalho_20.Text, Retrabalho_21.Text, Retrabalho_22.Text, Retrabalho_23.Text)
+            Width: =72
+            X: =285
+            Y: =33
+      - Label20:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =20
+            Size: =16
+            Text: |+
+              =Sum(Prod_0.Text , Prod_1.Text , Prod_2.Text , Prod_3.Text , Prod_4.Text , Prod_5.Text)
+            Width: =80
+            X: =45
+            Y: =28
+      - Label_Capacidade_Hora_2:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =20
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =12
+            Text: ="Prod. 2º"
+            Width: =82
+            X: =140
+      - Label20_1:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =20
+            Size: =16
+            Text: |
+              =Sum(Prod_6.Text , Prod_7.Text , Prod_8.Text , Prod_9.Text , Prod_10.Text , Prod_11.Text,Prod_12.Text,Prod_13.Text,Prod_14.Text,Prod_15.Text)
+            Width: =80
+            X: =129
+            Y: =26
+      - Label_Capacidade_Hora_3:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =20
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =12
+            Text: ="Prod. 2º"
+            Width: =82
+            X: =217
+      - Label20_2:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =20
+            Size: =16
+            Text: |
+              =Sum(Prod_16.Text , Prod_17.Text , Prod_18.Text , Prod_19.Text , Prod_20.Text , Prod_21.Text,Prod_22.Text,Prod_23.Text)
+            Width: =80
+            X: =207
+            Y: =28
+      - Label_Capacidade_Hora_4:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            Height: =20
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            Size: =12
+            Text: ="Prod. 2º"
+            Width: =82
+            X: =237
+            Y: =20

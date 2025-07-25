@@ -86,7 +86,7 @@ Screens:
 
               //ColorFade(RGBA(56; 96; 178; 1); -20%)
             OnSelect: |
-              =Set( varmaquina , "3353217002");
+              =Set( varmaquina , "3353217002-3");
               Set( varsetor ,  Label_setor_10.Text );
               Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
               Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
