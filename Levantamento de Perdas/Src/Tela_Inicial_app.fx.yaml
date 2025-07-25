@@ -37,14 +37,13 @@ Tela_Inicial_app As screen:
         DisplayFields: =["CAF"]
         Height: =63
         InputTextPlaceholder: ="MÁQUINA"
-        IsSearchable: =false
         Items: |-
             =Filter(CreateMaquina , Text(ComboBoxute_ini.Selected.Result) = UTE).CAF
             
             //Sort(Distinct( Filter(CreateMaquina; Text(ComboBoxute_ini.Selected.Result) in UTE) ; CAF ).Result ; Result)
         NoSelectionText: ="MÁQUINA"
         SearchFields: =["CAF"]
-        SearchItems: =[]
+        SearchItems: =Search(Filter(CreateMaquina,Text(ComboBoxute_ini.Selected.Result)=UTE).CAF,ComboBoxmaquina_ini.SearchText,CAF)
         Size: =21
         Width: =560
         X: =40

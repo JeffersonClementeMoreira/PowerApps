@@ -67,7 +67,6 @@ Screens:
             Height: =63
             HoverFill: =RGBA(186, 202, 226, 1)
             InputTextPlaceholder: ="MÁQUINA"
-            IsSearchable: =false
             Items: |-
               =Filter(CreateMaquina , Text(ComboBoxute_ini.Selected.Result) = UTE).CAF
 

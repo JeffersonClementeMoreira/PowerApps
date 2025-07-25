@@ -112,8 +112,8 @@ Retífica_Engr_CDZ_3ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "71500031");
-            Set( varsetor ,  Label_setor_26.Text );
+            =Set( varmaquina , "71500031-4");
+            Set( varsetor ,  "Retífica Engr. 4ª CDZ" );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -126,4 +126,130 @@ Retífica_Engr_CDZ_3ª As screen:
         X: =153
         Y: =632
         ZIndex: =7
+
+    Image6 As image:
+        Height: =194
+        Image: ='Captura de tela 2025-07-25 075125'
+        Width: =180
+        X: =147
+        Y: =888
+        ZIndex: =8
+
+    Image7 As image:
+        Height: =188
+        Image: ='Captura de tela 2025-07-25 075125'
+        Width: =166
+        X: =147
+        Y: =395
+        ZIndex: =9
+
+    Image8 As image:
+        Height: =54
+        Image: ='Captura de tela 2025-07-19 091725'
+        ImagePosition: =ImagePosition.Fill
+        Width: =80
+        X: =191
+        Y: =832
+        ZIndex: =10
+
+    Image8_1 As image:
+        Height: =144
+        Image: ='Captura de tela 2025-07-19 091725'
+        ImagePosition: =ImagePosition.Fill
+        Width: =142
+        X: =5
+        Y: =663
+        ZIndex: =11
+
+    Label16 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =110
+        Size: =16
+        Text: |-
+            ="MG-Exim 031
+            OP.: 110
+            Engr. 3ª CDZ"
+        Width: =153
+        Y: =439
+        ZIndex: =12
+
+    Label17 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =94
+        Size: =16
+        Text: |-
+            ="MG-Exim 031
+            OP.: 110
+            Engr. 4ª CDZ"
+        Width: =151
+        Y: =687
+        ZIndex: =13
+
+    Label18 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =126
+        Size: =16
+        Text: |-
+            ="MG-Exim 031
+            OP.: 110
+            Engr. 5ª CDZ"
+        Width: =148
+        X: =5
+        Y: =935
+        ZIndex: =14
+
+    Btnmaq_226 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =185
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "71500031-3");
+            Set( varsetor ,  "Retífica Engr. 3ª CDZ");
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =142
+        X: =157
+        Y: =396
+        ZIndex: =15
+
+    Btnmaq_227 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =197
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "71500031-5");
+            Set( varsetor ,  "Retífica Engr. 5ª CDZ" );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =157
+        X: =157
+        Y: =888
+        ZIndex: =16
 

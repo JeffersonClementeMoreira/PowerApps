@@ -154,8 +154,8 @@ Screens:
 
               //ColorFade(RGBA(56; 96; 178; 1); -20%)
             OnSelect: |
-              =Set( varmaquina , "71500031");
-              Set( varsetor ,  Label_setor_26.Text );
+              =Set( varmaquina , "71500031-4");
+              Set( varsetor ,  "Retífica Engr. 4ª CDZ" );
               Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
               Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
               Set( varselect , 1) ;
@@ -169,3 +169,153 @@ Screens:
             Width: =157
             X: =153
             Y: =632
+      - Image6:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =194
+            Image: ='Captura de tela 2025-07-25 075125'
+            Width: =180
+            X: =147
+            Y: =888
+      - Image7:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =188
+            Image: ='Captura de tela 2025-07-25 075125'
+            Width: =166
+            X: =147
+            Y: =395
+      - Image8:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =54
+            Image: ='Captura de tela 2025-07-19 091725'
+            ImagePosition: =ImagePosition.Fill
+            Width: =80
+            X: =191
+            Y: =832
+      - Image8_1:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =144
+            Image: ='Captura de tela 2025-07-19 091725'
+            ImagePosition: =ImagePosition.Fill
+            Width: =142
+            X: =5
+            Y: =663
+      - Label16:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Semibold
+            Height: =110
+            Size: =16
+            Text: |-
+              ="MG-Exim 031
+              OP.: 110
+              Engr. 3ª CDZ"
+            Width: =153
+            Y: =439
+      - Label17:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Semibold
+            Height: =94
+            Size: =16
+            Text: |-
+              ="MG-Exim 031
+              OP.: 110
+              Engr. 4ª CDZ"
+            Width: =151
+            Y: =687
+      - Label18:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Semibold
+            Height: =126
+            Size: =16
+            Text: |-
+              ="MG-Exim 031
+              OP.: 110
+              Engr. 5ª CDZ"
+            Width: =148
+            X: =5
+            Y: =935
+      - Btnmaq_226:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =185
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "71500031-3");
+              Set( varsetor ,  "Retífica Engr. 3ª CDZ");
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =142
+            X: =157
+            Y: =396
+      - Btnmaq_227:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =197
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: |-
+              =RGBA(4, 114, 14, 0.9)
+
+              //ColorFade(RGBA(56; 96; 178; 1); -20%)
+            OnSelect: |
+              =Set( varmaquina , "71500031-5");
+              Set( varsetor ,  "Retífica Engr. 5ª CDZ" );
+              Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+              Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+              Set( varselect , 1) ;
+              Set(varDelay,false);
+              Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+              NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: =""
+            Width: =157
+            X: =157
+            Y: =888

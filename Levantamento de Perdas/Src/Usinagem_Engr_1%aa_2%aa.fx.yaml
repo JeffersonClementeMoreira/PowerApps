@@ -325,7 +325,7 @@ Usinagem_Engr_1ª_2ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "41500085");
-            Set( varsetor ,  Label_setor_6.Text );
+            Set( varsetor ,  "Usinagem Engr. 2ª" );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -352,7 +352,7 @@ Usinagem_Engr_1ª_2ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "41500083");
-            Set( varsetor ,  Label_setor_6.Text );
+            Set( varsetor ,  "Usinagem Engr. 1ª" );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
