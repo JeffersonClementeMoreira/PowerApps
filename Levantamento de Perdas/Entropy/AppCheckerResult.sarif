@@ -8664,6 +8664,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Rectangle5_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Rectangle5_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Rectangle5_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Rectangle5_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Tela_acerto_levantamento.Rectangle5_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Tela_acerto_levantamento",
+                "type": "Tela_acerto_levantamento.Rectangle5_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Usinagem_Luva_1ª2ª_1"
                 }
               ],
@@ -9585,7 +9645,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Cada controle consome recursos e, quando uma tela tem muitos controles, o aplicativo pode ficar lento ou parar de responder. A complexidade estimada de \"Tela_acerto_levantamento\" é 605, o que excede o limite máximo recomendado (300)."
+                "whyFix": "Cada controle consome recursos e, quando uma tela tem muitos controles, o aplicativo pode ficar lento ou parar de responder. A complexidade estimada de \"Tela_acerto_levantamento\" é 606, o que excede o limite máximo recomendado (300)."
               }
             }
           ],

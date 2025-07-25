@@ -2,13 +2,31 @@
     Height: =790
     Width: =1123
 
+    Rectangle5_1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(238, 204, 204, 1)
+        Height: =49
+        Width: =73
+        X: =287
+        ZIndex: =1
+
+    Rectangle5 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(232, 244, 217, 1)
+        Height: =49
+        Width: =232
+        X: =53
+        ZIndex: =2
+
     Image1 As image:
         Height: =741
         Image: ='Imagem Levantamento de perdas_v2'
         ImagePosition: =ImagePosition.Stretch
         Width: =1123
         Y: =53
-        ZIndex: =1
+        ZIndex: =3
 
     Hora_00 As label:
         Height: =27.1
@@ -23,7 +41,7 @@
         Width: =49
         X: =2
         Y: =140
-        ZIndex: =2
+        ZIndex: =4
 
     Prod_0 As label:
         Align: =Align.Center
@@ -37,7 +55,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_00.Y
-        ZIndex: =3
+        ZIndex: =5
 
     Cbox_UTE As combobox:
         DisplayFields: =["Result"]
@@ -57,7 +75,7 @@
         Size: =12
         Width: =195
         X: =761
-        ZIndex: =4
+        ZIndex: =6
 
     DatePicker1 As datepicker:
         Height: =23
@@ -68,7 +86,7 @@
         Width: =154
         X: =967
         Y: =27
-        ZIndex: =5
+        ZIndex: =7
 
     Icon1_2 As icon.Home:
         BorderColor: =RGBA(255, 255, 255, 1)
@@ -83,7 +101,7 @@
         Width: =50
         X: =1
         Y: =1
-        ZIndex: =6
+        ZIndex: =8
 
     Hora_1 As label:
         Height: =Hora_00.Height
@@ -98,7 +116,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_00.Y + Hora_00.Height
-        ZIndex: =7
+        ZIndex: =9
 
     Hora_2 As label:
         Height: =Hora_00.Height
@@ -113,7 +131,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_1.Y + Hora_1.Height
-        ZIndex: =8
+        ZIndex: =10
 
     Hora_3 As label:
         Height: =Hora_00.Height
@@ -128,7 +146,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_2.Y + Hora_2.Height
-        ZIndex: =9
+        ZIndex: =11
 
     Hora_4 As label:
         Height: =Hora_00.Height
@@ -143,7 +161,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_3.Y + Hora_3.Height
-        ZIndex: =10
+        ZIndex: =12
 
     Hora_5 As label:
         Height: =Hora_00.Height
@@ -158,7 +176,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_4.Y + Hora_4.Height
-        ZIndex: =11
+        ZIndex: =13
 
     Hora_6 As label:
         Height: =Hora_00.Height
@@ -173,7 +191,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_5.Y + Hora_5.Height
-        ZIndex: =12
+        ZIndex: =14
 
     Hora_7 As label:
         Height: =Hora_00.Height
@@ -188,7 +206,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_6.Y + Hora_6.Height
-        ZIndex: =13
+        ZIndex: =15
 
     Hora_8 As label:
         Height: =Hora_00.Height
@@ -203,7 +221,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_7.Y + Hora_7.Height
-        ZIndex: =14
+        ZIndex: =16
 
     Hora_9 As label:
         Height: =Hora_00.Height
@@ -218,7 +236,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_8.Y + Hora_8.Height
-        ZIndex: =15
+        ZIndex: =17
 
     Hora_10 As label:
         Height: =Hora_00.Height
@@ -233,7 +251,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_9.Y + Hora_9.Height
-        ZIndex: =16
+        ZIndex: =18
 
     Hora_11 As label:
         Height: =Hora_00.Height
@@ -248,7 +266,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_10.Y + Hora_10.Height
-        ZIndex: =17
+        ZIndex: =19
 
     Hora_12 As label:
         Height: =Hora_00.Height
@@ -263,7 +281,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_11.Y + Hora_11.Height
-        ZIndex: =18
+        ZIndex: =20
 
     Hora_13 As label:
         Height: =Hora_00.Height
@@ -278,7 +296,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_12.Y + Hora_12.Height
-        ZIndex: =19
+        ZIndex: =21
 
     Hora_14 As label:
         Height: =Hora_00.Height
@@ -293,7 +311,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_13.Y + Hora_13.Height
-        ZIndex: =20
+        ZIndex: =22
 
     Hora_15 As label:
         Height: =Hora_00.Height
@@ -308,7 +326,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_14.Y + Hora_14.Height
-        ZIndex: =21
+        ZIndex: =23
 
     Hora_16 As label:
         Height: =Hora_00.Height
@@ -323,7 +341,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_15.Y + Hora_15.Height
-        ZIndex: =22
+        ZIndex: =24
 
     Hora_17 As label:
         Height: =Hora_00.Height
@@ -338,7 +356,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_16.Y + Hora_16.Height
-        ZIndex: =23
+        ZIndex: =25
 
     Hora_18 As label:
         Height: =Hora_00.Height
@@ -353,7 +371,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_17.Y + Hora_17.Height
-        ZIndex: =24
+        ZIndex: =26
 
     Hora_19 As label:
         Height: =Hora_00.Height
@@ -368,7 +386,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_18.Y + Hora_18.Height
-        ZIndex: =25
+        ZIndex: =27
 
     Hora_20 As label:
         Height: =Hora_00.Height
@@ -383,7 +401,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_19.Y + Hora_19.Height
-        ZIndex: =26
+        ZIndex: =28
 
     Hora_21 As label:
         Height: =Hora_00.Height
@@ -398,7 +416,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_20.Y + Hora_20.Height
-        ZIndex: =27
+        ZIndex: =29
 
     Hora_22 As label:
         Height: =Hora_00.Height
@@ -413,7 +431,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_21.Y + Hora_21.Height
-        ZIndex: =28
+        ZIndex: =30
 
     Hora_23 As label:
         Height: =Hora_00.Height
@@ -428,7 +446,7 @@
         Width: =Hora_00.Width
         X: =Hora_00.X
         Y: =Hora_22.Y + Hora_22.Height
-        ZIndex: =29
+        ZIndex: =31
 
     Prod_Horária As label:
         Align: =Align.Center
@@ -441,7 +459,7 @@
         Visible: =false
         Width: =54
         X: =657
-        ZIndex: =30
+        ZIndex: =32
 
     Prod_Diária As label:
         Align: =Align.Center
@@ -455,7 +473,7 @@
         Width: =54
         X: =657
         Y: =26
-        ZIndex: =31
+        ZIndex: =33
 
     Cbox_Maquina As combobox:
         DisplayFields: =["Result"]
@@ -478,7 +496,7 @@
         Size: =12
         Width: =156
         X: =967
-        ZIndex: =32
+        ZIndex: =34
 
     LabelDate As label:
         Height: =44
@@ -489,7 +507,7 @@
         Width: =172
         X: =951
         Y: =60
-        ZIndex: =33
+        ZIndex: =35
 
     Cbox_Setor As combobox:
         DisplayFields: =["Result"]
@@ -536,7 +554,7 @@
         Width: =195
         X: =761
         Y: =27
-        ZIndex: =34
+        ZIndex: =36
 
     Quebras_00 As label:
         Align: =Align.Center
@@ -550,7 +568,7 @@
         Width: =47
         X: =Refeicao_00.X + Refeicao_00.Width
         Y: =Hora_00.Y
-        ZIndex: =35
+        ZIndex: =37
 
     Troca_Ferramentas_00 As label:
         Align: =Align.Center
@@ -564,7 +582,7 @@
         Width: =46
         X: =Quebras_00.X + Quebras_00.Width
         Y: =Hora_00.Y
-        ZIndex: =36
+        ZIndex: =38
 
     Ajustes_Regulagens_00 As label:
         Align: =Align.Center
@@ -578,7 +596,7 @@
         Width: =47
         X: =Troca_Ferramentas_00.X + Troca_Ferramentas_00.Width
         Y: =Hora_00.Y
-        ZIndex: =40
+        ZIndex: =39
 
     Troca_tipo_00 As label:
         Align: =Align.Center
@@ -592,7 +610,7 @@
         Width: =46
         X: =Ajustes_Regulagens_00.X + Ajustes_Regulagens_00.Width
         Y: =Hora_00.Y
-        ZIndex: =41
+        ZIndex: =40
 
     Sist_Medicao_00 As label:
         Align: =Align.Center
@@ -606,7 +624,7 @@
         Width: =47
         X: =Troca_tipo_00.X + Troca_tipo_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =42
+        ZIndex: =41
 
     Label_Capacidade_Hora As label:
         Height: =20
@@ -618,7 +636,7 @@
         Text: ="Produção Dia"
         Width: =142
         X: =515
-        ZIndex: =43
+        ZIndex: =42
 
     Label_Capacidade_Dia As label:
         Height: =20
@@ -631,7 +649,7 @@
         Width: =142
         X: =515
         Y: =26
-        ZIndex: =44
+        ZIndex: =43
 
     Delta_prod_00 As label:
         Align: =Align.Center
@@ -646,7 +664,7 @@
         Width: =47
         X: =Prod_0.X + Prod_0.Width
         Y: =Hora_00.Y
-        ZIndex: =45
+        ZIndex: =44
 
     Nao_Prev_Prod_00 As label:
         Align: =Align.Center
@@ -660,7 +678,7 @@
         Width: =47
         X: =Delta_prod_00.X + Delta_prod_00.Width
         Y: =Hora_00.Y
-        ZIndex: =46
+        ZIndex: =45
 
     Reuniao_00 As label:
         Align: =Align.Center
@@ -674,7 +692,7 @@
         Width: =46
         X: =Nao_Prev_Prod_00.X + Nao_Prev_Prod_00.Width
         Y: =Hora_00.Y
-        ZIndex: =47
+        ZIndex: =46
 
     Refeicao_00 As label:
         Align: =Align.Center
@@ -688,7 +706,7 @@
         Width: =46
         X: =Reuniao_00.X + Reuniao_00.Width
         Y: =Hora_00.Y
-        ZIndex: =48
+        ZIndex: =47
 
     Sist_Transporte_00 As label:
         Align: =Align.Center
@@ -702,7 +720,7 @@
         Width: =47
         X: =Sist_Medicao_00.X + Sist_Medicao_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =49
+        ZIndex: =48
 
     AM_00 As label:
         Align: =Align.Center
@@ -716,7 +734,7 @@
         Width: =46
         X: =Sist_Transporte_00.X + Sist_Transporte_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =50
+        ZIndex: =49
 
     WO_5S_00 As label:
         Align: =Align.Center
@@ -730,7 +748,7 @@
         Width: =46
         X: =AM_00.X + AM_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =51
+        ZIndex: =50
 
     Manutencao_planejada_00 As label:
         Align: =Align.Center
@@ -744,7 +762,7 @@
         Width: =47
         X: =WO_5S_00.X + WO_5S_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =52
+        ZIndex: =51
 
     Limpeza_tecnica_00 As label:
         Align: =Align.Center
@@ -758,7 +776,7 @@
         Width: =47
         X: =Manutencao_planejada_00.X + Manutencao_planejada_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =53
+        ZIndex: =52
 
     Ajuste_inicio_turno_00 As label:
         Align: =Align.Center
@@ -772,7 +790,7 @@
         Width: =46
         X: =Limpeza_tecnica_00.X + Limpeza_tecnica_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =54
+        ZIndex: =53
 
     MicroParada_00 As label:
         Align: =Align.Center
@@ -786,7 +804,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_00.X + Ajuste_inicio_turno_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =55
+        ZIndex: =54
 
     FaltaMaterial_00 As label:
         Align: =Align.Center
@@ -800,7 +818,7 @@
         Width: =46
         X: =MicroParada_00.X + MicroParada_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =56
+        ZIndex: =55
 
     Velocidade_producao_00 As label:
         Align: =Align.Center
@@ -814,7 +832,7 @@
         Width: =47
         X: =FaltaMaterial_00.X + FaltaMaterial_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =57
+        ZIndex: =56
 
     Carga_Descarga_00 As label:
         Align: =Align.Center
@@ -828,7 +846,7 @@
         Width: =47
         X: =Velocidade_producao_00.X + Velocidade_producao_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =58
+        ZIndex: =57
 
     OPI_foraPDT_00 As label:
         Align: =Align.Center
@@ -842,7 +860,7 @@
         Width: =46
         X: =Carga_Descarga_00.X + Carga_Descarga_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =59
+        ZIndex: =58
 
     Refugo_00 As label:
         Align: =Align.Center
@@ -856,7 +874,7 @@
         Width: =46
         X: =OPI_foraPDT_00.X + OPI_foraPDT_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =60
+        ZIndex: =59
 
     Retrabalho_00 As label:
         Align: =Align.Center
@@ -870,7 +888,7 @@
         Width: =46
         X: =Refugo_00.X + Refugo_00.Width 
         Y: =Hora_00.Y
-        ZIndex: =61
+        ZIndex: =60
 
     Prod_1 As label:
         Align: =Align.Center
@@ -884,7 +902,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_1.Y
-        ZIndex: =62
+        ZIndex: =61
 
     Quebras_1 As label:
         Align: =Align.Center
@@ -898,7 +916,7 @@
         Width: =47
         X: =Refeicao_1.X + Refeicao_1.Width
         Y: =Hora_1.Y
-        ZIndex: =63
+        ZIndex: =62
 
     Troca_Ferramentas_1 As label:
         Align: =Align.Center
@@ -912,7 +930,7 @@
         Width: =46
         X: =Quebras_1.X + Quebras_1.Width
         Y: =Hora_1.Y
-        ZIndex: =64
+        ZIndex: =63
 
     Ajustes_Regulagens_1 As label:
         Align: =Align.Center
@@ -926,7 +944,7 @@
         Width: =47
         X: =Troca_Ferramentas_1.X + Troca_Ferramentas_1.Width
         Y: =Hora_1.Y
-        ZIndex: =65
+        ZIndex: =64
 
     Troca_tipo_1 As label:
         Align: =Align.Center
@@ -940,7 +958,7 @@
         Width: =46
         X: =Ajustes_Regulagens_1.X + Ajustes_Regulagens_1.Width
         Y: =Hora_1.Y
-        ZIndex: =66
+        ZIndex: =65
 
     Sist_Medicao_1 As label:
         Align: =Align.Center
@@ -954,7 +972,7 @@
         Width: =47
         X: =Troca_tipo_1.X + Troca_tipo_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =67
+        ZIndex: =66
 
     Delta_prod_1 As label:
         Align: =Align.Center
@@ -969,7 +987,7 @@
         Width: =47
         X: =Prod_1.X + Prod_1.Width
         Y: =Hora_1.Y
-        ZIndex: =68
+        ZIndex: =67
 
     Nao_Prev_Prod_1 As label:
         Align: =Align.Center
@@ -983,7 +1001,7 @@
         Width: =47
         X: =Delta_prod_1.X + Delta_prod_1.Width
         Y: =Hora_1.Y
-        ZIndex: =69
+        ZIndex: =68
 
     Reuniao_1 As label:
         Align: =Align.Center
@@ -997,7 +1015,7 @@
         Width: =46
         X: =Nao_Prev_Prod_1.X + Nao_Prev_Prod_1.Width
         Y: =Hora_1.Y
-        ZIndex: =70
+        ZIndex: =69
 
     Refeicao_1 As label:
         Align: =Align.Center
@@ -1011,7 +1029,7 @@
         Width: =46
         X: =Reuniao_1.X + Reuniao_1.Width
         Y: =Hora_1.Y
-        ZIndex: =71
+        ZIndex: =70
 
     Sist_Transporte_1 As label:
         Align: =Align.Center
@@ -1025,7 +1043,7 @@
         Width: =47
         X: =Sist_Medicao_1.X + Sist_Medicao_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =72
+        ZIndex: =71
 
     AM_1 As label:
         Align: =Align.Center
@@ -1039,7 +1057,7 @@
         Width: =46
         X: =Sist_Transporte_1.X + Sist_Transporte_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =73
+        ZIndex: =72
 
     WO_5S_1 As label:
         Align: =Align.Center
@@ -1053,7 +1071,7 @@
         Width: =46
         X: =AM_1.X + AM_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =74
+        ZIndex: =73
 
     Manutencao_planejada_1 As label:
         Align: =Align.Center
@@ -1067,7 +1085,7 @@
         Width: =47
         X: =WO_5S_1.X + WO_5S_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =75
+        ZIndex: =74
 
     Limpeza_tecnica_1 As label:
         Align: =Align.Center
@@ -1081,7 +1099,7 @@
         Width: =47
         X: =Manutencao_planejada_1.X + Manutencao_planejada_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =76
+        ZIndex: =75
 
     Ajuste_inicio_turno_1 As label:
         Align: =Align.Center
@@ -1095,7 +1113,7 @@
         Width: =46
         X: =Limpeza_tecnica_1.X + Limpeza_tecnica_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =77
+        ZIndex: =76
 
     MicroParada_1 As label:
         Align: =Align.Center
@@ -1109,7 +1127,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_1.X + Ajuste_inicio_turno_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =78
+        ZIndex: =77
 
     FaltaMaterial_1 As label:
         Align: =Align.Center
@@ -1123,7 +1141,7 @@
         Width: =46
         X: =MicroParada_1.X + MicroParada_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =79
+        ZIndex: =78
 
     Velocidade_producao_1 As label:
         Align: =Align.Center
@@ -1137,7 +1155,7 @@
         Width: =47
         X: =FaltaMaterial_1.X + FaltaMaterial_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =80
+        ZIndex: =79
 
     Carga_Descarga_1 As label:
         Align: =Align.Center
@@ -1151,7 +1169,7 @@
         Width: =47
         X: =Velocidade_producao_1.X + Velocidade_producao_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =81
+        ZIndex: =80
 
     OPI_foraPDT_1 As label:
         Align: =Align.Center
@@ -1165,7 +1183,7 @@
         Width: =46
         X: =Carga_Descarga_1.X + Carga_Descarga_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =82
+        ZIndex: =81
 
     Refugo_1 As label:
         Align: =Align.Center
@@ -1179,7 +1197,7 @@
         Width: =46
         X: =OPI_foraPDT_1.X + OPI_foraPDT_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =83
+        ZIndex: =82
 
     Retrabalho_1 As label:
         Align: =Align.Center
@@ -1193,7 +1211,7 @@
         Width: =46
         X: =Refugo_1.X + Refugo_1.Width 
         Y: =Hora_1.Y
-        ZIndex: =84
+        ZIndex: =83
 
     Prod_2 As label:
         Align: =Align.Center
@@ -1207,7 +1225,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_2.Y
-        ZIndex: =85
+        ZIndex: =84
 
     Quebras_2 As label:
         Align: =Align.Center
@@ -1221,7 +1239,7 @@
         Width: =47
         X: =Refeicao_2.X + Refeicao_2.Width
         Y: =Hora_2.Y
-        ZIndex: =86
+        ZIndex: =85
 
     Troca_Ferramentas_2 As label:
         Align: =Align.Center
@@ -1235,7 +1253,7 @@
         Width: =46
         X: =Quebras_2.X + Quebras_2.Width
         Y: =Hora_2.Y
-        ZIndex: =87
+        ZIndex: =86
 
     Ajustes_Regulagens_2 As label:
         Align: =Align.Center
@@ -1249,7 +1267,7 @@
         Width: =47
         X: =Troca_Ferramentas_2.X + Troca_Ferramentas_2.Width
         Y: =Hora_2.Y
-        ZIndex: =88
+        ZIndex: =87
 
     Troca_tipo_2 As label:
         Align: =Align.Center
@@ -1263,7 +1281,7 @@
         Width: =46
         X: =Ajustes_Regulagens_2.X + Ajustes_Regulagens_2.Width
         Y: =Hora_2.Y
-        ZIndex: =89
+        ZIndex: =88
 
     Sist_Medicao_2 As label:
         Align: =Align.Center
@@ -1277,7 +1295,7 @@
         Width: =47
         X: =Troca_tipo_2.X + Troca_tipo_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =90
+        ZIndex: =89
 
     Delta_prod_2 As label:
         Align: =Align.Center
@@ -1292,7 +1310,7 @@
         Width: =47
         X: =Prod_2.X + Prod_2.Width
         Y: =Hora_2.Y
-        ZIndex: =91
+        ZIndex: =90
 
     Nao_Prev_Prod_2 As label:
         Align: =Align.Center
@@ -1306,7 +1324,7 @@
         Width: =47
         X: =Delta_prod_2.X + Delta_prod_2.Width
         Y: =Hora_2.Y
-        ZIndex: =92
+        ZIndex: =91
 
     Reuniao_2 As label:
         Align: =Align.Center
@@ -1320,7 +1338,7 @@
         Width: =46
         X: =Nao_Prev_Prod_2.X + Nao_Prev_Prod_2.Width
         Y: =Hora_2.Y
-        ZIndex: =93
+        ZIndex: =92
 
     Refeicao_2 As label:
         Align: =Align.Center
@@ -1334,7 +1352,7 @@
         Width: =46
         X: =Reuniao_2.X + Reuniao_2.Width
         Y: =Hora_2.Y
-        ZIndex: =94
+        ZIndex: =93
 
     Sist_Transporte_2 As label:
         Align: =Align.Center
@@ -1348,7 +1366,7 @@
         Width: =47
         X: =Sist_Medicao_2.X + Sist_Medicao_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =95
+        ZIndex: =94
 
     AM_2 As label:
         Align: =Align.Center
@@ -1362,7 +1380,7 @@
         Width: =46
         X: =Sist_Transporte_2.X + Sist_Transporte_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =96
+        ZIndex: =95
 
     WO_5S_2 As label:
         Align: =Align.Center
@@ -1376,7 +1394,7 @@
         Width: =46
         X: =AM_2.X + AM_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =97
+        ZIndex: =96
 
     Manutencao_planejada_2 As label:
         Align: =Align.Center
@@ -1390,7 +1408,7 @@
         Width: =47
         X: =WO_5S_2.X + WO_5S_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =98
+        ZIndex: =97
 
     Limpeza_tecnica_2 As label:
         Align: =Align.Center
@@ -1404,7 +1422,7 @@
         Width: =47
         X: =Manutencao_planejada_2.X + Manutencao_planejada_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =99
+        ZIndex: =98
 
     Ajuste_inicio_turno_2 As label:
         Align: =Align.Center
@@ -1418,7 +1436,7 @@
         Width: =46
         X: =Limpeza_tecnica_2.X + Limpeza_tecnica_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =100
+        ZIndex: =99
 
     MicroParada_2 As label:
         Align: =Align.Center
@@ -1432,7 +1450,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_2.X + Ajuste_inicio_turno_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =101
+        ZIndex: =100
 
     FaltaMaterial_2 As label:
         Align: =Align.Center
@@ -1446,7 +1464,7 @@
         Width: =46
         X: =MicroParada_2.X + MicroParada_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =102
+        ZIndex: =101
 
     Velocidade_producao_2 As label:
         Align: =Align.Center
@@ -1460,7 +1478,7 @@
         Width: =47
         X: =FaltaMaterial_2.X + FaltaMaterial_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =103
+        ZIndex: =102
 
     Carga_Descarga_2 As label:
         Align: =Align.Center
@@ -1474,7 +1492,7 @@
         Width: =47
         X: =Velocidade_producao_2.X + Velocidade_producao_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =104
+        ZIndex: =103
 
     OPI_foraPDT_2 As label:
         Align: =Align.Center
@@ -1488,7 +1506,7 @@
         Width: =46
         X: =Carga_Descarga_2.X + Carga_Descarga_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =105
+        ZIndex: =104
 
     Refugo_2 As label:
         Align: =Align.Center
@@ -1502,7 +1520,7 @@
         Width: =46
         X: =OPI_foraPDT_2.X + OPI_foraPDT_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =106
+        ZIndex: =105
 
     Retrabalho_2 As label:
         Align: =Align.Center
@@ -1516,7 +1534,7 @@
         Width: =46
         X: =Refugo_2.X + Refugo_2.Width 
         Y: =Hora_2.Y
-        ZIndex: =107
+        ZIndex: =106
 
     Prod_3 As label:
         Align: =Align.Center
@@ -1530,7 +1548,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_3.Y
-        ZIndex: =108
+        ZIndex: =107
 
     Quebras_3 As label:
         Align: =Align.Center
@@ -1544,7 +1562,7 @@
         Width: =47
         X: =Refeicao_3.X + Refeicao_3.Width
         Y: =Hora_3.Y
-        ZIndex: =109
+        ZIndex: =108
 
     Troca_Ferramentas_3 As label:
         Align: =Align.Center
@@ -1558,7 +1576,7 @@
         Width: =46
         X: =Quebras_3.X + Quebras_3.Width
         Y: =Hora_3.Y
-        ZIndex: =110
+        ZIndex: =109
 
     Ajustes_Regulagens_3 As label:
         Align: =Align.Center
@@ -1572,7 +1590,7 @@
         Width: =47
         X: =Troca_Ferramentas_3.X + Troca_Ferramentas_3.Width
         Y: =Hora_3.Y
-        ZIndex: =111
+        ZIndex: =110
 
     Troca_tipo_3 As label:
         Align: =Align.Center
@@ -1586,7 +1604,7 @@
         Width: =46
         X: =Ajustes_Regulagens_3.X + Ajustes_Regulagens_3.Width
         Y: =Hora_3.Y
-        ZIndex: =112
+        ZIndex: =111
 
     Sist_Medicao_3 As label:
         Align: =Align.Center
@@ -1600,7 +1618,7 @@
         Width: =47
         X: =Troca_tipo_3.X + Troca_tipo_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =113
+        ZIndex: =112
 
     Delta_prod_3 As label:
         Align: =Align.Center
@@ -1615,7 +1633,7 @@
         Width: =47
         X: =Prod_3.X + Prod_3.Width
         Y: =Hora_3.Y
-        ZIndex: =114
+        ZIndex: =113
 
     Nao_Prev_Prod_3 As label:
         Align: =Align.Center
@@ -1629,7 +1647,7 @@
         Width: =47
         X: =Delta_prod_3.X + Delta_prod_3.Width
         Y: =Hora_3.Y
-        ZIndex: =115
+        ZIndex: =114
 
     Reuniao_3 As label:
         Align: =Align.Center
@@ -1643,7 +1661,7 @@
         Width: =46
         X: =Nao_Prev_Prod_3.X + Nao_Prev_Prod_3.Width
         Y: =Hora_3.Y
-        ZIndex: =116
+        ZIndex: =115
 
     Refeicao_3 As label:
         Align: =Align.Center
@@ -1657,7 +1675,7 @@
         Width: =46
         X: =Reuniao_3.X + Reuniao_3.Width
         Y: =Hora_3.Y
-        ZIndex: =117
+        ZIndex: =116
 
     Sist_Transporte_3 As label:
         Align: =Align.Center
@@ -1671,7 +1689,7 @@
         Width: =47
         X: =Sist_Medicao_3.X + Sist_Medicao_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =118
+        ZIndex: =117
 
     AM_3 As label:
         Align: =Align.Center
@@ -1685,7 +1703,7 @@
         Width: =46
         X: =Sist_Transporte_3.X + Sist_Transporte_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =119
+        ZIndex: =118
 
     WO_5S_3 As label:
         Align: =Align.Center
@@ -1699,7 +1717,7 @@
         Width: =46
         X: =AM_3.X + AM_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =120
+        ZIndex: =119
 
     Manutencao_planejada_3 As label:
         Align: =Align.Center
@@ -1713,7 +1731,7 @@
         Width: =47
         X: =WO_5S_3.X + WO_5S_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =121
+        ZIndex: =120
 
     Limpeza_tecnica_3 As label:
         Align: =Align.Center
@@ -1727,7 +1745,7 @@
         Width: =47
         X: =Manutencao_planejada_3.X + Manutencao_planejada_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =122
+        ZIndex: =121
 
     Ajuste_inicio_turno_3 As label:
         Align: =Align.Center
@@ -1741,7 +1759,7 @@
         Width: =46
         X: =Limpeza_tecnica_3.X + Limpeza_tecnica_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =123
+        ZIndex: =122
 
     MicroParada_3 As label:
         Align: =Align.Center
@@ -1755,7 +1773,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_3.X + Ajuste_inicio_turno_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =124
+        ZIndex: =123
 
     FaltaMaterial_3 As label:
         Align: =Align.Center
@@ -1769,7 +1787,7 @@
         Width: =46
         X: =MicroParada_3.X + MicroParada_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =125
+        ZIndex: =124
 
     Velocidade_producao_3 As label:
         Align: =Align.Center
@@ -1783,7 +1801,7 @@
         Width: =47
         X: =FaltaMaterial_3.X + FaltaMaterial_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =126
+        ZIndex: =125
 
     Carga_Descarga_3 As label:
         Align: =Align.Center
@@ -1797,7 +1815,7 @@
         Width: =47
         X: =Velocidade_producao_3.X + Velocidade_producao_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =127
+        ZIndex: =126
 
     OPI_foraPDT_3 As label:
         Align: =Align.Center
@@ -1811,7 +1829,7 @@
         Width: =46
         X: =Carga_Descarga_3.X + Carga_Descarga_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =128
+        ZIndex: =127
 
     Refugo_3 As label:
         Align: =Align.Center
@@ -1825,7 +1843,7 @@
         Width: =46
         X: =OPI_foraPDT_3.X + OPI_foraPDT_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =129
+        ZIndex: =128
 
     Retrabalho_3 As label:
         Align: =Align.Center
@@ -1839,7 +1857,7 @@
         Width: =46
         X: =Refugo_3.X + Refugo_3.Width 
         Y: =Hora_3.Y
-        ZIndex: =130
+        ZIndex: =129
 
     Prod_4 As label:
         Align: =Align.Center
@@ -1853,7 +1871,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_4.Y
-        ZIndex: =131
+        ZIndex: =130
 
     Quebras_4 As label:
         Align: =Align.Center
@@ -1867,7 +1885,7 @@
         Width: =47
         X: =Refeicao_4.X + Refeicao_4.Width
         Y: =Hora_4.Y
-        ZIndex: =132
+        ZIndex: =131
 
     Troca_Ferramentas_4 As label:
         Align: =Align.Center
@@ -1881,7 +1899,7 @@
         Width: =46
         X: =Quebras_4.X + Quebras_4.Width
         Y: =Hora_4.Y
-        ZIndex: =133
+        ZIndex: =132
 
     Ajustes_Regulagens_4 As label:
         Align: =Align.Center
@@ -1895,7 +1913,7 @@
         Width: =47
         X: =Troca_Ferramentas_4.X + Troca_Ferramentas_4.Width
         Y: =Hora_4.Y
-        ZIndex: =134
+        ZIndex: =133
 
     Troca_tipo_4 As label:
         Align: =Align.Center
@@ -1909,7 +1927,7 @@
         Width: =46
         X: =Ajustes_Regulagens_4.X + Ajustes_Regulagens_4.Width
         Y: =Hora_4.Y
-        ZIndex: =135
+        ZIndex: =134
 
     Sist_Medicao_4 As label:
         Align: =Align.Center
@@ -1923,7 +1941,7 @@
         Width: =47
         X: =Troca_tipo_4.X + Troca_tipo_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =136
+        ZIndex: =135
 
     Delta_prod_4 As label:
         Align: =Align.Center
@@ -1938,7 +1956,7 @@
         Width: =47
         X: =Prod_4.X + Prod_4.Width
         Y: =Hora_4.Y
-        ZIndex: =137
+        ZIndex: =136
 
     Nao_Prev_Prod_4 As label:
         Align: =Align.Center
@@ -1952,7 +1970,7 @@
         Width: =47
         X: =Delta_prod_4.X + Delta_prod_4.Width
         Y: =Hora_4.Y
-        ZIndex: =138
+        ZIndex: =137
 
     Reuniao_4 As label:
         Align: =Align.Center
@@ -1966,7 +1984,7 @@
         Width: =46
         X: =Nao_Prev_Prod_4.X + Nao_Prev_Prod_4.Width
         Y: =Hora_4.Y
-        ZIndex: =139
+        ZIndex: =138
 
     Refeicao_4 As label:
         Align: =Align.Center
@@ -1980,7 +1998,7 @@
         Width: =46
         X: =Reuniao_4.X + Reuniao_4.Width
         Y: =Hora_4.Y
-        ZIndex: =140
+        ZIndex: =139
 
     Sist_Transporte_4 As label:
         Align: =Align.Center
@@ -1994,7 +2012,7 @@
         Width: =47
         X: =Sist_Medicao_4.X + Sist_Medicao_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =141
+        ZIndex: =140
 
     AM_4 As label:
         Align: =Align.Center
@@ -2008,7 +2026,7 @@
         Width: =46
         X: =Sist_Transporte_4.X + Sist_Transporte_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =142
+        ZIndex: =141
 
     WO_5S_4 As label:
         Align: =Align.Center
@@ -2022,7 +2040,7 @@
         Width: =46
         X: =AM_4.X + AM_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =143
+        ZIndex: =142
 
     Manutencao_planejada_4 As label:
         Align: =Align.Center
@@ -2036,7 +2054,7 @@
         Width: =47
         X: =WO_5S_4.X + WO_5S_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =144
+        ZIndex: =143
 
     Limpeza_tecnica_4 As label:
         Align: =Align.Center
@@ -2050,7 +2068,7 @@
         Width: =47
         X: =Manutencao_planejada_4.X + Manutencao_planejada_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =145
+        ZIndex: =144
 
     Ajuste_inicio_turno_4 As label:
         Align: =Align.Center
@@ -2064,7 +2082,7 @@
         Width: =46
         X: =Limpeza_tecnica_4.X + Limpeza_tecnica_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =146
+        ZIndex: =145
 
     MicroParada_4 As label:
         Align: =Align.Center
@@ -2078,7 +2096,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_4.X + Ajuste_inicio_turno_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =147
+        ZIndex: =146
 
     FaltaMaterial_4 As label:
         Align: =Align.Center
@@ -2092,7 +2110,7 @@
         Width: =46
         X: =MicroParada_4.X + MicroParada_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =148
+        ZIndex: =147
 
     Velocidade_producao_4 As label:
         Align: =Align.Center
@@ -2106,7 +2124,7 @@
         Width: =47
         X: =FaltaMaterial_4.X + FaltaMaterial_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =149
+        ZIndex: =148
 
     Carga_Descarga_4 As label:
         Align: =Align.Center
@@ -2120,7 +2138,7 @@
         Width: =47
         X: =Velocidade_producao_4.X + Velocidade_producao_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =150
+        ZIndex: =149
 
     OPI_foraPDT_4 As label:
         Align: =Align.Center
@@ -2134,7 +2152,7 @@
         Width: =46
         X: =Carga_Descarga_4.X + Carga_Descarga_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =151
+        ZIndex: =150
 
     Refugo_4 As label:
         Align: =Align.Center
@@ -2148,7 +2166,7 @@
         Width: =46
         X: =OPI_foraPDT_4.X + OPI_foraPDT_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =152
+        ZIndex: =151
 
     Retrabalho_4 As label:
         Align: =Align.Center
@@ -2162,7 +2180,7 @@
         Width: =46
         X: =Refugo_4.X + Refugo_4.Width 
         Y: =Hora_4.Y
-        ZIndex: =153
+        ZIndex: =152
 
     Prod_5 As label:
         Align: =Align.Center
@@ -2176,7 +2194,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_5.Y
-        ZIndex: =154
+        ZIndex: =153
 
     Quebras_5 As label:
         Align: =Align.Center
@@ -2190,7 +2208,7 @@
         Width: =47
         X: =Refeicao_5.X + Refeicao_5.Width
         Y: =Hora_5.Y
-        ZIndex: =155
+        ZIndex: =154
 
     Troca_Ferramentas_5 As label:
         Align: =Align.Center
@@ -2204,7 +2222,7 @@
         Width: =46
         X: =Quebras_5.X + Quebras_5.Width
         Y: =Hora_5.Y
-        ZIndex: =156
+        ZIndex: =155
 
     Ajustes_Regulagens_5 As label:
         Align: =Align.Center
@@ -2218,7 +2236,7 @@
         Width: =47
         X: =Troca_Ferramentas_5.X + Troca_Ferramentas_5.Width
         Y: =Hora_5.Y
-        ZIndex: =157
+        ZIndex: =156
 
     Troca_tipo_5 As label:
         Align: =Align.Center
@@ -2232,7 +2250,7 @@
         Width: =46
         X: =Ajustes_Regulagens_5.X + Ajustes_Regulagens_5.Width
         Y: =Hora_5.Y
-        ZIndex: =158
+        ZIndex: =157
 
     Sist_Medicao_5 As label:
         Align: =Align.Center
@@ -2246,7 +2264,7 @@
         Width: =47
         X: =Troca_tipo_5.X + Troca_tipo_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =159
+        ZIndex: =158
 
     Delta_prod_5 As label:
         Align: =Align.Center
@@ -2261,7 +2279,7 @@
         Width: =47
         X: =Prod_5.X + Prod_5.Width
         Y: =Hora_5.Y
-        ZIndex: =160
+        ZIndex: =159
 
     Nao_Prev_Prod_5 As label:
         Align: =Align.Center
@@ -2275,7 +2293,7 @@
         Width: =47
         X: =Delta_prod_5.X + Delta_prod_5.Width
         Y: =Hora_5.Y
-        ZIndex: =161
+        ZIndex: =160
 
     Reuniao_5 As label:
         Align: =Align.Center
@@ -2289,7 +2307,7 @@
         Width: =46
         X: =Nao_Prev_Prod_5.X + Nao_Prev_Prod_5.Width
         Y: =Hora_5.Y
-        ZIndex: =162
+        ZIndex: =161
 
     Refeicao_5 As label:
         Align: =Align.Center
@@ -2303,7 +2321,7 @@
         Width: =46
         X: =Reuniao_5.X + Reuniao_5.Width
         Y: =Hora_5.Y
-        ZIndex: =163
+        ZIndex: =162
 
     Sist_Transporte_5 As label:
         Align: =Align.Center
@@ -2317,7 +2335,7 @@
         Width: =47
         X: =Sist_Medicao_5.X + Sist_Medicao_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =164
+        ZIndex: =163
 
     AM_5 As label:
         Align: =Align.Center
@@ -2331,7 +2349,7 @@
         Width: =46
         X: =Sist_Transporte_5.X + Sist_Transporte_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =165
+        ZIndex: =164
 
     WO_5S_5 As label:
         Align: =Align.Center
@@ -2345,7 +2363,7 @@
         Width: =46
         X: =AM_5.X + AM_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =166
+        ZIndex: =165
 
     Manutencao_planejada_5 As label:
         Align: =Align.Center
@@ -2359,7 +2377,7 @@
         Width: =47
         X: =WO_5S_5.X + WO_5S_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =167
+        ZIndex: =166
 
     Limpeza_tecnica_5 As label:
         Align: =Align.Center
@@ -2373,7 +2391,7 @@
         Width: =47
         X: =Manutencao_planejada_5.X + Manutencao_planejada_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =168
+        ZIndex: =167
 
     Ajuste_inicio_turno_5 As label:
         Align: =Align.Center
@@ -2387,7 +2405,7 @@
         Width: =46
         X: =Limpeza_tecnica_5.X + Limpeza_tecnica_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =169
+        ZIndex: =168
 
     MicroParada_5 As label:
         Align: =Align.Center
@@ -2401,7 +2419,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_5.X + Ajuste_inicio_turno_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =170
+        ZIndex: =169
 
     FaltaMaterial_5 As label:
         Align: =Align.Center
@@ -2415,7 +2433,7 @@
         Width: =46
         X: =MicroParada_5.X + MicroParada_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =171
+        ZIndex: =170
 
     Velocidade_producao_5 As label:
         Align: =Align.Center
@@ -2429,7 +2447,7 @@
         Width: =47
         X: =FaltaMaterial_5.X + FaltaMaterial_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =172
+        ZIndex: =171
 
     Carga_Descarga_5 As label:
         Align: =Align.Center
@@ -2443,7 +2461,7 @@
         Width: =47
         X: =Velocidade_producao_5.X + Velocidade_producao_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =173
+        ZIndex: =172
 
     OPI_foraPDT_5 As label:
         Align: =Align.Center
@@ -2457,7 +2475,7 @@
         Width: =46
         X: =Carga_Descarga_5.X + Carga_Descarga_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =174
+        ZIndex: =173
 
     Refugo_5 As label:
         Align: =Align.Center
@@ -2471,7 +2489,7 @@
         Width: =46
         X: =OPI_foraPDT_5.X + OPI_foraPDT_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =175
+        ZIndex: =174
 
     Retrabalho_5 As label:
         Align: =Align.Center
@@ -2485,7 +2503,7 @@
         Width: =46
         X: =Refugo_5.X + Refugo_5.Width 
         Y: =Hora_5.Y
-        ZIndex: =176
+        ZIndex: =175
 
     Prod_6 As label:
         Align: =Align.Center
@@ -2499,7 +2517,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_6.Y
-        ZIndex: =177
+        ZIndex: =176
 
     Quebras_6 As label:
         Align: =Align.Center
@@ -2513,7 +2531,7 @@
         Width: =47
         X: =Refeicao_6.X + Refeicao_6.Width
         Y: =Hora_6.Y
-        ZIndex: =178
+        ZIndex: =177
 
     Troca_Ferramentas_6 As label:
         Align: =Align.Center
@@ -2527,7 +2545,7 @@
         Width: =46
         X: =Quebras_6.X + Quebras_6.Width
         Y: =Hora_6.Y
-        ZIndex: =179
+        ZIndex: =178
 
     Ajustes_Regulagens_6 As label:
         Align: =Align.Center
@@ -2541,7 +2559,7 @@
         Width: =47
         X: =Troca_Ferramentas_6.X + Troca_Ferramentas_6.Width
         Y: =Hora_6.Y
-        ZIndex: =180
+        ZIndex: =179
 
     Troca_tipo_6 As label:
         Align: =Align.Center
@@ -2555,7 +2573,7 @@
         Width: =46
         X: =Ajustes_Regulagens_6.X + Ajustes_Regulagens_6.Width
         Y: =Hora_6.Y
-        ZIndex: =181
+        ZIndex: =180
 
     Sist_Medicao_6 As label:
         Align: =Align.Center
@@ -2569,7 +2587,7 @@
         Width: =47
         X: =Troca_tipo_6.X + Troca_tipo_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =182
+        ZIndex: =181
 
     Delta_prod_6 As label:
         Align: =Align.Center
@@ -2584,7 +2602,7 @@
         Width: =47
         X: =Prod_6.X + Prod_6.Width
         Y: =Hora_6.Y
-        ZIndex: =183
+        ZIndex: =182
 
     Nao_Prev_Prod_6 As label:
         Align: =Align.Center
@@ -2598,7 +2616,7 @@
         Width: =47
         X: =Delta_prod_6.X + Delta_prod_6.Width
         Y: =Hora_6.Y
-        ZIndex: =184
+        ZIndex: =183
 
     Reuniao_6 As label:
         Align: =Align.Center
@@ -2612,7 +2630,7 @@
         Width: =46
         X: =Nao_Prev_Prod_6.X + Nao_Prev_Prod_6.Width
         Y: =Hora_6.Y
-        ZIndex: =185
+        ZIndex: =184
 
     Refeicao_6 As label:
         Align: =Align.Center
@@ -2626,7 +2644,7 @@
         Width: =46
         X: =Reuniao_6.X + Reuniao_6.Width
         Y: =Hora_6.Y
-        ZIndex: =186
+        ZIndex: =185
 
     Sist_Transporte_6 As label:
         Align: =Align.Center
@@ -2640,7 +2658,7 @@
         Width: =47
         X: =Sist_Medicao_6.X + Sist_Medicao_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =187
+        ZIndex: =186
 
     AM_6 As label:
         Align: =Align.Center
@@ -2654,7 +2672,7 @@
         Width: =46
         X: =Sist_Transporte_6.X + Sist_Transporte_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =188
+        ZIndex: =187
 
     WO_5S_6 As label:
         Align: =Align.Center
@@ -2668,7 +2686,7 @@
         Width: =46
         X: =AM_6.X + AM_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =189
+        ZIndex: =188
 
     Manutencao_planejada_6 As label:
         Align: =Align.Center
@@ -2682,7 +2700,7 @@
         Width: =47
         X: =WO_5S_6.X + WO_5S_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =190
+        ZIndex: =189
 
     Limpeza_tecnica_6 As label:
         Align: =Align.Center
@@ -2696,7 +2714,7 @@
         Width: =47
         X: =Manutencao_planejada_6.X + Manutencao_planejada_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =191
+        ZIndex: =190
 
     Ajuste_inicio_turno_6 As label:
         Align: =Align.Center
@@ -2710,7 +2728,7 @@
         Width: =46
         X: =Limpeza_tecnica_6.X + Limpeza_tecnica_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =192
+        ZIndex: =191
 
     MicroParada_6 As label:
         Align: =Align.Center
@@ -2724,7 +2742,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_6.X + Ajuste_inicio_turno_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =193
+        ZIndex: =192
 
     FaltaMaterial_6 As label:
         Align: =Align.Center
@@ -2738,7 +2756,7 @@
         Width: =46
         X: =MicroParada_6.X + MicroParada_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =194
+        ZIndex: =193
 
     Velocidade_producao_6 As label:
         Align: =Align.Center
@@ -2752,7 +2770,7 @@
         Width: =47
         X: =FaltaMaterial_6.X + FaltaMaterial_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =195
+        ZIndex: =194
 
     Carga_Descarga_6 As label:
         Align: =Align.Center
@@ -2766,7 +2784,7 @@
         Width: =47
         X: =Velocidade_producao_6.X + Velocidade_producao_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =196
+        ZIndex: =195
 
     OPI_foraPDT_6 As label:
         Align: =Align.Center
@@ -2780,7 +2798,7 @@
         Width: =46
         X: =Carga_Descarga_6.X + Carga_Descarga_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =197
+        ZIndex: =196
 
     Refugo_6 As label:
         Align: =Align.Center
@@ -2794,7 +2812,7 @@
         Width: =46
         X: =OPI_foraPDT_6.X + OPI_foraPDT_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =198
+        ZIndex: =197
 
     Retrabalho_6 As label:
         Align: =Align.Center
@@ -2808,7 +2826,7 @@
         Width: =46
         X: =Refugo_6.X + Refugo_6.Width 
         Y: =Hora_6.Y
-        ZIndex: =199
+        ZIndex: =198
 
     Prod_7 As label:
         Align: =Align.Center
@@ -2822,7 +2840,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_7.Y
-        ZIndex: =200
+        ZIndex: =199
 
     Quebras_7 As label:
         Align: =Align.Center
@@ -2836,7 +2854,7 @@
         Width: =47
         X: =Refeicao_7.X + Refeicao_7.Width
         Y: =Hora_7.Y
-        ZIndex: =201
+        ZIndex: =200
 
     Troca_Ferramentas_7 As label:
         Align: =Align.Center
@@ -2850,7 +2868,7 @@
         Width: =46
         X: =Quebras_7.X + Quebras_7.Width
         Y: =Hora_7.Y
-        ZIndex: =202
+        ZIndex: =201
 
     Ajustes_Regulagens_7 As label:
         Align: =Align.Center
@@ -2864,7 +2882,7 @@
         Width: =47
         X: =Troca_Ferramentas_7.X + Troca_Ferramentas_7.Width
         Y: =Hora_7.Y
-        ZIndex: =203
+        ZIndex: =202
 
     Troca_tipo_7 As label:
         Align: =Align.Center
@@ -2878,7 +2896,7 @@
         Width: =46
         X: =Ajustes_Regulagens_7.X + Ajustes_Regulagens_7.Width
         Y: =Hora_7.Y
-        ZIndex: =204
+        ZIndex: =203
 
     Sist_Medicao_7 As label:
         Align: =Align.Center
@@ -2892,7 +2910,7 @@
         Width: =47
         X: =Troca_tipo_7.X + Troca_tipo_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =205
+        ZIndex: =204
 
     Delta_prod_7 As label:
         Align: =Align.Center
@@ -2907,7 +2925,7 @@
         Width: =47
         X: =Prod_7.X + Prod_7.Width
         Y: =Hora_7.Y
-        ZIndex: =206
+        ZIndex: =205
 
     Nao_Prev_Prod_7 As label:
         Align: =Align.Center
@@ -2921,7 +2939,7 @@
         Width: =47
         X: =Delta_prod_7.X + Delta_prod_7.Width
         Y: =Hora_7.Y
-        ZIndex: =207
+        ZIndex: =206
 
     Reuniao_7 As label:
         Align: =Align.Center
@@ -2935,7 +2953,7 @@
         Width: =46
         X: =Nao_Prev_Prod_7.X + Nao_Prev_Prod_7.Width
         Y: =Hora_7.Y
-        ZIndex: =208
+        ZIndex: =207
 
     Refeicao_7 As label:
         Align: =Align.Center
@@ -2949,7 +2967,7 @@
         Width: =46
         X: =Reuniao_7.X + Reuniao_7.Width
         Y: =Hora_7.Y
-        ZIndex: =209
+        ZIndex: =208
 
     Sist_Transporte_7 As label:
         Align: =Align.Center
@@ -2963,7 +2981,7 @@
         Width: =47
         X: =Sist_Medicao_7.X + Sist_Medicao_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =210
+        ZIndex: =209
 
     AM_7 As label:
         Align: =Align.Center
@@ -2977,7 +2995,7 @@
         Width: =46
         X: =Sist_Transporte_7.X + Sist_Transporte_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =211
+        ZIndex: =210
 
     WO_5S_7 As label:
         Align: =Align.Center
@@ -2991,7 +3009,7 @@
         Width: =46
         X: =AM_7.X + AM_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =212
+        ZIndex: =211
 
     Manutencao_planejada_7 As label:
         Align: =Align.Center
@@ -3005,7 +3023,7 @@
         Width: =47
         X: =WO_5S_7.X + WO_5S_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =213
+        ZIndex: =212
 
     Limpeza_tecnica_7 As label:
         Align: =Align.Center
@@ -3019,7 +3037,7 @@
         Width: =47
         X: =Manutencao_planejada_7.X + Manutencao_planejada_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =214
+        ZIndex: =213
 
     Ajuste_inicio_turno_7 As label:
         Align: =Align.Center
@@ -3033,7 +3051,7 @@
         Width: =46
         X: =Limpeza_tecnica_7.X + Limpeza_tecnica_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =215
+        ZIndex: =214
 
     MicroParada_7 As label:
         Align: =Align.Center
@@ -3047,7 +3065,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_7.X + Ajuste_inicio_turno_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =216
+        ZIndex: =215
 
     FaltaMaterial_7 As label:
         Align: =Align.Center
@@ -3061,7 +3079,7 @@
         Width: =46
         X: =MicroParada_7.X + MicroParada_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =217
+        ZIndex: =216
 
     Velocidade_producao_7 As label:
         Align: =Align.Center
@@ -3075,7 +3093,7 @@
         Width: =47
         X: =FaltaMaterial_7.X + FaltaMaterial_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =218
+        ZIndex: =217
 
     Carga_Descarga_7 As label:
         Align: =Align.Center
@@ -3089,7 +3107,7 @@
         Width: =47
         X: =Velocidade_producao_7.X + Velocidade_producao_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =219
+        ZIndex: =218
 
     OPI_foraPDT_7 As label:
         Align: =Align.Center
@@ -3103,7 +3121,7 @@
         Width: =46
         X: =Carga_Descarga_7.X + Carga_Descarga_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =220
+        ZIndex: =219
 
     Refugo_7 As label:
         Align: =Align.Center
@@ -3117,7 +3135,7 @@
         Width: =46
         X: =OPI_foraPDT_7.X + OPI_foraPDT_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =221
+        ZIndex: =220
 
     Retrabalho_7 As label:
         Align: =Align.Center
@@ -3131,7 +3149,7 @@
         Width: =46
         X: =Refugo_7.X + Refugo_7.Width 
         Y: =Hora_7.Y
-        ZIndex: =222
+        ZIndex: =221
 
     Prod_8 As label:
         Align: =Align.Center
@@ -3145,7 +3163,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_8.Y
-        ZIndex: =223
+        ZIndex: =222
 
     Quebras_8 As label:
         Align: =Align.Center
@@ -3159,7 +3177,7 @@
         Width: =47
         X: =Refeicao_8.X + Refeicao_8.Width
         Y: =Hora_8.Y
-        ZIndex: =224
+        ZIndex: =223
 
     Troca_Ferramentas_8 As label:
         Align: =Align.Center
@@ -3173,7 +3191,7 @@
         Width: =46
         X: =Quebras_8.X + Quebras_8.Width
         Y: =Hora_8.Y
-        ZIndex: =225
+        ZIndex: =224
 
     Ajustes_Regulagens_8 As label:
         Align: =Align.Center
@@ -3187,7 +3205,7 @@
         Width: =47
         X: =Troca_Ferramentas_8.X + Troca_Ferramentas_8.Width
         Y: =Hora_8.Y
-        ZIndex: =226
+        ZIndex: =225
 
     Troca_tipo_8 As label:
         Align: =Align.Center
@@ -3201,7 +3219,7 @@
         Width: =46
         X: =Ajustes_Regulagens_8.X + Ajustes_Regulagens_8.Width
         Y: =Hora_8.Y
-        ZIndex: =227
+        ZIndex: =226
 
     Sist_Medicao_8 As label:
         Align: =Align.Center
@@ -3215,7 +3233,7 @@
         Width: =47
         X: =Troca_tipo_8.X + Troca_tipo_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =228
+        ZIndex: =227
 
     Delta_prod_8 As label:
         Align: =Align.Center
@@ -3230,7 +3248,7 @@
         Width: =47
         X: =Prod_8.X + Prod_8.Width
         Y: =Hora_8.Y
-        ZIndex: =229
+        ZIndex: =228
 
     Nao_Prev_Prod_8 As label:
         Align: =Align.Center
@@ -3244,7 +3262,7 @@
         Width: =47
         X: =Delta_prod_8.X + Delta_prod_8.Width
         Y: =Hora_8.Y
-        ZIndex: =230
+        ZIndex: =229
 
     Reuniao_8 As label:
         Align: =Align.Center
@@ -3258,7 +3276,7 @@
         Width: =46
         X: =Nao_Prev_Prod_8.X + Nao_Prev_Prod_8.Width
         Y: =Hora_8.Y
-        ZIndex: =231
+        ZIndex: =230
 
     Refeicao_8 As label:
         Align: =Align.Center
@@ -3272,7 +3290,7 @@
         Width: =46
         X: =Reuniao_8.X + Reuniao_8.Width
         Y: =Hora_8.Y
-        ZIndex: =232
+        ZIndex: =231
 
     Sist_Transporte_8 As label:
         Align: =Align.Center
@@ -3286,7 +3304,7 @@
         Width: =47
         X: =Sist_Medicao_8.X + Sist_Medicao_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =233
+        ZIndex: =232
 
     AM_8 As label:
         Align: =Align.Center
@@ -3300,7 +3318,7 @@
         Width: =46
         X: =Sist_Transporte_8.X + Sist_Transporte_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =234
+        ZIndex: =233
 
     WO_5S_8 As label:
         Align: =Align.Center
@@ -3314,7 +3332,7 @@
         Width: =46
         X: =AM_8.X + AM_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =235
+        ZIndex: =234
 
     Manutencao_planejada_8 As label:
         Align: =Align.Center
@@ -3328,7 +3346,7 @@
         Width: =47
         X: =WO_5S_8.X + WO_5S_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =236
+        ZIndex: =235
 
     Limpeza_tecnica_8 As label:
         Align: =Align.Center
@@ -3342,7 +3360,7 @@
         Width: =47
         X: =Manutencao_planejada_8.X + Manutencao_planejada_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =237
+        ZIndex: =236
 
     Ajuste_inicio_turno_8 As label:
         Align: =Align.Center
@@ -3356,7 +3374,7 @@
         Width: =46
         X: =Limpeza_tecnica_8.X + Limpeza_tecnica_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =238
+        ZIndex: =237
 
     MicroParada_8 As label:
         Align: =Align.Center
@@ -3370,7 +3388,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_8.X + Ajuste_inicio_turno_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =239
+        ZIndex: =238
 
     FaltaMaterial_8 As label:
         Align: =Align.Center
@@ -3384,7 +3402,7 @@
         Width: =46
         X: =MicroParada_8.X + MicroParada_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =240
+        ZIndex: =239
 
     Velocidade_producao_8 As label:
         Align: =Align.Center
@@ -3398,7 +3416,7 @@
         Width: =47
         X: =FaltaMaterial_8.X + FaltaMaterial_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =241
+        ZIndex: =240
 
     Carga_Descarga_8 As label:
         Align: =Align.Center
@@ -3412,7 +3430,7 @@
         Width: =47
         X: =Velocidade_producao_8.X + Velocidade_producao_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =242
+        ZIndex: =241
 
     OPI_foraPDT_8 As label:
         Align: =Align.Center
@@ -3426,7 +3444,7 @@
         Width: =46
         X: =Carga_Descarga_8.X + Carga_Descarga_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =243
+        ZIndex: =242
 
     Refugo_8 As label:
         Align: =Align.Center
@@ -3440,7 +3458,7 @@
         Width: =46
         X: =OPI_foraPDT_8.X + OPI_foraPDT_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =244
+        ZIndex: =243
 
     Retrabalho_8 As label:
         Align: =Align.Center
@@ -3454,7 +3472,7 @@
         Width: =46
         X: =Refugo_8.X + Refugo_8.Width 
         Y: =Hora_8.Y
-        ZIndex: =245
+        ZIndex: =244
 
     Prod_9 As label:
         Align: =Align.Center
@@ -3468,7 +3486,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_9.Y
-        ZIndex: =246
+        ZIndex: =245
 
     Quebras_9 As label:
         Align: =Align.Center
@@ -3482,7 +3500,7 @@
         Width: =47
         X: =Refeicao_9.X + Refeicao_9.Width
         Y: =Hora_9.Y
-        ZIndex: =247
+        ZIndex: =246
 
     Troca_Ferramentas_9 As label:
         Align: =Align.Center
@@ -3496,7 +3514,7 @@
         Width: =46
         X: =Quebras_9.X + Quebras_9.Width
         Y: =Hora_9.Y
-        ZIndex: =248
+        ZIndex: =247
 
     Ajustes_Regulagens_9 As label:
         Align: =Align.Center
@@ -3510,7 +3528,7 @@
         Width: =47
         X: =Troca_Ferramentas_9.X + Troca_Ferramentas_9.Width
         Y: =Hora_9.Y
-        ZIndex: =249
+        ZIndex: =248
 
     Troca_tipo_9 As label:
         Align: =Align.Center
@@ -3524,7 +3542,7 @@
         Width: =46
         X: =Ajustes_Regulagens_9.X + Ajustes_Regulagens_9.Width
         Y: =Hora_9.Y
-        ZIndex: =250
+        ZIndex: =249
 
     Sist_Medicao_9 As label:
         Align: =Align.Center
@@ -3538,7 +3556,7 @@
         Width: =47
         X: =Troca_tipo_9.X + Troca_tipo_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =251
+        ZIndex: =250
 
     Delta_prod_9 As label:
         Align: =Align.Center
@@ -3553,7 +3571,7 @@
         Width: =47
         X: =Prod_9.X + Prod_9.Width
         Y: =Hora_9.Y
-        ZIndex: =252
+        ZIndex: =251
 
     Nao_Prev_Prod_9 As label:
         Align: =Align.Center
@@ -3567,7 +3585,7 @@
         Width: =47
         X: =Delta_prod_9.X + Delta_prod_9.Width
         Y: =Hora_9.Y
-        ZIndex: =253
+        ZIndex: =252
 
     Reuniao_9 As label:
         Align: =Align.Center
@@ -3581,7 +3599,7 @@
         Width: =46
         X: =Nao_Prev_Prod_9.X + Nao_Prev_Prod_9.Width
         Y: =Hora_9.Y
-        ZIndex: =254
+        ZIndex: =253
 
     Refeicao_9 As label:
         Align: =Align.Center
@@ -3595,7 +3613,7 @@
         Width: =46
         X: =Reuniao_9.X + Reuniao_9.Width
         Y: =Hora_9.Y
-        ZIndex: =255
+        ZIndex: =254
 
     Sist_Transporte_9 As label:
         Align: =Align.Center
@@ -3609,7 +3627,7 @@
         Width: =47
         X: =Sist_Medicao_9.X + Sist_Medicao_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =256
+        ZIndex: =255
 
     AM_9 As label:
         Align: =Align.Center
@@ -3623,7 +3641,7 @@
         Width: =46
         X: =Sist_Transporte_9.X + Sist_Transporte_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =257
+        ZIndex: =256
 
     WO_5S_9 As label:
         Align: =Align.Center
@@ -3637,7 +3655,7 @@
         Width: =46
         X: =AM_9.X + AM_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =258
+        ZIndex: =257
 
     Manutencao_planejada_9 As label:
         Align: =Align.Center
@@ -3651,7 +3669,7 @@
         Width: =47
         X: =WO_5S_9.X + WO_5S_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =259
+        ZIndex: =258
 
     Limpeza_tecnica_9 As label:
         Align: =Align.Center
@@ -3665,7 +3683,7 @@
         Width: =47
         X: =Manutencao_planejada_9.X + Manutencao_planejada_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =260
+        ZIndex: =259
 
     Ajuste_inicio_turno_9 As label:
         Align: =Align.Center
@@ -3679,7 +3697,7 @@
         Width: =46
         X: =Limpeza_tecnica_9.X + Limpeza_tecnica_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =261
+        ZIndex: =260
 
     MicroParada_9 As label:
         Align: =Align.Center
@@ -3693,7 +3711,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_9.X + Ajuste_inicio_turno_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =262
+        ZIndex: =261
 
     FaltaMaterial_9 As label:
         Align: =Align.Center
@@ -3707,7 +3725,7 @@
         Width: =46
         X: =MicroParada_9.X + MicroParada_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =263
+        ZIndex: =262
 
     Velocidade_producao_9 As label:
         Align: =Align.Center
@@ -3721,7 +3739,7 @@
         Width: =47
         X: =FaltaMaterial_9.X + FaltaMaterial_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =264
+        ZIndex: =263
 
     Carga_Descarga_9 As label:
         Align: =Align.Center
@@ -3735,7 +3753,7 @@
         Width: =47
         X: =Velocidade_producao_9.X + Velocidade_producao_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =265
+        ZIndex: =264
 
     OPI_foraPDT_9 As label:
         Align: =Align.Center
@@ -3749,7 +3767,7 @@
         Width: =46
         X: =Carga_Descarga_9.X + Carga_Descarga_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =266
+        ZIndex: =265
 
     Refugo_9 As label:
         Align: =Align.Center
@@ -3763,7 +3781,7 @@
         Width: =46
         X: =OPI_foraPDT_9.X + OPI_foraPDT_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =267
+        ZIndex: =266
 
     Retrabalho_9 As label:
         Align: =Align.Center
@@ -3777,7 +3795,7 @@
         Width: =46
         X: =Refugo_9.X + Refugo_9.Width 
         Y: =Hora_9.Y
-        ZIndex: =268
+        ZIndex: =267
 
     Prod_10 As label:
         Align: =Align.Center
@@ -3791,7 +3809,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_10.Y
-        ZIndex: =269
+        ZIndex: =268
 
     Quebras_10 As label:
         Align: =Align.Center
@@ -3805,7 +3823,7 @@
         Width: =47
         X: =Refeicao_10.X + Refeicao_10.Width
         Y: =Hora_10.Y
-        ZIndex: =270
+        ZIndex: =269
 
     Troca_Ferramentas_10 As label:
         Align: =Align.Center
@@ -3819,7 +3837,7 @@
         Width: =46
         X: =Quebras_10.X + Quebras_10.Width
         Y: =Hora_10.Y
-        ZIndex: =271
+        ZIndex: =270
 
     Ajustes_Regulagens_10 As label:
         Align: =Align.Center
@@ -3833,7 +3851,7 @@
         Width: =47
         X: =Troca_Ferramentas_10.X + Troca_Ferramentas_10.Width
         Y: =Hora_10.Y
-        ZIndex: =272
+        ZIndex: =271
 
     Troca_tipo_10 As label:
         Align: =Align.Center
@@ -3847,7 +3865,7 @@
         Width: =46
         X: =Ajustes_Regulagens_10.X + Ajustes_Regulagens_10.Width
         Y: =Hora_10.Y
-        ZIndex: =273
+        ZIndex: =272
 
     Sist_Medicao_10 As label:
         Align: =Align.Center
@@ -3861,7 +3879,7 @@
         Width: =47
         X: =Troca_tipo_10.X + Troca_tipo_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =274
+        ZIndex: =273
 
     Delta_prod_10 As label:
         Align: =Align.Center
@@ -3876,7 +3894,7 @@
         Width: =47
         X: =Prod_10.X + Prod_10.Width
         Y: =Hora_10.Y
-        ZIndex: =275
+        ZIndex: =274
 
     Nao_Prev_Prod_10 As label:
         Align: =Align.Center
@@ -3890,7 +3908,7 @@
         Width: =47
         X: =Delta_prod_10.X + Delta_prod_10.Width
         Y: =Hora_10.Y
-        ZIndex: =276
+        ZIndex: =275
 
     Reuniao_10 As label:
         Align: =Align.Center
@@ -3904,7 +3922,7 @@
         Width: =46
         X: =Nao_Prev_Prod_10.X + Nao_Prev_Prod_10.Width
         Y: =Hora_10.Y
-        ZIndex: =277
+        ZIndex: =276
 
     Refeicao_10 As label:
         Align: =Align.Center
@@ -3918,7 +3936,7 @@
         Width: =46
         X: =Reuniao_10.X + Reuniao_10.Width
         Y: =Hora_10.Y
-        ZIndex: =278
+        ZIndex: =277
 
     Sist_Transporte_10 As label:
         Align: =Align.Center
@@ -3932,7 +3950,7 @@
         Width: =47
         X: =Sist_Medicao_10.X + Sist_Medicao_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =279
+        ZIndex: =278
 
     AM_10 As label:
         Align: =Align.Center
@@ -3946,7 +3964,7 @@
         Width: =46
         X: =Sist_Transporte_10.X + Sist_Transporte_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =280
+        ZIndex: =279
 
     WO_5S_10 As label:
         Align: =Align.Center
@@ -3960,7 +3978,7 @@
         Width: =46
         X: =AM_10.X + AM_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =281
+        ZIndex: =280
 
     Manutencao_planejada_10 As label:
         Align: =Align.Center
@@ -3974,7 +3992,7 @@
         Width: =47
         X: =WO_5S_10.X + WO_5S_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =282
+        ZIndex: =281
 
     Limpeza_tecnica_10 As label:
         Align: =Align.Center
@@ -3988,7 +4006,7 @@
         Width: =47
         X: =Manutencao_planejada_10.X + Manutencao_planejada_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =283
+        ZIndex: =282
 
     Ajuste_inicio_turno_10 As label:
         Align: =Align.Center
@@ -4002,7 +4020,7 @@
         Width: =46
         X: =Limpeza_tecnica_10.X + Limpeza_tecnica_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =284
+        ZIndex: =283
 
     MicroParada_10 As label:
         Align: =Align.Center
@@ -4016,7 +4034,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_10.X + Ajuste_inicio_turno_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =285
+        ZIndex: =284
 
     FaltaMaterial_10 As label:
         Align: =Align.Center
@@ -4030,7 +4048,7 @@
         Width: =46
         X: =MicroParada_10.X + MicroParada_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =286
+        ZIndex: =285
 
     Velocidade_producao_10 As label:
         Align: =Align.Center
@@ -4044,7 +4062,7 @@
         Width: =47
         X: =FaltaMaterial_10.X + FaltaMaterial_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =287
+        ZIndex: =286
 
     Carga_Descarga_10 As label:
         Align: =Align.Center
@@ -4058,7 +4076,7 @@
         Width: =47
         X: =Velocidade_producao_10.X + Velocidade_producao_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =288
+        ZIndex: =287
 
     OPI_foraPDT_10 As label:
         Align: =Align.Center
@@ -4072,7 +4090,7 @@
         Width: =46
         X: =Carga_Descarga_10.X + Carga_Descarga_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =289
+        ZIndex: =288
 
     Refugo_10 As label:
         Align: =Align.Center
@@ -4086,7 +4104,7 @@
         Width: =46
         X: =OPI_foraPDT_10.X + OPI_foraPDT_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =290
+        ZIndex: =289
 
     Retrabalho_10 As label:
         Align: =Align.Center
@@ -4100,7 +4118,7 @@
         Width: =46
         X: =Refugo_10.X + Refugo_10.Width 
         Y: =Hora_10.Y
-        ZIndex: =291
+        ZIndex: =290
 
     Prod_11 As label:
         Align: =Align.Center
@@ -4114,7 +4132,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_11.Y
-        ZIndex: =292
+        ZIndex: =291
 
     Quebras_11 As label:
         Align: =Align.Center
@@ -4128,7 +4146,7 @@
         Width: =47
         X: =Refeicao_11.X + Refeicao_11.Width
         Y: =Hora_11.Y
-        ZIndex: =293
+        ZIndex: =292
 
     Troca_Ferramentas_11 As label:
         Align: =Align.Center
@@ -4142,7 +4160,7 @@
         Width: =46
         X: =Quebras_11.X + Quebras_11.Width
         Y: =Hora_11.Y
-        ZIndex: =294
+        ZIndex: =293
 
     Ajustes_Regulagens_11 As label:
         Align: =Align.Center
@@ -4156,7 +4174,7 @@
         Width: =47
         X: =Troca_Ferramentas_11.X + Troca_Ferramentas_11.Width
         Y: =Hora_11.Y
-        ZIndex: =295
+        ZIndex: =294
 
     Troca_tipo_11 As label:
         Align: =Align.Center
@@ -4170,7 +4188,7 @@
         Width: =46
         X: =Ajustes_Regulagens_11.X + Ajustes_Regulagens_11.Width
         Y: =Hora_11.Y
-        ZIndex: =296
+        ZIndex: =295
 
     Sist_Medicao_11 As label:
         Align: =Align.Center
@@ -4184,7 +4202,7 @@
         Width: =47
         X: =Troca_tipo_11.X + Troca_tipo_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =297
+        ZIndex: =296
 
     Delta_prod_11 As label:
         Align: =Align.Center
@@ -4199,7 +4217,7 @@
         Width: =47
         X: =Prod_11.X + Prod_11.Width
         Y: =Hora_11.Y
-        ZIndex: =298
+        ZIndex: =297
 
     Nao_Prev_Prod_11 As label:
         Align: =Align.Center
@@ -4213,7 +4231,7 @@
         Width: =47
         X: =Delta_prod_11.X + Delta_prod_11.Width
         Y: =Hora_11.Y
-        ZIndex: =299
+        ZIndex: =298
 
     Reuniao_11 As label:
         Align: =Align.Center
@@ -4227,7 +4245,7 @@
         Width: =46
         X: =Nao_Prev_Prod_11.X + Nao_Prev_Prod_11.Width
         Y: =Hora_11.Y
-        ZIndex: =300
+        ZIndex: =299
 
     Refeicao_11 As label:
         Align: =Align.Center
@@ -4241,7 +4259,7 @@
         Width: =46
         X: =Reuniao_11.X + Reuniao_11.Width
         Y: =Hora_11.Y
-        ZIndex: =301
+        ZIndex: =300
 
     Sist_Transporte_11 As label:
         Align: =Align.Center
@@ -4255,7 +4273,7 @@
         Width: =47
         X: =Sist_Medicao_11.X + Sist_Medicao_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =302
+        ZIndex: =301
 
     AM_11 As label:
         Align: =Align.Center
@@ -4269,7 +4287,7 @@
         Width: =46
         X: =Sist_Transporte_11.X + Sist_Transporte_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =303
+        ZIndex: =302
 
     WO_5S_11 As label:
         Align: =Align.Center
@@ -4283,7 +4301,7 @@
         Width: =46
         X: =AM_11.X + AM_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =304
+        ZIndex: =303
 
     Manutencao_planejada_11 As label:
         Align: =Align.Center
@@ -4297,7 +4315,7 @@
         Width: =47
         X: =WO_5S_11.X + WO_5S_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =305
+        ZIndex: =304
 
     Limpeza_tecnica_11 As label:
         Align: =Align.Center
@@ -4311,7 +4329,7 @@
         Width: =47
         X: =Manutencao_planejada_11.X + Manutencao_planejada_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =306
+        ZIndex: =305
 
     Ajuste_inicio_turno_11 As label:
         Align: =Align.Center
@@ -4325,7 +4343,7 @@
         Width: =46
         X: =Limpeza_tecnica_11.X + Limpeza_tecnica_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =307
+        ZIndex: =306
 
     MicroParada_11 As label:
         Align: =Align.Center
@@ -4339,7 +4357,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_11.X + Ajuste_inicio_turno_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =308
+        ZIndex: =307
 
     FaltaMaterial_11 As label:
         Align: =Align.Center
@@ -4353,7 +4371,7 @@
         Width: =46
         X: =MicroParada_11.X + MicroParada_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =309
+        ZIndex: =308
 
     Velocidade_producao_11 As label:
         Align: =Align.Center
@@ -4367,7 +4385,7 @@
         Width: =47
         X: =FaltaMaterial_11.X + FaltaMaterial_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =310
+        ZIndex: =309
 
     Carga_Descarga_11 As label:
         Align: =Align.Center
@@ -4381,7 +4399,7 @@
         Width: =47
         X: =Velocidade_producao_11.X + Velocidade_producao_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =311
+        ZIndex: =310
 
     OPI_foraPDT_11 As label:
         Align: =Align.Center
@@ -4395,7 +4413,7 @@
         Width: =46
         X: =Carga_Descarga_11.X + Carga_Descarga_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =312
+        ZIndex: =311
 
     Refugo_11 As label:
         Align: =Align.Center
@@ -4409,7 +4427,7 @@
         Width: =46
         X: =OPI_foraPDT_11.X + OPI_foraPDT_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =313
+        ZIndex: =312
 
     Retrabalho_11 As label:
         Align: =Align.Center
@@ -4423,7 +4441,7 @@
         Width: =46
         X: =Refugo_11.X + Refugo_11.Width 
         Y: =Hora_11.Y
-        ZIndex: =314
+        ZIndex: =313
 
     Prod_12 As label:
         Align: =Align.Center
@@ -4437,7 +4455,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_12.Y
-        ZIndex: =315
+        ZIndex: =314
 
     Quebras_12 As label:
         Align: =Align.Center
@@ -4451,7 +4469,7 @@
         Width: =47
         X: =Refeicao_12.X + Refeicao_12.Width
         Y: =Hora_12.Y
-        ZIndex: =316
+        ZIndex: =315
 
     Troca_Ferramentas_12 As label:
         Align: =Align.Center
@@ -4465,7 +4483,7 @@
         Width: =46
         X: =Quebras_12.X + Quebras_12.Width
         Y: =Hora_12.Y
-        ZIndex: =317
+        ZIndex: =316
 
     Ajustes_Regulagens_12 As label:
         Align: =Align.Center
@@ -4479,7 +4497,7 @@
         Width: =47
         X: =Troca_Ferramentas_12.X + Troca_Ferramentas_12.Width
         Y: =Hora_12.Y
-        ZIndex: =318
+        ZIndex: =317
 
     Troca_tipo_12 As label:
         Align: =Align.Center
@@ -4493,7 +4511,7 @@
         Width: =46
         X: =Ajustes_Regulagens_12.X + Ajustes_Regulagens_12.Width
         Y: =Hora_12.Y
-        ZIndex: =319
+        ZIndex: =318
 
     Sist_Medicao_12 As label:
         Align: =Align.Center
@@ -4507,7 +4525,7 @@
         Width: =47
         X: =Troca_tipo_12.X + Troca_tipo_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =320
+        ZIndex: =319
 
     Delta_prod_12 As label:
         Align: =Align.Center
@@ -4522,7 +4540,7 @@
         Width: =47
         X: =Prod_12.X + Prod_12.Width
         Y: =Hora_12.Y
-        ZIndex: =321
+        ZIndex: =320
 
     Nao_Prev_Prod_12 As label:
         Align: =Align.Center
@@ -4536,7 +4554,7 @@
         Width: =47
         X: =Delta_prod_12.X + Delta_prod_12.Width
         Y: =Hora_12.Y
-        ZIndex: =322
+        ZIndex: =321
 
     Reuniao_12 As label:
         Align: =Align.Center
@@ -4550,7 +4568,7 @@
         Width: =46
         X: =Nao_Prev_Prod_12.X + Nao_Prev_Prod_12.Width
         Y: =Hora_12.Y
-        ZIndex: =323
+        ZIndex: =322
 
     Refeicao_12 As label:
         Align: =Align.Center
@@ -4564,7 +4582,7 @@
         Width: =46
         X: =Reuniao_12.X + Reuniao_12.Width
         Y: =Hora_12.Y
-        ZIndex: =324
+        ZIndex: =323
 
     Sist_Transporte_12 As label:
         Align: =Align.Center
@@ -4578,7 +4596,7 @@
         Width: =47
         X: =Sist_Medicao_12.X + Sist_Medicao_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =325
+        ZIndex: =324
 
     AM_12 As label:
         Align: =Align.Center
@@ -4592,7 +4610,7 @@
         Width: =46
         X: =Sist_Transporte_12.X + Sist_Transporte_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =326
+        ZIndex: =325
 
     WO_5S_12 As label:
         Align: =Align.Center
@@ -4606,7 +4624,7 @@
         Width: =46
         X: =AM_12.X + AM_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =327
+        ZIndex: =326
 
     Manutencao_planejada_12 As label:
         Align: =Align.Center
@@ -4620,7 +4638,7 @@
         Width: =47
         X: =WO_5S_12.X + WO_5S_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =328
+        ZIndex: =327
 
     Limpeza_tecnica_12 As label:
         Align: =Align.Center
@@ -4634,7 +4652,7 @@
         Width: =47
         X: =Manutencao_planejada_12.X + Manutencao_planejada_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =329
+        ZIndex: =328
 
     Ajuste_inicio_turno_12 As label:
         Align: =Align.Center
@@ -4648,7 +4666,7 @@
         Width: =46
         X: =Limpeza_tecnica_12.X + Limpeza_tecnica_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =330
+        ZIndex: =329
 
     MicroParada_12 As label:
         Align: =Align.Center
@@ -4662,7 +4680,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_12.X + Ajuste_inicio_turno_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =331
+        ZIndex: =330
 
     FaltaMaterial_12 As label:
         Align: =Align.Center
@@ -4676,7 +4694,7 @@
         Width: =46
         X: =MicroParada_12.X + MicroParada_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =332
+        ZIndex: =331
 
     Velocidade_producao_12 As label:
         Align: =Align.Center
@@ -4690,7 +4708,7 @@
         Width: =47
         X: =FaltaMaterial_12.X + FaltaMaterial_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =333
+        ZIndex: =332
 
     Carga_Descarga_12 As label:
         Align: =Align.Center
@@ -4704,7 +4722,7 @@
         Width: =47
         X: =Velocidade_producao_12.X + Velocidade_producao_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =334
+        ZIndex: =333
 
     OPI_foraPDT_12 As label:
         Align: =Align.Center
@@ -4718,7 +4736,7 @@
         Width: =46
         X: =Carga_Descarga_12.X + Carga_Descarga_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =335
+        ZIndex: =334
 
     Refugo_12 As label:
         Align: =Align.Center
@@ -4732,7 +4750,7 @@
         Width: =46
         X: =OPI_foraPDT_12.X + OPI_foraPDT_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =336
+        ZIndex: =335
 
     Retrabalho_12 As label:
         Align: =Align.Center
@@ -4746,7 +4764,7 @@
         Width: =46
         X: =Refugo_12.X + Refugo_12.Width 
         Y: =Hora_12.Y
-        ZIndex: =337
+        ZIndex: =336
 
     Prod_13 As label:
         Align: =Align.Center
@@ -4760,7 +4778,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_13.Y
-        ZIndex: =338
+        ZIndex: =337
 
     Quebras_13 As label:
         Align: =Align.Center
@@ -4774,7 +4792,7 @@
         Width: =47
         X: =Refeicao_13.X + Refeicao_13.Width
         Y: =Hora_13.Y
-        ZIndex: =339
+        ZIndex: =338
 
     Troca_Ferramentas_13 As label:
         Align: =Align.Center
@@ -4788,7 +4806,7 @@
         Width: =46
         X: =Quebras_13.X + Quebras_13.Width
         Y: =Hora_13.Y
-        ZIndex: =340
+        ZIndex: =339
 
     Ajustes_Regulagens_13 As label:
         Align: =Align.Center
@@ -4802,7 +4820,7 @@
         Width: =47
         X: =Troca_Ferramentas_13.X + Troca_Ferramentas_13.Width
         Y: =Hora_13.Y
-        ZIndex: =341
+        ZIndex: =340
 
     Troca_tipo_13 As label:
         Align: =Align.Center
@@ -4816,7 +4834,7 @@
         Width: =46
         X: =Ajustes_Regulagens_13.X + Ajustes_Regulagens_13.Width
         Y: =Hora_13.Y
-        ZIndex: =342
+        ZIndex: =341
 
     Sist_Medicao_13 As label:
         Align: =Align.Center
@@ -4830,7 +4848,7 @@
         Width: =47
         X: =Troca_tipo_13.X + Troca_tipo_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =343
+        ZIndex: =342
 
     Delta_prod_13 As label:
         Align: =Align.Center
@@ -4845,7 +4863,7 @@
         Width: =47
         X: =Prod_13.X + Prod_13.Width
         Y: =Hora_13.Y
-        ZIndex: =344
+        ZIndex: =343
 
     Nao_Prev_Prod_13 As label:
         Align: =Align.Center
@@ -4859,7 +4877,7 @@
         Width: =47
         X: =Delta_prod_13.X + Delta_prod_13.Width
         Y: =Hora_13.Y
-        ZIndex: =345
+        ZIndex: =344
 
     Reuniao_13 As label:
         Align: =Align.Center
@@ -4873,7 +4891,7 @@
         Width: =46
         X: =Nao_Prev_Prod_13.X + Nao_Prev_Prod_13.Width
         Y: =Hora_13.Y
-        ZIndex: =346
+        ZIndex: =345
 
     Refeicao_13 As label:
         Align: =Align.Center
@@ -4887,7 +4905,7 @@
         Width: =46
         X: =Reuniao_13.X + Reuniao_13.Width
         Y: =Hora_13.Y
-        ZIndex: =347
+        ZIndex: =346
 
     Sist_Transporte_13 As label:
         Align: =Align.Center
@@ -4901,7 +4919,7 @@
         Width: =47
         X: =Sist_Medicao_13.X + Sist_Medicao_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =348
+        ZIndex: =347
 
     AM_13 As label:
         Align: =Align.Center
@@ -4915,7 +4933,7 @@
         Width: =46
         X: =Sist_Transporte_13.X + Sist_Transporte_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =349
+        ZIndex: =348
 
     WO_5S_13 As label:
         Align: =Align.Center
@@ -4929,7 +4947,7 @@
         Width: =46
         X: =AM_13.X + AM_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =350
+        ZIndex: =349
 
     Manutencao_planejada_13 As label:
         Align: =Align.Center
@@ -4943,7 +4961,7 @@
         Width: =47
         X: =WO_5S_13.X + WO_5S_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =351
+        ZIndex: =350
 
     Limpeza_tecnica_13 As label:
         Align: =Align.Center
@@ -4957,7 +4975,7 @@
         Width: =47
         X: =Manutencao_planejada_13.X + Manutencao_planejada_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =352
+        ZIndex: =351
 
     Ajuste_inicio_turno_13 As label:
         Align: =Align.Center
@@ -4971,7 +4989,7 @@
         Width: =46
         X: =Limpeza_tecnica_13.X + Limpeza_tecnica_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =353
+        ZIndex: =352
 
     MicroParada_13 As label:
         Align: =Align.Center
@@ -4985,7 +5003,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_13.X + Ajuste_inicio_turno_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =354
+        ZIndex: =353
 
     FaltaMaterial_13 As label:
         Align: =Align.Center
@@ -4999,7 +5017,7 @@
         Width: =46
         X: =MicroParada_13.X + MicroParada_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =355
+        ZIndex: =354
 
     Velocidade_producao_13 As label:
         Align: =Align.Center
@@ -5013,7 +5031,7 @@
         Width: =47
         X: =FaltaMaterial_13.X + FaltaMaterial_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =356
+        ZIndex: =355
 
     Carga_Descarga_13 As label:
         Align: =Align.Center
@@ -5027,7 +5045,7 @@
         Width: =47
         X: =Velocidade_producao_13.X + Velocidade_producao_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =357
+        ZIndex: =356
 
     OPI_foraPDT_13 As label:
         Align: =Align.Center
@@ -5041,7 +5059,7 @@
         Width: =46
         X: =Carga_Descarga_13.X + Carga_Descarga_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =358
+        ZIndex: =357
 
     Refugo_13 As label:
         Align: =Align.Center
@@ -5055,7 +5073,7 @@
         Width: =46
         X: =OPI_foraPDT_13.X + OPI_foraPDT_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =359
+        ZIndex: =358
 
     Retrabalho_13 As label:
         Align: =Align.Center
@@ -5069,7 +5087,7 @@
         Width: =46
         X: =Refugo_13.X + Refugo_13.Width 
         Y: =Hora_13.Y
-        ZIndex: =360
+        ZIndex: =359
 
     Prod_14 As label:
         Align: =Align.Center
@@ -5083,7 +5101,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_14.Y
-        ZIndex: =361
+        ZIndex: =360
 
     Quebras_14 As label:
         Align: =Align.Center
@@ -5097,7 +5115,7 @@
         Width: =47
         X: =Refeicao_14.X + Refeicao_14.Width
         Y: =Hora_14.Y
-        ZIndex: =362
+        ZIndex: =361
 
     Troca_Ferramentas_14 As label:
         Align: =Align.Center
@@ -5111,7 +5129,7 @@
         Width: =46
         X: =Quebras_14.X + Quebras_14.Width
         Y: =Hora_14.Y
-        ZIndex: =363
+        ZIndex: =362
 
     Ajustes_Regulagens_14 As label:
         Align: =Align.Center
@@ -5125,7 +5143,7 @@
         Width: =47
         X: =Troca_Ferramentas_14.X + Troca_Ferramentas_14.Width
         Y: =Hora_14.Y
-        ZIndex: =364
+        ZIndex: =363
 
     Troca_tipo_14 As label:
         Align: =Align.Center
@@ -5139,7 +5157,7 @@
         Width: =46
         X: =Ajustes_Regulagens_14.X + Ajustes_Regulagens_14.Width
         Y: =Hora_14.Y
-        ZIndex: =365
+        ZIndex: =364
 
     Sist_Medicao_14 As label:
         Align: =Align.Center
@@ -5153,7 +5171,7 @@
         Width: =47
         X: =Troca_tipo_14.X + Troca_tipo_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =366
+        ZIndex: =365
 
     Delta_prod_14 As label:
         Align: =Align.Center
@@ -5168,7 +5186,7 @@
         Width: =47
         X: =Prod_14.X + Prod_14.Width
         Y: =Hora_14.Y
-        ZIndex: =367
+        ZIndex: =366
 
     Nao_Prev_Prod_14 As label:
         Align: =Align.Center
@@ -5182,7 +5200,7 @@
         Width: =47
         X: =Delta_prod_14.X + Delta_prod_14.Width
         Y: =Hora_14.Y
-        ZIndex: =368
+        ZIndex: =367
 
     Reuniao_14 As label:
         Align: =Align.Center
@@ -5196,7 +5214,7 @@
         Width: =46
         X: =Nao_Prev_Prod_14.X + Nao_Prev_Prod_14.Width
         Y: =Hora_14.Y
-        ZIndex: =369
+        ZIndex: =368
 
     Refeicao_14 As label:
         Align: =Align.Center
@@ -5210,7 +5228,7 @@
         Width: =46
         X: =Reuniao_14.X + Reuniao_14.Width
         Y: =Hora_14.Y
-        ZIndex: =370
+        ZIndex: =369
 
     Sist_Transporte_14 As label:
         Align: =Align.Center
@@ -5224,7 +5242,7 @@
         Width: =47
         X: =Sist_Medicao_14.X + Sist_Medicao_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =371
+        ZIndex: =370
 
     AM_14 As label:
         Align: =Align.Center
@@ -5238,7 +5256,7 @@
         Width: =46
         X: =Sist_Transporte_14.X + Sist_Transporte_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =372
+        ZIndex: =371
 
     WO_5S_14 As label:
         Align: =Align.Center
@@ -5252,7 +5270,7 @@
         Width: =46
         X: =AM_14.X + AM_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =373
+        ZIndex: =372
 
     Manutencao_planejada_14 As label:
         Align: =Align.Center
@@ -5266,7 +5284,7 @@
         Width: =47
         X: =WO_5S_14.X + WO_5S_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =374
+        ZIndex: =373
 
     Limpeza_tecnica_14 As label:
         Align: =Align.Center
@@ -5280,7 +5298,7 @@
         Width: =47
         X: =Manutencao_planejada_14.X + Manutencao_planejada_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =375
+        ZIndex: =374
 
     Ajuste_inicio_turno_14 As label:
         Align: =Align.Center
@@ -5294,7 +5312,7 @@
         Width: =46
         X: =Limpeza_tecnica_14.X + Limpeza_tecnica_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =376
+        ZIndex: =375
 
     MicroParada_14 As label:
         Align: =Align.Center
@@ -5308,7 +5326,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_14.X + Ajuste_inicio_turno_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =377
+        ZIndex: =376
 
     FaltaMaterial_14 As label:
         Align: =Align.Center
@@ -5322,7 +5340,7 @@
         Width: =46
         X: =MicroParada_14.X + MicroParada_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =378
+        ZIndex: =377
 
     Velocidade_producao_14 As label:
         Align: =Align.Center
@@ -5336,7 +5354,7 @@
         Width: =47
         X: =FaltaMaterial_14.X + FaltaMaterial_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =379
+        ZIndex: =378
 
     Carga_Descarga_14 As label:
         Align: =Align.Center
@@ -5350,7 +5368,7 @@
         Width: =47
         X: =Velocidade_producao_14.X + Velocidade_producao_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =380
+        ZIndex: =379
 
     OPI_foraPDT_14 As label:
         Align: =Align.Center
@@ -5364,7 +5382,7 @@
         Width: =46
         X: =Carga_Descarga_14.X + Carga_Descarga_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =381
+        ZIndex: =380
 
     Refugo_14 As label:
         Align: =Align.Center
@@ -5378,7 +5396,7 @@
         Width: =46
         X: =OPI_foraPDT_14.X + OPI_foraPDT_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =382
+        ZIndex: =381
 
     Retrabalho_14 As label:
         Align: =Align.Center
@@ -5392,7 +5410,7 @@
         Width: =46
         X: =Refugo_14.X + Refugo_14.Width 
         Y: =Hora_14.Y
-        ZIndex: =383
+        ZIndex: =382
 
     Prod_15 As label:
         Align: =Align.Center
@@ -5406,7 +5424,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_15.Y
-        ZIndex: =384
+        ZIndex: =383
 
     Quebras_15 As label:
         Align: =Align.Center
@@ -5420,7 +5438,7 @@
         Width: =47
         X: =Refeicao_15.X + Refeicao_15.Width
         Y: =Hora_15.Y
-        ZIndex: =385
+        ZIndex: =384
 
     Troca_Ferramentas_15 As label:
         Align: =Align.Center
@@ -5434,7 +5452,7 @@
         Width: =46
         X: =Quebras_15.X + Quebras_15.Width
         Y: =Hora_15.Y
-        ZIndex: =386
+        ZIndex: =385
 
     Ajustes_Regulagens_15 As label:
         Align: =Align.Center
@@ -5448,7 +5466,7 @@
         Width: =47
         X: =Troca_Ferramentas_15.X + Troca_Ferramentas_15.Width
         Y: =Hora_15.Y
-        ZIndex: =387
+        ZIndex: =386
 
     Troca_tipo_15 As label:
         Align: =Align.Center
@@ -5462,7 +5480,7 @@
         Width: =46
         X: =Ajustes_Regulagens_15.X + Ajustes_Regulagens_15.Width
         Y: =Hora_15.Y
-        ZIndex: =388
+        ZIndex: =387
 
     Sist_Medicao_15 As label:
         Align: =Align.Center
@@ -5476,7 +5494,7 @@
         Width: =47
         X: =Troca_tipo_15.X + Troca_tipo_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =389
+        ZIndex: =388
 
     Delta_prod_15 As label:
         Align: =Align.Center
@@ -5491,7 +5509,7 @@
         Width: =47
         X: =Prod_15.X + Prod_15.Width
         Y: =Hora_15.Y
-        ZIndex: =390
+        ZIndex: =389
 
     Nao_Prev_Prod_15 As label:
         Align: =Align.Center
@@ -5505,7 +5523,7 @@
         Width: =47
         X: =Delta_prod_15.X + Delta_prod_15.Width
         Y: =Hora_15.Y
-        ZIndex: =391
+        ZIndex: =390
 
     Reuniao_15 As label:
         Align: =Align.Center
@@ -5519,7 +5537,7 @@
         Width: =46
         X: =Nao_Prev_Prod_15.X + Nao_Prev_Prod_15.Width
         Y: =Hora_15.Y
-        ZIndex: =392
+        ZIndex: =391
 
     Refeicao_15 As label:
         Align: =Align.Center
@@ -5533,7 +5551,7 @@
         Width: =46
         X: =Reuniao_15.X + Reuniao_15.Width
         Y: =Hora_15.Y
-        ZIndex: =393
+        ZIndex: =392
 
     Sist_Transporte_15 As label:
         Align: =Align.Center
@@ -5547,7 +5565,7 @@
         Width: =47
         X: =Sist_Medicao_15.X + Sist_Medicao_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =394
+        ZIndex: =393
 
     AM_15 As label:
         Align: =Align.Center
@@ -5561,7 +5579,7 @@
         Width: =46
         X: =Sist_Transporte_15.X + Sist_Transporte_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =395
+        ZIndex: =394
 
     WO_5S_15 As label:
         Align: =Align.Center
@@ -5575,7 +5593,7 @@
         Width: =46
         X: =AM_15.X + AM_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =396
+        ZIndex: =395
 
     Manutencao_planejada_15 As label:
         Align: =Align.Center
@@ -5589,7 +5607,7 @@
         Width: =47
         X: =WO_5S_15.X + WO_5S_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =397
+        ZIndex: =396
 
     Limpeza_tecnica_15 As label:
         Align: =Align.Center
@@ -5603,7 +5621,7 @@
         Width: =47
         X: =Manutencao_planejada_15.X + Manutencao_planejada_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =398
+        ZIndex: =397
 
     Ajuste_inicio_turno_15 As label:
         Align: =Align.Center
@@ -5617,7 +5635,7 @@
         Width: =46
         X: =Limpeza_tecnica_15.X + Limpeza_tecnica_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =399
+        ZIndex: =398
 
     MicroParada_15 As label:
         Align: =Align.Center
@@ -5631,7 +5649,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_15.X + Ajuste_inicio_turno_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =400
+        ZIndex: =399
 
     FaltaMaterial_15 As label:
         Align: =Align.Center
@@ -5645,7 +5663,7 @@
         Width: =46
         X: =MicroParada_15.X + MicroParada_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =401
+        ZIndex: =400
 
     Velocidade_producao_15 As label:
         Align: =Align.Center
@@ -5659,7 +5677,7 @@
         Width: =47
         X: =FaltaMaterial_15.X + FaltaMaterial_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =402
+        ZIndex: =401
 
     Carga_Descarga_15 As label:
         Align: =Align.Center
@@ -5673,7 +5691,7 @@
         Width: =47
         X: =Velocidade_producao_15.X + Velocidade_producao_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =403
+        ZIndex: =402
 
     OPI_foraPDT_15 As label:
         Align: =Align.Center
@@ -5687,7 +5705,7 @@
         Width: =46
         X: =Carga_Descarga_15.X + Carga_Descarga_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =404
+        ZIndex: =403
 
     Refugo_15 As label:
         Align: =Align.Center
@@ -5701,7 +5719,7 @@
         Width: =46
         X: =OPI_foraPDT_15.X + OPI_foraPDT_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =405
+        ZIndex: =404
 
     Retrabalho_15 As label:
         Align: =Align.Center
@@ -5715,7 +5733,7 @@
         Width: =46
         X: =Refugo_15.X + Refugo_15.Width 
         Y: =Hora_15.Y
-        ZIndex: =406
+        ZIndex: =405
 
     Prod_16 As label:
         Align: =Align.Center
@@ -5729,7 +5747,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_16.Y
-        ZIndex: =407
+        ZIndex: =406
 
     Quebras_16 As label:
         Align: =Align.Center
@@ -5743,7 +5761,7 @@
         Width: =47
         X: =Refeicao_16.X + Refeicao_16.Width
         Y: =Hora_16.Y
-        ZIndex: =408
+        ZIndex: =407
 
     Troca_Ferramentas_16 As label:
         Align: =Align.Center
@@ -5757,7 +5775,7 @@
         Width: =46
         X: =Quebras_16.X + Quebras_16.Width
         Y: =Hora_16.Y
-        ZIndex: =409
+        ZIndex: =408
 
     Ajustes_Regulagens_16 As label:
         Align: =Align.Center
@@ -5771,7 +5789,7 @@
         Width: =47
         X: =Troca_Ferramentas_16.X + Troca_Ferramentas_16.Width
         Y: =Hora_16.Y
-        ZIndex: =410
+        ZIndex: =409
 
     Troca_tipo_16 As label:
         Align: =Align.Center
@@ -5785,7 +5803,7 @@
         Width: =46
         X: =Ajustes_Regulagens_16.X + Ajustes_Regulagens_16.Width
         Y: =Hora_16.Y
-        ZIndex: =411
+        ZIndex: =410
 
     Sist_Medicao_16 As label:
         Align: =Align.Center
@@ -5799,7 +5817,7 @@
         Width: =47
         X: =Troca_tipo_16.X + Troca_tipo_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =412
+        ZIndex: =411
 
     Delta_prod_16 As label:
         Align: =Align.Center
@@ -5814,7 +5832,7 @@
         Width: =47
         X: =Prod_16.X + Prod_16.Width
         Y: =Hora_16.Y
-        ZIndex: =413
+        ZIndex: =412
 
     Nao_Prev_Prod_16 As label:
         Align: =Align.Center
@@ -5828,7 +5846,7 @@
         Width: =47
         X: =Delta_prod_16.X + Delta_prod_16.Width
         Y: =Hora_16.Y
-        ZIndex: =414
+        ZIndex: =413
 
     Reuniao_16 As label:
         Align: =Align.Center
@@ -5842,7 +5860,7 @@
         Width: =46
         X: =Nao_Prev_Prod_16.X + Nao_Prev_Prod_16.Width
         Y: =Hora_16.Y
-        ZIndex: =415
+        ZIndex: =414
 
     Refeicao_16 As label:
         Align: =Align.Center
@@ -5856,7 +5874,7 @@
         Width: =46
         X: =Reuniao_16.X + Reuniao_16.Width
         Y: =Hora_16.Y
-        ZIndex: =416
+        ZIndex: =415
 
     Sist_Transporte_16 As label:
         Align: =Align.Center
@@ -5870,7 +5888,7 @@
         Width: =47
         X: =Sist_Medicao_16.X + Sist_Medicao_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =417
+        ZIndex: =416
 
     AM_16 As label:
         Align: =Align.Center
@@ -5884,7 +5902,7 @@
         Width: =46
         X: =Sist_Transporte_16.X + Sist_Transporte_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =418
+        ZIndex: =417
 
     WO_5S_16 As label:
         Align: =Align.Center
@@ -5898,7 +5916,7 @@
         Width: =46
         X: =AM_16.X + AM_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =419
+        ZIndex: =418
 
     Manutencao_planejada_16 As label:
         Align: =Align.Center
@@ -5912,7 +5930,7 @@
         Width: =47
         X: =WO_5S_16.X + WO_5S_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =420
+        ZIndex: =419
 
     Limpeza_tecnica_16 As label:
         Align: =Align.Center
@@ -5926,7 +5944,7 @@
         Width: =47
         X: =Manutencao_planejada_16.X + Manutencao_planejada_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =421
+        ZIndex: =420
 
     Ajuste_inicio_turno_16 As label:
         Align: =Align.Center
@@ -5940,7 +5958,7 @@
         Width: =46
         X: =Limpeza_tecnica_16.X + Limpeza_tecnica_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =422
+        ZIndex: =421
 
     MicroParada_16 As label:
         Align: =Align.Center
@@ -5954,7 +5972,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_16.X + Ajuste_inicio_turno_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =423
+        ZIndex: =422
 
     FaltaMaterial_16 As label:
         Align: =Align.Center
@@ -5968,7 +5986,7 @@
         Width: =46
         X: =MicroParada_16.X + MicroParada_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =424
+        ZIndex: =423
 
     Velocidade_producao_16 As label:
         Align: =Align.Center
@@ -5982,7 +6000,7 @@
         Width: =47
         X: =FaltaMaterial_16.X + FaltaMaterial_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =425
+        ZIndex: =424
 
     Carga_Descarga_16 As label:
         Align: =Align.Center
@@ -5996,7 +6014,7 @@
         Width: =47
         X: =Velocidade_producao_16.X + Velocidade_producao_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =426
+        ZIndex: =425
 
     OPI_foraPDT_16 As label:
         Align: =Align.Center
@@ -6010,7 +6028,7 @@
         Width: =46
         X: =Carga_Descarga_16.X + Carga_Descarga_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =427
+        ZIndex: =426
 
     Refugo_16 As label:
         Align: =Align.Center
@@ -6024,7 +6042,7 @@
         Width: =46
         X: =OPI_foraPDT_16.X + OPI_foraPDT_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =428
+        ZIndex: =427
 
     Retrabalho_16 As label:
         Align: =Align.Center
@@ -6038,7 +6056,7 @@
         Width: =46
         X: =Refugo_16.X + Refugo_16.Width 
         Y: =Hora_16.Y
-        ZIndex: =429
+        ZIndex: =428
 
     Prod_17 As label:
         Align: =Align.Center
@@ -6052,7 +6070,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_17.Y
-        ZIndex: =430
+        ZIndex: =429
 
     Quebras_17 As label:
         Align: =Align.Center
@@ -6066,7 +6084,7 @@
         Width: =47
         X: =Refeicao_17.X + Refeicao_17.Width
         Y: =Hora_17.Y
-        ZIndex: =431
+        ZIndex: =430
 
     Troca_Ferramentas_17 As label:
         Align: =Align.Center
@@ -6080,7 +6098,7 @@
         Width: =46
         X: =Quebras_17.X + Quebras_17.Width
         Y: =Hora_17.Y
-        ZIndex: =432
+        ZIndex: =431
 
     Ajustes_Regulagens_17 As label:
         Align: =Align.Center
@@ -6094,7 +6112,7 @@
         Width: =47
         X: =Troca_Ferramentas_17.X + Troca_Ferramentas_17.Width
         Y: =Hora_17.Y
-        ZIndex: =433
+        ZIndex: =432
 
     Troca_tipo_17 As label:
         Align: =Align.Center
@@ -6108,7 +6126,7 @@
         Width: =46
         X: =Ajustes_Regulagens_17.X + Ajustes_Regulagens_17.Width
         Y: =Hora_17.Y
-        ZIndex: =434
+        ZIndex: =433
 
     Sist_Medicao_17 As label:
         Align: =Align.Center
@@ -6122,7 +6140,7 @@
         Width: =47
         X: =Troca_tipo_17.X + Troca_tipo_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =435
+        ZIndex: =434
 
     Delta_prod_17 As label:
         Align: =Align.Center
@@ -6137,7 +6155,7 @@
         Width: =47
         X: =Prod_17.X + Prod_17.Width
         Y: =Hora_17.Y
-        ZIndex: =436
+        ZIndex: =435
 
     Nao_Prev_Prod_17 As label:
         Align: =Align.Center
@@ -6151,7 +6169,7 @@
         Width: =47
         X: =Delta_prod_17.X + Delta_prod_17.Width
         Y: =Hora_17.Y
-        ZIndex: =437
+        ZIndex: =436
 
     Reuniao_17 As label:
         Align: =Align.Center
@@ -6165,7 +6183,7 @@
         Width: =46
         X: =Nao_Prev_Prod_17.X + Nao_Prev_Prod_17.Width
         Y: =Hora_17.Y
-        ZIndex: =438
+        ZIndex: =437
 
     Refeicao_17 As label:
         Align: =Align.Center
@@ -6179,7 +6197,7 @@
         Width: =46
         X: =Reuniao_17.X + Reuniao_17.Width
         Y: =Hora_17.Y
-        ZIndex: =439
+        ZIndex: =438
 
     Sist_Transporte_17 As label:
         Align: =Align.Center
@@ -6193,7 +6211,7 @@
         Width: =47
         X: =Sist_Medicao_17.X + Sist_Medicao_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =440
+        ZIndex: =439
 
     AM_17 As label:
         Align: =Align.Center
@@ -6207,7 +6225,7 @@
         Width: =46
         X: =Sist_Transporte_17.X + Sist_Transporte_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =441
+        ZIndex: =440
 
     WO_5S_17 As label:
         Align: =Align.Center
@@ -6221,7 +6239,7 @@
         Width: =46
         X: =AM_17.X + AM_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =442
+        ZIndex: =441
 
     Manutencao_planejada_17 As label:
         Align: =Align.Center
@@ -6235,7 +6253,7 @@
         Width: =47
         X: =WO_5S_17.X + WO_5S_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =443
+        ZIndex: =442
 
     Limpeza_tecnica_17 As label:
         Align: =Align.Center
@@ -6249,7 +6267,7 @@
         Width: =47
         X: =Manutencao_planejada_17.X + Manutencao_planejada_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =444
+        ZIndex: =443
 
     Ajuste_inicio_turno_17 As label:
         Align: =Align.Center
@@ -6263,7 +6281,7 @@
         Width: =46
         X: =Limpeza_tecnica_17.X + Limpeza_tecnica_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =445
+        ZIndex: =444
 
     MicroParada_17 As label:
         Align: =Align.Center
@@ -6277,7 +6295,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_17.X + Ajuste_inicio_turno_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =446
+        ZIndex: =445
 
     FaltaMaterial_17 As label:
         Align: =Align.Center
@@ -6291,7 +6309,7 @@
         Width: =46
         X: =MicroParada_17.X + MicroParada_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =447
+        ZIndex: =446
 
     Velocidade_producao_17 As label:
         Align: =Align.Center
@@ -6305,7 +6323,7 @@
         Width: =47
         X: =FaltaMaterial_17.X + FaltaMaterial_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =448
+        ZIndex: =447
 
     Carga_Descarga_17 As label:
         Align: =Align.Center
@@ -6319,7 +6337,7 @@
         Width: =47
         X: =Velocidade_producao_17.X + Velocidade_producao_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =449
+        ZIndex: =448
 
     OPI_foraPDT_17 As label:
         Align: =Align.Center
@@ -6333,7 +6351,7 @@
         Width: =46
         X: =Carga_Descarga_17.X + Carga_Descarga_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =450
+        ZIndex: =449
 
     Refugo_17 As label:
         Align: =Align.Center
@@ -6347,7 +6365,7 @@
         Width: =46
         X: =OPI_foraPDT_17.X + OPI_foraPDT_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =451
+        ZIndex: =450
 
     Retrabalho_17 As label:
         Align: =Align.Center
@@ -6361,7 +6379,7 @@
         Width: =46
         X: =Refugo_17.X + Refugo_17.Width 
         Y: =Hora_17.Y
-        ZIndex: =452
+        ZIndex: =451
 
     Prod_18 As label:
         Align: =Align.Center
@@ -6375,7 +6393,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_18.Y
-        ZIndex: =453
+        ZIndex: =452
 
     Quebras_18 As label:
         Align: =Align.Center
@@ -6389,7 +6407,7 @@
         Width: =47
         X: =Refeicao_18.X + Refeicao_18.Width
         Y: =Hora_18.Y
-        ZIndex: =454
+        ZIndex: =453
 
     Troca_Ferramentas_18 As label:
         Align: =Align.Center
@@ -6403,7 +6421,7 @@
         Width: =46
         X: =Quebras_18.X + Quebras_18.Width
         Y: =Hora_18.Y
-        ZIndex: =455
+        ZIndex: =454
 
     Ajustes_Regulagens_18 As label:
         Align: =Align.Center
@@ -6417,7 +6435,7 @@
         Width: =47
         X: =Troca_Ferramentas_18.X + Troca_Ferramentas_18.Width
         Y: =Hora_18.Y
-        ZIndex: =456
+        ZIndex: =455
 
     Troca_tipo_18 As label:
         Align: =Align.Center
@@ -6431,7 +6449,7 @@
         Width: =46
         X: =Ajustes_Regulagens_18.X + Ajustes_Regulagens_18.Width
         Y: =Hora_18.Y
-        ZIndex: =457
+        ZIndex: =456
 
     Sist_Medicao_18 As label:
         Align: =Align.Center
@@ -6445,7 +6463,7 @@
         Width: =47
         X: =Troca_tipo_18.X + Troca_tipo_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =458
+        ZIndex: =457
 
     Delta_prod_18 As label:
         Align: =Align.Center
@@ -6460,7 +6478,7 @@
         Width: =47
         X: =Prod_18.X + Prod_18.Width
         Y: =Hora_18.Y
-        ZIndex: =459
+        ZIndex: =458
 
     Nao_Prev_Prod_18 As label:
         Align: =Align.Center
@@ -6474,7 +6492,7 @@
         Width: =47
         X: =Delta_prod_18.X + Delta_prod_18.Width
         Y: =Hora_18.Y
-        ZIndex: =460
+        ZIndex: =459
 
     Reuniao_18 As label:
         Align: =Align.Center
@@ -6488,7 +6506,7 @@
         Width: =46
         X: =Nao_Prev_Prod_18.X + Nao_Prev_Prod_18.Width
         Y: =Hora_18.Y
-        ZIndex: =461
+        ZIndex: =460
 
     Refeicao_18 As label:
         Align: =Align.Center
@@ -6502,7 +6520,7 @@
         Width: =46
         X: =Reuniao_18.X + Reuniao_18.Width
         Y: =Hora_18.Y
-        ZIndex: =462
+        ZIndex: =461
 
     Sist_Transporte_18 As label:
         Align: =Align.Center
@@ -6516,7 +6534,7 @@
         Width: =47
         X: =Sist_Medicao_18.X + Sist_Medicao_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =463
+        ZIndex: =462
 
     AM_18 As label:
         Align: =Align.Center
@@ -6530,7 +6548,7 @@
         Width: =46
         X: =Sist_Transporte_18.X + Sist_Transporte_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =464
+        ZIndex: =463
 
     WO_5S_18 As label:
         Align: =Align.Center
@@ -6544,7 +6562,7 @@
         Width: =46
         X: =AM_18.X + AM_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =465
+        ZIndex: =464
 
     Manutencao_planejada_18 As label:
         Align: =Align.Center
@@ -6558,7 +6576,7 @@
         Width: =47
         X: =WO_5S_18.X + WO_5S_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =466
+        ZIndex: =465
 
     Limpeza_tecnica_18 As label:
         Align: =Align.Center
@@ -6572,7 +6590,7 @@
         Width: =47
         X: =Manutencao_planejada_18.X + Manutencao_planejada_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =467
+        ZIndex: =466
 
     Ajuste_inicio_turno_18 As label:
         Align: =Align.Center
@@ -6586,7 +6604,7 @@
         Width: =46
         X: =Limpeza_tecnica_18.X + Limpeza_tecnica_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =468
+        ZIndex: =467
 
     MicroParada_18 As label:
         Align: =Align.Center
@@ -6600,7 +6618,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_18.X + Ajuste_inicio_turno_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =469
+        ZIndex: =468
 
     FaltaMaterial_18 As label:
         Align: =Align.Center
@@ -6614,7 +6632,7 @@
         Width: =46
         X: =MicroParada_18.X + MicroParada_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =470
+        ZIndex: =469
 
     Velocidade_producao_18 As label:
         Align: =Align.Center
@@ -6628,7 +6646,7 @@
         Width: =47
         X: =FaltaMaterial_18.X + FaltaMaterial_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =471
+        ZIndex: =470
 
     Carga_Descarga_18 As label:
         Align: =Align.Center
@@ -6642,7 +6660,7 @@
         Width: =47
         X: =Velocidade_producao_18.X + Velocidade_producao_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =472
+        ZIndex: =471
 
     OPI_foraPDT_18 As label:
         Align: =Align.Center
@@ -6656,7 +6674,7 @@
         Width: =46
         X: =Carga_Descarga_18.X + Carga_Descarga_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =473
+        ZIndex: =472
 
     Refugo_18 As label:
         Align: =Align.Center
@@ -6670,7 +6688,7 @@
         Width: =46
         X: =OPI_foraPDT_18.X + OPI_foraPDT_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =474
+        ZIndex: =473
 
     Retrabalho_18 As label:
         Align: =Align.Center
@@ -6684,7 +6702,7 @@
         Width: =46
         X: =Refugo_18.X + Refugo_18.Width 
         Y: =Hora_18.Y
-        ZIndex: =475
+        ZIndex: =474
 
     Prod_19 As label:
         Align: =Align.Center
@@ -6698,7 +6716,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_19.Y
-        ZIndex: =476
+        ZIndex: =475
 
     Quebras_19 As label:
         Align: =Align.Center
@@ -6712,7 +6730,7 @@
         Width: =47
         X: =Refeicao_19.X + Refeicao_19.Width
         Y: =Hora_19.Y
-        ZIndex: =477
+        ZIndex: =476
 
     Troca_Ferramentas_19 As label:
         Align: =Align.Center
@@ -6726,7 +6744,7 @@
         Width: =46
         X: =Quebras_19.X + Quebras_19.Width
         Y: =Hora_19.Y
-        ZIndex: =478
+        ZIndex: =477
 
     Ajustes_Regulagens_19 As label:
         Align: =Align.Center
@@ -6740,7 +6758,7 @@
         Width: =47
         X: =Troca_Ferramentas_19.X + Troca_Ferramentas_19.Width
         Y: =Hora_19.Y
-        ZIndex: =479
+        ZIndex: =478
 
     Troca_tipo_19 As label:
         Align: =Align.Center
@@ -6754,7 +6772,7 @@
         Width: =46
         X: =Ajustes_Regulagens_19.X + Ajustes_Regulagens_19.Width
         Y: =Hora_19.Y
-        ZIndex: =480
+        ZIndex: =479
 
     Sist_Medicao_19 As label:
         Align: =Align.Center
@@ -6768,7 +6786,7 @@
         Width: =47
         X: =Troca_tipo_19.X + Troca_tipo_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =481
+        ZIndex: =480
 
     Delta_prod_19 As label:
         Align: =Align.Center
@@ -6783,7 +6801,7 @@
         Width: =47
         X: =Prod_19.X + Prod_19.Width
         Y: =Hora_19.Y
-        ZIndex: =482
+        ZIndex: =481
 
     Nao_Prev_Prod_19 As label:
         Align: =Align.Center
@@ -6797,7 +6815,7 @@
         Width: =47
         X: =Delta_prod_19.X + Delta_prod_19.Width
         Y: =Hora_19.Y
-        ZIndex: =483
+        ZIndex: =482
 
     Reuniao_19 As label:
         Align: =Align.Center
@@ -6811,7 +6829,7 @@
         Width: =46
         X: =Nao_Prev_Prod_19.X + Nao_Prev_Prod_19.Width
         Y: =Hora_19.Y
-        ZIndex: =484
+        ZIndex: =483
 
     Refeicao_19 As label:
         Align: =Align.Center
@@ -6825,7 +6843,7 @@
         Width: =46
         X: =Reuniao_19.X + Reuniao_19.Width
         Y: =Hora_19.Y
-        ZIndex: =485
+        ZIndex: =484
 
     Sist_Transporte_19 As label:
         Align: =Align.Center
@@ -6839,7 +6857,7 @@
         Width: =47
         X: =Sist_Medicao_19.X + Sist_Medicao_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =486
+        ZIndex: =485
 
     AM_19 As label:
         Align: =Align.Center
@@ -6853,7 +6871,7 @@
         Width: =46
         X: =Sist_Transporte_19.X + Sist_Transporte_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =487
+        ZIndex: =486
 
     WO_5S_19 As label:
         Align: =Align.Center
@@ -6867,7 +6885,7 @@
         Width: =46
         X: =AM_19.X + AM_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =488
+        ZIndex: =487
 
     Manutencao_planejada_19 As label:
         Align: =Align.Center
@@ -6881,7 +6899,7 @@
         Width: =47
         X: =WO_5S_19.X + WO_5S_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =489
+        ZIndex: =488
 
     Limpeza_tecnica_19 As label:
         Align: =Align.Center
@@ -6895,7 +6913,7 @@
         Width: =47
         X: =Manutencao_planejada_19.X + Manutencao_planejada_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =490
+        ZIndex: =489
 
     Ajuste_inicio_turno_19 As label:
         Align: =Align.Center
@@ -6909,7 +6927,7 @@
         Width: =46
         X: =Limpeza_tecnica_19.X + Limpeza_tecnica_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =491
+        ZIndex: =490
 
     MicroParada_19 As label:
         Align: =Align.Center
@@ -6923,7 +6941,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_19.X + Ajuste_inicio_turno_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =492
+        ZIndex: =491
 
     FaltaMaterial_19 As label:
         Align: =Align.Center
@@ -6937,7 +6955,7 @@
         Width: =46
         X: =MicroParada_19.X + MicroParada_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =493
+        ZIndex: =492
 
     Velocidade_producao_19 As label:
         Align: =Align.Center
@@ -6951,7 +6969,7 @@
         Width: =47
         X: =FaltaMaterial_19.X + FaltaMaterial_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =494
+        ZIndex: =493
 
     Carga_Descarga_19 As label:
         Align: =Align.Center
@@ -6965,7 +6983,7 @@
         Width: =47
         X: =Velocidade_producao_19.X + Velocidade_producao_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =495
+        ZIndex: =494
 
     OPI_foraPDT_19 As label:
         Align: =Align.Center
@@ -6979,7 +6997,7 @@
         Width: =46
         X: =Carga_Descarga_19.X + Carga_Descarga_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =496
+        ZIndex: =495
 
     Refugo_19 As label:
         Align: =Align.Center
@@ -6993,7 +7011,7 @@
         Width: =46
         X: =OPI_foraPDT_19.X + OPI_foraPDT_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =497
+        ZIndex: =496
 
     Retrabalho_19 As label:
         Align: =Align.Center
@@ -7007,7 +7025,7 @@
         Width: =46
         X: =Refugo_19.X + Refugo_19.Width 
         Y: =Hora_19.Y
-        ZIndex: =498
+        ZIndex: =497
 
     Prod_20 As label:
         Align: =Align.Center
@@ -7021,7 +7039,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_20.Y
-        ZIndex: =499
+        ZIndex: =498
 
     Quebras_20 As label:
         Align: =Align.Center
@@ -7035,7 +7053,7 @@
         Width: =47
         X: =Refeicao_20.X + Refeicao_20.Width
         Y: =Hora_20.Y
-        ZIndex: =500
+        ZIndex: =499
 
     Troca_Ferramentas_20 As label:
         Align: =Align.Center
@@ -7049,7 +7067,7 @@
         Width: =46
         X: =Quebras_20.X + Quebras_20.Width
         Y: =Hora_20.Y
-        ZIndex: =501
+        ZIndex: =500
 
     Ajustes_Regulagens_20 As label:
         Align: =Align.Center
@@ -7063,7 +7081,7 @@
         Width: =47
         X: =Troca_Ferramentas_20.X + Troca_Ferramentas_20.Width
         Y: =Hora_20.Y
-        ZIndex: =502
+        ZIndex: =501
 
     Troca_tipo_20 As label:
         Align: =Align.Center
@@ -7077,7 +7095,7 @@
         Width: =46
         X: =Ajustes_Regulagens_20.X + Ajustes_Regulagens_20.Width
         Y: =Hora_20.Y
-        ZIndex: =503
+        ZIndex: =502
 
     Sist_Medicao_20 As label:
         Align: =Align.Center
@@ -7091,7 +7109,7 @@
         Width: =47
         X: =Troca_tipo_20.X + Troca_tipo_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =504
+        ZIndex: =503
 
     Delta_prod_20 As label:
         Align: =Align.Center
@@ -7106,7 +7124,7 @@
         Width: =47
         X: =Prod_20.X + Prod_20.Width
         Y: =Hora_20.Y
-        ZIndex: =505
+        ZIndex: =504
 
     Nao_Prev_Prod_20 As label:
         Align: =Align.Center
@@ -7120,7 +7138,7 @@
         Width: =47
         X: =Delta_prod_20.X + Delta_prod_20.Width
         Y: =Hora_20.Y
-        ZIndex: =506
+        ZIndex: =505
 
     Reuniao_20 As label:
         Align: =Align.Center
@@ -7134,7 +7152,7 @@
         Width: =46
         X: =Nao_Prev_Prod_20.X + Nao_Prev_Prod_20.Width
         Y: =Hora_20.Y
-        ZIndex: =507
+        ZIndex: =506
 
     Refeicao_20 As label:
         Align: =Align.Center
@@ -7148,7 +7166,7 @@
         Width: =46
         X: =Reuniao_20.X + Reuniao_20.Width
         Y: =Hora_20.Y
-        ZIndex: =508
+        ZIndex: =507
 
     Sist_Transporte_20 As label:
         Align: =Align.Center
@@ -7162,7 +7180,7 @@
         Width: =47
         X: =Sist_Medicao_20.X + Sist_Medicao_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =509
+        ZIndex: =508
 
     AM_20 As label:
         Align: =Align.Center
@@ -7176,7 +7194,7 @@
         Width: =46
         X: =Sist_Transporte_20.X + Sist_Transporte_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =510
+        ZIndex: =509
 
     WO_5S_20 As label:
         Align: =Align.Center
@@ -7190,7 +7208,7 @@
         Width: =46
         X: =AM_20.X + AM_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =511
+        ZIndex: =510
 
     Manutencao_planejada_20 As label:
         Align: =Align.Center
@@ -7204,7 +7222,7 @@
         Width: =47
         X: =WO_5S_20.X + WO_5S_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =512
+        ZIndex: =511
 
     Limpeza_tecnica_20 As label:
         Align: =Align.Center
@@ -7218,7 +7236,7 @@
         Width: =47
         X: =Manutencao_planejada_20.X + Manutencao_planejada_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =513
+        ZIndex: =512
 
     Ajuste_inicio_turno_20 As label:
         Align: =Align.Center
@@ -7232,7 +7250,7 @@
         Width: =46
         X: =Limpeza_tecnica_20.X + Limpeza_tecnica_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =514
+        ZIndex: =513
 
     MicroParada_20 As label:
         Align: =Align.Center
@@ -7246,7 +7264,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_20.X + Ajuste_inicio_turno_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =515
+        ZIndex: =514
 
     FaltaMaterial_20 As label:
         Align: =Align.Center
@@ -7260,7 +7278,7 @@
         Width: =46
         X: =MicroParada_20.X + MicroParada_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =516
+        ZIndex: =515
 
     Velocidade_producao_20 As label:
         Align: =Align.Center
@@ -7274,7 +7292,7 @@
         Width: =47
         X: =FaltaMaterial_20.X + FaltaMaterial_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =517
+        ZIndex: =516
 
     Carga_Descarga_20 As label:
         Align: =Align.Center
@@ -7288,7 +7306,7 @@
         Width: =47
         X: =Velocidade_producao_20.X + Velocidade_producao_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =518
+        ZIndex: =517
 
     OPI_foraPDT_20 As label:
         Align: =Align.Center
@@ -7302,7 +7320,7 @@
         Width: =46
         X: =Carga_Descarga_20.X + Carga_Descarga_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =519
+        ZIndex: =518
 
     Refugo_20 As label:
         Align: =Align.Center
@@ -7316,7 +7334,7 @@
         Width: =46
         X: =OPI_foraPDT_20.X + OPI_foraPDT_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =520
+        ZIndex: =519
 
     Retrabalho_20 As label:
         Align: =Align.Center
@@ -7330,7 +7348,7 @@
         Width: =46
         X: =Refugo_20.X + Refugo_20.Width 
         Y: =Hora_20.Y
-        ZIndex: =521
+        ZIndex: =520
 
     Prod_21 As label:
         Align: =Align.Center
@@ -7344,7 +7362,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_21.Y
-        ZIndex: =522
+        ZIndex: =521
 
     Quebras_21 As label:
         Align: =Align.Center
@@ -7358,7 +7376,7 @@
         Width: =47
         X: =Refeicao_21.X + Refeicao_21.Width
         Y: =Hora_21.Y
-        ZIndex: =523
+        ZIndex: =522
 
     Troca_Ferramentas_21 As label:
         Align: =Align.Center
@@ -7372,7 +7390,7 @@
         Width: =46
         X: =Quebras_21.X + Quebras_21.Width
         Y: =Hora_21.Y
-        ZIndex: =524
+        ZIndex: =523
 
     Ajustes_Regulagens_21 As label:
         Align: =Align.Center
@@ -7386,7 +7404,7 @@
         Width: =47
         X: =Troca_Ferramentas_21.X + Troca_Ferramentas_21.Width
         Y: =Hora_21.Y
-        ZIndex: =525
+        ZIndex: =524
 
     Troca_tipo_21 As label:
         Align: =Align.Center
@@ -7400,7 +7418,7 @@
         Width: =46
         X: =Ajustes_Regulagens_21.X + Ajustes_Regulagens_21.Width
         Y: =Hora_21.Y
-        ZIndex: =526
+        ZIndex: =525
 
     Sist_Medicao_21 As label:
         Align: =Align.Center
@@ -7414,7 +7432,7 @@
         Width: =47
         X: =Troca_tipo_21.X + Troca_tipo_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =527
+        ZIndex: =526
 
     Delta_prod_21 As label:
         Align: =Align.Center
@@ -7429,7 +7447,7 @@
         Width: =47
         X: =Prod_21.X + Prod_21.Width
         Y: =Hora_21.Y
-        ZIndex: =528
+        ZIndex: =527
 
     Nao_Prev_Prod_21 As label:
         Align: =Align.Center
@@ -7443,7 +7461,7 @@
         Width: =47
         X: =Delta_prod_21.X + Delta_prod_21.Width
         Y: =Hora_21.Y
-        ZIndex: =529
+        ZIndex: =528
 
     Reuniao_21 As label:
         Align: =Align.Center
@@ -7457,7 +7475,7 @@
         Width: =46
         X: =Nao_Prev_Prod_21.X + Nao_Prev_Prod_21.Width
         Y: =Hora_21.Y
-        ZIndex: =530
+        ZIndex: =529
 
     Refeicao_21 As label:
         Align: =Align.Center
@@ -7471,7 +7489,7 @@
         Width: =46
         X: =Reuniao_21.X + Reuniao_21.Width
         Y: =Hora_21.Y
-        ZIndex: =531
+        ZIndex: =530
 
     Sist_Transporte_21 As label:
         Align: =Align.Center
@@ -7485,7 +7503,7 @@
         Width: =47
         X: =Sist_Medicao_21.X + Sist_Medicao_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =532
+        ZIndex: =531
 
     AM_21 As label:
         Align: =Align.Center
@@ -7499,7 +7517,7 @@
         Width: =46
         X: =Sist_Transporte_21.X + Sist_Transporte_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =533
+        ZIndex: =532
 
     WO_5S_21 As label:
         Align: =Align.Center
@@ -7513,7 +7531,7 @@
         Width: =46
         X: =AM_21.X + AM_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =534
+        ZIndex: =533
 
     Manutencao_planejada_21 As label:
         Align: =Align.Center
@@ -7527,7 +7545,7 @@
         Width: =47
         X: =WO_5S_21.X + WO_5S_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =535
+        ZIndex: =534
 
     Limpeza_tecnica_21 As label:
         Align: =Align.Center
@@ -7541,7 +7559,7 @@
         Width: =47
         X: =Manutencao_planejada_21.X + Manutencao_planejada_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =536
+        ZIndex: =535
 
     Ajuste_inicio_turno_21 As label:
         Align: =Align.Center
@@ -7555,7 +7573,7 @@
         Width: =46
         X: =Limpeza_tecnica_21.X + Limpeza_tecnica_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =537
+        ZIndex: =536
 
     MicroParada_21 As label:
         Align: =Align.Center
@@ -7569,7 +7587,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_21.X + Ajuste_inicio_turno_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =538
+        ZIndex: =537
 
     FaltaMaterial_21 As label:
         Align: =Align.Center
@@ -7583,7 +7601,7 @@
         Width: =46
         X: =MicroParada_21.X + MicroParada_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =539
+        ZIndex: =538
 
     Velocidade_producao_21 As label:
         Align: =Align.Center
@@ -7597,7 +7615,7 @@
         Width: =47
         X: =FaltaMaterial_21.X + FaltaMaterial_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =540
+        ZIndex: =539
 
     Carga_Descarga_21 As label:
         Align: =Align.Center
@@ -7611,7 +7629,7 @@
         Width: =47
         X: =Velocidade_producao_21.X + Velocidade_producao_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =541
+        ZIndex: =540
 
     OPI_foraPDT_21 As label:
         Align: =Align.Center
@@ -7625,7 +7643,7 @@
         Width: =46
         X: =Carga_Descarga_21.X + Carga_Descarga_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =542
+        ZIndex: =541
 
     Refugo_21 As label:
         Align: =Align.Center
@@ -7639,7 +7657,7 @@
         Width: =46
         X: =OPI_foraPDT_21.X + OPI_foraPDT_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =543
+        ZIndex: =542
 
     Retrabalho_21 As label:
         Align: =Align.Center
@@ -7653,7 +7671,7 @@
         Width: =46
         X: =Refugo_21.X + Refugo_21.Width 
         Y: =Hora_21.Y
-        ZIndex: =544
+        ZIndex: =543
 
     Prod_22 As label:
         Align: =Align.Center
@@ -7667,7 +7685,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_22.Y
-        ZIndex: =545
+        ZIndex: =544
 
     Quebras_22 As label:
         Align: =Align.Center
@@ -7681,7 +7699,7 @@
         Width: =47
         X: =Refeicao_22.X + Refeicao_22.Width
         Y: =Hora_22.Y
-        ZIndex: =546
+        ZIndex: =545
 
     Troca_Ferramentas_22 As label:
         Align: =Align.Center
@@ -7695,7 +7713,7 @@
         Width: =46
         X: =Quebras_22.X + Quebras_22.Width
         Y: =Hora_22.Y
-        ZIndex: =547
+        ZIndex: =546
 
     Ajustes_Regulagens_22 As label:
         Align: =Align.Center
@@ -7709,7 +7727,7 @@
         Width: =47
         X: =Troca_Ferramentas_22.X + Troca_Ferramentas_22.Width
         Y: =Hora_22.Y
-        ZIndex: =548
+        ZIndex: =547
 
     Troca_tipo_22 As label:
         Align: =Align.Center
@@ -7723,7 +7741,7 @@
         Width: =46
         X: =Ajustes_Regulagens_22.X + Ajustes_Regulagens_22.Width
         Y: =Hora_22.Y
-        ZIndex: =549
+        ZIndex: =548
 
     Sist_Medicao_22 As label:
         Align: =Align.Center
@@ -7737,7 +7755,7 @@
         Width: =47
         X: =Troca_tipo_22.X + Troca_tipo_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =550
+        ZIndex: =549
 
     Delta_prod_22 As label:
         Align: =Align.Center
@@ -7752,7 +7770,7 @@
         Width: =47
         X: =Prod_22.X + Prod_22.Width
         Y: =Hora_22.Y
-        ZIndex: =551
+        ZIndex: =550
 
     Nao_Prev_Prod_22 As label:
         Align: =Align.Center
@@ -7766,7 +7784,7 @@
         Width: =47
         X: =Delta_prod_22.X + Delta_prod_22.Width
         Y: =Hora_22.Y
-        ZIndex: =552
+        ZIndex: =551
 
     Reuniao_22 As label:
         Align: =Align.Center
@@ -7780,7 +7798,7 @@
         Width: =46
         X: =Nao_Prev_Prod_22.X + Nao_Prev_Prod_22.Width
         Y: =Hora_22.Y
-        ZIndex: =553
+        ZIndex: =552
 
     Refeicao_22 As label:
         Align: =Align.Center
@@ -7794,7 +7812,7 @@
         Width: =46
         X: =Reuniao_22.X + Reuniao_22.Width
         Y: =Hora_22.Y
-        ZIndex: =554
+        ZIndex: =553
 
     Sist_Transporte_22 As label:
         Align: =Align.Center
@@ -7808,7 +7826,7 @@
         Width: =47
         X: =Sist_Medicao_22.X + Sist_Medicao_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =555
+        ZIndex: =554
 
     AM_22 As label:
         Align: =Align.Center
@@ -7822,7 +7840,7 @@
         Width: =46
         X: =Sist_Transporte_22.X + Sist_Transporte_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =556
+        ZIndex: =555
 
     WO_5S_22 As label:
         Align: =Align.Center
@@ -7836,7 +7854,7 @@
         Width: =46
         X: =AM_22.X + AM_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =557
+        ZIndex: =556
 
     Manutencao_planejada_22 As label:
         Align: =Align.Center
@@ -7850,7 +7868,7 @@
         Width: =47
         X: =WO_5S_22.X + WO_5S_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =558
+        ZIndex: =557
 
     Limpeza_tecnica_22 As label:
         Align: =Align.Center
@@ -7864,7 +7882,7 @@
         Width: =47
         X: =Manutencao_planejada_22.X + Manutencao_planejada_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =559
+        ZIndex: =558
 
     Ajuste_inicio_turno_22 As label:
         Align: =Align.Center
@@ -7878,7 +7896,7 @@
         Width: =46
         X: =Limpeza_tecnica_22.X + Limpeza_tecnica_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =560
+        ZIndex: =559
 
     MicroParada_22 As label:
         Align: =Align.Center
@@ -7892,7 +7910,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_22.X + Ajuste_inicio_turno_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =561
+        ZIndex: =560
 
     FaltaMaterial_22 As label:
         Align: =Align.Center
@@ -7906,7 +7924,7 @@
         Width: =46
         X: =MicroParada_22.X + MicroParada_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =562
+        ZIndex: =561
 
     Velocidade_producao_22 As label:
         Align: =Align.Center
@@ -7920,7 +7938,7 @@
         Width: =47
         X: =FaltaMaterial_22.X + FaltaMaterial_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =563
+        ZIndex: =562
 
     Carga_Descarga_22 As label:
         Align: =Align.Center
@@ -7934,7 +7952,7 @@
         Width: =47
         X: =Velocidade_producao_22.X + Velocidade_producao_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =564
+        ZIndex: =563
 
     OPI_foraPDT_22 As label:
         Align: =Align.Center
@@ -7948,7 +7966,7 @@
         Width: =46
         X: =Carga_Descarga_22.X + Carga_Descarga_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =565
+        ZIndex: =564
 
     Refugo_22 As label:
         Align: =Align.Center
@@ -7962,7 +7980,7 @@
         Width: =46
         X: =OPI_foraPDT_22.X + OPI_foraPDT_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =566
+        ZIndex: =565
 
     Retrabalho_22 As label:
         Align: =Align.Center
@@ -7976,7 +7994,7 @@
         Width: =46
         X: =Refugo_22.X + Refugo_22.Width 
         Y: =Hora_22.Y
-        ZIndex: =567
+        ZIndex: =566
 
     Prod_23 As label:
         Align: =Align.Center
@@ -7990,7 +8008,7 @@
         Width: =47
         X: =Hora_00.X + Hora_00.Width
         Y: =Hora_23.Y
-        ZIndex: =568
+        ZIndex: =567
 
     Quebras_23 As label:
         Align: =Align.Center
@@ -8004,7 +8022,7 @@
         Width: =47
         X: =Refeicao_23.X + Refeicao_23.Width
         Y: =Hora_23.Y
-        ZIndex: =569
+        ZIndex: =568
 
     Troca_Ferramentas_23 As label:
         Align: =Align.Center
@@ -8018,7 +8036,7 @@
         Width: =46
         X: =Quebras_23.X + Quebras_23.Width
         Y: =Hora_23.Y
-        ZIndex: =570
+        ZIndex: =569
 
     Ajustes_Regulagens_23 As label:
         Align: =Align.Center
@@ -8032,7 +8050,7 @@
         Width: =47
         X: =Troca_Ferramentas_23.X + Troca_Ferramentas_23.Width
         Y: =Hora_23.Y
-        ZIndex: =571
+        ZIndex: =570
 
     Troca_tipo_23 As label:
         Align: =Align.Center
@@ -8046,7 +8064,7 @@
         Width: =46
         X: =Ajustes_Regulagens_23.X + Ajustes_Regulagens_23.Width
         Y: =Hora_23.Y
-        ZIndex: =572
+        ZIndex: =571
 
     Sist_Medicao_23 As label:
         Align: =Align.Center
@@ -8060,7 +8078,7 @@
         Width: =47
         X: =Troca_tipo_23.X + Troca_tipo_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =573
+        ZIndex: =572
 
     Delta_prod_23 As label:
         Align: =Align.Center
@@ -8075,7 +8093,7 @@
         Width: =47
         X: =Prod_23.X + Prod_23.Width
         Y: =Hora_23.Y
-        ZIndex: =574
+        ZIndex: =573
 
     Nao_Prev_Prod_23 As label:
         Align: =Align.Center
@@ -8089,7 +8107,7 @@
         Width: =47
         X: =Delta_prod_23.X + Delta_prod_23.Width
         Y: =Hora_23.Y
-        ZIndex: =575
+        ZIndex: =574
 
     Reuniao_23 As label:
         Align: =Align.Center
@@ -8103,7 +8121,7 @@
         Width: =46
         X: =Nao_Prev_Prod_23.X + Nao_Prev_Prod_23.Width
         Y: =Hora_23.Y
-        ZIndex: =576
+        ZIndex: =575
 
     Refeicao_23 As label:
         Align: =Align.Center
@@ -8117,7 +8135,7 @@
         Width: =46
         X: =Reuniao_23.X + Reuniao_23.Width
         Y: =Hora_23.Y
-        ZIndex: =577
+        ZIndex: =576
 
     Sist_Transporte_23 As label:
         Align: =Align.Center
@@ -8131,7 +8149,7 @@
         Width: =47
         X: =Sist_Medicao_23.X + Sist_Medicao_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =578
+        ZIndex: =577
 
     AM_23 As label:
         Align: =Align.Center
@@ -8145,7 +8163,7 @@
         Width: =46
         X: =Sist_Transporte_23.X + Sist_Transporte_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =579
+        ZIndex: =578
 
     WO_5S_23 As label:
         Align: =Align.Center
@@ -8159,7 +8177,7 @@
         Width: =46
         X: =AM_23.X + AM_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =580
+        ZIndex: =579
 
     Manutencao_planejada_23 As label:
         Align: =Align.Center
@@ -8173,7 +8191,7 @@
         Width: =47
         X: =WO_5S_23.X + WO_5S_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =581
+        ZIndex: =580
 
     Limpeza_tecnica_23 As label:
         Align: =Align.Center
@@ -8187,7 +8205,7 @@
         Width: =47
         X: =Manutencao_planejada_23.X + Manutencao_planejada_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =582
+        ZIndex: =581
 
     Ajuste_inicio_turno_23 As label:
         Align: =Align.Center
@@ -8201,7 +8219,7 @@
         Width: =46
         X: =Limpeza_tecnica_23.X + Limpeza_tecnica_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =583
+        ZIndex: =582
 
     MicroParada_23 As label:
         Align: =Align.Center
@@ -8215,7 +8233,7 @@
         Width: =47
         X: =Ajuste_inicio_turno_23.X + Ajuste_inicio_turno_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =584
+        ZIndex: =583
 
     FaltaMaterial_23 As label:
         Align: =Align.Center
@@ -8229,7 +8247,7 @@
         Width: =46
         X: =MicroParada_23.X + MicroParada_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =585
+        ZIndex: =584
 
     Velocidade_producao_23 As label:
         Align: =Align.Center
@@ -8243,7 +8261,7 @@
         Width: =47
         X: =FaltaMaterial_23.X + FaltaMaterial_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =586
+        ZIndex: =585
 
     Carga_Descarga_23 As label:
         Align: =Align.Center
@@ -8257,7 +8275,7 @@
         Width: =47
         X: =Velocidade_producao_23.X + Velocidade_producao_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =587
+        ZIndex: =586
 
     OPI_foraPDT_23 As label:
         Align: =Align.Center
@@ -8271,7 +8289,7 @@
         Width: =46
         X: =Carga_Descarga_23.X + Carga_Descarga_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =588
+        ZIndex: =587
 
     Refugo_23 As label:
         Align: =Align.Center
@@ -8285,7 +8303,7 @@
         Width: =46
         X: =OPI_foraPDT_23.X + OPI_foraPDT_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =589
+        ZIndex: =588
 
     Retrabalho_23 As label:
         Align: =Align.Center
@@ -8299,7 +8317,7 @@
         Width: =46
         X: =Refugo_23.X + Refugo_23.Width 
         Y: =Hora_23.Y
-        ZIndex: =590
+        ZIndex: =589
 
     IconRefresh1_3 As icon.Reload:
         AccessibleLabel: =Self.Tooltip
@@ -8320,7 +8338,7 @@
         Width: =50
         X: =1
         Y: =26
-        ZIndex: =591
+        ZIndex: =590
 
     Icon2_3 As icon.Erase:
         Color: =RGBA(255, 255, 255, 1)
@@ -8336,7 +8354,7 @@
         Width: =42
         X: =711
         Y: =1
-        ZIndex: =594
+        ZIndex: =591
 
     Label2 As label:
         Align: =Align.Center
@@ -8347,7 +8365,7 @@
         Width: =294
         X: =54
         Y: =7
-        ZIndex: =595
+        ZIndex: =592
 
     btn_edit_prod As button:
         Align: =Align.Right
@@ -8370,14 +8388,14 @@
         Tooltip: ="Ir para a tela de editar produção"
         Width: =126
         X: =364
-        ZIndex: =596
+        ZIndex: =593
 
     Icon_edit_prod As icon.Edit:
         Height: =20
         Icon: =Icon.Trash
         Width: =24
         X: =375
-        ZIndex: =597
+        ZIndex: =594
 
     btn_edit_perdas As button:
         Align: =Align.Right
@@ -8402,7 +8420,7 @@
         Width: =126
         X: =366
         Y: =27
-        ZIndex: =598
+        ZIndex: =595
 
     Icon_edit_perdas As icon.Edit:
         Height: =20
@@ -8410,7 +8428,7 @@
         Width: =24
         X: =377
         Y: =29
-        ZIndex: =599
+        ZIndex: =596
 
     HtmlText1 As htmlViewer:
         DisabledBorderColor: =RGBA(56, 56, 56, 1)
@@ -8435,7 +8453,7 @@
         Width: =47
         X: =145
         Y: =53
-        ZIndex: =601
+        ZIndex: =597
 
     "'Prod. Dia' As label":
         Align: =Align.Center
@@ -8445,7 +8463,7 @@
             =Sum(Prod_0.Text,Prod_1.Text,Prod_2.Text,Prod_3.Text,Prod_4.Text,Prod_5.Text,Prod_6.Text,Prod_7.Text,Prod_8.Text,Prod_9.Text,Prod_10.Text,Prod_11.Text,Prod_12.Text,Prod_13.Text,Prod_14.Text,Prod_15.Text,Prod_16.Text,Prod_17.Text,Prod_18.Text,Prod_19.Text,Prod_20.Text,Prod_21.Text,Prod_22.Text,Prod_23.Text,0)
         Width: =54
         X: =657
-        ZIndex: =602
+        ZIndex: =598
 
     Label_Capacidade_Hora_1 As label:
         Align: =Align.Center
@@ -8455,10 +8473,10 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =12
-        Text: ="Prod. 1º"
+        Text: ="Prod. 3º"
         Width: =82
         X: =50
-        ZIndex: =603
+        ZIndex: =599
 
     Label19 As label:
         Align: =Align.Center
@@ -8486,7 +8504,7 @@
         Width: =70
         X: =285
         Y: =26
-        ZIndex: =604
+        ZIndex: =600
 
     Label20 As label:
         Align: =Align.Center
@@ -8497,7 +8515,7 @@
         Width: =70
         X: =53
         Y: =26
-        ZIndex: =605
+        ZIndex: =601
 
     Label_Capacidade_Hora_2 As label:
         Align: =Align.Center
@@ -8507,10 +8525,10 @@
         PaddingRight: =2
         PaddingTop: =2
         Size: =12
-        Text: ="Prod. 2º"
+        Text: ="Prod. 1º"
         Width: =82
-        X: =124
-        ZIndex: =606
+        X: =132
+        ZIndex: =602
 
     Label20_1 As label:
         Align: =Align.Center
@@ -8519,9 +8537,9 @@
         Text: |
             =Sum(Prod_6.Text , Prod_7.Text , Prod_8.Text , Prod_9.Text , Prod_10.Text , Prod_11.Text,Prod_12.Text,Prod_13.Text,Prod_14.Text,Prod_15.Text)
         Width: =70
-        X: =129
+        X: =137
         Y: =26
-        ZIndex: =607
+        ZIndex: =603
 
     Label_Capacidade_Hora_3 As label:
         Align: =Align.Center
@@ -8534,7 +8552,7 @@
         Text: ="Prod. 2º"
         Width: =82
         X: =209
-        ZIndex: =608
+        ZIndex: =604
 
     Label20_2 As label:
         Align: =Align.Center
@@ -8545,7 +8563,7 @@
         Width: =70
         X: =215
         Y: =26
-        ZIndex: =609
+        ZIndex: =605
 
     Label_Capacidade_Hora_4 As label:
         Align: =Align.Center
@@ -8558,11 +8576,5 @@
         Text: ="Perdas"
         Width: =70
         X: =287
-        ZIndex: =610
-
-    Rectangle5 As rectangle:
-        Height: =49
-        Width: =232
-        X: =37
-        ZIndex: =611
+        ZIndex: =606
 

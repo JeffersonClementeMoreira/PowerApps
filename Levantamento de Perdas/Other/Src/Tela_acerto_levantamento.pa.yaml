@@ -13,6 +13,24 @@ Screens:
       LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
       Width: =1123
     Children:
+      - Rectangle5_1:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(238, 204, 204, 1)
+            Height: =49
+            Width: =73
+            X: =287
+      - Rectangle5:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(232, 244, 217, 1)
+            Height: =49
+            Width: =232
+            X: =53
       - Image1:
           Control: Image@2.2.3
           Properties:
@@ -9662,7 +9680,7 @@ Screens:
             PaddingRight: =2
             PaddingTop: =2
             Size: =12
-            Text: ="Prod. 1º"
+            Text: ="Prod. 3º"
             Width: =82
             X: =50
       - Label19:
@@ -9720,9 +9738,9 @@ Screens:
             PaddingRight: =2
             PaddingTop: =2
             Size: =12
-            Text: ="Prod. 2º"
+            Text: ="Prod. 1º"
             Width: =82
-            X: =124
+            X: =132
       - Label20_1:
           Control: Label@2.5.1
           Properties:
@@ -9734,7 +9752,7 @@ Screens:
             Text: |
               =Sum(Prod_6.Text , Prod_7.Text , Prod_8.Text , Prod_9.Text , Prod_10.Text , Prod_11.Text,Prod_12.Text,Prod_13.Text,Prod_14.Text,Prod_15.Text)
             Width: =70
-            X: =129
+            X: =137
             Y: =26
       - Label_Capacidade_Hora_3:
           Control: Label@2.5.1
@@ -9779,11 +9797,3 @@ Screens:
             Text: ="Perdas"
             Width: =70
             X: =287
-      - Rectangle5:
-          Control: Rectangle@2.3.0
-          Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Fill: =RGBA(56, 96, 178, 1)
-            Height: =49
-            Width: =232
-            X: =37
