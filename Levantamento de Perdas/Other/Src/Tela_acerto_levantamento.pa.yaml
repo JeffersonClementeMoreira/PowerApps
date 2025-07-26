@@ -9691,7 +9691,7 @@ Screens:
             Font: =Font.'Open Sans'
             Height: =22
             Size: =12
-            Text: |+
+            Text: |
               =Sum(Quebras_00.Text, Quebras_1.Text, Quebras_2.Text, Quebras_3.Text, Quebras_4.Text, Quebras_5.Text, Quebras_6.Text, Quebras_7.Text, Quebras_8.Text, Quebras_9.Text, Quebras_10.Text, Quebras_11.Text, Quebras_12.Text, Quebras_13.Text, Quebras_14.Text, Quebras_15.Text, Quebras_16.Text, Quebras_17.Text, Quebras_18.Text, Quebras_19.Text, Quebras_20.Text, Quebras_21.Text, Quebras_22.Text, Quebras_23.Text,
               Troca_Ferramentas_00.Text, Troca_Ferramentas_1.Text, Troca_Ferramentas_2.Text, Troca_Ferramentas_3.Text, Troca_Ferramentas_4.Text, Troca_Ferramentas_5.Text, Troca_Ferramentas_6.Text, Troca_Ferramentas_7.Text, Troca_Ferramentas_8.Text, Troca_Ferramentas_9.Text, Troca_Ferramentas_10.Text, Troca_Ferramentas_11.Text, Troca_Ferramentas_12.Text, Troca_Ferramentas_13.Text, Troca_Ferramentas_14.Text, Troca_Ferramentas_15.Text, Troca_Ferramentas_16.Text, Troca_Ferramentas_17.Text, Troca_Ferramentas_18.Text, Troca_Ferramentas_19.Text, Troca_Ferramentas_20.Text, Troca_Ferramentas_21.Text, Troca_Ferramentas_22.Text, Troca_Ferramentas_23.Text,
               Ajustes_Regulagens_00.Text, Ajustes_Regulagens_1.Text, Ajustes_Regulagens_2.Text, Ajustes_Regulagens_3.Text, Ajustes_Regulagens_4.Text, Ajustes_Regulagens_5.Text, Ajustes_Regulagens_6.Text, Ajustes_Regulagens_7.Text, Ajustes_Regulagens_8.Text, Ajustes_Regulagens_9.Text, Ajustes_Regulagens_10.Text, Ajustes_Regulagens_11.Text, Ajustes_Regulagens_12.Text, Ajustes_Regulagens_13.Text, Ajustes_Regulagens_14.Text, Ajustes_Regulagens_15.Text, Ajustes_Regulagens_16.Text, Ajustes_Regulagens_17.Text, Ajustes_Regulagens_18.Text, Ajustes_Regulagens_19.Text, Ajustes_Regulagens_20.Text, Ajustes_Regulagens_21.Text, Ajustes_Regulagens_22.Text, Ajustes_Regulagens_23.Text,
@@ -9721,7 +9721,7 @@ Screens:
             Font: =Font.'Open Sans'
             Height: =20
             Size: =12
-            Text: |+
+            Text: |
               =Sum(Prod_0.Text , Prod_1.Text , Prod_2.Text , Prod_3.Text , Prod_4.Text , Prod_5.Text)
             Width: =70
             X: =53

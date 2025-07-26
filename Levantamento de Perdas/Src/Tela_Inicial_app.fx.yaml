@@ -730,7 +730,7 @@ Tela_Inicial_app As screen:
         Fill: =RGBA(230, 230, 230, 1)
         Height: =Label_perda_real_ini.Height
         Size: =21
-        Text: ="Total Lançado"
+        Text: ="Total Previsto (- Perdas)"
         Width: =Label_perda_real_ini.Width
         X: =Label_perda_real_ini.X
         Y: =Label_perda_real_ini.Y + Label_perda_real_ini.Height + 15
@@ -738,7 +738,7 @@ Tela_Inicial_app As screen:
 
     Total As text:
         Align: =Align.Center
-        Default: =Perda_Real_ini.Text+Prod_Real_ini.Text
+        Default: =(Perda_Real_ini.Text+Prod_Real_ini.Text)-Perdanaoimpact_ini.Text
         DisplayMode: =DisplayMode.Disabled
         Height: =Perda_Real_ini.Height
         Size: =21
@@ -1330,7 +1330,7 @@ Tela_Inicial_app As screen:
         Fill: =RGBA(0, 0, 0, 1)
         Height: =41
         Size: =14
-        Text: ="Versão 19/07/2025"
+        Text: ="Versão 26/07/2025"
         Width: =207
         X: =433
         Y: =1095

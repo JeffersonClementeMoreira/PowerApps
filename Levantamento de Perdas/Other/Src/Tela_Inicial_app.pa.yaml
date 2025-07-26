@@ -463,7 +463,7 @@ Screens:
             Fill: =RGBA(230, 230, 230, 1)
             Font: =Font.'Open Sans'
             Height: =Label_perda_real_ini.Height
-            Text: ="Total Lançado"
+            Text: ="Total Previsto (- Perdas)"
             Width: =Label_perda_real_ini.Width
             X: =Label_perda_real_ini.X
             Y: =Label_perda_real_ini.Y + Label_perda_real_ini.Height + 15
@@ -472,7 +472,7 @@ Screens:
           Properties:
             Align: =Align.Center
             BorderColor: =RGBA(0, 18, 107, 1)
-            Default: =Perda_Real_ini.Text+Prod_Real_ini.Text
+            Default: =(Perda_Real_ini.Text+Prod_Real_ini.Text)-Perdanaoimpact_ini.Text
             DisplayMode: =DisplayMode.Disabled
             Font: =Font.'Open Sans'
             Height: =Perda_Real_ini.Height
@@ -1165,7 +1165,7 @@ Screens:
             Font: =Font.'Open Sans'
             Height: =41
             Size: =14
-            Text: ="Versão 19/07/2025"
+            Text: ="Versão 26/07/2025"
             Width: =207
             X: =433
             Y: =1095
