@@ -835,7 +835,7 @@ Screens:
                       )
                       &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())
                       &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
-                      && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
+                      && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) ||(Filtro_Reunião.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
                   ),
                   QUANTIDADE
               )
@@ -1169,3 +1169,16 @@ Screens:
             Width: =207
             X: =433
             Y: =1095
+      - Filtro_Reunião:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Default: ="Reunião"
+            Font: =Font.'Open Sans'
+            Height: =30
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            Visible: =false
+            Width: =140
+            X: =230
+            Y: =949

@@ -1080,7 +1080,7 @@ Tela_Inicial_app As screen:
                     )
                     &&((UTE = ComboBoxute_ini.Selected.Result) || ComboBoxute_ini.Selected.Result = Blank())
                     &&((DATA = txt_date_ini.Text) || txt_date_ini.Text = Blank())
-                    && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
+                    && ((Filtro_naoprevistoprod.Text = TIPO_DE_PERDA) ||(Filtro_Reunião.Text = TIPO_DE_PERDA) || (Filtro_refeicao_intervalo.Text = TIPO_DE_PERDA) || (Filtro_desbalanceamento.Text = TIPO_DE_PERDA))
                 ),
                 QUANTIDADE
             )
@@ -1335,4 +1335,15 @@ Tela_Inicial_app As screen:
         X: =433
         Y: =1095
         ZIndex: =33
+
+    Filtro_Reunião As text:
+        Default: ="Reunião"
+        Height: =30
+        HintText: =""
+        Size: =21
+        Visible: =false
+        Width: =140
+        X: =230
+        Y: =949
+        ZIndex: =34
 
