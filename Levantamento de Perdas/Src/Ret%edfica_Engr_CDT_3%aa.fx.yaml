@@ -58,8 +58,8 @@ Retífica_Engr_CDT_3ª As screen:
             
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
-            =Set( varmaquina , "961502097");
-            Set( varsetor ,  Label_setor_25.Text );
+            =Set( varmaquina , "961502097-3");
+            Set( varsetor ,  "Retífica Engr. CDT 3ª" );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -85,7 +85,7 @@ Retífica_Engr_CDT_3ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "951500940");
-            Set( varsetor ,  Label_setor_25.Text );
+            Set( varsetor ,  "Retífica Engr. CDT 3ª" );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -191,7 +191,7 @@ Retífica_Engr_CDT_3ª As screen:
             //ColorFade(RGBA(56; 96; 178; 1); -20%)
         OnSelect: |
             =Set( varmaquina , "951500941");
-            Set( varsetor ,  Label_setor_25.Text );
+            Set( varsetor ,  "Retífica Engr. CDT 4ª" );
             Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
             Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
             Set( varselect , 1) ;
@@ -230,4 +230,76 @@ Retífica_Engr_CDT_3ª As screen:
         X: =510
         Y: =775
         ZIndex: =11
+
+    Image9 As image:
+        Height: =184
+        Image: ='Captura de tela 2025-08-16 092651'
+        Width: =136
+        X: =87
+        Y: =528
+        ZIndex: =12
+
+    Btnmaq_203 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =185
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "961502097-4");
+            Set( varsetor ,  "Retífica Engr. CDT 4ª" );
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =100
+        X: =105
+        Y: =528
+        ZIndex: =13
+
+    Label21 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =146
+        Size: =12
+        Text: |-
+            ="Back-Up
+            Retifica Nova
+            CAF. 2097 
+            OP.130
+            4ª VEL"
+        Width: =93
+        Y: =548
+        ZIndex: =14
+
+    Image10 As image:
+        Height: =158
+        Image: ='Captura de tela 2025-07-19 091725'
+        ImagePosition: =ImagePosition.Fill
+        Width: =95
+        Y: =323
+        ZIndex: =15
+
+    Label21_1 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =146
+        Size: =12
+        Text: |-
+            ="Back-Up
+            Retifica Nova
+            CAF. 2097 
+            OP.130
+            3ª VEL"
+        Width: =93
+        Y: =335
+        ZIndex: =16
 

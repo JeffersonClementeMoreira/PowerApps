@@ -227,7 +227,7 @@ AcertoProdução As screen:
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoProducao, SETOR = SelectSetor.Selected.Value),MAQUINA),SelectCaf.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoProducao,SETOR=SelectSetor.Selected.Value),MAQUINA),SelectCaf.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =188
@@ -247,7 +247,7 @@ AcertoProdução As screen:
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =[]
+        SearchItems: =Search(Sort(Distinct(LancamentoProducao,UTE),Value),SelectUte.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =138
@@ -531,7 +531,7 @@ AcertoProdução As screen:
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoProducao, UTE = SelectUte.Selected.Value),SETOR),SelectSetor.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoProducao,UTE=SelectUte.Selected.Value),SETOR),SelectSetor.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =314

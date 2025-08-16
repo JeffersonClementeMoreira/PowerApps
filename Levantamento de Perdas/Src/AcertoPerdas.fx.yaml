@@ -227,7 +227,7 @@ AcertoPerdas As screen:
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, SETOR = SelectSetor2.Selected.Value),MAQUINA),SelectCaf_1.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoPerdas,SETOR=SelectSetor2.Selected.Value),MAQUINA),SelectCaf_1.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =188
@@ -275,7 +275,7 @@ AcertoPerdas As screen:
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),TIPO_DE_PERDA),SelectOp_1.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoPerdas,MAQUINA=SelectCaf_1.Selected.Value),TIPO_DE_PERDA),SelectOp_1.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =296
@@ -559,7 +559,7 @@ AcertoPerdas As screen:
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),SETOR),SelectSetor2.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoPerdas,UTE=SelectUte_1.Selected.Value),SETOR),SelectSetor2.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =254
