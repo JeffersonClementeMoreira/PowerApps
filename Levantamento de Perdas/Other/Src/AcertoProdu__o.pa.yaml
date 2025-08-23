@@ -45,7 +45,7 @@ Screens:
               =Navigate(Tela_Inicial_app)
             Tooltip: ="Menu"
             Width: =45
-            X: =152
+            X: =38
             Y: =60
       - Gallery1:
           Control: Gallery@2.15.0
@@ -60,7 +60,7 @@ Screens:
                           LancamentoProducao,
                               StartsWith(DATA,Data.Text) Or IsBlank(Data.Text),
                               StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
-                              StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value)),
+                              StartsWith(MAQUINA,SelectCaf.Selected.Result) Or IsBlank(SelectCaf.Selected.Result)),
                       HORA_INICIO,
                   SortOrder.Ascending
               )
@@ -276,17 +276,17 @@ Screens:
             ChevronFill: =RGBA(255, 255, 255, 1)
             ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
             ChevronHoverFill: =RGBA(255, 255, 255, 1)
-            DisplayFields: =["Value"]
+            DisplayFields: =["Result"]
             Font: =Font.'Open Sans'
             Height: =35
             HoverFill: =RGBA(0, 0, 0, 0)
             IsSearchable: =false
-            Items: =Distinct(Filter(LancamentoProducao, SETOR = SelectSetor.Selected.Value),MAQUINA)
+            Items: "=//Distinct(Filter(LancamentoProducao; SETOR = SelectSetor.Selected.Value);MAQUINA)\r\nlistamaquina "
             PaddingBottom: =2
             PaddingTop: =2
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 18, 107, 1)
-            SearchFields: =["Value"]
+            SearchFields: =["Result"]
             SelectMultiple: =false
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: =RGBA(56, 96, 178, 1)
@@ -308,7 +308,9 @@ Screens:
             Height: =35
             HoverFill: =RGBA(0, 0, 0, 0)
             IsSearchable: =false
-            Items: =Sort(Distinct(LancamentoProducao,UTE),Value)
+            Items: |+
+              =Sort(Distinct(LancamentoProducao,UTE),Value)
+            OnChange: =Reset(SelectSetor)
             PaddingBottom: =2
             PaddingTop: =2
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -319,7 +321,7 @@ Screens:
             SelectionFill: =RGBA(56, 96, 178, 1)
             Size: =12
             Width: =138
-            X: =441
+            X: =429
             Y: =70
       - DatePicker2:
           Control: Classic/DatePicker@2.6.0
@@ -331,7 +333,7 @@ Screens:
             IconFill: =RGBA(255, 255, 255, 1)
             Size: =13
             Width: =175
-            X: =224
+            X: =110
             Y: =70
       - Icon1_36:
           Control: Classic/Icon@2.5.0
@@ -365,7 +367,7 @@ Screens:
             Size: =14
             Text: ="DATA"
             Width: =77
-            X: =224
+            X: =110
             Y: =46
       - Label6_10:
           Control: Label@2.5.1
@@ -377,7 +379,7 @@ Screens:
             Size: =14
             Text: ="UTE"
             Width: =77
-            X: =441
+            X: =429
             Y: =42
       - Label6_11:
           Control: Label@2.5.1
@@ -404,7 +406,7 @@ Screens:
                           LancamentoProducao_BD,
                               StartsWith(DATA,Data.Text) Or IsBlank(Data.Text),
                               StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
-                              StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value)),
+                              StartsWith(MAQUINA,SelectCaf.Selected.Result) Or IsBlank(SelectCaf.Selected.Result)),
                       HORA_INICIO,
                   SortOrder.Ascending
               )
@@ -685,17 +687,48 @@ Screens:
             ChevronFill: =RGBA(255, 255, 255, 1)
             ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
             ChevronHoverFill: =RGBA(255, 255, 255, 1)
-            DisplayFields: =["Value"]
+            DisplayFields: =["Result"]
             Font: =Font.'Open Sans'
             Height: =35
             HoverFill: =RGBA(0, 0, 0, 0)
             IsSearchable: =false
-            Items: =Distinct(Filter(LancamentoProducao, UTE = SelectUte.Selected.Value),SETOR)
+            Items: |+
+              =//Distinct(Filter(LancamentoProducao; UTE = SelectUte.Selected.Value);SETOR)
+              listasetor
+            OnChange: |-
+              =Reset(SelectCaf);
+              ClearCollect(
+                  listamaquina,
+                  Sort(
+                      ForAll(Distinct(
+                          Filter(
+                              CreateMaquina,
+                              (Text(SelectSetor.Selected.Result) in SETOR)
+                          ),
+                          CAF
+                      ), {Result: ThisRecord.Value}).Result,
+                      Result
+                  )
+              )
+            OnSelect: |-
+              =ClearCollect(
+                  listasetor,
+                  Sort(
+                      ForAll(Distinct(
+                          Filter(
+                              CreateMaquina,
+                              (Text(SelectUte.Selected.Value) in UTE)
+                          ),
+                          SETOR
+                      ), {Result: ThisRecord.Value}).Result,
+                      Result
+                  )
+              ) ;
             PaddingBottom: =2
             PaddingTop: =2
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 18, 107, 1)
-            SearchFields: =["Value"]
+            SearchFields: =["Result"]
             SelectMultiple: =false
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: =RGBA(56, 96, 178, 1)

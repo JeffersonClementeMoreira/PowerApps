@@ -28,7 +28,7 @@ AcertoProdução As screen:
             =Navigate(Tela_Inicial_app)
         Tooltip: ="Menu"
         Width: =45
-        X: =152
+        X: =38
         Y: =60
         ZIndex: =3
 
@@ -42,7 +42,7 @@ AcertoProdução As screen:
                         LancamentoProducao,
                             StartsWith(DATA,Data.Text) Or IsBlank(Data.Text),
                             StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
-                            StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value)),
+                            StartsWith(MAQUINA,SelectCaf.Selected.Result) Or IsBlank(SelectCaf.Selected.Result)),
                     HORA_INICIO,
                 SortOrder.Ascending
             )
@@ -217,17 +217,19 @@ AcertoProdução As screen:
 
     SelectCaf As combobox:
         BorderThickness: =1
-        DisplayFields: =["Value"]
+        DisplayFields: =["Result"]
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoProducao, SETOR = SelectSetor.Selected.Value),MAQUINA)
+        Items: |-
+            =//Distinct(Filter(LancamentoProducao; SETOR = SelectSetor.Selected.Value);MAQUINA)
+            listamaquina 
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
-        SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoProducao,SETOR=SelectSetor.Selected.Value),MAQUINA),SelectCaf.SearchText,Value)
+        SearchFields: =["Result"]
+        SearchItems: =Search(listamaquina,SelectCaf.SearchText,Result)
         SelectMultiple: =false
         Size: =12
         Width: =188
@@ -241,7 +243,9 @@ AcertoProdução As screen:
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Sort(Distinct(LancamentoProducao,UTE),Value)
+        Items: |
+            =Sort(Distinct(LancamentoProducao,UTE),Value)
+        OnChange: =Reset(SelectSetor)
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
@@ -251,7 +255,7 @@ AcertoProdução As screen:
         SelectMultiple: =false
         Size: =12
         Width: =138
-        X: =441
+        X: =429
         Y: =70
         ZIndex: =14
 
@@ -259,7 +263,7 @@ AcertoProdução As screen:
         Height: =35
         Size: =13
         Width: =175
-        X: =224
+        X: =110
         Y: =70
         ZIndex: =15
 
@@ -291,7 +295,7 @@ AcertoProdução As screen:
         Size: =14
         Text: ="DATA"
         Width: =77
-        X: =224
+        X: =110
         Y: =46
         ZIndex: =18
 
@@ -301,7 +305,7 @@ AcertoProdução As screen:
         Size: =14
         Text: ="UTE"
         Width: =77
-        X: =441
+        X: =429
         Y: =42
         ZIndex: =19
 
@@ -325,7 +329,7 @@ AcertoProdução As screen:
                         LancamentoProducao_BD,
                             StartsWith(DATA,Data.Text) Or IsBlank(Data.Text),
                             StartsWith(UTE,SelectUte.Selected.Value) Or IsBlank(SelectUte.Selected.Value),
-                            StartsWith(MAQUINA,SelectCaf.Selected.Value) Or IsBlank(SelectCaf.Selected.Value)),
+                            StartsWith(MAQUINA,SelectCaf.Selected.Result) Or IsBlank(SelectCaf.Selected.Result)),
                     HORA_INICIO,
                 SortOrder.Ascending
             )
@@ -521,17 +525,48 @@ AcertoProdução As screen:
 
     SelectSetor As combobox:
         BorderThickness: =1
-        DisplayFields: =["Value"]
+        DisplayFields: =["Result"]
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoProducao, UTE = SelectUte.Selected.Value),SETOR)
+        Items: |
+            =//Distinct(Filter(LancamentoProducao; UTE = SelectUte.Selected.Value);SETOR)
+            listasetor
+        OnChange: |-
+            =Reset(SelectCaf);
+            ClearCollect(
+                listamaquina,
+                Sort(
+                    ForAll(Distinct(
+                        Filter(
+                            CreateMaquina,
+                            (Text(SelectSetor.Selected.Result) in SETOR)
+                        ),
+                        CAF
+                    ), {Result: ThisRecord.Value}).Result,
+                    Result
+                )
+            )
+        OnSelect: |-
+            =ClearCollect(
+                listasetor,
+                Sort(
+                    ForAll(Distinct(
+                        Filter(
+                            CreateMaquina,
+                            (Text(SelectUte.Selected.Value) in UTE)
+                        ),
+                        SETOR
+                    ), {Result: ThisRecord.Value}).Result,
+                    Result
+                )
+            ) ;
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
-        SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoProducao,UTE=SelectUte.Selected.Value),SETOR),SelectSetor.SearchText,Value)
+        SearchFields: =["Result"]
+        SearchItems: =Search(listasetor,SelectSetor.SearchText,Result)
         SelectMultiple: =false
         Size: =12
         Width: =314
