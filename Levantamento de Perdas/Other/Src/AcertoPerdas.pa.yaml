@@ -59,8 +59,8 @@ Screens:
                   Filter(   
                           LancamentoPerdas,
                               StartsWith(DATA,Data2.Text) Or IsBlank(Data2.Text),
-                              StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
-                              StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
+                              StartsWith(UTE,SelectUte_2.Selected.Value) Or IsBlank(SelectUte_2.Selected.Value),
+                              StartsWith(MAQUINA,SelectCaf_2.Selected.Result) Or IsBlank(SelectCaf_2.Selected.Result),
                               StartsWith(TIPO_DE_PERDA,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
                       HORA_INICIO,
                   SortOrder.Ascending
@@ -267,60 +267,6 @@ Screens:
             Width: =71
             X: =520
             Y: =157
-      - SelectCaf_1:
-          Control: Classic/ComboBox@2.4.0
-          Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            BorderThickness: =1
-            ChevronBackground: =RGBA(56, 96, 178, 1)
-            ChevronFill: =RGBA(255, 255, 255, 1)
-            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
-            ChevronHoverFill: =RGBA(255, 255, 255, 1)
-            DisplayFields: =["Value"]
-            Font: =Font.'Open Sans'
-            Height: =35
-            HoverFill: =RGBA(0, 0, 0, 0)
-            IsSearchable: =false
-            Items: =Distinct(Filter(LancamentoPerdas, SETOR = SelectSetor2.Selected.Value),MAQUINA)
-            PaddingBottom: =2
-            PaddingTop: =2
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 18, 107, 1)
-            SearchFields: =["Value"]
-            SelectMultiple: =false
-            SelectionColor: =RGBA(255, 255, 255, 1)
-            SelectionFill: =RGBA(56, 96, 178, 1)
-            Size: =12
-            Width: =188
-            X: =718
-            Y: =70
-      - SelectUte_1:
-          Control: Classic/ComboBox@2.4.0
-          Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            BorderThickness: =1
-            ChevronBackground: =RGBA(56, 96, 178, 1)
-            ChevronFill: =RGBA(255, 255, 255, 1)
-            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
-            ChevronHoverFill: =RGBA(255, 255, 255, 1)
-            DisplayFields: =["Value"]
-            Font: =Font.'Open Sans'
-            Height: =35
-            HoverFill: =RGBA(0, 0, 0, 0)
-            IsSearchable: =false
-            Items: =Sort(Distinct(LancamentoPerdas,UTE),Value)
-            PaddingBottom: =2
-            PaddingTop: =2
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 18, 107, 1)
-            SearchFields: =["Value"]
-            SelectMultiple: =false
-            SelectionColor: =RGBA(255, 255, 255, 1)
-            SelectionFill: =RGBA(56, 96, 178, 1)
-            Size: =12
-            Width: =138
-            X: =286
-            Y: =70
       - DatePicker2_1:
           Control: Classic/DatePicker@2.6.0
           Properties:
@@ -347,7 +293,7 @@ Screens:
             Height: =35
             HoverFill: =RGBA(0, 0, 0, 0)
             IsSearchable: =false
-            Items: =Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),TIPO_DE_PERDA)
+            Items: =Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_2.Selected.Result),TIPO_DE_PERDA)
             PaddingBottom: =2
             PaddingTop: =2
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -370,9 +316,9 @@ Screens:
             Icon: =Icon.Erase
             OnSelect: |
               =Reset(DatePicker2_1);
-              Reset(SelectUte_1);
-              Reset(SelectCaf_1);
-              Reset(SelectSetor2);
+              Reset(SelectUte_2);
+              Reset(SelectCaf_2);
+              Reset(SelectSetor_1);
               Reset(SelectOp_1)
             PaddingBottom: =5
             PaddingLeft: =5
@@ -552,8 +498,8 @@ Screens:
                   Filter(   
                           LancamentoPerdas_BD,
                               StartsWith(Data,Data2.Text) Or IsBlank(Data2.Text),
-                              StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
-                              StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
+                              StartsWith(UTE,SelectUte_2.Selected.Value) Or IsBlank(SelectUte_2.Selected.Value),
+                              StartsWith(MAQUINA,SelectCaf_2.Selected.Result) Or IsBlank(SelectCaf_2.Selected.Result),
                               StartsWith(TIPO_DE_PERDA,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
                       HORA_INICIO,
                   SortOrder.Ascending
@@ -713,7 +659,46 @@ Screens:
             Width: =100
             X: =602
             Y: =477
-      - SelectSetor2:
+      - Label6_39:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =28
+            Size: =14
+            Text: ="SETOR"
+            Width: =154
+            X: =431
+            Y: =42
+      - SelectCaf_2:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["Result"]
+            Font: =Font.'Open Sans'
+            Height: =35
+            HoverFill: =RGBA(0, 0, 0, 0)
+            IsSearchable: =false
+            Items: "=//Distinct(Filter(LancamentoProducao; SETOR = SelectSetor.Selected.Value);MAQUINA)\r\nlistamaquina "
+            PaddingBottom: =2
+            PaddingTop: =2
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Result"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =12
+            Width: =206
+            X: =704
+            Y: =67
+      - SelectUte_2:
           Control: Classic/ComboBox@2.4.0
           Properties:
             BorderColor: =RGBA(0, 18, 107, 1)
@@ -727,9 +712,10 @@ Screens:
             Height: =35
             HoverFill: =RGBA(0, 0, 0, 0)
             IsSearchable: =false
-            Items: =Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),SETOR)
+            Items: |
+              =Sort(Distinct(LancamentoProducao,UTE),Value)
+            OnChange: =Reset(SelectSetor_1)
             PaddingBottom: =2
-            PaddingLeft: =0
             PaddingTop: =2
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 18, 107, 1)
@@ -738,18 +724,64 @@ Screens:
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: =RGBA(56, 96, 178, 1)
             Size: =12
-            Width: =254
-            X: =446
+            Width: =138
+            X: =266
             Y: =69
-      - Label6_39:
-          Control: Label@2.5.1
+      - SelectSetor_1:
+          Control: Classic/ComboBox@2.4.0
           Properties:
             BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(56, 96, 178, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            DisplayFields: =["Result"]
             Font: =Font.'Open Sans'
-            Height: =28
-            Size: =14
-            Text: ="SETOR"
-            Width: =154
-            X: =443
-            Y: =42
+            Height: =35
+            HoverFill: =RGBA(0, 0, 0, 0)
+            IsSearchable: =false
+            Items: |
+              =//Distinct(Filter(LancamentoProducao; UTE = SelectUte.Selected.Value);SETOR)
+              listasetor
+            OnChange: |-
+              =Reset(SelectCaf_2);
+              ClearCollect(
+                  listamaquina,
+                  Sort(
+                      ForAll(Distinct(
+                          Filter(
+                              CreateMaquina,
+                              (Text(SelectSetor_1.Selected.Result) in SETOR)
+                          ),
+                          CAF
+                      ), {Result: ThisRecord.Value}).Result,
+                      Result
+                  )
+              )
+            OnSelect: |-
+              =ClearCollect(
+                  listasetor,
+                  Sort(
+                      ForAll(Distinct(
+                          Filter(
+                              CreateMaquina,
+                              (Text(SelectUte_2.Selected.Value) in UTE)
+                          ),
+                          SETOR
+                      ), {Result: ThisRecord.Value}).Result,
+                      Result
+                  )
+              ) ;
+            PaddingBottom: =2
+            PaddingTop: =2
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 18, 107, 1)
+            SearchFields: =["Result"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(56, 96, 178, 1)
+            Size: =12
+            Width: =272
+            X: =416
+            Y: =68

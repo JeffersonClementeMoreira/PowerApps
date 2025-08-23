@@ -45,7 +45,7 @@ Screens:
               =Navigate(Tela_Inicial_app)
             Tooltip: ="Menu"
             Width: =45
-            X: =38
+            X: =146
             Y: =60
       - Gallery1:
           Control: Gallery@2.15.0
@@ -333,7 +333,7 @@ Screens:
             IconFill: =RGBA(255, 255, 255, 1)
             Size: =13
             Width: =175
-            X: =110
+            X: =218
             Y: =70
       - Icon1_36:
           Control: Classic/Icon@2.5.0
@@ -367,7 +367,7 @@ Screens:
             Size: =14
             Text: ="DATA"
             Width: =77
-            X: =110
+            X: =218
             Y: =46
       - Label6_10:
           Control: Label@2.5.1

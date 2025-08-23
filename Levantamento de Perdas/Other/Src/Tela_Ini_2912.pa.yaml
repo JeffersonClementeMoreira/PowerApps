@@ -370,6 +370,7 @@ Screens:
             OnSelect: |-
               =//Navigate(Tela_Inicial_Producao;ScreenTransition.None);;
               //Set(vartela ; "Tela_Ini_2912");;
+              Refresh(LancamentoProducao);
               Navigate(AcertoProdução);
               Reset(DatePicker2);
               Reset(SelectUte);
@@ -417,6 +418,7 @@ Screens:
             OnSelect: |-
               =//Navigate(Tela_Inicial_Perdas;ScreenTransition.None);;
               //Set(vartela ; "Tela_Ini_2912");;
+              Refresh(LancamentoPerdas);
               Navigate(AcertoPerdas);
               Reset(DatePicker2_1);
               Reset(SelectUte_1);

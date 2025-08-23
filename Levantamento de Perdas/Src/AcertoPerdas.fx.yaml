@@ -41,8 +41,8 @@ AcertoPerdas As screen:
                 Filter(   
                         LancamentoPerdas,
                             StartsWith(DATA,Data2.Text) Or IsBlank(Data2.Text),
-                            StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
-                            StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
+                            StartsWith(UTE,SelectUte_2.Selected.Value) Or IsBlank(SelectUte_2.Selected.Value),
+                            StartsWith(MAQUINA,SelectCaf_2.Selected.Result) Or IsBlank(SelectCaf_2.Selected.Result),
                             StartsWith(TIPO_DE_PERDA,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
                     HORA_INICIO,
                 SortOrder.Ascending
@@ -215,46 +215,6 @@ AcertoPerdas As screen:
         Y: =157
         ZIndex: =12
 
-    SelectCaf_1 As combobox:
-        BorderThickness: =1
-        DisplayFields: =["Value"]
-        Height: =35
-        HoverFill: =RGBA(0, 0, 0, 0)
-        IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoPerdas, SETOR = SelectSetor2.Selected.Value),MAQUINA)
-        PaddingBottom: =2
-        PaddingLeft: =10
-        PaddingRight: =10
-        PaddingTop: =2
-        SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas,SETOR=SelectSetor2.Selected.Value),MAQUINA),SelectCaf_1.SearchText,Value)
-        SelectMultiple: =false
-        Size: =12
-        Width: =188
-        X: =718
-        Y: =70
-        ZIndex: =13
-
-    SelectUte_1 As combobox:
-        BorderThickness: =1
-        DisplayFields: =["Value"]
-        Height: =35
-        HoverFill: =RGBA(0, 0, 0, 0)
-        IsSearchable: =false
-        Items: =Sort(Distinct(LancamentoPerdas,UTE),Value)
-        PaddingBottom: =2
-        PaddingLeft: =10
-        PaddingRight: =10
-        PaddingTop: =2
-        SearchFields: =["Value"]
-        SearchItems: =Search(Sort(Distinct(LancamentoPerdas,UTE),Value),SelectUte_1.SearchText,Value)
-        SelectMultiple: =false
-        Size: =12
-        Width: =138
-        X: =286
-        Y: =70
-        ZIndex: =14
-
     DatePicker2_1 As datepicker:
         Height: =35
         Size: =13
@@ -269,13 +229,13 @@ AcertoPerdas As screen:
         Height: =35
         HoverFill: =RGBA(0, 0, 0, 0)
         IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_1.Selected.Value),TIPO_DE_PERDA)
+        Items: =Distinct(Filter(LancamentoPerdas, MAQUINA = SelectCaf_2.Selected.Result),TIPO_DE_PERDA)
         PaddingBottom: =2
         PaddingLeft: =10
         PaddingRight: =10
         PaddingTop: =2
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas,MAQUINA=SelectCaf_1.Selected.Value),TIPO_DE_PERDA),SelectOp_1.SearchText,Value)
+        SearchItems: =Search(Distinct(Filter(LancamentoPerdas,MAQUINA=SelectCaf_2.Selected.Result),TIPO_DE_PERDA),SelectOp_1.SearchText,Value)
         SelectMultiple: =false
         Size: =12
         Width: =296
@@ -291,9 +251,9 @@ AcertoPerdas As screen:
         Icon: =Icon.Erase
         OnSelect: |
             =Reset(DatePicker2_1);
-            Reset(SelectUte_1);
-            Reset(SelectCaf_1);
-            Reset(SelectSetor2);
+            Reset(SelectUte_2);
+            Reset(SelectCaf_2);
+            Reset(SelectSetor_1);
             Reset(SelectOp_1)
         PaddingBottom: =5
         PaddingLeft: =5
@@ -441,8 +401,8 @@ AcertoPerdas As screen:
                 Filter(   
                         LancamentoPerdas_BD,
                             StartsWith(Data,Data2.Text) Or IsBlank(Data2.Text),
-                            StartsWith(UTE,SelectUte_1.Selected.Value) Or IsBlank(SelectUte_1.Selected.Value),
-                            StartsWith(MAQUINA,SelectCaf_1.Selected.Value) Or IsBlank(SelectCaf_1.Selected.Value),
+                            StartsWith(UTE,SelectUte_2.Selected.Value) Or IsBlank(SelectUte_2.Selected.Value),
+                            StartsWith(MAQUINA,SelectCaf_2.Selected.Result) Or IsBlank(SelectCaf_2.Selected.Result),
                             StartsWith(TIPO_DE_PERDA,SelectOp_1.Selected.Value) Or IsBlank(SelectOp_1.Selected.Value)),
                     HORA_INICIO,
                 SortOrder.Ascending
@@ -547,26 +507,6 @@ AcertoPerdas As screen:
         Width: =35
         ZIndex: =33
 
-    SelectSetor2 As combobox:
-        BorderThickness: =1
-        DisplayFields: =["Value"]
-        Height: =35
-        HoverFill: =RGBA(0, 0, 0, 0)
-        IsSearchable: =false
-        Items: =Distinct(Filter(LancamentoPerdas, UTE = SelectUte_1.Selected.Value),SETOR)
-        PaddingBottom: =2
-        PaddingLeft: =0
-        PaddingRight: =10
-        PaddingTop: =2
-        SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Filter(LancamentoPerdas,UTE=SelectUte_1.Selected.Value),SETOR),SelectSetor2.SearchText,Value)
-        SelectMultiple: =false
-        Size: =12
-        Width: =254
-        X: =446
-        Y: =69
-        ZIndex: =37
-
     POPUP_PERDA As group:
         Height: =5
         Width: =5
@@ -615,7 +555,105 @@ AcertoPerdas As screen:
         Size: =14
         Text: ="SETOR"
         Width: =154
-        X: =443
+        X: =431
         Y: =42
         ZIndex: =38
+
+    SelectCaf_2 As combobox:
+        BorderThickness: =1
+        DisplayFields: =["Result"]
+        Height: =35
+        HoverFill: =RGBA(0, 0, 0, 0)
+        InputTextPlaceholder: ="Localizar itens"
+        IsSearchable: =false
+        Items: |-
+            =//Distinct(Filter(LancamentoProducao; SETOR = SelectSetor.Selected.Value);MAQUINA)
+            listamaquina 
+        PaddingBottom: =2
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =2
+        SearchFields: =["Result"]
+        SearchItems: =Search(listamaquina,SelectCaf_2.SearchText,Result)
+        SelectMultiple: =false
+        Size: =12
+        Width: =206
+        X: =704
+        Y: =67
+        ZIndex: =39
+
+    SelectUte_2 As combobox:
+        BorderThickness: =1
+        DisplayFields: =["Value"]
+        Height: =35
+        HoverFill: =RGBA(0, 0, 0, 0)
+        InputTextPlaceholder: ="Localizar itens"
+        IsSearchable: =false
+        Items: |
+            =Sort(Distinct(LancamentoProducao,UTE),Value)
+        OnChange: =Reset(SelectSetor_1)
+        PaddingBottom: =2
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =2
+        SearchFields: =["Value"]
+        SearchItems: =Search(Sort(Distinct(LancamentoProducao,UTE),Value),SelectUte_2.SearchText,Value)
+        SelectMultiple: =false
+        Size: =12
+        Width: =138
+        X: =266
+        Y: =69
+        ZIndex: =40
+
+    SelectSetor_1 As combobox:
+        BorderThickness: =1
+        DisplayFields: =["Result"]
+        Height: =35
+        HoverFill: =RGBA(0, 0, 0, 0)
+        InputTextPlaceholder: ="Localizar itens"
+        IsSearchable: =false
+        Items: |
+            =//Distinct(Filter(LancamentoProducao; UTE = SelectUte.Selected.Value);SETOR)
+            listasetor
+        OnChange: |-
+            =Reset(SelectCaf_2);
+            ClearCollect(
+                listamaquina,
+                Sort(
+                    ForAll(Distinct(
+                        Filter(
+                            CreateMaquina,
+                            (Text(SelectSetor_1.Selected.Result) in SETOR)
+                        ),
+                        CAF
+                    ), {Result: ThisRecord.Value}).Result,
+                    Result
+                )
+            )
+        OnSelect: |-
+            =ClearCollect(
+                listasetor,
+                Sort(
+                    ForAll(Distinct(
+                        Filter(
+                            CreateMaquina,
+                            (Text(SelectUte_2.Selected.Value) in UTE)
+                        ),
+                        SETOR
+                    ), {Result: ThisRecord.Value}).Result,
+                    Result
+                )
+            ) ;
+        PaddingBottom: =2
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =2
+        SearchFields: =["Result"]
+        SearchItems: =Search(listasetor,SelectSetor_1.SearchText,Result)
+        SelectMultiple: =false
+        Size: =12
+        Width: =272
+        X: =416
+        Y: =68
+        ZIndex: =41
 
