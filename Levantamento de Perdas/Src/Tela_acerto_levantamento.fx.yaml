@@ -73,19 +73,19 @@
             =Search(Sort(ForAll(Distinct( CreateMaquina , UTE ), {Result: ThisRecord.Value}).Result,Result),Cbox_UTE.SearchText,Result)
         SelectMultiple: =false
         Size: =12
-        Width: =195
-        X: =761
+        Width: =117
+        X: =757
         ZIndex: =6
 
     DatePicker1 As datepicker:
-        Height: =23
+        Height: =22
         OnChange: |-
             =ClearCollect(Listaperdas , Filter(LancamentoPerdas , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
             ClearCollect(Listaproducao , Filter(LancamentoProducao , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
-        Size: =12
-        Width: =154
-        X: =967
-        Y: =27
+        Size: =10
+        Width: =138
+        X: =985
+        Y: =26
         ZIndex: =7
 
     Icon1_2 As icon.Home:
@@ -477,7 +477,7 @@
 
     Cbox_Maquina As combobox:
         DisplayFields: =["Result"]
-        Height: =23
+        Height: =22
         InputTextPlaceholder: ="CAF"
         IsSearchable: =false
         Items: =listamaquina 
@@ -494,8 +494,9 @@
         SearchItems: =[]
         SelectMultiple: =false
         Size: =12
-        Width: =156
-        X: =967
+        Width: =224
+        X: =757
+        Y: =26
         ZIndex: =34
 
     LabelDate As label:
@@ -546,14 +547,14 @@
             ) ;
         PaddingBottom: =0
         PaddingLeft: =0
+        PaddingRight: =0
         PaddingTop: =0
         SearchFields: =["Result"]
         SearchItems: =Search(listasetor,Cbox_Setor.SearchText,Result)
         SelectMultiple: =false
-        Size: =12
-        Width: =195
-        X: =761
-        Y: =27
+        Size: =10
+        Width: =245
+        X: =878
         ZIndex: =36
 
     Quebras_00 As label:

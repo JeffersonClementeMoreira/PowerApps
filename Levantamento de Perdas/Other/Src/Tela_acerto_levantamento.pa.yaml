@@ -99,23 +99,23 @@ Screens:
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: =RGBA(56, 96, 178, 1)
             Size: =12
-            Width: =195
-            X: =761
+            Width: =117
+            X: =757
       - DatePicker1:
           Control: Classic/DatePicker@2.6.0
           Properties:
             BorderColor: =RGBA(0, 18, 107, 1)
             Font: =Font.'Open Sans'
-            Height: =23
+            Height: =22
             IconBackground: =RGBA(56, 96, 178, 1)
             IconFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
               =ClearCollect(Listaperdas , Filter(LancamentoPerdas , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
               ClearCollect(Listaproducao , Filter(LancamentoProducao , (MAQUINA = Cbox_Maquina.Selected.Result) && (DATA = LabelDate.Text) ));
-            Size: =12
-            Width: =154
-            X: =967
-            Y: =27
+            Size: =10
+            Width: =138
+            X: =985
+            Y: =26
       - Icon1_2:
           Control: Classic/Icon@2.5.0
           Properties:
@@ -540,7 +540,7 @@ Screens:
             ChevronHoverFill: =RGBA(255, 255, 255, 1)
             DisplayFields: =["Result"]
             Font: =Font.'Open Sans'
-            Height: =23
+            Height: =22
             HoverFill: =RGBA(186, 202, 226, 1)
             InputTextPlaceholder: ="CAF"
             IsSearchable: =false
@@ -561,8 +561,9 @@ Screens:
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: =RGBA(56, 96, 178, 1)
             Size: =12
-            Width: =156
-            X: =967
+            Width: =224
+            X: =757
+            Y: =26
       - LabelDate:
           Control: Label@2.5.1
           Properties:
@@ -621,6 +622,7 @@ Screens:
               ) ;
             PaddingBottom: =0
             PaddingLeft: =0
+            PaddingRight: =0
             PaddingTop: =0
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 18, 107, 1)
@@ -628,10 +630,9 @@ Screens:
             SelectMultiple: =false
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: =RGBA(56, 96, 178, 1)
-            Size: =12
-            Width: =195
-            X: =761
-            Y: =27
+            Size: =10
+            Width: =245
+            X: =878
       - Quebras_00:
           Control: Label@2.5.1
           Properties:
