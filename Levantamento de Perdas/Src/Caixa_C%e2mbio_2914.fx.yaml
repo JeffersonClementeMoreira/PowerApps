@@ -395,9 +395,6 @@ Caixa_Câmbio_2914 As screen:
         ZIndex: =18
 
     Image11_1 As image:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
         Image: =GROB
         Width: =71
         X: =373
@@ -437,9 +434,6 @@ Caixa_Câmbio_2914 As screen:
 
     Label22_1 As label:
         Align: =Align.Center
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Open Sans Condensed'
         Height: =63
         Size: =11
@@ -453,9 +447,6 @@ Caixa_Câmbio_2914 As screen:
 
     Label22_2 As label:
         Align: =Align.Center
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Open Sans Condensed'
         Height: =63
         Size: =11
@@ -520,11 +511,9 @@ Caixa_Câmbio_2914 As screen:
         ZIndex: =26
 
     Btnmaq_29 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        FontWeight: =FontWeight.Semibold
         Height: =Btnmaq.Height
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-

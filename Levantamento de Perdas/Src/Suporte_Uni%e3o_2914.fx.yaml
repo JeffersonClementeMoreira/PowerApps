@@ -418,9 +418,6 @@ Suporte_União_2914 As screen:
         ZIndex: =20
 
     Image14_2 As image:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =70
         Image: ='Captura de tela 2025-07-19 091725'
         ImagePosition: =ImagePosition.Fill
@@ -477,9 +474,6 @@ Suporte_União_2914 As screen:
         ZIndex: =24
 
     Image16_1 As image:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =109
         Image: =GROB
         Width: =93
@@ -489,9 +483,6 @@ Suporte_União_2914 As screen:
 
     Label23_2 As label:
         Align: =Align.Center
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Open Sans Condensed'
         Height: =60
         Size: =11
@@ -530,11 +521,9 @@ Suporte_União_2914 As screen:
         ZIndex: =27
 
     Btnmaq_31 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 0, 0, 0)
-        FontWeight: =FontWeight.Semibold
         Height: =Btnmaq_14.Height
         HoverColor: =RGBA(0, 0, 0, 0)
         HoverFill: |-
