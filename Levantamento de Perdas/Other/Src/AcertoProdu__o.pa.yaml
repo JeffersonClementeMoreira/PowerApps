@@ -281,7 +281,7 @@ Screens:
             Height: =35
             HoverFill: =RGBA(0, 0, 0, 0)
             IsSearchable: =false
-            Items: "=//Distinct(Filter(LancamentoProducao; SETOR = SelectSetor.Selected.Value);MAQUINA)\r\nlistamaquina "
+            Items: "=//Distinct(Filter(LancamentoProducao; SETOR = SelectSetor.Selected.Value);MAQUINA)\nlistamaquina "
             PaddingBottom: =2
             PaddingTop: =2
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -308,7 +308,7 @@ Screens:
             Height: =35
             HoverFill: =RGBA(0, 0, 0, 0)
             IsSearchable: =false
-            Items: |+
+            Items: |
               =Sort(Distinct(LancamentoProducao,UTE),Value)
             OnChange: =Reset(SelectSetor)
             PaddingBottom: =2
@@ -692,7 +692,7 @@ Screens:
             Height: =35
             HoverFill: =RGBA(0, 0, 0, 0)
             IsSearchable: =false
-            Items: |+
+            Items: |
               =//Distinct(Filter(LancamentoProducao; UTE = SelectUte.Selected.Value);SETOR)
               listasetor
             OnChange: |-

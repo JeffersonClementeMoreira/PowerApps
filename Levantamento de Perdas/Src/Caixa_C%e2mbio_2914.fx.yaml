@@ -61,7 +61,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq.X + Btnmaq.Width + 10
         Y: =Btnmaq.Y
-        ZIndex: =5
+        ZIndex: =3
 
     Btnmaq_2 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -87,7 +87,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_1.X + Btnmaq_1.Width + 10
         Y: =Btnmaq.Y
-        ZIndex: =6
+        ZIndex: =4
 
     Btnmaq_3 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -113,7 +113,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_2.X + Btnmaq_2.Width + 10
         Y: =Btnmaq.Y
-        ZIndex: =7
+        ZIndex: =5
 
     Btnmaq_4 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -139,7 +139,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_3.X + Btnmaq_3.Width + 10
         Y: =Btnmaq.Y
-        ZIndex: =8
+        ZIndex: =6
 
     Btnmaq_5 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -165,7 +165,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_4.X + Btnmaq_4.Width + 10
         Y: =Btnmaq.Y
-        ZIndex: =9
+        ZIndex: =7
 
     Btnmaq_6 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -194,7 +194,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_5.X + Btnmaq_5.Width + 10
         Y: =Btnmaq.Y
-        ZIndex: =10
+        ZIndex: =8
 
     Btnmaq_7 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -220,7 +220,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =106
         Y: =421
-        ZIndex: =11
+        ZIndex: =9
 
     Btnmaq_8 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -246,33 +246,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_7.X + Btnmaq_7.Width + 10
         Y: =Btnmaq_7.Y
-        ZIndex: =12
-
-    Btnmaq_9 As button:
-        DisabledColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =Btnmaq.Height
-        HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: |-
-            =RGBA(4, 114, 14, 0.9)
-            
-            //ColorFade(RGBA(56; 96; 178; 1); -20%)
-        OnSelect: |
-            =Set( varmaquina , "201405003557");
-            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
-            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
-            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
-            Set( varselect , 1) ;
-            Set(varDelay,false);
-            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
-            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
-        Size: =24
-        Text: =""
-        Width: =Btnmaq.Width
-        X: =Btnmaq_8.X + Btnmaq_8.Width + 10 + Btnmaq_8.Width + 10
-        Y: =Btnmaq_7.Y
-        ZIndex: =13
+        ZIndex: =10
 
     Btnmaq_10 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -298,7 +272,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_7.X + Btnmaq_7.Width + 10
         Y: =Btnmaq_7.Y + 197
-        ZIndex: =14
+        ZIndex: =11
 
     Btnmaq_11 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -324,7 +298,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_8.X + Btnmaq_8.Width + 10 + Btnmaq_8.Width + 10
         Y: =Btnmaq_7.Y + 197
-        ZIndex: =15
+        ZIndex: =12
 
     Btnmaq_12 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -350,7 +324,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_8.X + Btnmaq_8.Width + 10 + Btnmaq_8.Width + 10
         Y: =Btnmaq_7.Y + 197 + 197
-        ZIndex: =16
+        ZIndex: =13
 
     Btnmaq_13 As button:
         DisabledColor: =RGBA(0, 0, 0, 0)
@@ -376,7 +350,7 @@ Caixa_Câmbio_2914 As screen:
         Width: =Btnmaq.Width
         X: =Btnmaq_7.X + Btnmaq_7.Width + 10
         Y: =Btnmaq_7.Y + 197 + 197
-        ZIndex: =17
+        ZIndex: =14
 
     Label_setor As label:
         Height: =70
@@ -385,7 +359,7 @@ Caixa_Câmbio_2914 As screen:
         Visible: =false
         Width: =560
         X: =41
-        ZIndex: =18
+        ZIndex: =15
 
     Label_Local As button:
         Align: =Align.Left
@@ -395,7 +369,7 @@ Caixa_Câmbio_2914 As screen:
         Text: ="Linha Caixa de Câmbio - UTE 2914"
         Width: =640
         Y: =13
-        ZIndex: =19
+        ZIndex: =16
 
     Icon1_8 As icon.Home:
         BorderColor: =RGBA(255, 255, 255, 1)
@@ -411,5 +385,165 @@ Caixa_Câmbio_2914 As screen:
         Width: =80
         X: =560
         Y: =13
+        ZIndex: =17
+
+    Image11 As image:
+        Image: =GROB
+        Width: =71
+        X: =465
+        Y: =425
+        ZIndex: =18
+
+    Image11_1 As image:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Image: =GROB
+        Width: =71
+        X: =373
+        Y: =424
+        ZIndex: =19
+
+    Image12 As image:
+        Height: =104
+        Image: =NTC
+        ImagePosition: =ImagePosition.Fill
+        Width: =72
+        X: =285
+        Y: =425
         ZIndex: =20
+
+    Image13 As image:
+        Height: =89
+        Image: ='Captura de tela 2025-07-19 091725'
+        ImagePosition: =ImagePosition.Fill
+        Width: =152
+        X: =296
+        Y: =529
+        ZIndex: =21
+
+    Label22 As label:
+        Align: =Align.Center
+        Font: =Font.'Open Sans Condensed'
+        Height: =63
+        Size: =11
+        Text: |-
+            ="NTC - 120
+            OP. 30"
+        Width: =72
+        X: =278
+        Y: =541
+        ZIndex: =22
+
+    Label22_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =63
+        Size: =11
+        Text: |-
+            ="GROB - 5860
+            OP. 30"
+        Width: =88
+        X: =360
+        Y: =541
+        ZIndex: =23
+
+    Label22_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =63
+        Size: =11
+        Text: |-
+            ="GROB- 5861
+            OP. 30"
+        Width: =80
+        X: =459
+        Y: =541
+        ZIndex: =24
+
+    Btnmaq_9 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "201405003557");
+            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =Btnmaq.Width
+        X: =282
+        Y: =424
+        ZIndex: =25
+
+    Btnmaq_28 As button:
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Btnmaq.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "201405005860");
+            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =Btnmaq.Width
+        X: =366
+        Y: =421
+        ZIndex: =26
+
+    Btnmaq_29 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        FontWeight: =FontWeight.Semibold
+        Height: =Btnmaq.Height
+        HoverColor: =RGBA(0, 0, 0, 0)
+        HoverFill: |-
+            =RGBA(4, 114, 14, 0.9)
+            
+            //ColorFade(RGBA(56; 96; 178; 1); -20%)
+        OnSelect: |
+            =Set( varmaquina , "201405005861");
+            Set( varsetor , Text(LookUp(CreateMaquina, varmaquina = CAF).SETOR));
+            Set( varute , Text(LookUp(CreateMaquina, varmaquina = CAF).UTE)) ;
+            Set( varoperacao , Text(LookUp(CreateMaquina, varmaquina = CAF).OPERACAO));
+            Set( varselect , 1) ;
+            Set(varDelay,false);
+            Set(varIDpai,  Value(DataCardute.Selected.Result) & Value(DataCardmaquina.Selected.Result) & DataCardcolaborador.Text & DataCarddata.SelectedDate & DataCardhora_inicio.Selected.Result) ; Set(varDelta , 0) ;
+            NewForm('Form Produção');Navigate(Tel_Edit_Producao, ScreenTransition.None);
+        Size: =24
+        Text: =""
+        Width: =Btnmaq.Width
+        X: =461
+        Y: =421
+        ZIndex: =27
 
