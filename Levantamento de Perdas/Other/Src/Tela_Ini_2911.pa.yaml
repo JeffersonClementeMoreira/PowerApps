@@ -243,10 +243,10 @@ Screens:
               //Set(vartela ; "Tela_Ini_2911");;
               Navigate(AcertoPerdas);
               Reset(DatePicker2_1);
-              Reset(SelectUte_1);
-              Reset(SelectCaf_1);
+              Reset(SelectUte_2);
+              Reset(SelectCaf_2);
               Reset(SelectOp_1);
-              Reset(SelectSetor2);
+              Reset(SelectSetor_1);
               Set(ALARME_PERDAS,true)
             PaddingBottom: =0
             PaddingLeft: =0
