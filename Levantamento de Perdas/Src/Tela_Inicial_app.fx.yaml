@@ -1324,18 +1324,6 @@ Tela_Inicial_app As screen:
         Y: =btn_2913.Y + btn_2913.Height + 10
         ZIndex: =32
 
-    Label4 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(0, 0, 0, 1)
-        Height: =41
-        Size: =14
-        Text: ="Versão 26/07/2025"
-        Width: =207
-        X: =433
-        Y: =1095
-        ZIndex: =33
-
     Filtro_Reunião As text:
         Default: ="Reunião"
         Height: =30
@@ -1346,4 +1334,22 @@ Tela_Inicial_app As screen:
         X: =230
         Y: =949
         ZIndex: =34
+
+    Button1 As button:
+        Fill: =RGBA(209, 82, 8, 1)
+        Height: =70
+        HoverFill: =RGBA(224, 86, 6, 1)
+        OnSelect: =Navigate(Links)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(224, 86, 6, 1)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="LINKS ÚTEIS"
+        Width: =280
+        X: =321
+        Y: =1050
+        ZIndex: =36
 

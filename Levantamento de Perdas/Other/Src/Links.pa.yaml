@@ -1,0 +1,133 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Links:
+    Properties:
+      BackgroundImage: =Transmissões_foto_bw
+      ImagePosition: =ImagePosition.Fill
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - Label24:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Semibold
+            Height: =94
+            Size: =30
+            Text: ="LINKS ÚTEIS"
+            Width: =640
+      - Icon7:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Tela_Inicial_app)
+            X: =549
+            Y: =15
+      - Button1_1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(209, 82, 8, 1)
+            Font: =Font.'Open Sans'
+            Height: =98
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(224, 86, 6, 1)
+            OnSelect: =Launch("https://forms.cloud.microsoft/r/iNSXZrcKcJ")
+            PressedBorderColor: =Self.Fill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(224, 86, 6, 1)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =26
+            Text: ="Solicitação De Óleo"
+            Width: =640
+            Y: =126
+      - Button1_2:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(209, 82, 8, 1)
+            Font: =Font.'Open Sans'
+            Height: =98
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(224, 86, 6, 1)
+            OnSelect: =Launch("https://forms.cloud.microsoft/r/h2nGwL399e")
+            PressedBorderColor: =Self.Fill
+            PressedColor: =
+            PressedFill: =RGBA(224, 86, 6, 1)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =26
+            Text: ="Armário AM"
+            Width: =640
+            Y: =242
+      - Button1_3:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(209, 82, 8, 1)
+            Font: =Font.'Open Sans'
+            Height: =98
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(224, 86, 6, 1)
+            OnSelect: =Launch("https://forms.cloud.microsoft/r/E8MsxyC9d7")
+            PressedBorderColor: =Self.Fill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(224, 86, 6, 1)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =26
+            Text: ="2918 - Preparação"
+            Width: =640
+            Y: =358
+      - Button1_4:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(209, 82, 8, 1)
+            Font: =Font.'Open Sans'
+            Height: =98
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(224, 86, 6, 1)
+            OnSelect: =Launch("https://apps.powerapps.com/play/e/default-d852d5cd-724c-4128-8812-ffa5db3f8507/a/a4ec21cf-e03d-4cdd-8126-def441238818?tenantId=d852d5cd-724c-4128-8812-ffa5db3f8507&source=portal#")
+            PressedBorderColor: =Self.Fill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(224, 86, 6, 1)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =26
+            Text: ="Controle UTE 2942"
+            Width: =640
+            Y: =480

@@ -1,0 +1,95 @@
+Links As screen:
+    BackgroundImage: =Transmissões_foto_bw
+    ImagePosition: =ImagePosition.Fill
+
+    Label24 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(56, 96, 178, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =94
+        Size: =30
+        Text: ="LINKS ÚTEIS"
+        Width: =640
+        ZIndex: =1
+
+    Icon7 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Tela_Inicial_app)
+        X: =549
+        Y: =15
+        ZIndex: =2
+
+    Button1_1 As button:
+        Fill: =RGBA(209, 82, 8, 1)
+        Height: =98
+        HoverFill: =RGBA(224, 86, 6, 1)
+        OnSelect: |-
+            =Launch("https://forms.cloud.microsoft/r/iNSXZrcKcJ")
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(224, 86, 6, 1)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =26
+        Text: ="Solicitação De Óleo"
+        Width: =640
+        Y: =126
+        ZIndex: =3
+
+    Button1_2 As button:
+        Fill: =RGBA(209, 82, 8, 1)
+        Height: =98
+        HoverFill: =RGBA(224, 86, 6, 1)
+        OnSelect: |-
+            =Launch("https://forms.cloud.microsoft/r/h2nGwL399e")
+        PressedColor: =
+        PressedFill: =RGBA(224, 86, 6, 1)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =26
+        Text: ="Armário AM"
+        Width: =640
+        Y: =242
+        ZIndex: =4
+
+    Button1_3 As button:
+        Fill: =RGBA(209, 82, 8, 1)
+        Height: =98
+        HoverFill: =RGBA(224, 86, 6, 1)
+        OnSelect: |-
+            =Launch("https://forms.cloud.microsoft/r/E8MsxyC9d7")
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(224, 86, 6, 1)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =26
+        Text: ="2918 - Preparação"
+        Width: =640
+        Y: =358
+        ZIndex: =5
+
+    Button1_4 As button:
+        Fill: =RGBA(209, 82, 8, 1)
+        Height: =98
+        HoverFill: =RGBA(224, 86, 6, 1)
+        OnSelect: |-
+            =Launch("https://apps.powerapps.com/play/e/default-d852d5cd-724c-4128-8812-ffa5db3f8507/a/a4ec21cf-e03d-4cdd-8126-def441238818?tenantId=d852d5cd-724c-4128-8812-ffa5db3f8507&source=portal#")
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(224, 86, 6, 1)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =26
+        Text: ="Controle UTE 2942"
+        Width: =640
+        Y: =480
+        ZIndex: =6
+

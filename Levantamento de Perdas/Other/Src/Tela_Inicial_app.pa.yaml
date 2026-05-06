@@ -1155,20 +1155,6 @@ Screens:
             Text: ="UTE 2915"
             X: =Btn_vis_lev_perdas.X
             Y: =btn_2913.Y + btn_2913.Height + 10
-      - Label4:
-          Control: Label@2.5.1
-          Properties:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 0, 0, 1)
-            Font: =Font.'Open Sans'
-            Height: =41
-            Size: =14
-            Text: ="Versão 26/07/2025"
-            Width: =207
-            X: =433
-            Y: =1095
       - Filtro_Reunião:
           Control: Classic/TextInput@2.3.2
           Properties:
@@ -1182,3 +1168,25 @@ Screens:
             Width: =140
             X: =230
             Y: =949
+      - Button1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(209, 82, 8, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(224, 86, 6, 1)
+            OnSelect: =Navigate(Links)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(224, 86, 6, 1)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Text: ="LINKS ÚTEIS"
+            X: =321
+            Y: =1050
